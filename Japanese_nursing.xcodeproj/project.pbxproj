@@ -14,6 +14,7 @@
 		BA1E5B382487AC250055A5F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA1E5B372487AC250055A5F4 /* Assets.xcassets */; };
 		BA1E5B3B2487AC250055A5F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1E5B392487AC250055A5F4 /* LaunchScreen.storyboard */; };
 		BA27FB32248CE901002840B8 /* YasashisaGothic.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA27FB31248CE8D3002840B8 /* YasashisaGothic.otf */; };
+		BA27FB35248CECDA002840B8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA27FB34248CECDA002840B8 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		BA1E5B3A2487AC250055A5F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA1E5B3C2487AC250055A5F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA27FB31248CE8D3002840B8 /* YasashisaGothic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = YasashisaGothic.otf; sourceTree = "<group>"; };
+		BA27FB34248CECDA002840B8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				BA1E5B372487AC250055A5F4 /* Assets.xcassets */,
 				BA1E5B392487AC250055A5F4 /* LaunchScreen.storyboard */,
 				BA1E5B3C2487AC250055A5F4 /* Info.plist */,
+				BA27FB34248CECDA002840B8 /* Colors.xcassets */,
 			);
 			path = Japanese_nursing;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA27FB35248CECDA002840B8 /* Colors.xcassets in Resources */,
 				BA27FB32248CE901002840B8 /* YasashisaGothic.otf in Resources */,
 				BA1E5B3B2487AC250055A5F4 /* LaunchScreen.storyboard in Resources */,
 				BA1E5B382487AC250055A5F4 /* Assets.xcassets in Resources */,
