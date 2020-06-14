@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BA1E5B2B2487AC210055A5F4 /* Japanese_nursing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Japanese_nursing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA1E5B2B2487AC210055A5F4 /* 介護の日本語.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "介護の日本語.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA1E5B2E2487AC210055A5F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA1E5B302487AC210055A5F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BA1E5B322487AC210055A5F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		BA1E5B2C2487AC210055A5F4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BA1E5B2B2487AC210055A5F4 /* Japanese_nursing.app */,
+				BA1E5B2B2487AC210055A5F4 /* 介護の日本語.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,7 +106,7 @@
 			);
 			name = Japanese_nursing;
 			productName = Japanese_nursing;
-			productReference = BA1E5B2B2487AC210055A5F4 /* Japanese_nursing.app */;
+			productReference = BA1E5B2B2487AC210055A5F4 /* 介護の日本語.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -315,7 +315,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "project.Japanese-nursing";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "介護の日本語";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -332,7 +332,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "project.Japanese-nursing";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "介護の日本語";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
