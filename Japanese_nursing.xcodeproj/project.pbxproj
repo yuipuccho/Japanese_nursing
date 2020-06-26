@@ -72,8 +72,8 @@
 		BA1E5B2D2487AC210055A5F4 /* Japanese_nursing */ = {
 			isa = PBXGroup;
 			children = (
-				BAC4F7F124A642FB009ACEF3 /* Supporting Files */,
 				BA27FB2F248CE86E002840B8 /* Resources */,
+				BAC4F7F124A642FB009ACEF3 /* Supporting Files */,
 				BAC4F7ED24A641FF009ACEF3 /* src */,
 				BA1E5B2E2487AC210055A5F4 /* AppDelegate.swift */,
 				BA1E5B302487AC210055A5F4 /* SceneDelegate.swift */,
