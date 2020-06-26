@@ -72,6 +72,7 @@
 		BA1E5B2D2487AC210055A5F4 /* Japanese_nursing */ = {
 			isa = PBXGroup;
 			children = (
+				BAC4F7F124A642FB009ACEF3 /* Supporting Files */,
 				BA27FB2F248CE86E002840B8 /* Resources */,
 				BAC4F7ED24A641FF009ACEF3 /* src */,
 				BA1E5B2E2487AC210055A5F4 /* AppDelegate.swift */,
@@ -79,8 +80,6 @@
 				BA1E5B322487AC210055A5F4 /* ViewController.swift */,
 				BA1E5B342487AC210055A5F4 /* Main.storyboard */,
 				BA1E5B372487AC250055A5F4 /* Assets.xcassets */,
-				BA1E5B392487AC250055A5F4 /* LaunchScreen.storyboard */,
-				BA1E5B3C2487AC250055A5F4 /* Info.plist */,
 				BA27FB34248CECDA002840B8 /* Colors.xcassets */,
 			);
 			path = Japanese_nursing;
@@ -131,6 +130,15 @@
 			children = (
 			);
 			path = Study;
+			sourceTree = "<group>";
+		};
+		BAC4F7F124A642FB009ACEF3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA1E5B3C2487AC250055A5F4 /* Info.plist */,
+				BA1E5B392487AC250055A5F4 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		BAC59044249EECCF007D247B /* NotoSans */ = {
