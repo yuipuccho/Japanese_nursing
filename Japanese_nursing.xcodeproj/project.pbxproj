@@ -73,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				BA27FB2F248CE86E002840B8 /* Resources */,
+				BAC4F7ED24A641FF009ACEF3 /* src */,
 				BA1E5B2E2487AC210055A5F4 /* AppDelegate.swift */,
 				BA1E5B302487AC210055A5F4 /* SceneDelegate.swift */,
 				BA1E5B322487AC210055A5F4 /* ViewController.swift */,
@@ -99,6 +100,37 @@
 				BAC59044249EECCF007D247B /* NotoSans */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		BAC4F7ED24A641FF009ACEF3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				BAC4F7EE24A64211009ACEF3 /* Views */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		BAC4F7EE24A64211009ACEF3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BAC4F7EF24A64219009ACEF3 /* Mypage */,
+				BAC4F7F024A6421F009ACEF3 /* Study */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BAC4F7EF24A64219009ACEF3 /* Mypage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mypage;
+			sourceTree = "<group>";
+		};
+		BAC4F7F024A6421F009ACEF3 /* Study */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Study;
 			sourceTree = "<group>";
 		};
 		BAC59044249EECCF007D247B /* NotoSans */ = {
