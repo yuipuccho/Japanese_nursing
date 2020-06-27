@@ -13,8 +13,12 @@
 		BA1E5B382487AC250055A5F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA1E5B372487AC250055A5F4 /* Assets.xcassets */; };
 		BA1E5B3B2487AC250055A5F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1E5B392487AC250055A5F4 /* LaunchScreen.storyboard */; };
 		BA27FB35248CECDA002840B8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA27FB34248CECDA002840B8 /* Colors.xcassets */; };
+		BA66D67724A6E77F00BE7273 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA66D67624A6E77F00BE7273 /* Main.storyboard */; };
+		BA66D67924A6E91500BE7273 /* AppBootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA66D67824A6E91500BE7273 /* AppBootstrap.swift */; };
+		BA66D67D24A6ECF000BE7273 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA66D67C24A6ECF000BE7273 /* TabBarController.swift */; };
+		BA66D67F24A6EE6C00BE7273 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA66D67E24A6EE6C00BE7273 /* Tabbar.storyboard */; };
+		BA66D68124A6EFFD00BE7273 /* Mypage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA66D68024A6EFFD00BE7273 /* Mypage.storyboard */; };
 		BAC4F7FD24A6E4C5009ACEF3 /* Study.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC4F7FC24A6E4C5009ACEF3 /* Study.storyboard */; };
-		BAC4F7FF24A6E4DF009ACEF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC4F7FE24A6E4DF009ACEF3 /* Main.storyboard */; };
 		BAC5904C249EECCF007D247B /* NotoSansCJKjpSub-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAC59045249EECCF007D247B /* NotoSansCJKjpSub-Black.otf */; };
 		BAC5904D249EECCF007D247B /* NotoSansCJKjpSub-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAC59046249EECCF007D247B /* NotoSansCJKjpSub-Regular.otf */; };
 		BAC5904E249EECCF007D247B /* NotoSansCJKjpSub-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAC59047249EECCF007D247B /* NotoSansCJKjpSub-Bold.otf */; };
@@ -31,10 +35,14 @@
 		BA1E5B322487AC210055A5F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BA1E5B372487AC250055A5F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA1E5B3A2487AC250055A5F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BA1E5B3C2487AC250055A5F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA1E5B3C2487AC250055A5F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
 		BA27FB34248CECDA002840B8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		BA66D67624A6E77F00BE7273 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		BA66D67824A6E91500BE7273 /* AppBootstrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBootstrap.swift; sourceTree = "<group>"; };
+		BA66D67C24A6ECF000BE7273 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		BA66D67E24A6EE6C00BE7273 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
+		BA66D68024A6EFFD00BE7273 /* Mypage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mypage.storyboard; sourceTree = "<group>"; };
 		BAC4F7FC24A6E4C5009ACEF3 /* Study.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Study.storyboard; sourceTree = "<group>"; };
-		BAC4F7FE24A6E4DF009ACEF3 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BAC59045249EECCF007D247B /* NotoSansCJKjpSub-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKjpSub-Black.otf"; sourceTree = "<group>"; };
 		BAC59046249EECCF007D247B /* NotoSansCJKjpSub-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKjpSub-Regular.otf"; sourceTree = "<group>"; };
 		BAC59047249EECCF007D247B /* NotoSansCJKjpSub-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKjpSub-Bold.otf"; sourceTree = "<group>"; };
@@ -74,6 +82,7 @@
 		BA1E5B2D2487AC210055A5F4 /* Japanese_nursing */ = {
 			isa = PBXGroup;
 			children = (
+				BA1E5B3C2487AC250055A5F4 /* Info.plist */,
 				BA27FB2F248CE86E002840B8 /* Resources */,
 				BAC4F7F124A642FB009ACEF3 /* Supporting Files */,
 				BAC4F7ED24A641FF009ACEF3 /* src */,
@@ -82,6 +91,7 @@
 				BA1E5B322487AC210055A5F4 /* ViewController.swift */,
 				BA1E5B372487AC250055A5F4 /* Assets.xcassets */,
 				BA27FB34248CECDA002840B8 /* Colors.xcassets */,
+				BA66D67624A6E77F00BE7273 /* Main.storyboard */,
 			);
 			path = Japanese_nursing;
 			sourceTree = "<group>";
@@ -102,10 +112,37 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		BA66D67524A6E70A00BE7273 /* Mypage */ = {
+			isa = PBXGroup;
+			children = (
+				BA66D68024A6EFFD00BE7273 /* Mypage.storyboard */,
+			);
+			path = Mypage;
+			sourceTree = "<group>";
+		};
+		BA66D67A24A6EC9C00BE7273 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				BA66D67B24A6ECB300BE7273 /* TabViews */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		BA66D67B24A6ECB300BE7273 /* TabViews */ = {
+			isa = PBXGroup;
+			children = (
+				BA66D67C24A6ECF000BE7273 /* TabBarController.swift */,
+				BA66D67E24A6EE6C00BE7273 /* Tabbar.storyboard */,
+			);
+			path = TabViews;
+			sourceTree = "<group>";
+		};
 		BAC4F7ED24A641FF009ACEF3 /* src */ = {
 			isa = PBXGroup;
 			children = (
 				BAC4F7EE24A64211009ACEF3 /* Views */,
+				BA66D67A24A6EC9C00BE7273 /* Feature */,
+				BA66D67824A6E91500BE7273 /* AppBootstrap.swift */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -113,18 +150,10 @@
 		BAC4F7EE24A64211009ACEF3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BAC4F7EF24A64219009ACEF3 /* Mypage */,
+				BA66D67524A6E70A00BE7273 /* Mypage */,
 				BAC4F7F024A6421F009ACEF3 /* Study */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		BAC4F7EF24A64219009ACEF3 /* Mypage */ = {
-			isa = PBXGroup;
-			children = (
-				BAC4F7FE24A6E4DF009ACEF3 /* Main.storyboard */,
-			);
-			path = Mypage;
 			sourceTree = "<group>";
 		};
 		BAC4F7F024A6421F009ACEF3 /* Study */ = {
@@ -138,7 +167,6 @@
 		BAC4F7F124A642FB009ACEF3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BA1E5B3C2487AC250055A5F4 /* Info.plist */,
 				BA1E5B392487AC250055A5F4 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
@@ -217,9 +245,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAC4F7FD24A6E4C5009ACEF3 /* Study.storyboard in Resources */,
+				BA66D68124A6EFFD00BE7273 /* Mypage.storyboard in Resources */,
 				BAC5904C249EECCF007D247B /* NotoSansCJKjpSub-Black.otf in Resources */,
+				BA66D67F24A6EE6C00BE7273 /* Tabbar.storyboard in Resources */,
 				BAC5904F249EECCF007D247B /* NotoSansCJKjpSub-Thin.otf in Resources */,
-				BAC4F7FF24A6E4DF009ACEF3 /* Main.storyboard in Resources */,
+				BA66D67724A6E77F00BE7273 /* Main.storyboard in Resources */,
 				BAC5904E249EECCF007D247B /* NotoSansCJKjpSub-Bold.otf in Resources */,
 				BA27FB35248CECDA002840B8 /* Colors.xcassets in Resources */,
 				BA1E5B3B2487AC250055A5F4 /* LaunchScreen.storyboard in Resources */,
@@ -238,8 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA66D67924A6E91500BE7273 /* AppBootstrap.swift in Sources */,
 				BA1E5B332487AC210055A5F4 /* ViewController.swift in Sources */,
 				BA1E5B2F2487AC210055A5F4 /* AppDelegate.swift in Sources */,
+				BA66D67D24A6ECF000BE7273 /* TabBarController.swift in Sources */,
 				BA1E5B312487AC210055A5F4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

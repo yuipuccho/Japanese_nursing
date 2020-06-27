@@ -7,3 +7,17 @@
 //
 
 import Foundation
+import UIKit
+
+struct AppBootstrap {
+
+    fileprivate init () {}
+
+    static func goToMainTabVC() {
+        let vc = UIStoryboard(name: "Tabbar", bundle: nil).instantiateViewController(withIdentifier: "TabbarController")
+        let tab = vc as! TabBarController
+
+        // 学習タブ
+        tab.selectedViewController = tab.firstVC
+    }
+}

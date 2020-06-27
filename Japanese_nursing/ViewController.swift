@@ -12,7 +12,26 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        print("main")
+
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        test()
+    }
+
+    func test() {
+        AppBootstrap.goToMainTabVC()
+
+        let vc = UIStoryboard(name: "Tabbar", bundle: nil).instantiateViewController(withIdentifier: "TabbarController")
+        let tab = vc as! TabBarController
+
+        // 学習タブ
+        tab.selectedViewController = tab.firstVC
+
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: false)
+        print(123)
     }
 
 
