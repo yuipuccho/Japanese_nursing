@@ -19,7 +19,7 @@
 		BA66D67D24A6ECF000BE7273 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA66D67C24A6ECF000BE7273 /* TabBarController.swift */; };
 		BA66D67F24A6EE6C00BE7273 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA66D67E24A6EE6C00BE7273 /* Tabbar.storyboard */; };
 		BA66D68124A6EFFD00BE7273 /* Mypage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA66D68024A6EFFD00BE7273 /* Mypage.storyboard */; };
-		BA6C8DD524A71FF500340CA4 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6C8DD424A71FF500340CA4 /* R.generated.swift */; };
+		BA85A3FE24AB7F51003E6E85 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85A3FD24AB7F51003E6E85 /* R.generated.swift */; };
 		BAC4F7FD24A6E4C5009ACEF3 /* Study.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC4F7FC24A6E4C5009ACEF3 /* Study.storyboard */; };
 		BAC5904C249EECCF007D247B /* NotoSansCJKjpSub-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAC59045249EECCF007D247B /* NotoSansCJKjpSub-Black.otf */; };
 		BAC5904D249EECCF007D247B /* NotoSansCJKjpSub-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAC59046249EECCF007D247B /* NotoSansCJKjpSub-Regular.otf */; };
@@ -47,7 +47,7 @@
 		BA66D67C24A6ECF000BE7273 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		BA66D67E24A6EE6C00BE7273 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
 		BA66D68024A6EFFD00BE7273 /* Mypage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mypage.storyboard; sourceTree = "<group>"; };
-		BA6C8DD424A71FF500340CA4 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = Japanese_nursing/src/R.generated.swift; sourceTree = SOURCE_ROOT; };
+		BA85A3FD24AB7F51003E6E85 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		BAC4F7FC24A6E4C5009ACEF3 /* Study.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Study.storyboard; sourceTree = "<group>"; };
 		BAC59045249EECCF007D247B /* NotoSansCJKjpSub-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKjpSub-Black.otf"; sourceTree = "<group>"; };
 		BAC59046249EECCF007D247B /* NotoSansCJKjpSub-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKjpSub-Regular.otf"; sourceTree = "<group>"; };
@@ -73,10 +73,10 @@
 		BA1E5B222487AC210055A5F4 = {
 			isa = PBXGroup;
 			children = (
-				BA1E5B2D2487AC210055A5F4 /* Japanese_nursing */,
-				BA1E5B2C2487AC210055A5F4 /* Products */,
-				C07CEA2183146A04CA3CFB85 /* Pods */,
 				C87E173A7739EAF8084E6F1B /* Frameworks */,
+				C07CEA2183146A04CA3CFB85 /* Pods */,
+				BA1E5B2C2487AC210055A5F4 /* Products */,
+				BA1E5B2D2487AC210055A5F4 /* Japanese_nursing */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,7 +95,6 @@
 				BA27FB2F248CE86E002840B8 /* Resources */,
 				BAC4F7F124A642FB009ACEF3 /* Supporting Files */,
 				BAC4F7ED24A641FF009ACEF3 /* src */,
-				BA1E5B302487AC210055A5F4 /* SceneDelegate.swift */,
 				BA1E5B372487AC250055A5F4 /* Assets.xcassets */,
 				BA27FB34248CECDA002840B8 /* Colors.xcassets */,
 			);
@@ -150,9 +149,10 @@
 				BA66D67A24A6EC9C00BE7273 /* Feature */,
 				BA66D67824A6E91500BE7273 /* AppBootstrap.swift */,
 				BA1E5B2E2487AC210055A5F4 /* AppDelegate.swift */,
-				BA6C8DD424A71FF500340CA4 /* R.generated.swift */,
-				BA1E5B322487AC210055A5F4 /* ViewController.swift */,
 				BA66D67624A6E77F00BE7273 /* Main.storyboard */,
+				BA85A3FD24AB7F51003E6E85 /* R.generated.swift */,
+				BA1E5B302487AC210055A5F4 /* SceneDelegate.swift */,
+				BA1E5B322487AC210055A5F4 /* ViewController.swift */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -364,7 +364,7 @@
 				BA1E5B2F2487AC210055A5F4 /* AppDelegate.swift in Sources */,
 				BA66D67D24A6ECF000BE7273 /* TabBarController.swift in Sources */,
 				BA1E5B312487AC210055A5F4 /* SceneDelegate.swift in Sources */,
-				BA6C8DD524A71FF500340CA4 /* R.generated.swift in Sources */,
+				BA85A3FE24AB7F51003E6E85 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
