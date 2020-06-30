@@ -7,11 +7,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--学習-->
         <scene sceneID="5VZ-MK-b0N">
             <objects>
                 <navigationController id="1rv-da-v9e" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="dMp-9v-mYX"/>
+                    <tabBarItem key="tabBarItem" title="学習" image="study_tab_icon" id="dMp-9v-mYX" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5oT-w2-F8V">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -22,6 +22,7 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s2m-fA-V7N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="vKS-re-8lj" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
             <point key="canvasLocation" x="-248" y="104"/>
         </scene>
@@ -42,4 +43,7 @@
             <point key="canvasLocation" x="591" y="104"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="study_tab_icon" width="33" height="33"/>
+    </resources>
 </document>

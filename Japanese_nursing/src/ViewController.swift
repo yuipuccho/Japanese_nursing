@@ -12,15 +12,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("main")
-
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        test()
+        goToTabBar()
     }
 
-    func test() {
+    func goToTabBar() {
         AppBootstrap.goToMainTabVC()
 
         let vc = UIStoryboard(name: "Tabbar", bundle: nil).instantiateViewController(withIdentifier: "TabbarController")
@@ -31,8 +29,6 @@ class ViewController: UIViewController {
 
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: false)
-        print(123)
     }
-
 
 }

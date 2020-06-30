@@ -7,11 +7,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--マイページ-->
         <scene sceneID="Ami-f1-gv6">
             <objects>
                 <navigationController id="9t9-Cd-9Cf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="1nf-z1-hwh"/>
+                    <tabBarItem key="tabBarItem" title="マイページ" image="mypage_tab_icon" id="1nf-z1-hwh" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="evy-EN-0Qj">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -22,6 +22,7 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HN9-kj-iCA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="g27-dN-ehO" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
             <point key="canvasLocation" x="-620" y="-187"/>
         </scene>
@@ -42,4 +43,7 @@
             <point key="canvasLocation" x="151" y="-183"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mypage_tab_icon" width="33" height="33"/>
+    </resources>
 </document>
