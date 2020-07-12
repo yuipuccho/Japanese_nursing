@@ -13,9 +13,18 @@ struct AppBootstrap {
 
     fileprivate init () {}
 
+    static func boost() {
+        goToMainTabVC()
+    }
+
     static func goToMainTabVC() {
         let vc = UIStoryboard(name: "Tabbar", bundle: nil).instantiateViewController(withIdentifier: "TabbarController")
         let tab = vc as! TabBarController
+
+        // メインウィンドウのrootVCを更新
+        AppDelegate.appDelegate?.window?.rootViewController = tab
+        print("あああああ")
+        print(tab)
 
         // 学習タブ
         tab.selectedViewController = tab.firstVC

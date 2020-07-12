@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "study_tab_icon.png",
+      "filename" : "mypage_icon_inactive.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "mypage_icon_inactive@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "mypage_icon_inactive@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

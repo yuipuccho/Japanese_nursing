@@ -8,14 +8,55 @@
 
 import UIKit
 
+// MARK: - AppDelegate
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    static var appDelegate: AppDelegate? {
+        return UIApplication.shared.delegate as? AppDelegate
+    }
+
+    /// AppDelegate.appDelgate
+    static var shared: AppDelegate {
+        guard let app = UIApplication.shared.delegate as? AppDelegate else {
+            assertionFailure()
+            exit(0)
+        }
+        return app
+    }
+
+    var window: UIWindow?
+
+    open var splashWindow: UIWindow?
+
+    // MARK: - AppDelegate functions
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         sleep(2)
-        AppBootstrap.goToMainTabVC()
+
+        //setUpSplashView()
+
+        // アプリバックグラウンド時に表示するウィンドウ
+        let vc = UIViewController()
+        let view = UIView()
+        view.backgroundColor = .white
+        vc.view.addSubview(view)
+        //vc.view.allPin(subView: view)
+        //self.splashWindow = UIWindow.createNewWindow
+
+        AppBootstrap.boost()
+
         return true
+    }
+
+    func applicationWillResignActive(_ application: UIApplication) {
+        //self.splashWindow.open()
+    }
+
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        //self.splashWindow.close()
     }
 
     // MARK: UISceneSession Lifecycle
