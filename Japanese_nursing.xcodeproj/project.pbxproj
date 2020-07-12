@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6957F40151887726FC69D034 /* Pods_Japanese_nursing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B94643ECC484CCF846EA499 /* Pods_Japanese_nursing.framework */; };
+		BA133AC624BB28B80047E265 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA133AC524BB28B80047E265 /* Test.storyboard */; };
 		BA1E5B2F2487AC210055A5F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E5B2E2487AC210055A5F4 /* AppDelegate.swift */; };
 		BA1E5B312487AC210055A5F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E5B302487AC210055A5F4 /* SceneDelegate.swift */; };
 		BA1E5B332487AC210055A5F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E5B322487AC210055A5F4 /* ViewController.swift */; };
@@ -34,6 +35,7 @@
 		0B94643ECC484CCF846EA499 /* Pods_Japanese_nursing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Japanese_nursing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		649DB55D88B2F4BF768BCA11 /* Pods-Japanese_nursing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Japanese_nursing.release.xcconfig"; path = "Target Support Files/Pods-Japanese_nursing/Pods-Japanese_nursing.release.xcconfig"; sourceTree = "<group>"; };
 		6BF915CCD17BCD856D68A990 /* Pods-Japanese_nursing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Japanese_nursing.debug.xcconfig"; path = "Target Support Files/Pods-Japanese_nursing/Pods-Japanese_nursing.debug.xcconfig"; sourceTree = "<group>"; };
+		BA133AC524BB28B80047E265 /* Test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
 		BA1E5B2B2487AC210055A5F4 /* 介護の日本語.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "介護の日本語.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA1E5B2E2487AC210055A5F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA1E5B302487AC210055A5F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA133AC224BB28680047E265 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				BA133AC524BB28B80047E265 /* Test.storyboard */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		BA1E5B222487AC210055A5F4 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +171,7 @@
 			children = (
 				BA66D67524A6E70A00BE7273 /* Mypage */,
 				BAC4F7F024A6421F009ACEF3 /* Study */,
+				BA133AC224BB28680047E265 /* Test */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -283,6 +294,7 @@
 				BAC5904E249EECCF007D247B /* NotoSansCJKjpSub-Bold.otf in Resources */,
 				BA27FB35248CECDA002840B8 /* Colors.xcassets in Resources */,
 				BA1E5B3B2487AC250055A5F4 /* LaunchScreen.storyboard in Resources */,
+				BA133AC624BB28B80047E265 /* Test.storyboard in Resources */,
 				BAC5904D249EECCF007D247B /* NotoSansCJKjpSub-Regular.otf in Resources */,
 				BA1E5B382487AC250055A5F4 /* Assets.xcassets in Resources */,
 				BAC59051249EECCF007D247B /* NotoSansCJKjpSub-Light.otf in Resources */,

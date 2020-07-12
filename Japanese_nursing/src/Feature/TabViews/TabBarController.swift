@@ -13,7 +13,8 @@ extension UITabBarController {
     /// 各画面のタブ
     enum TabVCIndex: Int {
         case study = 0
-        case myPage = 1
+        case test = 1
+        case myPage = 2
     }
     
 }
