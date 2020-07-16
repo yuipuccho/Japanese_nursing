@@ -7,11 +7,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--マイページ-->
+        <!--Navigation Controller-->
         <scene sceneID="Ami-f1-gv6">
             <objects>
                 <navigationController id="9t9-Cd-9Cf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="マイページ" image="mypage_tab_icon" id="1nf-z1-hwh" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
+                    <tabBarItem key="tabBarItem" title="" image="mypage_icon_inactive" selectedImage="mypage_icon_active" id="1nf-z1-hwh" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="evy-EN-0Qj">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -44,6 +44,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="mypage_tab_icon" width="33" height="33"/>
+        <image name="mypage_icon_active" width="30" height="30"/>
+        <image name="mypage_icon_inactive" width="30" height="30"/>
     </resources>
 </document>

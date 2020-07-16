@@ -7,11 +7,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--学習-->
+        <!--Navigation Controller-->
         <scene sceneID="5VZ-MK-b0N">
             <objects>
                 <navigationController id="1rv-da-v9e" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="学習" image="study_tab_icon" id="dMp-9v-mYX" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
+                    <tabBarItem key="tabBarItem" title="" image="study_icon_inactive" selectedImage="study_icon_active" id="dMp-9v-mYX" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5oT-w2-F8V">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -44,6 +44,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="study_tab_icon" width="33" height="33"/>
+        <image name="study_icon_active" width="30" height="30"/>
+        <image name="study_icon_inactive" width="30" height="30"/>
     </resources>
 </document>

@@ -7,11 +7,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="aHw-fZ-R9m">
             <objects>
                 <navigationController id="SbY-jC-dqh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="eZT-Yt-pfk"/>
+                    <tabBarItem key="tabBarItem" title="" image="test_icon_inactive" selectedImage="test_icon_active" id="eZT-Yt-pfk"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pNB-7r-gVm">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -42,4 +42,8 @@
             <point key="canvasLocation" x="309" y="94"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="test_icon_active" width="30" height="30"/>
+        <image name="test_icon_inactive" width="30" height="30"/>
+    </resources>
 </document>

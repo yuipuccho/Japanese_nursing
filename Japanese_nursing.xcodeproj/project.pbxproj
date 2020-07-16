@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6957F40151887726FC69D034 /* Pods_Japanese_nursing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B94643ECC484CCF846EA499 /* Pods_Japanese_nursing.framework */; };
 		BA133AC624BB28B80047E265 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA133AC524BB28B80047E265 /* Test.storyboard */; };
+		BA133ACA24C04D850047E265 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA133AC924C04D850047E265 /* CustomTabBar.swift */; };
 		BA1E5B2F2487AC210055A5F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E5B2E2487AC210055A5F4 /* AppDelegate.swift */; };
 		BA1E5B312487AC210055A5F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E5B302487AC210055A5F4 /* SceneDelegate.swift */; };
 		BA1E5B332487AC210055A5F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E5B322487AC210055A5F4 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 		649DB55D88B2F4BF768BCA11 /* Pods-Japanese_nursing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Japanese_nursing.release.xcconfig"; path = "Target Support Files/Pods-Japanese_nursing/Pods-Japanese_nursing.release.xcconfig"; sourceTree = "<group>"; };
 		6BF915CCD17BCD856D68A990 /* Pods-Japanese_nursing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Japanese_nursing.debug.xcconfig"; path = "Target Support Files/Pods-Japanese_nursing/Pods-Japanese_nursing.debug.xcconfig"; sourceTree = "<group>"; };
 		BA133AC524BB28B80047E265 /* Test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
+		BA133AC924C04D850047E265 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		BA1E5B2B2487AC210055A5F4 /* 介護の日本語.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "介護の日本語.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA1E5B2E2487AC210055A5F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA1E5B302487AC210055A5F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 		BA66D67B24A6ECB300BE7273 /* TabViews */ = {
 			isa = PBXGroup;
 			children = (
+				BA133AC924C04D850047E265 /* CustomTabBar.swift */,
 				BA66D67C24A6ECF000BE7273 /* TabBarController.swift */,
 				BA66D67E24A6EE6C00BE7273 /* Tabbar.storyboard */,
 			);
@@ -373,6 +376,7 @@
 			files = (
 				BA66D67924A6E91500BE7273 /* AppBootstrap.swift in Sources */,
 				BA1E5B332487AC210055A5F4 /* ViewController.swift in Sources */,
+				BA133ACA24C04D850047E265 /* CustomTabBar.swift in Sources */,
 				BA1E5B2F2487AC210055A5F4 /* AppDelegate.swift in Sources */,
 				BA66D67D24A6ECF000BE7273 /* TabBarController.swift in Sources */,
 				BA1E5B312487AC210055A5F4 /* SceneDelegate.swift in Sources */,
