@@ -1,0 +1,24 @@
+PODS:
+  - R.swift (5.2.2):
+    - R.swift.Library (~> 5.2.0)
+  - R.swift.Library (5.2.0)
+  - RAMAnimatedTabBarController (5.2.0)
+
+DEPENDENCIES:
+  - R.swift
+  - RAMAnimatedTabBarController
+
+SPEC REPOS:
+  trunk:
+    - R.swift
+    - R.swift.Library
+    - RAMAnimatedTabBarController
+
+SPEC CHECKSUMS:
+  R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
+  R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
+  RAMAnimatedTabBarController: 6863a386e7ae2ab227cd60aa73ab8ff56cdacfdd
+
+PODFILE CHECKSUM: 98d0b905cdc751a50b4d9a39a7486c6e7bd808c1
+
+COCOAPODS: 1.9.1

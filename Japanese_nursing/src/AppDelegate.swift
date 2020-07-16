@@ -8,15 +8,45 @@
 
 import UIKit
 
+// MARK: - AppDelegate
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    static var appDelegate: AppDelegate? {
+        return UIApplication.shared.delegate as? AppDelegate
+    }
 
+    /// AppDelegate.appDelgate
+    static var shared: AppDelegate {
+        guard let app = UIApplication.shared.delegate as? AppDelegate else {
+            assertionFailure()
+            exit(0)
+        }
+        return app
+    }
+
+    var window: UIWindow?
+
+    open var splashWindow: UIWindow?
+
+    // MARK: - AppDelegate functions
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         sleep(2)
+
+        //AppBootstrap.boost()
+
         return true
+    }
+
+    func applicationWillResignActive(_ application: UIApplication) {
+        //self.splashWindow.open()
+    }
+
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        //self.splashWindow.close()
     }
 
     // MARK: UISceneSession Lifecycle
@@ -32,7 +62,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
 }
-

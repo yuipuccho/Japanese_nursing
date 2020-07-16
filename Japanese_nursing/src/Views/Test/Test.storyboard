@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SbY-jC-dqh">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="aHw-fZ-R9m">
+            <objects>
+                <navigationController id="SbY-jC-dqh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="test_icon_inactive" selectedImage="test_icon_active" id="eZT-Yt-pfk"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pNB-7r-gVm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="owY-yw-uEs" kind="relationship" relationship="rootViewController" id="Emb-gl-D98"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0t3-aJ-msn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-530" y="97"/>
+        </scene>
+        <!--テスト-->
+        <scene sceneID="gL5-0y-d81">
+            <objects>
+                <viewController id="owY-yw-uEs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YLZ-qb-IWb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="T7j-cc-9BE"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="テスト" id="4td-hZ-rSQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hzp-zz-9ff" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="309" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="test_icon_active" width="30" height="30"/>
+        <image name="test_icon_inactive" width="30" height="30"/>
+    </resources>
+</document>
