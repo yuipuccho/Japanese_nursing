@@ -26,17 +26,17 @@
             </objects>
             <point key="canvasLocation" x="-248" y="104"/>
         </scene>
-        <!--View Controller-->
+        <!--学習-->
         <scene sceneID="EMg-2Q-5FU">
             <objects>
                 <viewController id="9w6-BQ-s5y" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wYg-68-YWg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="X6F-rd-oEG"/>
                     </view>
-                    <navigationItem key="navigationItem" id="dPE-dE-g5N"/>
+                    <navigationItem key="navigationItem" title="学習" id="dPE-dE-g5N"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OAs-vX-6cR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

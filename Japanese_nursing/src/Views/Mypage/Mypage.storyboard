@@ -26,17 +26,17 @@
             </objects>
             <point key="canvasLocation" x="-620" y="-187"/>
         </scene>
-        <!--View Controller-->
+        <!--マイページ-->
         <scene sceneID="Rz9-Ag-KdO">
             <objects>
                 <viewController id="k32-Ol-2cH" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="htT-eu-QUw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="BWE-z8-TPh"/>
                     </view>
-                    <navigationItem key="navigationItem" id="sjt-7Q-GTo"/>
+                    <navigationItem key="navigationItem" title="マイページ" id="sjt-7Q-GTo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hh2-5y-Rde" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

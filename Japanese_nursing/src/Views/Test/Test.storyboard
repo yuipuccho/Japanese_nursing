@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-530" y="97"/>
         </scene>
-        <!--View Controller-->
+        <!--テスト-->
         <scene sceneID="gL5-0y-d81">
             <objects>
                 <viewController id="owY-yw-uEs" sceneMemberID="viewController">
@@ -35,7 +35,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="T7j-cc-9BE"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4td-hZ-rSQ"/>
+                    <navigationItem key="navigationItem" title="テスト" id="4td-hZ-rSQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzp-zz-9ff" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
