@@ -36,17 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         sleep(2)
 
-        //setUpSplashView()
-
-        // アプリバックグラウンド時に表示するウィンドウ
-        let vc = UIViewController()
-        let view = UIView()
-        view.backgroundColor = .white
-        vc.view.addSubview(view)
-        //vc.view.allPin(subView: view)
-        //self.splashWindow = UIWindow.createNewWindow
-
-        AppBootstrap.boost()
+        //AppBootstrap.boost()
 
         return true
     }

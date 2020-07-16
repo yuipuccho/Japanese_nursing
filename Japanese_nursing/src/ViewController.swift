@@ -19,8 +19,6 @@ class ViewController: UIViewController {
     }
 
     func goToTabBar() {
-        AppBootstrap.goToMainTabVC()
-
         let vc = UIStoryboard(name: "Tabbar", bundle: nil).instantiateViewController(withIdentifier: "TabbarController")
         let tab = vc as! TabBarController
 

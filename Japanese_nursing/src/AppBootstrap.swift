@@ -23,10 +23,9 @@ struct AppBootstrap {
 
         // メインウィンドウのrootVCを更新
         AppDelegate.appDelegate?.window?.rootViewController = tab
-        print("あああああ")
-        print(tab)
 
         // 学習タブ
         tab.selectedViewController = tab.firstVC
     }
+
 }
