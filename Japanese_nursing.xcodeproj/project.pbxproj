@@ -22,6 +22,16 @@
 		BA66D67F24A6EE6C00BE7273 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA66D67E24A6EE6C00BE7273 /* Tabbar.storyboard */; };
 		BA66D68124A6EFFD00BE7273 /* Mypage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA66D68024A6EFFD00BE7273 /* Mypage.storyboard */; };
 		BA85A3FE24AB7F51003E6E85 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85A3FD24AB7F51003E6E85 /* R.generated.swift */; };
+		BAA3D8A324C47F5300157FF2 /* .Tabman.version in Resources */ = {isa = PBXBuildFile; fileRef = BAA3D89424C47F5300157FF2 /* .Tabman.version */; };
+		BAA3D8A424C47F5300157FF2 /* A14ED56A-4404-3106-911D-85EFBA2B8B3D.bcsymbolmap in Resources */ = {isa = PBXBuildFile; fileRef = BAA3D89624C47F5300157FF2 /* A14ED56A-4404-3106-911D-85EFBA2B8B3D.bcsymbolmap */; };
+		BAA3D8A524C47F5300157FF2 /* F56491EC-3ACC-3E29-9796-2201A2E7ED9B.bcsymbolmap in Resources */ = {isa = PBXBuildFile; fileRef = BAA3D89724C47F5300157FF2 /* F56491EC-3ACC-3E29-9796-2201A2E7ED9B.bcsymbolmap */; };
+		BAA3D8A624C47F5300157FF2 /* Tabman.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = BAA3D89824C47F5300157FF2 /* Tabman.framework.dSYM */; };
+		BAA3D8A724C47F5300157FF2 /* Pageboy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA3D89924C47F5300157FF2 /* Pageboy.framework */; };
+		BAA3D8A824C47F5300157FF2 /* Pageboy.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = BAA3D89A24C47F5300157FF2 /* Pageboy.framework.dSYM */; };
+		BAA3D8A924C47F5300157FF2 /* Tabman.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA3D89B24C47F5300157FF2 /* Tabman.framework */; };
+		BAA3D8AA24C47F5300157FF2 /* 2EA27B49-3C30-3681-A849-B5B21EFAD9F3.bcsymbolmap in Resources */ = {isa = PBXBuildFile; fileRef = BAA3D89C24C47F5300157FF2 /* 2EA27B49-3C30-3681-A849-B5B21EFAD9F3.bcsymbolmap */; };
+		BAA3D8AB24C47F5300157FF2 /* B52CF898-7634-368D-AB0F-C2841A231B48.bcsymbolmap in Resources */ = {isa = PBXBuildFile; fileRef = BAA3D89D24C47F5300157FF2 /* B52CF898-7634-368D-AB0F-C2841A231B48.bcsymbolmap */; };
+		BAA3D8AF24C47F5300157FF2 /* .Pageboy.version in Resources */ = {isa = PBXBuildFile; fileRef = BAA3D8A224C47F5300157FF2 /* .Pageboy.version */; };
 		BAC4F7FD24A6E4C5009ACEF3 /* Study.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC4F7FC24A6E4C5009ACEF3 /* Study.storyboard */; };
 		BAC5904C249EECCF007D247B /* NotoSansCJKjpSub-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAC59045249EECCF007D247B /* NotoSansCJKjpSub-Black.otf */; };
 		BAC5904D249EECCF007D247B /* NotoSansCJKjpSub-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAC59046249EECCF007D247B /* NotoSansCJKjpSub-Regular.otf */; };
@@ -31,6 +41,19 @@
 		BAC59051249EECCF007D247B /* NotoSansCJKjpSub-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAC5904A249EECCF007D247B /* NotoSansCJKjpSub-Light.otf */; };
 		BAC59052249EECCF007D247B /* NotoSansCJKjpSub-DemiLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAC5904B249EECCF007D247B /* NotoSansCJKjpSub-DemiLight.otf */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BAA3D88D24C47D5100157FF2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0B94643ECC484CCF846EA499 /* Pods_Japanese_nursing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Japanese_nursing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +75,16 @@
 		BA66D67E24A6EE6C00BE7273 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
 		BA66D68024A6EFFD00BE7273 /* Mypage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mypage.storyboard; sourceTree = "<group>"; };
 		BA85A3FD24AB7F51003E6E85 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		BAA3D89424C47F5300157FF2 /* .Tabman.version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .Tabman.version; sourceTree = "<group>"; };
+		BAA3D89624C47F5300157FF2 /* A14ED56A-4404-3106-911D-85EFBA2B8B3D.bcsymbolmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "A14ED56A-4404-3106-911D-85EFBA2B8B3D.bcsymbolmap"; sourceTree = "<group>"; };
+		BAA3D89724C47F5300157FF2 /* F56491EC-3ACC-3E29-9796-2201A2E7ED9B.bcsymbolmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "F56491EC-3ACC-3E29-9796-2201A2E7ED9B.bcsymbolmap"; sourceTree = "<group>"; };
+		BAA3D89824C47F5300157FF2 /* Tabman.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = Tabman.framework.dSYM; sourceTree = "<group>"; };
+		BAA3D89924C47F5300157FF2 /* Pageboy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pageboy.framework; sourceTree = "<group>"; };
+		BAA3D89A24C47F5300157FF2 /* Pageboy.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = Pageboy.framework.dSYM; sourceTree = "<group>"; };
+		BAA3D89B24C47F5300157FF2 /* Tabman.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Tabman.framework; sourceTree = "<group>"; };
+		BAA3D89C24C47F5300157FF2 /* 2EA27B49-3C30-3681-A849-B5B21EFAD9F3.bcsymbolmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2EA27B49-3C30-3681-A849-B5B21EFAD9F3.bcsymbolmap"; sourceTree = "<group>"; };
+		BAA3D89D24C47F5300157FF2 /* B52CF898-7634-368D-AB0F-C2841A231B48.bcsymbolmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "B52CF898-7634-368D-AB0F-C2841A231B48.bcsymbolmap"; sourceTree = "<group>"; };
+		BAA3D8A224C47F5300157FF2 /* .Pageboy.version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .Pageboy.version; sourceTree = "<group>"; };
 		BAC4F7FC24A6E4C5009ACEF3 /* Study.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Study.storyboard; sourceTree = "<group>"; };
 		BAC59045249EECCF007D247B /* NotoSansCJKjpSub-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKjpSub-Black.otf"; sourceTree = "<group>"; };
 		BAC59046249EECCF007D247B /* NotoSansCJKjpSub-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKjpSub-Regular.otf"; sourceTree = "<group>"; };
@@ -67,6 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAA3D8A724C47F5300157FF2 /* Pageboy.framework in Frameworks */,
+				BAA3D8A924C47F5300157FF2 /* Tabman.framework in Frameworks */,
 				6957F40151887726FC69D034 /* Pods_Japanese_nursing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,6 +189,32 @@
 			path = TabViews;
 			sourceTree = "<group>";
 		};
+		BAA3D89324C47F5300157FF2 /* Build */ = {
+			isa = PBXGroup;
+			children = (
+				BAA3D8A224C47F5300157FF2 /* .Pageboy.version */,
+				BAA3D89424C47F5300157FF2 /* .Tabman.version */,
+				BAA3D89524C47F5300157FF2 /* iOS */,
+			);
+			name = Build;
+			path = Carthage/Build;
+			sourceTree = "<group>";
+		};
+		BAA3D89524C47F5300157FF2 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				BAA3D89624C47F5300157FF2 /* A14ED56A-4404-3106-911D-85EFBA2B8B3D.bcsymbolmap */,
+				BAA3D89724C47F5300157FF2 /* F56491EC-3ACC-3E29-9796-2201A2E7ED9B.bcsymbolmap */,
+				BAA3D89824C47F5300157FF2 /* Tabman.framework.dSYM */,
+				BAA3D89924C47F5300157FF2 /* Pageboy.framework */,
+				BAA3D89A24C47F5300157FF2 /* Pageboy.framework.dSYM */,
+				BAA3D89B24C47F5300157FF2 /* Tabman.framework */,
+				BAA3D89C24C47F5300157FF2 /* 2EA27B49-3C30-3681-A849-B5B21EFAD9F3.bcsymbolmap */,
+				BAA3D89D24C47F5300157FF2 /* B52CF898-7634-368D-AB0F-C2841A231B48.bcsymbolmap */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
 		BAC4F7ED24A641FF009ACEF3 /* src */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +283,7 @@
 		C87E173A7739EAF8084E6F1B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BAA3D89324C47F5300157FF2 /* Build */,
 				0B94643ECC484CCF846EA499 /* Pods_Japanese_nursing.framework */,
 			);
 			name = Frameworks;
@@ -236,10 +298,12 @@
 			buildPhases = (
 				59D9974B6B618D168FD8E426 /* [CP] Check Pods Manifest.lock */,
 				BA66D68224A71BCE00BE7273 /* ShellScript */,
+				BAA3D89124C47DEE00157FF2 /* [Carthage] Run Script */,
 				BA1E5B272487AC210055A5F4 /* Sources */,
 				BA1E5B282487AC210055A5F4 /* Frameworks */,
 				BA1E5B292487AC210055A5F4 /* Resources */,
 				4E8D98E990CAFCF93E941BA6 /* [CP] Embed Pods Frameworks */,
+				BAA3D88D24C47D5100157FF2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -288,15 +352,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAA3D8A824C47F5300157FF2 /* Pageboy.framework.dSYM in Resources */,
+				BAA3D8A424C47F5300157FF2 /* A14ED56A-4404-3106-911D-85EFBA2B8B3D.bcsymbolmap in Resources */,
 				BAC4F7FD24A6E4C5009ACEF3 /* Study.storyboard in Resources */,
+				BAA3D8A524C47F5300157FF2 /* F56491EC-3ACC-3E29-9796-2201A2E7ED9B.bcsymbolmap in Resources */,
 				BA66D68124A6EFFD00BE7273 /* Mypage.storyboard in Resources */,
+				BAA3D8AF24C47F5300157FF2 /* .Pageboy.version in Resources */,
 				BAC5904C249EECCF007D247B /* NotoSansCJKjpSub-Black.otf in Resources */,
 				BA66D67F24A6EE6C00BE7273 /* Tabbar.storyboard in Resources */,
+				BAA3D8A324C47F5300157FF2 /* .Tabman.version in Resources */,
 				BAC5904F249EECCF007D247B /* NotoSansCJKjpSub-Thin.otf in Resources */,
 				BA66D67724A6E77F00BE7273 /* Main.storyboard in Resources */,
 				BAC5904E249EECCF007D247B /* NotoSansCJKjpSub-Bold.otf in Resources */,
+				BAA3D8AB24C47F5300157FF2 /* B52CF898-7634-368D-AB0F-C2841A231B48.bcsymbolmap in Resources */,
+				BAA3D8AA24C47F5300157FF2 /* 2EA27B49-3C30-3681-A849-B5B21EFAD9F3.bcsymbolmap in Resources */,
 				BA27FB35248CECDA002840B8 /* Colors.xcassets in Resources */,
 				BA1E5B3B2487AC250055A5F4 /* LaunchScreen.storyboard in Resources */,
+				BAA3D8A624C47F5300157FF2 /* Tabman.framework.dSYM in Resources */,
 				BA133AC624BB28B80047E265 /* Test.storyboard in Resources */,
 				BAC5904D249EECCF007D247B /* NotoSansCJKjpSub-Regular.otf in Resources */,
 				BA1E5B382487AC250055A5F4 /* Assets.xcassets in Resources */,
@@ -366,6 +438,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		BAA3D89124C47DEE00157FF2 /* [Carthage] Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)//Carthage/Build/iOS/Tabman.framework",
+				"$(SRCROOT)//Carthage/Build/iOS/Pageboy.framework",
+			);
+			name = "[Carthage] Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -518,6 +610,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = Japanese_nursing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -536,6 +633,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = Japanese_nursing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
