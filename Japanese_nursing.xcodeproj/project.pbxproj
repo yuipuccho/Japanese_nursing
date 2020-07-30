@@ -18,6 +18,12 @@
 		BA27FB35248CECDA002840B8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA27FB34248CECDA002840B8 /* Colors.xcassets */; };
 		BA5EACD624D261F50008E2D0 /* Pageboy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA3D89924C47F5300157FF2 /* Pageboy.framework */; };
 		BA5EACD824D262050008E2D0 /* Tabman.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA3D89B24C47F5300157FF2 /* Tabman.framework */; };
+		BA5EACDB24D2A5BF0008E2D0 /* StudyTabContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5EACDA24D2A5BF0008E2D0 /* StudyTabContainerViewController.swift */; };
+		BA5EACDF24D2AC320008E2D0 /* StudyTabContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5EACDE24D2AC320008E2D0 /* StudyTabContainerViewModel.swift */; };
+		BA5EACE324D2AF8F0008E2D0 /* InProgressListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5EACE224D2AF8F0008E2D0 /* InProgressListViewController.swift */; };
+		BA5EACE624D2B00C0008E2D0 /* InProgressList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5EACE524D2B00C0008E2D0 /* InProgressList.storyboard */; };
+		BA5EACE824D2B2750008E2D0 /* CompletionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5EACE724D2B2750008E2D0 /* CompletionListViewController.swift */; };
+		BA5EACEA24D2B2840008E2D0 /* CompletionList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5EACE924D2B2840008E2D0 /* CompletionList.storyboard */; };
 		BA66D67724A6E77F00BE7273 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA66D67624A6E77F00BE7273 /* Main.storyboard */; };
 		BA66D67924A6E91500BE7273 /* AppBootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA66D67824A6E91500BE7273 /* AppBootstrap.swift */; };
 		BA66D67D24A6ECF000BE7273 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA66D67C24A6ECF000BE7273 /* TabBarController.swift */; };
@@ -54,6 +60,12 @@
 		BA1E5B3A2487AC250055A5F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA1E5B3C2487AC250055A5F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BA27FB34248CECDA002840B8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		BA5EACDA24D2A5BF0008E2D0 /* StudyTabContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyTabContainerViewController.swift; sourceTree = "<group>"; };
+		BA5EACDE24D2AC320008E2D0 /* StudyTabContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyTabContainerViewModel.swift; sourceTree = "<group>"; };
+		BA5EACE224D2AF8F0008E2D0 /* InProgressListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InProgressListViewController.swift; sourceTree = "<group>"; };
+		BA5EACE524D2B00C0008E2D0 /* InProgressList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InProgressList.storyboard; sourceTree = "<group>"; };
+		BA5EACE724D2B2750008E2D0 /* CompletionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionListViewController.swift; sourceTree = "<group>"; };
+		BA5EACE924D2B2840008E2D0 /* CompletionList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompletionList.storyboard; sourceTree = "<group>"; };
 		BA66D67624A6E77F00BE7273 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BA66D67824A6E91500BE7273 /* AppBootstrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBootstrap.swift; sourceTree = "<group>"; };
 		BA66D67C24A6ECF000BE7273 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -146,6 +158,42 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		BA5EACDC24D2ABFE0008E2D0 /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BA5EACDD24D2AC150008E2D0 /* Study */,
+			);
+			path = viewModels;
+			sourceTree = "<group>";
+		};
+		BA5EACDD24D2AC150008E2D0 /* Study */ = {
+			isa = PBXGroup;
+			children = (
+				BA5EACE124D2AF5A0008E2D0 /* CompletionList */,
+				BA5EACE024D2AEF30008E2D0 /* InProgressList */,
+				BA5EACDE24D2AC320008E2D0 /* StudyTabContainerViewModel.swift */,
+			);
+			path = Study;
+			sourceTree = "<group>";
+		};
+		BA5EACE024D2AEF30008E2D0 /* InProgressList */ = {
+			isa = PBXGroup;
+			children = (
+				BA5EACE224D2AF8F0008E2D0 /* InProgressListViewController.swift */,
+				BA5EACE524D2B00C0008E2D0 /* InProgressList.storyboard */,
+			);
+			path = InProgressList;
+			sourceTree = "<group>";
+		};
+		BA5EACE124D2AF5A0008E2D0 /* CompletionList */ = {
+			isa = PBXGroup;
+			children = (
+				BA5EACE724D2B2750008E2D0 /* CompletionListViewController.swift */,
+				BA5EACE924D2B2840008E2D0 /* CompletionList.storyboard */,
+			);
+			path = CompletionList;
+			sourceTree = "<group>";
+		};
 		BA66D67524A6E70A00BE7273 /* Mypage */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +247,7 @@
 		BAC4F7ED24A641FF009ACEF3 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				BA5EACDC24D2ABFE0008E2D0 /* viewModels */,
 				BAC4F7EE24A64211009ACEF3 /* Views */,
 				BA66D67A24A6EC9C00BE7273 /* Feature */,
 				BA66D67824A6E91500BE7273 /* AppBootstrap.swift */,
@@ -225,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				BAC4F7FC24A6E4C5009ACEF3 /* Study.storyboard */,
+				BA5EACDA24D2A5BF0008E2D0 /* StudyTabContainerViewController.swift */,
 			);
 			path = Study;
 			sourceTree = "<group>";
@@ -332,6 +382,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA5EACEA24D2B2840008E2D0 /* CompletionList.storyboard in Resources */,
 				BAA3D8A824C47F5300157FF2 /* Pageboy.framework.dSYM in Resources */,
 				BAA3D8A424C47F5300157FF2 /* A14ED56A-4404-3106-911D-85EFBA2B8B3D.bcsymbolmap in Resources */,
 				BAC4F7FD24A6E4C5009ACEF3 /* Study.storyboard in Resources */,
@@ -346,6 +397,7 @@
 				BAC5904E249EECCF007D247B /* NotoSansCJKjpSub-Bold.otf in Resources */,
 				BA27FB35248CECDA002840B8 /* Colors.xcassets in Resources */,
 				BA1E5B3B2487AC250055A5F4 /* LaunchScreen.storyboard in Resources */,
+				BA5EACE624D2B00C0008E2D0 /* InProgressList.storyboard in Resources */,
 				BAA3D8A624C47F5300157FF2 /* Tabman.framework.dSYM in Resources */,
 				BA133AC624BB28B80047E265 /* Test.storyboard in Resources */,
 				BAC5904D249EECCF007D247B /* NotoSansCJKjpSub-Regular.otf in Resources */,
@@ -448,11 +500,15 @@
 			files = (
 				BA66D67924A6E91500BE7273 /* AppBootstrap.swift in Sources */,
 				BA1E5B332487AC210055A5F4 /* ViewController.swift in Sources */,
+				BA5EACE324D2AF8F0008E2D0 /* InProgressListViewController.swift in Sources */,
+				BA5EACDB24D2A5BF0008E2D0 /* StudyTabContainerViewController.swift in Sources */,
 				BA133ACA24C04D850047E265 /* CustomTabBar.swift in Sources */,
 				BA1E5B2F2487AC210055A5F4 /* AppDelegate.swift in Sources */,
 				BA66D67D24A6ECF000BE7273 /* TabBarController.swift in Sources */,
 				BA1E5B312487AC210055A5F4 /* SceneDelegate.swift in Sources */,
+				BA5EACE824D2B2750008E2D0 /* CompletionListViewController.swift in Sources */,
 				BA85A3FE24AB7F51003E6E85 /* R.generated.swift in Sources */,
+				BA5EACDF24D2AC320008E2D0 /* StudyTabContainerViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
