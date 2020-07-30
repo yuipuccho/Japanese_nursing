@@ -19,7 +19,7 @@ class StudyTabContainerViewController: TabmanViewController {
 
     // MARK: - viewModel
 
-
+    lazy var viewModel: StudyTabContainerViewModelProtocol = StudyTabContainerViewModel()
 
     // MARK: - Properties
 

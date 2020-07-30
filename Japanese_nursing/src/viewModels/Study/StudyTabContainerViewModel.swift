@@ -29,7 +29,8 @@ class StudyTabContainerViewModel: StudyTabContainerViewModelProtocol {
 
     /// タブ内のViewController
     let viewControllers: [UIViewController] = [
-
+        InProgressListViewController.makeInstance(),
+        CompletionListViewController.makeInstance()
     ]
 
     /// タブ表示文字列

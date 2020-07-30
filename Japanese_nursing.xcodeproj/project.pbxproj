@@ -22,6 +22,8 @@
 		BA5EACDF24D2AC320008E2D0 /* StudyTabContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5EACDE24D2AC320008E2D0 /* StudyTabContainerViewModel.swift */; };
 		BA5EACE324D2AF8F0008E2D0 /* InProgressListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5EACE224D2AF8F0008E2D0 /* InProgressListViewController.swift */; };
 		BA5EACE624D2B00C0008E2D0 /* InProgressList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5EACE524D2B00C0008E2D0 /* InProgressList.storyboard */; };
+		BA5EACE824D2B2750008E2D0 /* CompletionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5EACE724D2B2750008E2D0 /* CompletionListViewController.swift */; };
+		BA5EACEA24D2B2840008E2D0 /* CompletionList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5EACE924D2B2840008E2D0 /* CompletionList.storyboard */; };
 		BA66D67724A6E77F00BE7273 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA66D67624A6E77F00BE7273 /* Main.storyboard */; };
 		BA66D67924A6E91500BE7273 /* AppBootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA66D67824A6E91500BE7273 /* AppBootstrap.swift */; };
 		BA66D67D24A6ECF000BE7273 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA66D67C24A6ECF000BE7273 /* TabBarController.swift */; };
@@ -62,6 +64,8 @@
 		BA5EACDE24D2AC320008E2D0 /* StudyTabContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyTabContainerViewModel.swift; sourceTree = "<group>"; };
 		BA5EACE224D2AF8F0008E2D0 /* InProgressListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InProgressListViewController.swift; sourceTree = "<group>"; };
 		BA5EACE524D2B00C0008E2D0 /* InProgressList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InProgressList.storyboard; sourceTree = "<group>"; };
+		BA5EACE724D2B2750008E2D0 /* CompletionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionListViewController.swift; sourceTree = "<group>"; };
+		BA5EACE924D2B2840008E2D0 /* CompletionList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompletionList.storyboard; sourceTree = "<group>"; };
 		BA66D67624A6E77F00BE7273 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BA66D67824A6E91500BE7273 /* AppBootstrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBootstrap.swift; sourceTree = "<group>"; };
 		BA66D67C24A6ECF000BE7273 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -184,6 +188,8 @@
 		BA5EACE124D2AF5A0008E2D0 /* CompletionList */ = {
 			isa = PBXGroup;
 			children = (
+				BA5EACE724D2B2750008E2D0 /* CompletionListViewController.swift */,
+				BA5EACE924D2B2840008E2D0 /* CompletionList.storyboard */,
 			);
 			path = CompletionList;
 			sourceTree = "<group>";
@@ -376,6 +382,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA5EACEA24D2B2840008E2D0 /* CompletionList.storyboard in Resources */,
 				BAA3D8A824C47F5300157FF2 /* Pageboy.framework.dSYM in Resources */,
 				BAA3D8A424C47F5300157FF2 /* A14ED56A-4404-3106-911D-85EFBA2B8B3D.bcsymbolmap in Resources */,
 				BAC4F7FD24A6E4C5009ACEF3 /* Study.storyboard in Resources */,
@@ -499,6 +506,7 @@
 				BA1E5B2F2487AC210055A5F4 /* AppDelegate.swift in Sources */,
 				BA66D67D24A6ECF000BE7273 /* TabBarController.swift in Sources */,
 				BA1E5B312487AC210055A5F4 /* SceneDelegate.swift in Sources */,
+				BA5EACE824D2B2750008E2D0 /* CompletionListViewController.swift in Sources */,
 				BA85A3FE24AB7F51003E6E85 /* R.generated.swift in Sources */,
 				BA5EACDF24D2AC320008E2D0 /* StudyTabContainerViewModel.swift in Sources */,
 			);
