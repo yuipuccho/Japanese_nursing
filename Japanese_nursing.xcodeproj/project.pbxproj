@@ -161,9 +161,17 @@
 		BA5EACDD24D2AC150008E2D0 /* Study */ = {
 			isa = PBXGroup;
 			children = (
+				BA5EACE024D2AEF30008E2D0 /* InProgressList */,
 				BA5EACDE24D2AC320008E2D0 /* StudyTabContainerViewModel.swift */,
 			);
 			path = Study;
+			sourceTree = "<group>";
+		};
+		BA5EACE024D2AEF30008E2D0 /* InProgressList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = InProgressList;
 			sourceTree = "<group>";
 		};
 		BA66D67524A6E70A00BE7273 /* Mypage */ = {
