@@ -27,6 +27,7 @@
 		BA5EACEC24D2E34D0008E2D0 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5EACEB24D2E34D0008E2D0 /* RxSwift.framework */; };
 		BA5EACF024D2E3990008E2D0 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5EACEF24D2E3990008E2D0 /* RxCocoa.framework */; };
 		BA5EACF424D2E3C50008E2D0 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5EACF324D2E3C50008E2D0 /* RxRelay.framework */; };
+		BA5EACFB24D2F46B0008E2D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA5EACFA24D2F46A0008E2D0 /* GoogleService-Info.plist */; };
 		BA66D67724A6E77F00BE7273 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA66D67624A6E77F00BE7273 /* Main.storyboard */; };
 		BA66D67924A6E91500BE7273 /* AppBootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA66D67824A6E91500BE7273 /* AppBootstrap.swift */; };
 		BA66D67D24A6ECF000BE7273 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA66D67C24A6ECF000BE7273 /* TabBarController.swift */; };
@@ -72,6 +73,7 @@
 		BA5EACEB24D2E34D0008E2D0 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		BA5EACEF24D2E3990008E2D0 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		BA5EACF324D2E3C50008E2D0 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		BA5EACFA24D2F46A0008E2D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../paters_iOS/paters_ios/paters/Supporting Files/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BA66D67624A6E77F00BE7273 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BA66D67824A6E91500BE7273 /* AppBootstrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBootstrap.swift; sourceTree = "<group>"; };
 		BA66D67C24A6ECF000BE7273 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 		BAC4F7F124A642FB009ACEF3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BA5EACFA24D2F46A0008E2D0 /* GoogleService-Info.plist */,
 				BA1E5B3C2487AC250055A5F4 /* Info.plist */,
 				BA1E5B392487AC250055A5F4 /* LaunchScreen.storyboard */,
 			);
@@ -396,6 +399,7 @@
 			files = (
 				BA5EACEA24D2B2840008E2D0 /* CompletionList.storyboard in Resources */,
 				BAA3D8A824C47F5300157FF2 /* Pageboy.framework.dSYM in Resources */,
+				BA5EACFB24D2F46B0008E2D0 /* GoogleService-Info.plist in Resources */,
 				BAA3D8A424C47F5300157FF2 /* A14ED56A-4404-3106-911D-85EFBA2B8B3D.bcsymbolmap in Resources */,
 				BAC4F7FD24A6E4C5009ACEF3 /* Study.storyboard in Resources */,
 				BAA3D8A524C47F5300157FF2 /* F56491EC-3ACC-3E29-9796-2201A2E7ED9B.bcsymbolmap in Resources */,
