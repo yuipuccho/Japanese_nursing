@@ -14,7 +14,19 @@
                     <view key="view" contentMode="scaleToFill" id="PTu-hd-8wq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="修了" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHb-0D-XDX">
+                                <rect key="frame" x="189.5" y="437.5" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WHb-0D-XDX" firstAttribute="centerX" secondItem="PTu-hd-8wq" secondAttribute="centerX" id="qjA-CB-hkX"/>
+                            <constraint firstItem="WHb-0D-XDX" firstAttribute="centerY" secondItem="PTu-hd-8wq" secondAttribute="centerY" id="sKa-qd-KUA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="KCS-dq-KGI"/>
                     </view>
                 </viewController>
