@@ -201,6 +201,13 @@
 			path = CompletionList;
 			sourceTree = "<group>";
 		};
+		BA5EAD0824D3DEF30008E2D0 /* ViewForCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewForCell;
+			sourceTree = "<group>";
+		};
 		BA66D67524A6E70A00BE7273 /* Mypage */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +289,7 @@
 			children = (
 				BA5EACE124D2AF5A0008E2D0 /* CompletionList */,
 				BA5EACE024D2AEF30008E2D0 /* InProgressList */,
+				BA5EAD0824D3DEF30008E2D0 /* ViewForCell */,
 				BAC4F7FC24A6E4C5009ACEF3 /* Study.storyboard */,
 				BA5EACDA24D2A5BF0008E2D0 /* StudyTabContainerViewController.swift */,
 			);
