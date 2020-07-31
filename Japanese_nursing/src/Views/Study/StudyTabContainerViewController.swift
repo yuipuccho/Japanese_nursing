@@ -29,13 +29,13 @@ class StudyTabContainerViewController: TabmanViewController {
     /// 表示内容一覧
     private enum Content {
         // 学習中
-        case imProgress
+        case inProgress
         // 修了
         case completion
     }
 
     /// 現在表示している内容
-    private var content: Content = .imProgress
+    private var content: Content = .inProgress
 
     // MARK: - LifeCycle
 

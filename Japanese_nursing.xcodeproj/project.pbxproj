@@ -178,8 +178,6 @@
 		BA5EACDD24D2AC150008E2D0 /* Study */ = {
 			isa = PBXGroup;
 			children = (
-				BA5EACE124D2AF5A0008E2D0 /* CompletionList */,
-				BA5EACE024D2AEF30008E2D0 /* InProgressList */,
 				BA5EACDE24D2AC320008E2D0 /* StudyTabContainerViewModel.swift */,
 			);
 			path = Study;
@@ -282,6 +280,8 @@
 		BAC4F7F024A6421F009ACEF3 /* Study */ = {
 			isa = PBXGroup;
 			children = (
+				BA5EACE124D2AF5A0008E2D0 /* CompletionList */,
+				BA5EACE024D2AEF30008E2D0 /* InProgressList */,
 				BAC4F7FC24A6E4C5009ACEF3 /* Study.storyboard */,
 				BA5EACDA24D2A5BF0008E2D0 /* StudyTabContainerViewController.swift */,
 			);

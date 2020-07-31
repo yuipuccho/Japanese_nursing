@@ -23,7 +23,7 @@ protocol StudyTabContainerViewModelProtocol {
 }
 
 /**
-* 学習タブ画面ViewModel対応Protocol
+* 学習タブ画面ViewModel
 */
 class StudyTabContainerViewModel: StudyTabContainerViewModelProtocol {
 
