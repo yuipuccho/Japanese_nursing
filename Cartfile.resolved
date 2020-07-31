@@ -1,3 +1,6 @@
+binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseAuthBinary.json" "6.29.0"
+binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseFirestoreBinary.json" "6.29.0"
+binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseStorageBinary.json" "6.29.0"
 github "ReactiveX/RxSwift" "5.1.1"
 github "uias/Pageboy" "3.6.1"
 github "uias/Tabman" "2.9.1"
