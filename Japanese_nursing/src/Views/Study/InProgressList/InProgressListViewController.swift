@@ -16,7 +16,7 @@ class InProgressListViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 5
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -33,8 +33,6 @@ class InProgressListViewController: UITableViewController {
 //    private func setupDataSource() {
 //        //let dataSource =
 //    }
-
-
 
 }
 

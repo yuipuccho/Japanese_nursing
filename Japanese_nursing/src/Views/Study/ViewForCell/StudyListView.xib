@@ -135,6 +135,13 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="bookMarksCountLabel" destination="N59-bc-8Cp" id="oYF-U4-MGC"/>
+                <outlet property="checkMarkPercentageLabel" destination="ojG-Gn-lIf" id="Gib-Gx-UN4"/>
+                <outlet property="startButton" destination="sTR-4N-SKU" id="IHP-ML-rgJ"/>
+                <outlet property="unitTitleLabel" destination="7FG-ZE-hNu" id="bVA-iB-awd"/>
+                <outlet property="wordsCountLabel" destination="1G9-pQ-7Yo" id="8OP-xt-QVt"/>
+            </connections>
             <point key="canvasLocation" x="130.40000000000001" y="464.16791604197903"/>
         </view>
     </objects>
