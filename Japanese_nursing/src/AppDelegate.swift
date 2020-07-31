@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 // MARK: - AppDelegate
 
@@ -36,6 +38,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         sleep(2)
 
+        // Firebase
+        FirebaseApp.configure()
+        Auth.auth().signInAnonymously { (authResult, error) in
+           if error != nil{
+               print("Auth Error :\(error!.localizedDescription)")
+           }
+
+            // 認証情報の取得
+            guard let user = authResult?.user else { return }
+            let isAnonymous = user.isAnonymous  // true
+            let uid = user.uid
+           return
+       }
         //AppBootstrap.boost()
 
         return true
