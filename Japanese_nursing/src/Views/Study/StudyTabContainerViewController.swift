@@ -23,9 +23,6 @@ class StudyTabContainerViewController: TabmanViewController {
 
     // MARK: - Properties
 
-    /// タブ高さ
-    private let tabHeight: CGFloat = 36
-
     /// 表示内容一覧
     private enum Content {
         // 学習中
@@ -72,6 +69,7 @@ class StudyTabContainerViewController: TabmanViewController {
         }
         addBar(bar, dataSource: self, at: .top)
     }
+
 }
 
 extension StudyTabContainerViewController: PageboyViewControllerDataSource, TMBarDataSource {
