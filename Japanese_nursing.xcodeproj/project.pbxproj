@@ -12,7 +12,6 @@
 		BA133ACA24C04D850047E265 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA133AC924C04D850047E265 /* CustomTabBar.swift */; };
 		BA1E5B2F2487AC210055A5F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E5B2E2487AC210055A5F4 /* AppDelegate.swift */; };
 		BA1E5B312487AC210055A5F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E5B302487AC210055A5F4 /* SceneDelegate.swift */; };
-		BA1E5B332487AC210055A5F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E5B322487AC210055A5F4 /* ViewController.swift */; };
 		BA1E5B382487AC250055A5F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA1E5B372487AC250055A5F4 /* Assets.xcassets */; };
 		BA1E5B3B2487AC250055A5F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1E5B392487AC250055A5F4 /* LaunchScreen.storyboard */; };
 		BA27FB35248CECDA002840B8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA27FB34248CECDA002840B8 /* Colors.xcassets */; };
@@ -40,7 +39,6 @@
 		BA5EAD4524D452400008E2D0 /* leveldb-library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5EAD4224D452400008E2D0 /* leveldb-library.framework */; };
 		BA5EAD4824D4526A0008E2D0 /* gRPCCertificates-Cpp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BA5EAD4724D4526A0008E2D0 /* gRPCCertificates-Cpp.bundle */; };
 		BA5EAD4C24D453520008E2D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA5EAD4B24D453520008E2D0 /* GoogleService-Info.plist */; };
-		BA66D67724A6E77F00BE7273 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA66D67624A6E77F00BE7273 /* Main.storyboard */; };
 		BA66D67924A6E91500BE7273 /* AppBootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA66D67824A6E91500BE7273 /* AppBootstrap.swift */; };
 		BA66D67D24A6ECF000BE7273 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA66D67C24A6ECF000BE7273 /* TabBarController.swift */; };
 		BA66D67F24A6EE6C00BE7273 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA66D67E24A6EE6C00BE7273 /* Tabbar.storyboard */; };
@@ -71,10 +69,8 @@
 		BA1E5B2B2487AC210055A5F4 /* 介護の日本語.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "介護の日本語.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA1E5B2E2487AC210055A5F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA1E5B302487AC210055A5F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BA1E5B322487AC210055A5F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BA1E5B372487AC250055A5F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA1E5B3A2487AC250055A5F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BA1E5B3C2487AC250055A5F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BA27FB34248CECDA002840B8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		BA5EACDA24D2A5BF0008E2D0 /* StudyTabContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyTabContainerViewController.swift; sourceTree = "<group>"; };
 		BA5EACDE24D2AC320008E2D0 /* StudyTabContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyTabContainerViewModel.swift; sourceTree = "<group>"; };
@@ -98,7 +94,7 @@
 		BA5EAD4224D452400008E2D0 /* leveldb-library.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "leveldb-library.framework"; path = "Carthage/Build/iOS/leveldb-library.framework"; sourceTree = "<group>"; };
 		BA5EAD4724D4526A0008E2D0 /* gRPCCertificates-Cpp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "gRPCCertificates-Cpp.bundle"; sourceTree = "<group>"; };
 		BA5EAD4B24D453520008E2D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../FetiLip-develop/fetilip/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		BA66D67624A6E77F00BE7273 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		BA5EAD4F24D522F80008E2D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Japanese_nursing/Info.plist; sourceTree = SOURCE_ROOT; };
 		BA66D67824A6E91500BE7273 /* AppBootstrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBootstrap.swift; sourceTree = "<group>"; };
 		BA66D67C24A6ECF000BE7273 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		BA66D67E24A6EE6C00BE7273 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
@@ -304,10 +300,8 @@
 				BA66D67A24A6EC9C00BE7273 /* Feature */,
 				BA66D67824A6E91500BE7273 /* AppBootstrap.swift */,
 				BA1E5B2E2487AC210055A5F4 /* AppDelegate.swift */,
-				BA66D67624A6E77F00BE7273 /* Main.storyboard */,
 				BA85A3FD24AB7F51003E6E85 /* R.generated.swift */,
 				BA1E5B302487AC210055A5F4 /* SceneDelegate.swift */,
-				BA1E5B322487AC210055A5F4 /* ViewController.swift */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -338,7 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				BA5EAD4B24D453520008E2D0 /* GoogleService-Info.plist */,
-				BA1E5B3C2487AC250055A5F4 /* Info.plist */,
+				BA5EAD4F24D522F80008E2D0 /* Info.plist */,
 				BA1E5B392487AC250055A5F4 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
@@ -463,7 +457,6 @@
 				BAA3D8A324C47F5300157FF2 /* .Tabman.version in Resources */,
 				BA5EAD4C24D453520008E2D0 /* GoogleService-Info.plist in Resources */,
 				BAC5904F249EECCF007D247B /* NotoSansCJKjpSub-Thin.otf in Resources */,
-				BA66D67724A6E77F00BE7273 /* Main.storyboard in Resources */,
 				BAC5904E249EECCF007D247B /* NotoSansCJKjpSub-Bold.otf in Resources */,
 				BA27FB35248CECDA002840B8 /* Colors.xcassets in Resources */,
 				BA1E5B3B2487AC250055A5F4 /* LaunchScreen.storyboard in Resources */,
@@ -576,7 +569,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA66D67924A6E91500BE7273 /* AppBootstrap.swift in Sources */,
-				BA1E5B332487AC210055A5F4 /* ViewController.swift in Sources */,
 				BA5EACE324D2AF8F0008E2D0 /* InProgressListViewController.swift in Sources */,
 				BA5EACDB24D2A5BF0008E2D0 /* StudyTabContainerViewController.swift in Sources */,
 				BA133ACA24C04D850047E265 /* CustomTabBar.swift in Sources */,

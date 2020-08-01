@@ -51,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let uid = user.uid
            return
        }
-        //AppBootstrap.boost()
+        AppBootstrap.boost()
 
         return true
     }
