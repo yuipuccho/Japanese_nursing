@@ -15,6 +15,20 @@ import FirebaseAuth
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    override init() {
+        super.init()
+        // firebase init
+        let filePath: String?
+        #if PRODUCTION
+        filePath = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist")
+        #else
+        filePath = Bundle.main.path(forResource: "", ofType: "plist")
+        #endif
+
+        let option = FirebaseOptions(contentsOfFile: filePath!)
+        FirebaseApp.configure(options: option!)
+    }
+
     static var appDelegate: AppDelegate? {
         return UIApplication.shared.delegate as? AppDelegate
     }
@@ -36,21 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        sleep(2)
 
-        // Firebase
-        FirebaseApp.configure()
-        Auth.auth().signInAnonymously { (authResult, error) in
-           if error != nil{
-               print("Auth Error :\(error!.localizedDescription)")
-           }
-
-            // 認証情報の取得
-            guard let user = authResult?.user else { return }
-            let isAnonymous = user.isAnonymous  // true
-            let uid = user.uid
-           return
-       }
         AppBootstrap.boost()
 
         return true
