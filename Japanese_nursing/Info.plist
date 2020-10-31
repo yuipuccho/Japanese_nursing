@@ -2,6 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>NotoSansCJKjpSub-DemiLight.otf</string>
+		<string>NotoSansCJKjpSub-Light.otf</string>
+		<string>NotoSansCJKjpSub-Medium.otf</string>
+		<string>NotoSansCJKjpSub-Thin.otf</string>
+		<string>NotoSansCJKjpSub-Bold.otf</string>
+		<string>NotoSansCJKjpSub-Black.otf</string>
+		<string>NotoSansCJKjpSub-Regular.otf</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
