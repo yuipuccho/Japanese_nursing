@@ -15,6 +15,7 @@
 		BA1E5B382487AC250055A5F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA1E5B372487AC250055A5F4 /* Assets.xcassets */; };
 		BA1E5B3B2487AC250055A5F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1E5B392487AC250055A5F4 /* LaunchScreen.storyboard */; };
 		BA27FB35248CECDA002840B8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA27FB34248CECDA002840B8 /* Colors.xcassets */; };
+		BA3711E7254C5DEB002D34A0 /* Pageboy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA3D89924C47F5300157FF2 /* Pageboy.framework */; };
 		BA582A3924E170670089DA0B /* Learning.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA582A3824E170670089DA0B /* Learning.storyboard */; };
 		BA5EACD624D261F50008E2D0 /* Pageboy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA3D89924C47F5300157FF2 /* Pageboy.framework */; };
 		BA5EACD824D262050008E2D0 /* Tabman.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA3D89B24C47F5300157FF2 /* Tabman.framework */; };
@@ -29,16 +30,6 @@
 		BA5EACF424D2E3C50008E2D0 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5EACF324D2E3C50008E2D0 /* RxRelay.framework */; };
 		BA5EAD0A24D3E03C0008E2D0 /* StudyListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA5EAD0924D3E03B0008E2D0 /* StudyListView.xib */; };
 		BA5EAD0C24D3E9600008E2D0 /* StudyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5EAD0B24D3E9600008E2D0 /* StudyListView.swift */; };
-		BA5EAD2C24D452060008E2D0 /* abseil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5EAD2B24D452060008E2D0 /* abseil.framework */; };
-		BA5EAD3024D452130008E2D0 /* BoringSSL-GRPC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5EAD2F24D452130008E2D0 /* BoringSSL-GRPC.framework */; };
-		BA5EAD3724D452300008E2D0 /* FirebaseFirestore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5EAD3224D4522F0008E2D0 /* FirebaseFirestore.framework */; };
-		BA5EAD3924D452300008E2D0 /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5EAD3324D4522F0008E2D0 /* FirebaseAuth.framework */; };
-		BA5EAD3B24D452300008E2D0 /* gRPC-Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5EAD3424D4522F0008E2D0 /* gRPC-Core.framework */; };
-		BA5EAD3D24D452300008E2D0 /* FirebaseStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5EAD3524D4522F0008E2D0 /* FirebaseStorage.framework */; };
-		BA5EAD3F24D452300008E2D0 /* gRPC-C++.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5EAD3624D4522F0008E2D0 /* gRPC-C++.framework */; };
-		BA5EAD4324D452400008E2D0 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5EAD4124D4523F0008E2D0 /* GTMSessionFetcher.framework */; };
-		BA5EAD4524D452400008E2D0 /* leveldb-library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5EAD4224D452400008E2D0 /* leveldb-library.framework */; };
-		BA5EAD4824D4526A0008E2D0 /* gRPCCertificates-Cpp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BA5EAD4724D4526A0008E2D0 /* gRPCCertificates-Cpp.bundle */; };
 		BA5EAD4C24D453520008E2D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA5EAD4B24D453520008E2D0 /* GoogleService-Info.plist */; };
 		BA66D67924A6E91500BE7273 /* AppBootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA66D67824A6E91500BE7273 /* AppBootstrap.swift */; };
 		BA66D67D24A6ECF000BE7273 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA66D67C24A6ECF000BE7273 /* TabBarController.swift */; };
@@ -46,8 +37,6 @@
 		BA66D68124A6EFFD00BE7273 /* Mypage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA66D68024A6EFFD00BE7273 /* Mypage.storyboard */; };
 		BA85A3FE24AB7F51003E6E85 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85A3FD24AB7F51003E6E85 /* R.generated.swift */; };
 		BAA3D8A324C47F5300157FF2 /* .Tabman.version in Resources */ = {isa = PBXBuildFile; fileRef = BAA3D89424C47F5300157FF2 /* .Tabman.version */; };
-		BAA3D8A424C47F5300157FF2 /* A14ED56A-4404-3106-911D-85EFBA2B8B3D.bcsymbolmap in Resources */ = {isa = PBXBuildFile; fileRef = BAA3D89624C47F5300157FF2 /* A14ED56A-4404-3106-911D-85EFBA2B8B3D.bcsymbolmap */; };
-		BAA3D8A524C47F5300157FF2 /* F56491EC-3ACC-3E29-9796-2201A2E7ED9B.bcsymbolmap in Resources */ = {isa = PBXBuildFile; fileRef = BAA3D89724C47F5300157FF2 /* F56491EC-3ACC-3E29-9796-2201A2E7ED9B.bcsymbolmap */; };
 		BAA3D8A624C47F5300157FF2 /* Tabman.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = BAA3D89824C47F5300157FF2 /* Tabman.framework.dSYM */; };
 		BAA3D8A824C47F5300157FF2 /* Pageboy.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = BAA3D89A24C47F5300157FF2 /* Pageboy.framework.dSYM */; };
 		BAA3D8AF24C47F5300157FF2 /* .Pageboy.version in Resources */ = {isa = PBXBuildFile; fileRef = BAA3D8A224C47F5300157FF2 /* .Pageboy.version */; };
@@ -85,16 +74,6 @@
 		BA5EACF324D2E3C50008E2D0 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		BA5EAD0924D3E03B0008E2D0 /* StudyListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudyListView.xib; sourceTree = "<group>"; };
 		BA5EAD0B24D3E9600008E2D0 /* StudyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyListView.swift; sourceTree = "<group>"; };
-		BA5EAD2B24D452060008E2D0 /* abseil.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = abseil.framework; path = Carthage/Build/iOS/abseil.framework; sourceTree = "<group>"; };
-		BA5EAD2F24D452130008E2D0 /* BoringSSL-GRPC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "BoringSSL-GRPC.framework"; path = "Carthage/Build/iOS/BoringSSL-GRPC.framework"; sourceTree = "<group>"; };
-		BA5EAD3224D4522F0008E2D0 /* FirebaseFirestore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseFirestore.framework; path = Carthage/Build/iOS/FirebaseFirestore.framework; sourceTree = "<group>"; };
-		BA5EAD3324D4522F0008E2D0 /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAuth.framework; path = Carthage/Build/iOS/FirebaseAuth.framework; sourceTree = "<group>"; };
-		BA5EAD3424D4522F0008E2D0 /* gRPC-Core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "gRPC-Core.framework"; path = "Carthage/Build/iOS/gRPC-Core.framework"; sourceTree = "<group>"; };
-		BA5EAD3524D4522F0008E2D0 /* FirebaseStorage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseStorage.framework; path = Carthage/Build/iOS/FirebaseStorage.framework; sourceTree = "<group>"; };
-		BA5EAD3624D4522F0008E2D0 /* gRPC-C++.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "gRPC-C++.framework"; path = "Carthage/Build/iOS/gRPC-C++.framework"; sourceTree = "<group>"; };
-		BA5EAD4124D4523F0008E2D0 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTMSessionFetcher.framework; path = Carthage/Build/iOS/GTMSessionFetcher.framework; sourceTree = "<group>"; };
-		BA5EAD4224D452400008E2D0 /* leveldb-library.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "leveldb-library.framework"; path = "Carthage/Build/iOS/leveldb-library.framework"; sourceTree = "<group>"; };
-		BA5EAD4724D4526A0008E2D0 /* gRPCCertificates-Cpp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "gRPCCertificates-Cpp.bundle"; sourceTree = "<group>"; };
 		BA5EAD4B24D453520008E2D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../FetiLip-develop/fetilip/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BA5EAD4F24D522F80008E2D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Japanese_nursing/Info.plist; sourceTree = SOURCE_ROOT; };
 		BA66D67824A6E91500BE7273 /* AppBootstrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBootstrap.swift; sourceTree = "<group>"; };
@@ -103,8 +82,6 @@
 		BA66D68024A6EFFD00BE7273 /* Mypage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mypage.storyboard; sourceTree = "<group>"; };
 		BA85A3FD24AB7F51003E6E85 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		BAA3D89424C47F5300157FF2 /* .Tabman.version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .Tabman.version; sourceTree = "<group>"; };
-		BAA3D89624C47F5300157FF2 /* A14ED56A-4404-3106-911D-85EFBA2B8B3D.bcsymbolmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "A14ED56A-4404-3106-911D-85EFBA2B8B3D.bcsymbolmap"; sourceTree = "<group>"; };
-		BAA3D89724C47F5300157FF2 /* F56491EC-3ACC-3E29-9796-2201A2E7ED9B.bcsymbolmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "F56491EC-3ACC-3E29-9796-2201A2E7ED9B.bcsymbolmap"; sourceTree = "<group>"; };
 		BAA3D89824C47F5300157FF2 /* Tabman.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = Tabman.framework.dSYM; sourceTree = "<group>"; };
 		BAA3D89924C47F5300157FF2 /* Pageboy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pageboy.framework; sourceTree = "<group>"; };
 		BAA3D89A24C47F5300157FF2 /* Pageboy.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = Pageboy.framework.dSYM; sourceTree = "<group>"; };
@@ -125,21 +102,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA5EAD3B24D452300008E2D0 /* gRPC-Core.framework in Frameworks */,
-				BA5EAD3024D452130008E2D0 /* BoringSSL-GRPC.framework in Frameworks */,
 				BA5EACEC24D2E34D0008E2D0 /* RxSwift.framework in Frameworks */,
-				BA5EAD3F24D452300008E2D0 /* gRPC-C++.framework in Frameworks */,
+				BA3711E7254C5DEB002D34A0 /* Pageboy.framework in Frameworks */,
 				BA5EACD624D261F50008E2D0 /* Pageboy.framework in Frameworks */,
-				BA5EAD2C24D452060008E2D0 /* abseil.framework in Frameworks */,
 				BA5EACF424D2E3C50008E2D0 /* RxRelay.framework in Frameworks */,
-				BA5EAD3724D452300008E2D0 /* FirebaseFirestore.framework in Frameworks */,
 				6957F40151887726FC69D034 /* Pods_Japanese_nursing.framework in Frameworks */,
-				BA5EAD3924D452300008E2D0 /* FirebaseAuth.framework in Frameworks */,
 				BA5EACF024D2E3990008E2D0 /* RxCocoa.framework in Frameworks */,
 				BA5EACD824D262050008E2D0 /* Tabman.framework in Frameworks */,
-				BA5EAD4324D452400008E2D0 /* GTMSessionFetcher.framework in Frameworks */,
-				BA5EAD3D24D452300008E2D0 /* FirebaseStorage.framework in Frameworks */,
-				BA5EAD4524D452400008E2D0 /* leveldb-library.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,9 +260,6 @@
 		BAA3D89524C47F5300157FF2 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				BA5EAD4724D4526A0008E2D0 /* gRPCCertificates-Cpp.bundle */,
-				BAA3D89624C47F5300157FF2 /* A14ED56A-4404-3106-911D-85EFBA2B8B3D.bcsymbolmap */,
-				BAA3D89724C47F5300157FF2 /* F56491EC-3ACC-3E29-9796-2201A2E7ED9B.bcsymbolmap */,
 				BAA3D89824C47F5300157FF2 /* Tabman.framework.dSYM */,
 				BAA3D89924C47F5300157FF2 /* Pageboy.framework */,
 				BAA3D89A24C47F5300157FF2 /* Pageboy.framework.dSYM */,
@@ -375,15 +341,6 @@
 		C87E173A7739EAF8084E6F1B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BA5EAD4124D4523F0008E2D0 /* GTMSessionFetcher.framework */,
-				BA5EAD4224D452400008E2D0 /* leveldb-library.framework */,
-				BA5EAD3324D4522F0008E2D0 /* FirebaseAuth.framework */,
-				BA5EAD3224D4522F0008E2D0 /* FirebaseFirestore.framework */,
-				BA5EAD3524D4522F0008E2D0 /* FirebaseStorage.framework */,
-				BA5EAD3624D4522F0008E2D0 /* gRPC-C++.framework */,
-				BA5EAD3424D4522F0008E2D0 /* gRPC-Core.framework */,
-				BA5EAD2F24D452130008E2D0 /* BoringSSL-GRPC.framework */,
-				BA5EAD2B24D452060008E2D0 /* abseil.framework */,
 				BA5EACF324D2E3C50008E2D0 /* RxRelay.framework */,
 				BA5EACEF24D2E3990008E2D0 /* RxCocoa.framework */,
 				BA5EACEB24D2E34D0008E2D0 /* RxSwift.framework */,
@@ -455,12 +412,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA5EAD4824D4526A0008E2D0 /* gRPCCertificates-Cpp.bundle in Resources */,
 				BA5EACEA24D2B2840008E2D0 /* CompletionList.storyboard in Resources */,
 				BAA3D8A824C47F5300157FF2 /* Pageboy.framework.dSYM in Resources */,
-				BAA3D8A424C47F5300157FF2 /* A14ED56A-4404-3106-911D-85EFBA2B8B3D.bcsymbolmap in Resources */,
 				BAC4F7FD24A6E4C5009ACEF3 /* Study.storyboard in Resources */,
-				BAA3D8A524C47F5300157FF2 /* F56491EC-3ACC-3E29-9796-2201A2E7ED9B.bcsymbolmap in Resources */,
 				BA66D68124A6EFFD00BE7273 /* Mypage.storyboard in Resources */,
 				BAA3D8AF24C47F5300157FF2 /* .Pageboy.version in Resources */,
 				BAC5904C249EECCF007D247B /* NotoSansCJKjpSub-Black.otf in Resources */,
@@ -734,6 +688,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 69H3H2U752;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -757,6 +712,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 69H3H2U752;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import Firebase
-import FirebaseAuth
 
 // MARK: - AppDelegate
 
@@ -18,15 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     override init() {
         super.init()
         // firebase init
-        let filePath: String?
-        #if PRODUCTION
-        filePath = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist")
-        #else
-        filePath = Bundle.main.path(forResource: "", ofType: "plist")
-        #endif
+//        let filePath: String?
+//        #if PRODUCTION
+//        filePath = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist")
+//        #else
+//        filePath = Bundle.main.path(forResource: "", ofType: "plist")
+//        #endif
 
-        let option = FirebaseOptions(contentsOfFile: filePath!)
-        FirebaseApp.configure(options: option!)
+//        let option = FirebaseOptions(contentsOfFile: filePath!)
+//        FirebaseApp.configure(options: option!)
     }
 
     static var appDelegate: AppDelegate? {
