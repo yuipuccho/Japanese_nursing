@@ -167,13 +167,6 @@
 			path = LearningUnit;
 			sourceTree = "<group>";
 		};
-		BA5EACDC24D2ABFE0008E2D0 /* viewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = viewModels;
-			sourceTree = "<group>";
-		};
 		BA5EACE024D2AEF30008E2D0 /* UnitList */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,7 +236,6 @@
 		BAC4F7ED24A641FF009ACEF3 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				BA5EACDC24D2ABFE0008E2D0 /* viewModels */,
 				BAC4F7EE24A64211009ACEF3 /* Views */,
 				BA66D67A24A6EC9C00BE7273 /* Feature */,
 				BA66D67824A6E91500BE7273 /* AppBootstrap.swift */,
