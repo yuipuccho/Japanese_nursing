@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ * 単元一覧画面VC
+ */
 class UnitListViewController: UITableViewController {
 
     override func viewDidLoad() {

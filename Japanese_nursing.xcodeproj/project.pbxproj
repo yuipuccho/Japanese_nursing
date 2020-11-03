@@ -177,8 +177,8 @@
 		BA5EACE024D2AEF30008E2D0 /* UnitList */ = {
 			isa = PBXGroup;
 			children = (
-				BA5EACE224D2AF8F0008E2D0 /* UnitListViewController.swift */,
 				BAC4F7FC24A6E4C5009ACEF3 /* UnitList.storyboard */,
+				BA5EACE224D2AF8F0008E2D0 /* UnitListViewController.swift */,
 			);
 			path = UnitList;
 			sourceTree = "<group>";

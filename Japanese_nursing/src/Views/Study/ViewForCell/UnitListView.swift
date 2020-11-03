@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ * 単元一覧セルView
+ */
 class UnitListView: UITableViewCell {
 
     // MARK: - Outlets
