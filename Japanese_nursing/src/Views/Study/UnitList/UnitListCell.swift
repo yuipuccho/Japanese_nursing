@@ -23,6 +23,19 @@ class UnitListCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        //clearConfigure()
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        //clearConfigure()
+    }
+
+    func clearConfigure() {
+        unitTitleLabel.text = nil
+        wordsCountLabel.text = nil
+        bookMarksCountLabel.text = nil
+        checkMarkPercentageLabel.text = nil
     }
 
 }

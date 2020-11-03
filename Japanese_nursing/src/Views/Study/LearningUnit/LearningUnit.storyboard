@@ -9,20 +9,25 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansCJKjpSub-Bold.otf">
+            <string>NotoSansCJKjpSub-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Title-->
+        <!--Learning Unit View Controller-->
         <scene sceneID="ktY-am-LAB">
             <objects>
                 <viewController storyboardIdentifier="LearningUnitViewController" id="NIa-Q6-Xln" customClass="LearningUnitViewController" customModule="d_介護の日本語" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="riQ-i0-sgE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="r1J-K3-A7t">
-                                <rect key="frame" x="60" y="745" width="294" height="4"/>
+                                <rect key="frame" x="60" y="833" width="294" height="4"/>
                             </progressView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="KPc-vZ-Ee2">
-                                <rect key="frame" x="128.5" y="644.5" width="157.5" height="75.5"/>
+                                <rect key="frame" x="128.5" y="732.5" width="157.5" height="75.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="zxp-2u-KpR">
                                         <rect key="frame" x="0.0" y="0.0" width="67.5" height="75.5"/>
@@ -66,12 +71,27 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tcb-FZ-tg2" customClass="KolodaView" customModule="Koloda">
-                                <rect key="frame" x="20" y="91" width="374" height="382"/>
-                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <rect key="frame" x="20" y="135" width="374" height="382"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="学習終了View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPX-Fq-SO5">
+                                        <rect key="frame" x="55.5" y="166" width="263" height="50.5"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="43"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.10980392156862745" green="0.6705882352941176" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="382" id="1Oh-Mh-Zaq"/>
+                                    <constraint firstItem="fPX-Fq-SO5" firstAttribute="centerY" secondItem="tcb-FZ-tg2" secondAttribute="centerY" id="D5i-Qx-nru"/>
+                                    <constraint firstItem="fPX-Fq-SO5" firstAttribute="centerX" secondItem="tcb-FZ-tg2" secondAttribute="centerX" id="WpP-te-QVu"/>
                                     <constraint firstAttribute="width" constant="374" id="lv0-Br-96N"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oSk-gv-an0"/>
@@ -87,12 +107,10 @@
                             <constraint firstItem="oSk-gv-an0" firstAttribute="trailing" secondItem="tcb-FZ-tg2" secondAttribute="trailing" constant="20" id="wOV-YF-FmL"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="MXA-f9-9W4">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="setting_icon" id="7pd-Em-VYC"/>
-                    </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="cardView" destination="tcb-FZ-tg2" id="wvG-wN-yTW"/>
+                        <outlet property="label" destination="fPX-Fq-SO5" id="rFX-O5-hJ1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TQt-TD-ZuP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -103,15 +121,11 @@
     <resources>
         <image name="book_mark_icon_inactive" width="50" height="50"/>
         <image name="check_mark_icon_inactive" width="50" height="50"/>
-        <image name="setting_icon" width="30" height="30"/>
         <namedColor name="WeakText">
             <color red="0.67100000381469727" green="0.67100000381469727" blue="0.67100000381469727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

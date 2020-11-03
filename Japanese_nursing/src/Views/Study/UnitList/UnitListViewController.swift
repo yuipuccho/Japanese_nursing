@@ -48,7 +48,7 @@ extension UnitListViewController {
 extension UnitListViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = LearningUnitViewController.makeInstanceInNavigationController()
+        let vc = LearningUnitViewController.makeInstance()
         present(vc, animated: true)
     }
 

@@ -16,6 +16,7 @@ class LearningUnitViewController: UIViewController {
 
     @IBOutlet weak var cardView: KolodaView!
 
+    @IBOutlet weak var label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         cardView.dataSource = self
@@ -28,6 +29,10 @@ class LearningUnitViewController: UIViewController {
 
 extension LearningUnitViewController: KolodaViewDelegate {
 
+    func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
+        label.text = "2"
+    }
+
     /// スワイプを続けて行ってデータソース内のViewを全て表示しきった際に呼ばれるメソッド
     func kolodaDidRunOutOfCards(koloda: KolodaView) {
         print("Out of stock!!")
@@ -36,11 +41,6 @@ extension LearningUnitViewController: KolodaViewDelegate {
     func koloda(koloda: KolodaView, didSelectCardAtIndex index: Int) {
         print("index \(index) has tapped!!")
     }
-
-//    // フリックできる方向を指定する
-//    func koloda(_ koloda: KolodaView, allowedDirectionsForIndex index: Int) -> [SwipeResultDirection] {
-//        return [.left, .right, .up]
-//    }
 
     /// カードがスワイプされたら実行されるメソッド
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
