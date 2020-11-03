@@ -1,5 +1,5 @@
 //
-//  StudyListView.swift
+//  UnitListView.swift
 //  Japanese_nursing
 //
 //  Created by 吉澤優衣 on 2020/07/31.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StudyListView: UITableViewCell {
+class UnitListView: UITableViewCell {
 
     // MARK: - Outlets
 
@@ -20,8 +20,6 @@ class StudyListView: UITableViewCell {
     @IBOutlet weak var bookMarksCountLabel: UILabel!
     /// チェックマーク率
     @IBOutlet weak var checkMarkPercentageLabel: UILabel!
-    /// 学習開始ボタン
-    @IBOutlet weak var startButton: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()

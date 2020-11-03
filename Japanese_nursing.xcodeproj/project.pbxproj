@@ -19,17 +19,12 @@
 		BA582A3924E170670089DA0B /* Learning.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA582A3824E170670089DA0B /* Learning.storyboard */; };
 		BA5EACD624D261F50008E2D0 /* Pageboy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA3D89924C47F5300157FF2 /* Pageboy.framework */; };
 		BA5EACD824D262050008E2D0 /* Tabman.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA3D89B24C47F5300157FF2 /* Tabman.framework */; };
-		BA5EACDB24D2A5BF0008E2D0 /* StudyTabContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5EACDA24D2A5BF0008E2D0 /* StudyTabContainerViewController.swift */; };
-		BA5EACDF24D2AC320008E2D0 /* StudyTabContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5EACDE24D2AC320008E2D0 /* StudyTabContainerViewModel.swift */; };
-		BA5EACE324D2AF8F0008E2D0 /* InProgressListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5EACE224D2AF8F0008E2D0 /* InProgressListViewController.swift */; };
-		BA5EACE624D2B00C0008E2D0 /* InProgressList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5EACE524D2B00C0008E2D0 /* InProgressList.storyboard */; };
-		BA5EACE824D2B2750008E2D0 /* CompletionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5EACE724D2B2750008E2D0 /* CompletionListViewController.swift */; };
-		BA5EACEA24D2B2840008E2D0 /* CompletionList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5EACE924D2B2840008E2D0 /* CompletionList.storyboard */; };
+		BA5EACE324D2AF8F0008E2D0 /* UnitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5EACE224D2AF8F0008E2D0 /* UnitListViewController.swift */; };
 		BA5EACEC24D2E34D0008E2D0 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5EACEB24D2E34D0008E2D0 /* RxSwift.framework */; };
 		BA5EACF024D2E3990008E2D0 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5EACEF24D2E3990008E2D0 /* RxCocoa.framework */; };
 		BA5EACF424D2E3C50008E2D0 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5EACF324D2E3C50008E2D0 /* RxRelay.framework */; };
-		BA5EAD0A24D3E03C0008E2D0 /* StudyListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA5EAD0924D3E03B0008E2D0 /* StudyListView.xib */; };
-		BA5EAD0C24D3E9600008E2D0 /* StudyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5EAD0B24D3E9600008E2D0 /* StudyListView.swift */; };
+		BA5EAD0A24D3E03C0008E2D0 /* UnitListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA5EAD0924D3E03B0008E2D0 /* UnitListView.xib */; };
+		BA5EAD0C24D3E9600008E2D0 /* UnitListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5EAD0B24D3E9600008E2D0 /* UnitListView.swift */; };
 		BA5EAD4C24D453520008E2D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA5EAD4B24D453520008E2D0 /* GoogleService-Info.plist */; };
 		BA66D67924A6E91500BE7273 /* AppBootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA66D67824A6E91500BE7273 /* AppBootstrap.swift */; };
 		BA66D67D24A6ECF000BE7273 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA66D67C24A6ECF000BE7273 /* TabBarController.swift */; };
@@ -40,7 +35,7 @@
 		BAA3D8A624C47F5300157FF2 /* Tabman.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = BAA3D89824C47F5300157FF2 /* Tabman.framework.dSYM */; };
 		BAA3D8A824C47F5300157FF2 /* Pageboy.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = BAA3D89A24C47F5300157FF2 /* Pageboy.framework.dSYM */; };
 		BAA3D8AF24C47F5300157FF2 /* .Pageboy.version in Resources */ = {isa = PBXBuildFile; fileRef = BAA3D8A224C47F5300157FF2 /* .Pageboy.version */; };
-		BAC4F7FD24A6E4C5009ACEF3 /* Study.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC4F7FC24A6E4C5009ACEF3 /* Study.storyboard */; };
+		BAC4F7FD24A6E4C5009ACEF3 /* UnitList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC4F7FC24A6E4C5009ACEF3 /* UnitList.storyboard */; };
 		BAC5904C249EECCF007D247B /* NotoSansCJKjpSub-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAC59045249EECCF007D247B /* NotoSansCJKjpSub-Black.otf */; };
 		BAC5904D249EECCF007D247B /* NotoSansCJKjpSub-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAC59046249EECCF007D247B /* NotoSansCJKjpSub-Regular.otf */; };
 		BAC5904E249EECCF007D247B /* NotoSansCJKjpSub-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAC59047249EECCF007D247B /* NotoSansCJKjpSub-Bold.otf */; };
@@ -63,17 +58,12 @@
 		BA1E5B3A2487AC250055A5F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA27FB34248CECDA002840B8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		BA582A3824E170670089DA0B /* Learning.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Learning.storyboard; sourceTree = "<group>"; };
-		BA5EACDA24D2A5BF0008E2D0 /* StudyTabContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyTabContainerViewController.swift; sourceTree = "<group>"; };
-		BA5EACDE24D2AC320008E2D0 /* StudyTabContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyTabContainerViewModel.swift; sourceTree = "<group>"; };
-		BA5EACE224D2AF8F0008E2D0 /* InProgressListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InProgressListViewController.swift; sourceTree = "<group>"; };
-		BA5EACE524D2B00C0008E2D0 /* InProgressList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InProgressList.storyboard; sourceTree = "<group>"; };
-		BA5EACE724D2B2750008E2D0 /* CompletionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionListViewController.swift; sourceTree = "<group>"; };
-		BA5EACE924D2B2840008E2D0 /* CompletionList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompletionList.storyboard; sourceTree = "<group>"; };
+		BA5EACE224D2AF8F0008E2D0 /* UnitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListViewController.swift; sourceTree = "<group>"; };
 		BA5EACEB24D2E34D0008E2D0 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		BA5EACEF24D2E3990008E2D0 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		BA5EACF324D2E3C50008E2D0 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
-		BA5EAD0924D3E03B0008E2D0 /* StudyListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudyListView.xib; sourceTree = "<group>"; };
-		BA5EAD0B24D3E9600008E2D0 /* StudyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyListView.swift; sourceTree = "<group>"; };
+		BA5EAD0924D3E03B0008E2D0 /* UnitListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnitListView.xib; sourceTree = "<group>"; };
+		BA5EAD0B24D3E9600008E2D0 /* UnitListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListView.swift; sourceTree = "<group>"; };
 		BA5EAD4B24D453520008E2D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../FetiLip-develop/fetilip/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BA5EAD4F24D522F80008E2D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Japanese_nursing/Info.plist; sourceTree = SOURCE_ROOT; };
 		BA66D67824A6E91500BE7273 /* AppBootstrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBootstrap.swift; sourceTree = "<group>"; };
@@ -87,7 +77,7 @@
 		BAA3D89A24C47F5300157FF2 /* Pageboy.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = Pageboy.framework.dSYM; sourceTree = "<group>"; };
 		BAA3D89B24C47F5300157FF2 /* Tabman.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Tabman.framework; sourceTree = "<group>"; };
 		BAA3D8A224C47F5300157FF2 /* .Pageboy.version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .Pageboy.version; sourceTree = "<group>"; };
-		BAC4F7FC24A6E4C5009ACEF3 /* Study.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Study.storyboard; sourceTree = "<group>"; };
+		BAC4F7FC24A6E4C5009ACEF3 /* UnitList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UnitList.storyboard; sourceTree = "<group>"; };
 		BAC59045249EECCF007D247B /* NotoSansCJKjpSub-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKjpSub-Black.otf"; sourceTree = "<group>"; };
 		BAC59046249EECCF007D247B /* NotoSansCJKjpSub-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKjpSub-Regular.otf"; sourceTree = "<group>"; };
 		BAC59047249EECCF007D247B /* NotoSansCJKjpSub-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKjpSub-Bold.otf"; sourceTree = "<group>"; };
@@ -180,42 +170,24 @@
 		BA5EACDC24D2ABFE0008E2D0 /* viewModels */ = {
 			isa = PBXGroup;
 			children = (
-				BA5EACDD24D2AC150008E2D0 /* Study */,
 			);
 			path = viewModels;
 			sourceTree = "<group>";
 		};
-		BA5EACDD24D2AC150008E2D0 /* Study */ = {
+		BA5EACE024D2AEF30008E2D0 /* UnitList */ = {
 			isa = PBXGroup;
 			children = (
-				BA5EACDE24D2AC320008E2D0 /* StudyTabContainerViewModel.swift */,
+				BA5EACE224D2AF8F0008E2D0 /* UnitListViewController.swift */,
+				BAC4F7FC24A6E4C5009ACEF3 /* UnitList.storyboard */,
 			);
-			path = Study;
-			sourceTree = "<group>";
-		};
-		BA5EACE024D2AEF30008E2D0 /* InProgressList */ = {
-			isa = PBXGroup;
-			children = (
-				BA5EACE224D2AF8F0008E2D0 /* InProgressListViewController.swift */,
-				BA5EACE524D2B00C0008E2D0 /* InProgressList.storyboard */,
-			);
-			path = InProgressList;
-			sourceTree = "<group>";
-		};
-		BA5EACE124D2AF5A0008E2D0 /* CompletionList */ = {
-			isa = PBXGroup;
-			children = (
-				BA5EACE724D2B2750008E2D0 /* CompletionListViewController.swift */,
-				BA5EACE924D2B2840008E2D0 /* CompletionList.storyboard */,
-			);
-			path = CompletionList;
+			path = UnitList;
 			sourceTree = "<group>";
 		};
 		BA5EAD0824D3DEF30008E2D0 /* ViewForCell */ = {
 			isa = PBXGroup;
 			children = (
-				BA5EAD0924D3E03B0008E2D0 /* StudyListView.xib */,
-				BA5EAD0B24D3E9600008E2D0 /* StudyListView.swift */,
+				BA5EAD0924D3E03B0008E2D0 /* UnitListView.xib */,
+				BA5EAD0B24D3E9600008E2D0 /* UnitListView.swift */,
 			);
 			path = ViewForCell;
 			sourceTree = "<group>";
@@ -296,11 +268,8 @@
 			isa = PBXGroup;
 			children = (
 				BA582A3724E170190089DA0B /* LearningUnit */,
-				BA5EACE124D2AF5A0008E2D0 /* CompletionList */,
-				BA5EACE024D2AEF30008E2D0 /* InProgressList */,
+				BA5EACE024D2AEF30008E2D0 /* UnitList */,
 				BA5EAD0824D3DEF30008E2D0 /* ViewForCell */,
-				BAC4F7FC24A6E4C5009ACEF3 /* Study.storyboard */,
-				BA5EACDA24D2A5BF0008E2D0 /* StudyTabContainerViewController.swift */,
 			);
 			path = Study;
 			sourceTree = "<group>";
@@ -412,9 +381,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA5EACEA24D2B2840008E2D0 /* CompletionList.storyboard in Resources */,
 				BAA3D8A824C47F5300157FF2 /* Pageboy.framework.dSYM in Resources */,
-				BAC4F7FD24A6E4C5009ACEF3 /* Study.storyboard in Resources */,
+				BAC4F7FD24A6E4C5009ACEF3 /* UnitList.storyboard in Resources */,
 				BA66D68124A6EFFD00BE7273 /* Mypage.storyboard in Resources */,
 				BAA3D8AF24C47F5300157FF2 /* .Pageboy.version in Resources */,
 				BAC5904C249EECCF007D247B /* NotoSansCJKjpSub-Black.otf in Resources */,
@@ -426,10 +394,9 @@
 				BAC5904E249EECCF007D247B /* NotoSansCJKjpSub-Bold.otf in Resources */,
 				BA27FB35248CECDA002840B8 /* Colors.xcassets in Resources */,
 				BA1E5B3B2487AC250055A5F4 /* LaunchScreen.storyboard in Resources */,
-				BA5EACE624D2B00C0008E2D0 /* InProgressList.storyboard in Resources */,
 				BAA3D8A624C47F5300157FF2 /* Tabman.framework.dSYM in Resources */,
 				BA133AC624BB28B80047E265 /* Test.storyboard in Resources */,
-				BA5EAD0A24D3E03C0008E2D0 /* StudyListView.xib in Resources */,
+				BA5EAD0A24D3E03C0008E2D0 /* UnitListView.xib in Resources */,
 				BAC5904D249EECCF007D247B /* NotoSansCJKjpSub-Regular.otf in Resources */,
 				BA1E5B382487AC250055A5F4 /* Assets.xcassets in Resources */,
 				BAC59051249EECCF007D247B /* NotoSansCJKjpSub-Light.otf in Resources */,
@@ -535,16 +502,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA66D67924A6E91500BE7273 /* AppBootstrap.swift in Sources */,
-				BA5EACE324D2AF8F0008E2D0 /* InProgressListViewController.swift in Sources */,
-				BA5EACDB24D2A5BF0008E2D0 /* StudyTabContainerViewController.swift in Sources */,
+				BA5EACE324D2AF8F0008E2D0 /* UnitListViewController.swift in Sources */,
 				BA133ACA24C04D850047E265 /* CustomTabBar.swift in Sources */,
 				BA1E5B2F2487AC210055A5F4 /* AppDelegate.swift in Sources */,
-				BA5EAD0C24D3E9600008E2D0 /* StudyListView.swift in Sources */,
+				BA5EAD0C24D3E9600008E2D0 /* UnitListView.swift in Sources */,
 				BA66D67D24A6ECF000BE7273 /* TabBarController.swift in Sources */,
 				BA1E5B312487AC210055A5F4 /* SceneDelegate.swift in Sources */,
-				BA5EACE824D2B2750008E2D0 /* CompletionListViewController.swift in Sources */,
 				BA85A3FE24AB7F51003E6E85 /* R.generated.swift in Sources */,
-				BA5EACDF24D2AC320008E2D0 /* StudyTabContainerViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

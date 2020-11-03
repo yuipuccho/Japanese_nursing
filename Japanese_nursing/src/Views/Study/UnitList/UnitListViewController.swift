@@ -1,5 +1,5 @@
 //
-//  InProgressListViewController.swift
+//  UnitListViewController.swift
 //  Japanese_nursing
 //
 //  Created by 吉澤優衣 on 2020/07/30.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class InProgressListViewController: UITableViewController {
+class UnitListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.register(UINib(nibName: "StudyListView", bundle: nil), forCellReuseIdentifier: "customCell")
+        self.tableView.register(UINib(nibName: "UnitListView", bundle: nil), forCellReuseIdentifier: "customCell")
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -20,7 +20,7 @@ class InProgressListViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! StudyListView
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! UnitListView
         return cell
     }
 
@@ -28,21 +28,15 @@ class InProgressListViewController: UITableViewController {
         return 82
     }
 
-//    // MARK: - TableViewDataSource
-//    /// DataSource のセットアップ
-//    private func setupDataSource() {
-//        //let dataSource =
-//    }
-
 }
 
 // MARK: - makeInstance
 
-extension InProgressListViewController {
+extension UnitListViewController {
 
     static func makeInstance() -> UIViewController {
-        guard let vc = R.storyboard.inProgressList.instantiateInitialViewController() else {
-            assertionFailure("Can't make instance 'ImProgressListViewController'.")
+        guard let vc = R.storyboard.unitList.instantiateInitialViewController() else {
+            assertionFailure("Can't make instance 'UnitListViewController'.")
             return UIViewController()
         }
         return vc
