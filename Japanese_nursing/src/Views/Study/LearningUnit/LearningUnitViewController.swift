@@ -8,29 +8,71 @@
 
 import UIKit
 import Koloda
+import RxSwift
+import RxCocoa
 
 /**
  * 学習画面VC
  */
 class LearningUnitViewController: UIViewController {
 
-    @IBOutlet weak var kolodaView: KolodaView!
+    // MARK: - Outlets
 
-    @IBOutlet weak var label: UILabel!
+    /// 閉じるボタン
+    @IBOutlet weak var closeButton: UIButton!
+    /// 「覚えた」ボタン
+    @IBOutlet weak var memorizedButton: UIButton!
+    /// 「覚えていない」ボタン
+    @IBOutlet weak var notMemorizedButton: UIButton!
+    /// 進捗バー
+    @IBOutlet weak var progressView: UIProgressView!
 
-    private lazy var cardView = R.nib.cardView.firstView(owner: nil)!
+    // MARK: - Properties
 
-    var items: [String] = ["aa", "bb", "cc"]
+    private let kolodaView = KolodaView()
+
+    private var items: [String] = ["aa", "bb", "cc", "dd", "ee"]
+
+    private var disposebag = DisposeBag()
+
+    // MARK: - LifeCycles
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        subscribe()
+
         kolodaView.dataSource = self
         kolodaView.delegate = self
+
+        // 表示サイズや位置を調整して、viewに追加します。
+        kolodaView.frame = CGRect(x: 0, y: 0, width: 280, height: 300)
+        kolodaView.center = self.view.center
+        self.view.addSubview(kolodaView)
+    }
+
+    // MARK: - Functions
+
+    private func subscribe() {
+        // 閉じるボタンタップ
+        closeButton.rx.tap.subscribe(onNext: { [weak self] in
+            self?.dismiss(animated: true)
+        }).disposed(by: disposebag)
+
+        // 覚えたボタンタップ
+        memorizedButton.rx.tap.subscribe(onNext: { [weak self] in
+            self?.kolodaView.swipe(.right)
+        }).disposed(by: disposebag)
+
+        // 覚えていないボタンタップ
+        notMemorizedButton.rx.tap.subscribe(onNext: { [weak self] in
+            self?.kolodaView.swipe(.left)
+        }).disposed(by: disposebag)
     }
 
 }
 
-// MARK: Koloda view delegate
+// MARK: - KolodaViewDelegate
 
 extension LearningUnitViewController: KolodaViewDelegate {
 
@@ -57,53 +99,51 @@ extension LearningUnitViewController: KolodaViewDelegate {
 
 }
 
-// MARK: Koloda view data source
+// MARK: - KolodaViewDataSource
 
 extension LearningUnitViewController: KolodaViewDataSource {
 
     /// カードの枚数を返す
     func kolodaNumberOfCards(_ koloda: KolodaView) -> Int {
-        return 3
+        return 5
     }
 
     /// カードのViewを返す
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-//        var view = UIView(frame: koloda.bounds)
-//        view = cardView
-//        view.backgroundColor = UIColor.gray
+
+        // CardのベースとなるView
+        let view = UIView()
+        view.frame = CGRect(x: 0, y: 0, width: 280, height: 300)
+        view.layer.backgroundColor = UIColor.white.cgColor
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOpacity = 0.2
+        view.layer.shadowOffset = CGSize(width: 0, height: 1.5)
 
 
-//        // UILabelの設定
-//        let titleLabel = UILabel() // ラベルの生成
-//        titleLabel.frame = CGRect(x: 50, y: 50, width: 100, height: 40) // 位置とサイズの指定
-//        titleLabel.textAlignment = .center // 横揃えの設定
-//        titleLabel.text = items[index] // テキストの設定
-//        titleLabel.textColor = UIColor.white // テキストカラーの設定
-//        titleLabel.font = R.font.notoSansCJKjpSubBlack(size: 40) // フォントの設定
-//        titleLabel.center = view.center
-//
-//        view.addSubview(titleLabel) // ラベルの追加
+        // ラベルを表示する.
+        let label = UILabel()
+        label.text = items[index]
+        label.font = R.font.notoSansCJKjpSubBold(size: 40)
+        label.textColor = R.color.mainBlue()
+        label.sizeToFit()
+        label.center = view.center
+        view.addSubview(label) // ラベルの追加
 
-//        cardView.frame = view.frame
-//        cardView.center = view.center
-//        view.addSubview(cardView)
-        let view = cardView
-
-        view.layer.cornerRadius = 20
+        view.layer.cornerRadius = 10
 
         return view
     }
 
 
-//    //左へ
-//    @IBAction func cardGoToleft() {
-//    kolodaView.swipe(.left)
-//    }
-//
-//    //右へ
-//    @IBAction func cardGoToright() {
-//        kolodaView.swipe(.right)
-//    }
+    //    //左へ
+    //    @IBAction func cardGoToleft() {
+    //    kolodaView.swipe(.left)
+    //    }
+    //
+    //    //右へ
+    //    @IBAction func cardGoToright() {
+    //        kolodaView.swipe(.right)
+    //    }
 
 }
 
