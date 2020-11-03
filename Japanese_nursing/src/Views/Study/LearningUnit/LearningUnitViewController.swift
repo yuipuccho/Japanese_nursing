@@ -14,13 +14,18 @@ import Koloda
  */
 class LearningUnitViewController: UIViewController {
 
-    @IBOutlet weak var cardView: KolodaView!
+    @IBOutlet weak var kolodaView: KolodaView!
 
     @IBOutlet weak var label: UILabel!
+
+    private lazy var cardView = R.nib.cardView.firstView(owner: nil)!
+
+    var items: [String] = ["aa", "bb", "cc"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        cardView.dataSource = self
-        cardView.delegate = self
+        kolodaView.dataSource = self
+        kolodaView.delegate = self
     }
 
 }
@@ -28,10 +33,6 @@ class LearningUnitViewController: UIViewController {
 // MARK: Koloda view delegate
 
 extension LearningUnitViewController: KolodaViewDelegate {
-
-    func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
-        label.text = "2"
-    }
 
     /// スワイプを続けて行ってデータソース内のViewを全て表示しきった際に呼ばれるメソッド
     func kolodaDidRunOutOfCards(koloda: KolodaView) {
@@ -67,8 +68,29 @@ extension LearningUnitViewController: KolodaViewDataSource {
 
     /// カードのViewを返す
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-        let view = UIView(frame: koloda.bounds)
-        view.backgroundColor = UIColor.gray
+//        var view = UIView(frame: koloda.bounds)
+//        view = cardView
+//        view.backgroundColor = UIColor.gray
+
+
+//        // UILabelの設定
+//        let titleLabel = UILabel() // ラベルの生成
+//        titleLabel.frame = CGRect(x: 50, y: 50, width: 100, height: 40) // 位置とサイズの指定
+//        titleLabel.textAlignment = .center // 横揃えの設定
+//        titleLabel.text = items[index] // テキストの設定
+//        titleLabel.textColor = UIColor.white // テキストカラーの設定
+//        titleLabel.font = R.font.notoSansCJKjpSubBlack(size: 40) // フォントの設定
+//        titleLabel.center = view.center
+//
+//        view.addSubview(titleLabel) // ラベルの追加
+
+//        cardView.frame = view.frame
+//        cardView.center = view.center
+//        view.addSubview(cardView)
+        let view = cardView
+
+        view.layer.cornerRadius = 20
+
         return view
     }
 

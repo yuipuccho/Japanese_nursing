@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansCJKjpSub-Bold.otf">
+            <string>NotoSansCJKjpSub-Bold</string>
+        </array>
+        <array key="NotoSansCJKjpSub-Medium.otf">
+            <string>NotoSansCJKjpSub-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CardView" customModule="d_介護の日本語" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="411"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="jKt-Nl-aBi">
+                    <rect key="frame" x="0.0" y="151" width="414" height="109"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="voJ-n7-Zor">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMO-Qk-Dlz">
+                                    <rect key="frame" x="156" y="-6.5" width="102" height="53.5"/>
+                                    <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="36"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="qMO-Qk-Dlz" firstAttribute="centerY" secondItem="voJ-n7-Zor" secondAttribute="centerY" id="Ktr-aS-Htw"/>
+                                <constraint firstAttribute="height" constant="40" id="bLF-IA-xaO"/>
+                                <constraint firstItem="qMO-Qk-Dlz" firstAttribute="centerX" secondItem="voJ-n7-Zor" secondAttribute="centerX" id="zqB-vo-9Hb"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E9q-Db-dg2">
+                            <rect key="frame" x="0.0" y="69" width="414" height="40"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="りんご" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKL-me-fmP">
+                                    <rect key="frame" x="162" y="-2" width="90" height="44.5"/>
+                                    <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Medium" family="NotoSansCJKjpSub-Medium" pointSize="30"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="KKL-me-fmP" firstAttribute="centerX" secondItem="E9q-Db-dg2" secondAttribute="centerX" id="EJl-5i-d7n"/>
+                                <constraint firstAttribute="height" constant="40" id="Vjo-bB-Kt8"/>
+                                <constraint firstItem="KKL-me-fmP" firstAttribute="centerY" secondItem="E9q-Db-dg2" secondAttribute="centerY" id="dHk-hg-oFv"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.10980392160000001" green="0.6705882353" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jKt-Nl-aBi" secondAttribute="trailing" id="Kyr-8Q-Zas"/>
+                <constraint firstItem="jKt-Nl-aBi" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="L2Q-XW-p7U"/>
+                <constraint firstItem="jKt-Nl-aBi" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="rqf-a6-Ofl"/>
+                <constraint firstItem="jKt-Nl-aBi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="uWy-Nr-cwr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="176.45089285714286"/>
+        </view>
+    </objects>
+</document>

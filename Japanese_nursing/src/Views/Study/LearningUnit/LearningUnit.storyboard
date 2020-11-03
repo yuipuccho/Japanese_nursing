@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -20,14 +18,14 @@
             <objects>
                 <viewController storyboardIdentifier="LearningUnitViewController" id="NIa-Q6-Xln" customClass="LearningUnitViewController" customModule="d_介護の日本語" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="riQ-i0-sgE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="r1J-K3-A7t">
-                                <rect key="frame" x="60" y="833" width="294" height="4"/>
+                                <rect key="frame" x="60" y="571" width="480" height="4"/>
                             </progressView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="KPc-vZ-Ee2">
-                                <rect key="frame" x="128.5" y="732.5" width="157.5" height="75.5"/>
+                                <rect key="frame" x="221.5" y="470.5" width="157.5" height="75.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="zxp-2u-KpR">
                                         <rect key="frame" x="0.0" y="0.0" width="67.5" height="75.5"/>
@@ -71,10 +69,10 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tcb-FZ-tg2" customClass="KolodaView" customModule="Koloda">
-                                <rect key="frame" x="20" y="135" width="374" height="382"/>
+                                <rect key="frame" x="20" y="91" width="560" height="382"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="学習終了View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPX-Fq-SO5">
-                                        <rect key="frame" x="55.5" y="166" width="263" height="50.5"/>
+                                        <rect key="frame" x="148.5" y="166" width="263" height="50.5"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="43"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -109,7 +107,7 @@
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="cardView" destination="tcb-FZ-tg2" id="wvG-wN-yTW"/>
+                        <outlet property="kolodaView" destination="tcb-FZ-tg2" id="wvG-wN-yTW"/>
                         <outlet property="label" destination="fPX-Fq-SO5" id="rFX-O5-hJ1"/>
                     </connections>
                 </viewController>
