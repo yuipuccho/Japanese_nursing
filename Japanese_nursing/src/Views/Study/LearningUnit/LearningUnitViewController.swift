@@ -33,6 +33,8 @@ class LearningUnitViewController: UIViewController {
 
     private var items: [String] = ["aa", "bb", "cc", "dd", "ee"]
 
+    private var currentIndex = 0
+
     private var disposebag = DisposeBag()
 
     // MARK: - LifeCycles
@@ -60,14 +62,26 @@ class LearningUnitViewController: UIViewController {
         }).disposed(by: disposebag)
 
         // 覚えたボタンタップ
-        memorizedButton.rx.tap.subscribe(onNext: { [weak self] in
-            self?.kolodaView.swipe(.right)
+        memorizedButton.rx.tap.subscribe(onNext: { [unowned self] in
+            self.kolodaView.swipe(.right)
+            self.currentIndex += 1
+            self.setProgressView(currentIndex: self.currentIndex)
         }).disposed(by: disposebag)
 
         // 覚えていないボタンタップ
-        notMemorizedButton.rx.tap.subscribe(onNext: { [weak self] in
-            self?.kolodaView.swipe(.left)
+        notMemorizedButton.rx.tap.subscribe(onNext: { [unowned self] in
+            self.kolodaView.swipe(.left)
+            self.currentIndex += 1
+            self.setProgressView(currentIndex: self.currentIndex)
         }).disposed(by: disposebag)
+    }
+
+    // 関数名
+    private func setProgressView(currentIndex: Int) {
+        let maxCount = Float(items.count)
+        let current = Float(currentIndex + 1)
+        let a = Float(current / maxCount)
+        progressView.setProgress(a, animated: true)
     }
 
 }
@@ -89,9 +103,14 @@ extension LearningUnitViewController: KolodaViewDelegate {
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
         switch direction {
         case .right:
+            // この辺を関数にまとめる
             print("Swiped to right!")
+            currentIndex = index
+            setProgressView(currentIndex: index)
         case .left:
             print("Swiped to left!")
+            currentIndex = index
+            setProgressView(currentIndex: index)
         default:
             print("aaa")
         }
@@ -133,17 +152,6 @@ extension LearningUnitViewController: KolodaViewDataSource {
 
         return view
     }
-
-
-    //    //左へ
-    //    @IBAction func cardGoToleft() {
-    //    kolodaView.swipe(.left)
-    //    }
-    //
-    //    //右へ
-    //    @IBAction func cardGoToright() {
-    //        kolodaView.swipe(.right)
-    //    }
 
 }
 
