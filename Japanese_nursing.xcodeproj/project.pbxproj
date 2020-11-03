@@ -15,16 +15,17 @@
 		BA1E5B382487AC250055A5F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA1E5B372487AC250055A5F4 /* Assets.xcassets */; };
 		BA1E5B3B2487AC250055A5F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1E5B392487AC250055A5F4 /* LaunchScreen.storyboard */; };
 		BA27FB35248CECDA002840B8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA27FB34248CECDA002840B8 /* Colors.xcassets */; };
+		BA2A5DE5255135A50085A3EF /* UnitListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A5DE4255135A50085A3EF /* UnitListCell.swift */; };
+		BA2A5DE9255139DB0085A3EF /* LearningUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A5DE8255139DB0085A3EF /* LearningUnitViewController.swift */; };
+		BA2A5DF4255166600085A3EF /* UIViewController+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A5DF3255166600085A3EF /* UIViewController+Extended.swift */; };
 		BA3711E7254C5DEB002D34A0 /* Pageboy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA3D89924C47F5300157FF2 /* Pageboy.framework */; };
-		BA582A3924E170670089DA0B /* Learning.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA582A3824E170670089DA0B /* Learning.storyboard */; };
+		BA582A3924E170670089DA0B /* LearningUnit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA582A3824E170670089DA0B /* LearningUnit.storyboard */; };
 		BA5EACD624D261F50008E2D0 /* Pageboy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA3D89924C47F5300157FF2 /* Pageboy.framework */; };
 		BA5EACD824D262050008E2D0 /* Tabman.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA3D89B24C47F5300157FF2 /* Tabman.framework */; };
 		BA5EACE324D2AF8F0008E2D0 /* UnitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5EACE224D2AF8F0008E2D0 /* UnitListViewController.swift */; };
 		BA5EACEC24D2E34D0008E2D0 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5EACEB24D2E34D0008E2D0 /* RxSwift.framework */; };
 		BA5EACF024D2E3990008E2D0 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5EACEF24D2E3990008E2D0 /* RxCocoa.framework */; };
 		BA5EACF424D2E3C50008E2D0 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5EACF324D2E3C50008E2D0 /* RxRelay.framework */; };
-		BA5EAD0A24D3E03C0008E2D0 /* UnitListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA5EAD0924D3E03B0008E2D0 /* UnitListView.xib */; };
-		BA5EAD0C24D3E9600008E2D0 /* UnitListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5EAD0B24D3E9600008E2D0 /* UnitListView.swift */; };
 		BA5EAD4C24D453520008E2D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA5EAD4B24D453520008E2D0 /* GoogleService-Info.plist */; };
 		BA66D67924A6E91500BE7273 /* AppBootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA66D67824A6E91500BE7273 /* AppBootstrap.swift */; };
 		BA66D67D24A6ECF000BE7273 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA66D67C24A6ECF000BE7273 /* TabBarController.swift */; };
@@ -57,13 +58,14 @@
 		BA1E5B372487AC250055A5F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA1E5B3A2487AC250055A5F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA27FB34248CECDA002840B8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		BA582A3824E170670089DA0B /* Learning.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Learning.storyboard; sourceTree = "<group>"; };
+		BA2A5DE4255135A50085A3EF /* UnitListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListCell.swift; sourceTree = "<group>"; };
+		BA2A5DE8255139DB0085A3EF /* LearningUnitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningUnitViewController.swift; sourceTree = "<group>"; };
+		BA2A5DF3255166600085A3EF /* UIViewController+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extended.swift"; sourceTree = "<group>"; };
+		BA582A3824E170670089DA0B /* LearningUnit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LearningUnit.storyboard; sourceTree = "<group>"; };
 		BA5EACE224D2AF8F0008E2D0 /* UnitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListViewController.swift; sourceTree = "<group>"; };
 		BA5EACEB24D2E34D0008E2D0 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		BA5EACEF24D2E3990008E2D0 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		BA5EACF324D2E3C50008E2D0 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
-		BA5EAD0924D3E03B0008E2D0 /* UnitListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnitListView.xib; sourceTree = "<group>"; };
-		BA5EAD0B24D3E9600008E2D0 /* UnitListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListView.swift; sourceTree = "<group>"; };
 		BA5EAD4B24D453520008E2D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../FetiLip-develop/fetilip/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BA5EAD4F24D522F80008E2D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Japanese_nursing/Info.plist; sourceTree = SOURCE_ROOT; };
 		BA66D67824A6E91500BE7273 /* AppBootstrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBootstrap.swift; sourceTree = "<group>"; };
@@ -159,10 +161,19 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		BA2A5DF22551663E0085A3EF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BA2A5DF3255166600085A3EF /* UIViewController+Extended.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		BA582A3724E170190089DA0B /* LearningUnit */ = {
 			isa = PBXGroup;
 			children = (
-				BA582A3824E170670089DA0B /* Learning.storyboard */,
+				BA582A3824E170670089DA0B /* LearningUnit.storyboard */,
+				BA2A5DE8255139DB0085A3EF /* LearningUnitViewController.swift */,
 			);
 			path = LearningUnit;
 			sourceTree = "<group>";
@@ -172,17 +183,9 @@
 			children = (
 				BAC4F7FC24A6E4C5009ACEF3 /* UnitList.storyboard */,
 				BA5EACE224D2AF8F0008E2D0 /* UnitListViewController.swift */,
+				BA2A5DE4255135A50085A3EF /* UnitListCell.swift */,
 			);
 			path = UnitList;
-			sourceTree = "<group>";
-		};
-		BA5EAD0824D3DEF30008E2D0 /* ViewForCell */ = {
-			isa = PBXGroup;
-			children = (
-				BA5EAD0924D3E03B0008E2D0 /* UnitListView.xib */,
-				BA5EAD0B24D3E9600008E2D0 /* UnitListView.swift */,
-			);
-			path = ViewForCell;
 			sourceTree = "<group>";
 		};
 		BA66D67524A6E70A00BE7273 /* Mypage */ = {
@@ -236,6 +239,7 @@
 		BAC4F7ED24A641FF009ACEF3 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				BA2A5DF22551663E0085A3EF /* Extensions */,
 				BAC4F7EE24A64211009ACEF3 /* Views */,
 				BA66D67A24A6EC9C00BE7273 /* Feature */,
 				BA66D67824A6E91500BE7273 /* AppBootstrap.swift */,
@@ -261,7 +265,6 @@
 			children = (
 				BA582A3724E170190089DA0B /* LearningUnit */,
 				BA5EACE024D2AEF30008E2D0 /* UnitList */,
-				BA5EAD0824D3DEF30008E2D0 /* ViewForCell */,
 			);
 			path = Study;
 			sourceTree = "<group>";
@@ -381,14 +384,13 @@
 				BA66D67F24A6EE6C00BE7273 /* Tabbar.storyboard in Resources */,
 				BAA3D8A324C47F5300157FF2 /* .Tabman.version in Resources */,
 				BA5EAD4C24D453520008E2D0 /* GoogleService-Info.plist in Resources */,
-				BA582A3924E170670089DA0B /* Learning.storyboard in Resources */,
+				BA582A3924E170670089DA0B /* LearningUnit.storyboard in Resources */,
 				BAC5904F249EECCF007D247B /* NotoSansCJKjpSub-Thin.otf in Resources */,
 				BAC5904E249EECCF007D247B /* NotoSansCJKjpSub-Bold.otf in Resources */,
 				BA27FB35248CECDA002840B8 /* Colors.xcassets in Resources */,
 				BA1E5B3B2487AC250055A5F4 /* LaunchScreen.storyboard in Resources */,
 				BAA3D8A624C47F5300157FF2 /* Tabman.framework.dSYM in Resources */,
 				BA133AC624BB28B80047E265 /* Test.storyboard in Resources */,
-				BA5EAD0A24D3E03C0008E2D0 /* UnitListView.xib in Resources */,
 				BAC5904D249EECCF007D247B /* NotoSansCJKjpSub-Regular.otf in Resources */,
 				BA1E5B382487AC250055A5F4 /* Assets.xcassets in Resources */,
 				BAC59051249EECCF007D247B /* NotoSansCJKjpSub-Light.otf in Resources */,
@@ -494,10 +496,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA66D67924A6E91500BE7273 /* AppBootstrap.swift in Sources */,
+				BA2A5DE5255135A50085A3EF /* UnitListCell.swift in Sources */,
 				BA5EACE324D2AF8F0008E2D0 /* UnitListViewController.swift in Sources */,
+				BA2A5DE9255139DB0085A3EF /* LearningUnitViewController.swift in Sources */,
 				BA133ACA24C04D850047E265 /* CustomTabBar.swift in Sources */,
+				BA2A5DF4255166600085A3EF /* UIViewController+Extended.swift in Sources */,
 				BA1E5B2F2487AC210055A5F4 /* AppDelegate.swift in Sources */,
-				BA5EAD0C24D3E9600008E2D0 /* UnitListView.swift in Sources */,
 				BA66D67D24A6ECF000BE7273 /* TabBarController.swift in Sources */,
 				BA1E5B312487AC210055A5F4 /* SceneDelegate.swift in Sources */,
 				BA85A3FE24AB7F51003E6E85 /* R.generated.swift in Sources */,

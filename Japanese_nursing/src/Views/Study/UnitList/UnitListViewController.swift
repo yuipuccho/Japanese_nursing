@@ -13,22 +13,43 @@ import UIKit
  */
 class UnitListViewController: UITableViewController {
 
+    // MARK: - LifeCycles
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.register(UINib(nibName: "UnitListView", bundle: nil), forCellReuseIdentifier: "customCell")
     }
+
+}
+
+// MARK: - Table view data source
+
+extension UnitListViewController {
+
+    // TODO: API取得次第変更
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! UnitListView
-        return cell
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.unitListCell.identifier, for: indexPath) as? UnitListCell
+        return UITableViewCell()
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 82
+    }
+
+}
+
+// MARK: - Table view delegate
+
+extension UnitListViewController {
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = LearningUnitViewController.makeInstanceInNavigationController()
+        present(vc, animated: true)
     }
 
 }
@@ -38,7 +59,7 @@ class UnitListViewController: UITableViewController {
 extension UnitListViewController {
 
     static func makeInstance() -> UIViewController {
-        guard let vc = R.storyboard.unitList.instantiateInitialViewController() else {
+        guard let vc = R.storyboard.unitList.unitListViewController() else {
             assertionFailure("Can't make instance 'UnitListViewController'.")
             return UIViewController()
         }
