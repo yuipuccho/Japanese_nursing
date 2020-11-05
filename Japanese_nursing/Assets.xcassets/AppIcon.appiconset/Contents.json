@@ -1,55 +1,55 @@
 {
   "images" : [
     {
-      "filename" : "icon_japanese_nursing40.png",
+      "filename" : "icon_japanese_nasing40.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
-      "filename" : "icon_japanese_nursing60.png",
+      "filename" : "icon_japanese_nasing60.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "20x20"
     },
     {
-      "filename" : "icon_japanese_nursing58.png",
+      "filename" : "icon_japanese_nasing58.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
-      "filename" : "icon_japanese_nursing87.png",
+      "filename" : "icon_japanese_nasing87.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "29x29"
     },
     {
-      "filename" : "icon_japanese_nursing80.png",
+      "filename" : "icon_japanese_nasing80.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
-      "filename" : "icon_japanese_nursing120.png",
+      "filename" : "icon_japanese_nasing120.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "40x40"
     },
     {
-      "filename" : "icon_japanese_nursing120-1.png",
+      "filename" : "icon_japanese_nasing120-1.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
     },
     {
-      "filename" : "icon_japanese_nursing180.png",
+      "filename" : "icon_japanese_nasing180.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"
     },
     {
-      "filename" : "icon_japanese_nursing1024.png",
+      "filename" : "icon_japanese_nasing1024.png",
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
