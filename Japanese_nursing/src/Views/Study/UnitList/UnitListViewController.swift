@@ -33,23 +33,20 @@ extension UnitListViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.unitListCell.identifier, for: indexPath) as? UnitListCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.unitListCell.identifier, for: indexPath) as? UnitListCell else{
+            return UITableViewCell()
+        }
+
+        cell.cellTappedSubject.subscribe(onNext: { [weak self] in
+            let vc = LearningUnitViewController.makeInstance()
+            self?.present(vc, animated: true)
+        }).disposed(by: cell.disposeBag)
+
         return UITableViewCell()
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 82
-    }
-
-}
-
-// MARK: - TableViewDelegate
-
-extension UnitListViewController {
-
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = LearningUnitViewController.makeInstance()
-        present(vc, animated: true)
     }
 
 }

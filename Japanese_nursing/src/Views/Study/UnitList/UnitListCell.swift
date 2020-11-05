@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class UnitListCell: UITableViewCell {
 
@@ -20,9 +22,21 @@ class UnitListCell: UITableViewCell {
     @IBOutlet weak var bookMarksCountLabel: UILabel!
     /// チェックマーク率
     @IBOutlet weak var checkMarkPercentageLabel: UILabel!
+    /// セルボタン（セルのタップだとセルが白くなる不具合がなぜか発生するため、応急処置）
+    @IBOutlet weak var cellButton: UIButton!
+
+    // MARK: - Properties
+
+    /// セルタップ
+    var cellTappedSubject: PublishSubject<Void> = PublishSubject<Void>()
+
+    var disposeBag = DisposeBag()
+
+    // MARK: - LifeCycles
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        subscribe()
         //clearConfigure()
     }
 
@@ -31,11 +45,20 @@ class UnitListCell: UITableViewCell {
         //clearConfigure()
     }
 
+    // MARK: - Functions
+
     func clearConfigure() {
         unitTitleLabel.text = nil
         wordsCountLabel.text = nil
         bookMarksCountLabel.text = nil
         checkMarkPercentageLabel.text = nil
+    }
+
+    func subscribe() {
+        // セルタップ
+        cellButton.rx.tap.subscribe(onNext: { [weak self] in
+            self?.cellTappedSubject.onNext(())
+        }).disposed(by: disposeBag)
     }
 
 }
