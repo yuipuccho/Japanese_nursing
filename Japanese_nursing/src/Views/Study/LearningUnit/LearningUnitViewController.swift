@@ -76,11 +76,13 @@ class LearningUnitViewController: UIViewController {
         // 覚えたボタンタップ
         memorizedButton.rx.tap.subscribe(onNext: { [weak self] in
             self?.kolodaView.swipe(.right)
+            self?.cardSwipingSubject.onNext(())
         }).disposed(by: disposebag)
 
         // 覚えていないボタンタップ
         notMemorizedButton.rx.tap.subscribe(onNext: { [weak self] in
             self?.kolodaView.swipe(.left)
+            self?.cardSwipingSubject.onNext(())
         }).disposed(by: disposebag)
     }
 
@@ -104,12 +106,12 @@ extension LearningUnitViewController: KolodaViewDelegate {
 
     /// カードがタップされた際に呼ばれるメソッド
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
-        self.cardTappedSubject.onNext(())
+        cardTappedSubject.onNext(())
     }
 
     /// カードのスワイプ中に呼ばれるメソッド
     func koloda(_ koloda: KolodaView, shouldDragCardAt index: Int) -> Bool {
-        self.cardSwipingSubject.onNext(())
+        cardSwipingSubject.onNext(())
         return true
     }
 
