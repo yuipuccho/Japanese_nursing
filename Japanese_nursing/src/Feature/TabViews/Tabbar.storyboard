@@ -39,10 +39,10 @@
             </objects>
             <point key="canvasLocation" x="270" y="-273"/>
         </scene>
-        <!--Test-->
+        <!--TestSettings-->
         <scene sceneID="yDa-6w-yEJ">
             <objects>
-                <viewControllerPlaceholder storyboardName="Test" id="sXT-MZ-wmj" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="TestSettings" id="sXT-MZ-wmj" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="wS5-A6-fod"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZOP-B9-BfB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -62,7 +62,7 @@
     </scenes>
     <resources>
         <namedColor name="MainBlue">
-            <color red="0.10980392156862745" green="0.6705882352941176" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.027450980392156862" green="0.72941176470588232" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

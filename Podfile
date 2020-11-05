@@ -22,4 +22,6 @@ target 'Japanese_nursing' do
 
   pod 'Koloda'
 
+  pod 'Charts'
+
 end

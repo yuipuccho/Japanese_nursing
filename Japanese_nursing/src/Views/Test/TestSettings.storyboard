@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SbY-jC-dqh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SbY-jC-dqh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,14 +30,31 @@
         <!--テスト-->
         <scene sceneID="gL5-0y-d81">
             <objects>
-                <viewController id="owY-yw-uEs" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TestSettingsViewController" id="owY-yw-uEs" customClass="TestSettingsViewController" customModule="d_介護の日本語" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YLZ-qb-IWb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tlp-AG-jYh" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="67" y="308" width="280" height="280"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="AOt-hm-z7f"/>
+                                    <constraint firstAttribute="height" constant="280" id="Git-4V-CtO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="T7j-cc-9BE"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="Tlp-AG-jYh" firstAttribute="centerY" secondItem="YLZ-qb-IWb" secondAttribute="centerY" id="X4Y-eB-ghn"/>
+                            <constraint firstItem="Tlp-AG-jYh" firstAttribute="centerX" secondItem="YLZ-qb-IWb" secondAttribute="centerX" id="iSv-aC-DyC"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="テスト" id="4td-hZ-rSQ"/>
+                    <connections>
+                        <outlet property="chartView" destination="Tlp-AG-jYh" id="Qh7-KE-ffQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzp-zz-9ff" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -45,5 +64,8 @@
     <resources>
         <image name="test_icon_active" width="30" height="30"/>
         <image name="test_icon_inactive" width="30" height="30"/>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

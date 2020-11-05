@@ -1,4 +1,7 @@
 PODS:
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
   - Firebase/Analytics (6.29.0):
     - Firebase/Core
   - Firebase/Core (6.29.0):
@@ -71,6 +74,7 @@ PODS:
   - RAMAnimatedTabBarController (5.2.0)
 
 DEPENDENCIES:
+  - Charts
   - Firebase/Analytics
   - Koloda
   - R.swift
@@ -78,6 +82,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Charts
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -95,6 +100,7 @@ SPEC REPOS:
     - RAMAnimatedTabBarController
 
 SPEC CHECKSUMS:
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
   Firebase: 57957c8d6eb3d8b80a560b1dc58be24724b89ff2
   FirebaseAnalytics: aa522dce9fd93002ba1554467d23ce7092323000
   FirebaseCore: 7930a1946517d94256d857f97371ed993b55f7bd
@@ -111,6 +117,6 @@ SPEC CHECKSUMS:
   R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
   RAMAnimatedTabBarController: 6863a386e7ae2ab227cd60aa73ab8ff56cdacfdd
 
-PODFILE CHECKSUM: 224e19202ab67c5aec492d422626f52cb16a41bf
+PODFILE CHECKSUM: 1c6358f7dad2a77601751c21400e1f43f24cf7e6
 
 COCOAPODS: 1.10.0
