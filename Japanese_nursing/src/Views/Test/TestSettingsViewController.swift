@@ -67,6 +67,14 @@ class TestSettingsViewController: UIViewController {
 
         view.addSubview(self.chartView)
         chartView.animate(xAxisDuration: 1.2, yAxisDuration: 0.8) // アニメーション
+
+        /// 進捗ラベルの表示にもアニメーションをつける
+        percentageLabel.alpha = 0
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            UIView.animate(withDuration: 0.6) { [weak self] in
+                self?.percentageLabel.alpha = 1
+            }
+        }
     }
 
 }
