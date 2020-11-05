@@ -49,8 +49,8 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhx-RK-DJ5">
-                                <rect key="frame" x="165" y="229.5" width="84.5" height="47"/>
-                                <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Medium" family="NotoSansCJKjpSub-Medium" pointSize="40"/>
+                                <rect key="frame" x="160.5" y="227" width="93" height="51.5"/>
+                                <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Medium" family="NotoSansCJKjpSub-Medium" pointSize="44"/>
                                 <color key="textColor" name="MainBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -68,6 +68,7 @@
                     <navigationItem key="navigationItem" title="テスト" id="4td-hZ-rSQ"/>
                     <connections>
                         <outlet property="chartView" destination="Tlp-AG-jYh" id="Qh7-KE-ffQ"/>
+                        <outlet property="percentageLabel" destination="zhx-RK-DJ5" id="HrL-pY-3vr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzp-zz-9ff" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

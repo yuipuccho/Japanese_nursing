@@ -14,71 +14,59 @@ import Charts
  */
 class TestSettingsViewController: UIViewController {
 
-    @IBOutlet private weak var chartView: PieChartView!
+    // MARK: - Outlets
 
+    /// 円形進捗バーのView
+    @IBOutlet private weak var chartView: PieChartView!
+    /// パーセンテージLabel
+    @IBOutlet private weak var percentageLabel: UILabel!
+
+    // MARK: - Properties
+
+
+
+    // MARK: - LyfeCycles
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        super.viewDidLoad()
-        // 円グラフの中心に表示するタイトル
-        //chartView.centerText = "テストデータ"
+        setupChartView()
+    }
 
-        // グラフに表示するデータのタイトルと値
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        setupChartView()
+    }
+
+    // MARK: - Functions
+
+    /// 円形進捗バーの設定
+    private func setupChartView() {
+        // グラフに表示するデータ(仮)
         let dataEntries = [
-            PieChartDataEntry(value: 40, label: "A"),
-            PieChartDataEntry(value: 35, label: "B"),
-            PieChartDataEntry(value: 25, label: "C")
+            PieChartDataEntry(value: 40),
+            PieChartDataEntry(value: 35),
+            PieChartDataEntry(value: 25)
         ]
 
+        // データをセットする
         let dataSet = PieChartDataSet(entries: dataEntries)
-
-        // 穴を大きく
-        chartView.holeRadiusPercent = 0.85
-
-        //穴を透明に
-        chartView.holeColor = UIColor.clear
-
-        // グラフの色
-        dataSet.setColors(R.color.mainBlue()!, R.color.mistake()!, R.color.untested()!)
-        // グラフのデータの値の色
-        dataSet.valueTextColor = UIColor.black
-        // グラフのデータのタイトルの色
-        dataSet.entryLabelColor = UIColor.black
-
+        dataSet.setColors(R.color.mainBlue()!, R.color.mistake()!, R.color.untested()!)  // グラフの色
+        dataSet.drawValuesEnabled = false  // グラフ上のデータ値を非表示にする
         self.chartView.data = PieChartData(dataSet: dataSet)
-        // データを％表示にする
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .percent
-        formatter.maximumFractionDigits = 2
-        formatter.multiplier = 1.0
-        self.chartView.data?.setValueFormatter(DefaultValueFormatter(formatter: formatter))
-        self.chartView.usePercentValuesEnabled = true
 
-        view.addSubview(self.chartView)
+        chartView.holeRadiusPercent = 0.85  // 中心の穴の大きさ
+        chartView.holeColor = UIColor.clear  // 中心の穴の色
 
-
-        dataSet.drawValuesEnabled = false  // グラフ上のデータ値を非表示
-        chartView.highlightPerTapEnabled = false  // グラフがタップされたときのハイライトをOFF（任意）
+        chartView.highlightPerTapEnabled = false  // グラフがタップされたときのハイライトを無効化
         chartView.chartDescription?.enabled = false  // グラフの説明を非表示
         chartView.drawEntryLabelsEnabled = false  // グラフ上のデータラベルを非表示
         chartView.legend.enabled = false  // グラフの注釈を非表示
-        chartView.rotationEnabled = false // グラフがぐるぐる動くのを無効化
+        chartView.rotationEnabled = false // グラフが動くのを無効化
 
-        //chartView.animate(yAxisDuration: 0.8)  // アニメーション
-        chartView.animate(xAxisDuration: 1.4, yAxisDuration: 0.8)
-
+        view.addSubview(self.chartView)
+        chartView.animate(xAxisDuration: 1.2, yAxisDuration: 0.8) // アニメーション
     }
-    
-
-    /*
-     // MARK: - Navigation
-
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
 
 }
