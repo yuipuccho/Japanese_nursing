@@ -21,7 +21,7 @@ class UnitListViewController: UITableViewController {
 
 }
 
-// MARK: - Table view data source
+// MARK: - TableViewDataSource
 
 extension UnitListViewController {
 
@@ -43,7 +43,7 @@ extension UnitListViewController {
 
 }
 
-// MARK: - Table view delegate
+// MARK: - TableViewDelegate
 
 extension UnitListViewController {
 

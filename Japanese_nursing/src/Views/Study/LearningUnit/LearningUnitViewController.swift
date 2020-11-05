@@ -74,13 +74,13 @@ class LearningUnitViewController: UIViewController {
         }).disposed(by: disposebag)
 
         // 覚えたボタンタップ
-        memorizedButton.rx.tap.subscribe(onNext: { [unowned self] in
-            self.kolodaView.swipe(.right)
+        memorizedButton.rx.tap.subscribe(onNext: { [weak self] in
+            self?.kolodaView.swipe(.right)
         }).disposed(by: disposebag)
 
         // 覚えていないボタンタップ
-        notMemorizedButton.rx.tap.subscribe(onNext: { [unowned self] in
-            self.kolodaView.swipe(.left)
+        notMemorizedButton.rx.tap.subscribe(onNext: { [weak self] in
+            self?.kolodaView.swipe(.left)
         }).disposed(by: disposebag)
     }
 
@@ -113,7 +113,7 @@ extension LearningUnitViewController: KolodaViewDelegate {
         return true
     }
 
-    /// カードがスワイプされたら実行されるメソッド
+    /// カードがスワイプされたら呼ばれるメソッド
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
         // TODO: APIが追加されたら、スワイプの方向によって処理を変更する
 //        switch direction {
