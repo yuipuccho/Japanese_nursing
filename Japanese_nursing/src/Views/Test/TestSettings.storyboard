@@ -4,10 +4,16 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansCJKjpSub-Medium.otf">
+            <string>NotoSansCJKjpSub-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="aHw-fZ-R9m">
@@ -36,18 +42,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tlp-AG-jYh" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="67" y="308" width="280" height="280"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <rect key="frame" x="62" y="108" width="290" height="290"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="AOt-hm-z7f"/>
-                                    <constraint firstAttribute="height" constant="280" id="Git-4V-CtO"/>
+                                    <constraint firstAttribute="width" secondItem="Tlp-AG-jYh" secondAttribute="height" multiplier="1:1" id="Tym-PF-OTU"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhx-RK-DJ5">
+                                <rect key="frame" x="165" y="229.5" width="84.5" height="47"/>
+                                <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Medium" family="NotoSansCJKjpSub-Medium" pointSize="40"/>
+                                <color key="textColor" name="MainBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="T7j-cc-9BE"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="Tlp-AG-jYh" firstAttribute="centerY" secondItem="YLZ-qb-IWb" secondAttribute="centerY" id="X4Y-eB-ghn"/>
+                            <constraint firstItem="zhx-RK-DJ5" firstAttribute="centerY" secondItem="Tlp-AG-jYh" secondAttribute="centerY" id="16x-sD-xXB"/>
+                            <constraint firstItem="zhx-RK-DJ5" firstAttribute="centerX" secondItem="Tlp-AG-jYh" secondAttribute="centerX" id="7wE-L4-G8d"/>
+                            <constraint firstItem="Tlp-AG-jYh" firstAttribute="width" secondItem="YLZ-qb-IWb" secondAttribute="width" multiplier="0.7" id="8UB-lz-VJC"/>
+                            <constraint firstItem="Tlp-AG-jYh" firstAttribute="top" secondItem="T7j-cc-9BE" secondAttribute="top" constant="20" id="g6k-N1-0oc"/>
                             <constraint firstItem="Tlp-AG-jYh" firstAttribute="centerX" secondItem="YLZ-qb-IWb" secondAttribute="centerX" id="iSv-aC-DyC"/>
                         </constraints>
                     </view>
@@ -64,8 +78,11 @@
     <resources>
         <image name="test_icon_active" width="30" height="30"/>
         <image name="test_icon_inactive" width="30" height="30"/>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="MainBlue">
+            <color red="0.027450980392156862" green="0.72941176470588232" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

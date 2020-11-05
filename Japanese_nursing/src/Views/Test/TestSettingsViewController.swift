@@ -22,7 +22,7 @@ class TestSettingsViewController: UIViewController {
 
         super.viewDidLoad()
         // 円グラフの中心に表示するタイトル
-        self.chartView.centerText = "テストデータ"
+        //chartView.centerText = "テストデータ"
 
         // グラフに表示するデータのタイトルと値
         let dataEntries = [
@@ -31,16 +31,16 @@ class TestSettingsViewController: UIViewController {
             PieChartDataEntry(value: 25, label: "C")
         ]
 
-        let dataSet = PieChartDataSet(entries: dataEntries, label: "テストデータ")
+        let dataSet = PieChartDataSet(entries: dataEntries)
 
         // 穴を大きく
-        chartView.holeRadiusPercent = 0.9
+        chartView.holeRadiusPercent = 0.85
 
         //穴を透明に
         chartView.holeColor = UIColor.clear
 
         // グラフの色
-        dataSet.setColors(UIColor.green, UIColor.blue, UIColor.red)
+        dataSet.setColors(R.color.mainBlue()!, R.color.mistake()!, R.color.untested()!)
         // グラフのデータの値の色
         dataSet.valueTextColor = UIColor.black
         // グラフのデータのタイトルの色
@@ -63,8 +63,10 @@ class TestSettingsViewController: UIViewController {
         chartView.chartDescription?.enabled = false  // グラフの説明を非表示
         chartView.drawEntryLabelsEnabled = false  // グラフ上のデータラベルを非表示
         chartView.legend.enabled = false  // グラフの注釈を非表示
+        chartView.rotationEnabled = false // グラフがぐるぐる動くのを無効化
 
-        chartView.animate(xAxisDuration: 1.4)  // アニメーション
+        //chartView.animate(yAxisDuration: 0.8)  // アニメーション
+        chartView.animate(xAxisDuration: 1.4, yAxisDuration: 0.8)
 
     }
     
