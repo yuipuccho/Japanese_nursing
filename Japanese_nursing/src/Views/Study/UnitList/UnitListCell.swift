@@ -1,17 +1,14 @@
 //
-//  UnitListView.swift
+//  UnitListCell.swift
 //  Japanese_nursing
 //
-//  Created by 吉澤優衣 on 2020/07/31.
+//  Created by 吉澤優衣 on 2020/11/03.
 //  Copyright © 2020 吉澤優衣. All rights reserved.
 //
 
 import UIKit
 
-/**
- * 単元一覧セルView
- */
-class UnitListView: UITableViewCell {
+class UnitListCell: UITableViewCell {
 
     // MARK: - Outlets
 
@@ -26,6 +23,19 @@ class UnitListView: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        //clearConfigure()
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        //clearConfigure()
+    }
+
+    func clearConfigure() {
+        unitTitleLabel.text = nil
+        wordsCountLabel.text = nil
+        bookMarksCountLabel.text = nil
+        checkMarkPercentageLabel.text = nil
     }
 
 }

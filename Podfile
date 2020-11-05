@@ -20,4 +20,6 @@ target 'Japanese_nursing' do
 
   pod 'R.swift'
 
+  pod 'Koloda'
+
 end

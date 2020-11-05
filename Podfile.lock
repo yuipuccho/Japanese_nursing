@@ -56,11 +56,14 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (6.7.1):
     - GoogleUtilities/Logger
+  - Koloda (5.0.1):
+    - pop (~> 1.0)
   - nanopb (1.30905.0):
     - nanopb/decode (= 1.30905.0)
     - nanopb/encode (= 1.30905.0)
   - nanopb/decode (1.30905.0)
   - nanopb/encode (1.30905.0)
+  - pop (1.0.12)
   - PromisesObjC (1.2.9)
   - R.swift (5.2.2):
     - R.swift.Library (~> 5.2.0)
@@ -69,6 +72,7 @@ PODS:
 
 DEPENDENCIES:
   - Firebase/Analytics
+  - Koloda
   - R.swift
   - RAMAnimatedTabBarController
 
@@ -82,7 +86,9 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
+    - Koloda
     - nanopb
+    - pop
     - PromisesObjC
     - R.swift
     - R.swift.Library
@@ -97,12 +103,14 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 345d365fd105e6682bf5084783a5352a3db26820
   GoogleDataTransport: af0c79193dc59acd37630b4833d0dc6912ae6bd5
   GoogleUtilities: e121a3867449ce16b0e35ddf1797ea7a389ffdf2
+  Koloda: d07b9199a383abc5898b62aa945a599f5e7c0c4b
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   PromisesObjC: b48e0338dbbac2207e611750777895f7a5811b75
   R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
   R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
   RAMAnimatedTabBarController: 6863a386e7ae2ab227cd60aa73ab8ff56cdacfdd
 
-PODFILE CHECKSUM: 5b50643b41fdb6400712318dc39dbec0494aeea8
+PODFILE CHECKSUM: 224e19202ab67c5aec492d422626f52cb16a41bf
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.10.0
