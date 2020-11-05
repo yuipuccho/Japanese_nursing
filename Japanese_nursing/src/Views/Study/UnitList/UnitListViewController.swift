@@ -51,17 +51,6 @@ extension UnitListViewController {
 
 }
 
-// MARK: - TableViewDelegate
-
-extension UnitListViewController {
-
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let vc = LearningUnitViewController.makeInstance()
-//        present(vc, animated: true)
-    }
-
-}
-
 // MARK: - MakeInstance
 
 extension UnitListViewController {
