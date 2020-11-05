@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6957F40151887726FC69D034 /* Pods_Japanese_nursing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B94643ECC484CCF846EA499 /* Pods_Japanese_nursing.framework */; };
-		BA133AC624BB28B80047E265 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA133AC524BB28B80047E265 /* Test.storyboard */; };
+		BA133AC624BB28B80047E265 /* TestSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA133AC524BB28B80047E265 /* TestSettings.storyboard */; };
 		BA133ACA24C04D850047E265 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA133AC924C04D850047E265 /* CustomTabBar.swift */; };
 		BA1E5B2F2487AC210055A5F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E5B2E2487AC210055A5F4 /* AppDelegate.swift */; };
 		BA1E5B312487AC210055A5F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E5B302487AC210055A5F4 /* SceneDelegate.swift */; };
@@ -19,6 +19,7 @@
 		BA2A5DE9255139DB0085A3EF /* LearningUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A5DE8255139DB0085A3EF /* LearningUnitViewController.swift */; };
 		BA2A5DF4255166600085A3EF /* UIViewController+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A5DF3255166600085A3EF /* UIViewController+Extended.swift */; };
 		BA3711E7254C5DEB002D34A0 /* Pageboy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA3D89924C47F5300157FF2 /* Pageboy.framework */; };
+		BA40295D255436B800421276 /* TestSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA40295C255436B800421276 /* TestSettingsViewController.swift */; };
 		BA582A3924E170670089DA0B /* LearningUnit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA582A3824E170670089DA0B /* LearningUnit.storyboard */; };
 		BA5EACD624D261F50008E2D0 /* Pageboy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA3D89924C47F5300157FF2 /* Pageboy.framework */; };
 		BA5EACD824D262050008E2D0 /* Tabman.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA3D89B24C47F5300157FF2 /* Tabman.framework */; };
@@ -50,7 +51,7 @@
 		0B94643ECC484CCF846EA499 /* Pods_Japanese_nursing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Japanese_nursing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		649DB55D88B2F4BF768BCA11 /* Pods-Japanese_nursing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Japanese_nursing.release.xcconfig"; path = "Target Support Files/Pods-Japanese_nursing/Pods-Japanese_nursing.release.xcconfig"; sourceTree = "<group>"; };
 		6BF915CCD17BCD856D68A990 /* Pods-Japanese_nursing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Japanese_nursing.debug.xcconfig"; path = "Target Support Files/Pods-Japanese_nursing/Pods-Japanese_nursing.debug.xcconfig"; sourceTree = "<group>"; };
-		BA133AC524BB28B80047E265 /* Test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
+		BA133AC524BB28B80047E265 /* TestSettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestSettings.storyboard; sourceTree = "<group>"; };
 		BA133AC924C04D850047E265 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		BA1E5B2B2487AC210055A5F4 /* d_介護の日本語.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "d_介護の日本語.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA1E5B2E2487AC210055A5F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +62,7 @@
 		BA2A5DE4255135A50085A3EF /* UnitListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListCell.swift; sourceTree = "<group>"; };
 		BA2A5DE8255139DB0085A3EF /* LearningUnitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningUnitViewController.swift; sourceTree = "<group>"; };
 		BA2A5DF3255166600085A3EF /* UIViewController+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extended.swift"; sourceTree = "<group>"; };
+		BA40295C255436B800421276 /* TestSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSettingsViewController.swift; sourceTree = "<group>"; };
 		BA582A3824E170670089DA0B /* LearningUnit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LearningUnit.storyboard; sourceTree = "<group>"; };
 		BA5EACE224D2AF8F0008E2D0 /* UnitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListViewController.swift; sourceTree = "<group>"; };
 		BA5EACEB24D2E34D0008E2D0 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
@@ -110,7 +112,8 @@
 		BA133AC224BB28680047E265 /* Test */ = {
 			isa = PBXGroup;
 			children = (
-				BA133AC524BB28B80047E265 /* Test.storyboard */,
+				BA133AC524BB28B80047E265 /* TestSettings.storyboard */,
+				BA40295C255436B800421276 /* TestSettingsViewController.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -390,7 +393,7 @@
 				BA27FB35248CECDA002840B8 /* Colors.xcassets in Resources */,
 				BA1E5B3B2487AC250055A5F4 /* LaunchScreen.storyboard in Resources */,
 				BAA3D8A624C47F5300157FF2 /* Tabman.framework.dSYM in Resources */,
-				BA133AC624BB28B80047E265 /* Test.storyboard in Resources */,
+				BA133AC624BB28B80047E265 /* TestSettings.storyboard in Resources */,
 				BAC5904D249EECCF007D247B /* NotoSansCJKjpSub-Regular.otf in Resources */,
 				BA1E5B382487AC250055A5F4 /* Assets.xcassets in Resources */,
 				BAC59051249EECCF007D247B /* NotoSansCJKjpSub-Light.otf in Resources */,
@@ -505,6 +508,7 @@
 				BA66D67D24A6ECF000BE7273 /* TabBarController.swift in Sources */,
 				BA1E5B312487AC210055A5F4 /* SceneDelegate.swift in Sources */,
 				BA85A3FE24AB7F51003E6E85 /* R.generated.swift in Sources */,
+				BA40295D255436B800421276 /* TestSettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
