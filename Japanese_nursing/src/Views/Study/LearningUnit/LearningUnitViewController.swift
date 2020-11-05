@@ -34,11 +34,17 @@ class LearningUnitViewController: UIViewController {
     /// カードのサイズ
     private var cardFrame: CGRect {
         let width = (view.bounds.size.width) * 0.85
-        let height = (view.bounds.size.height) * 0.55
+        let height = (view.bounds.size.height) * 0.5
         return CGRect(x: 0, y: 0, width: width, height: height)
     }
 
-    private var items: [String] = ["aa", "bb", "cc", "dd", "ee"]
+    private var items: [String] = ["りんご", "ごりら", "ラッパ", "パンダ", "だるま"]
+
+    /// カードタップ
+    private var cardTappedSubject: PublishSubject<Void> = PublishSubject<Void>()
+
+    /// カードスワイプ中
+    private var cardSwipingSubject: PublishSubject<Void> = PublishSubject<Void>()
 
     private var disposebag = DisposeBag()
 
@@ -78,7 +84,7 @@ class LearningUnitViewController: UIViewController {
         }).disposed(by: disposebag)
     }
 
-    /// 関数名
+    /// 進捗バーを更新する
     private func updateProgressView(swipedCardIndex: Int) {
         /// カードの最大枚数
         let maxCardCount = Float(items.count)
@@ -96,14 +102,15 @@ class LearningUnitViewController: UIViewController {
 
 extension LearningUnitViewController: KolodaViewDelegate {
 
-    /// スワイプを続けて行ってデータソース内のViewを全て表示しきった際に呼ばれるメソッド
-    func kolodaDidRunOutOfCards(koloda: KolodaView) {
-        print("Out of stock!!")
-    }
-
     /// カードがタップされた際に呼ばれるメソッド
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
-        print("index \(index) has tapped!!")
+        self.cardTappedSubject.onNext(())
+    }
+
+    /// カードのスワイプ中に呼ばれるメソッド
+    func koloda(_ koloda: KolodaView, shouldDragCardAt index: Int) -> Bool {
+        self.cardSwipingSubject.onNext(())
+        return true
     }
 
     /// カードがスワイプされたら実行されるメソッド
@@ -139,18 +146,38 @@ extension LearningUnitViewController: KolodaViewDataSource {
         view.layer.shadowColor = UIColor.black.cgColor
         view.layer.shadowOpacity = 0.2
         view.layer.shadowOffset = CGSize(width: 0, height: 1.5)
-
-
-        // ラベルを表示する.
-        let label = UILabel()
-        label.text = items[index]
-        label.font = R.font.notoSansCJKjpSubBold(size: 40)
-        label.textColor = R.color.mainBlue()
-        label.sizeToFit()
-        label.center = view.center
-        view.addSubview(label) // ラベルの追加
-
         view.layer.cornerRadius = 10
+
+        // メインラベルを表示する
+        let mainLabel = UILabel()
+        mainLabel.text = items[index]
+        mainLabel.font = R.font.notoSansCJKjpSubBold(size: 40)
+        mainLabel.textColor = R.color.mainBlue()
+        mainLabel.sizeToFit()
+        mainLabel.center = CGPoint(x: view.bounds.size.width / 2, y: (view.bounds.size.height / 2) - 35)
+        view.addSubview(mainLabel)
+
+        // サブラベルを表示する
+        let subLabel = UILabel()
+        subLabel.text = items[index]
+        subLabel.font = R.font.notoSansCJKjpSubMedium(size: 24)
+        subLabel.textColor = R.color.mainBlue()
+        subLabel.sizeToFit()
+        subLabel.center = CGPoint(x: view.bounds.size.width / 2, y: (view.bounds.size.height / 2) + 35)
+        view.addSubview(subLabel)
+
+        // サブラベルは最初は非表示
+        subLabel.isHidden = true
+
+        // カードがタップされた場合はサブラベルを表示する
+        cardTappedSubject.subscribe(onNext: { _ in
+            subLabel.isHidden = false
+        }).disposed(by: disposebag)
+
+        // カードがスワイプされはじめたらサブラベルを非表示にする（次のカードのサブラベルが見えてしまう可能性があるため）
+        cardSwipingSubject.subscribe(onNext: { _ in
+            subLabel.isHidden = true
+        }).disposed(by: disposebag)
 
         return view
     }
