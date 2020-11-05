@@ -47,7 +47,7 @@ class LearningUnitViewController: UIViewController {
     /// カードスワイプ中
     private var cardSwipingSubject: PublishSubject<Void> = PublishSubject<Void>()
 
-    private var disposebag = DisposeBag()
+    private var disposeBag = DisposeBag()
 
     // MARK: - LifeCycles
 
@@ -71,19 +71,19 @@ class LearningUnitViewController: UIViewController {
         // 閉じるボタンタップ
         closeButton.rx.tap.subscribe(onNext: { [weak self] in
             self?.dismiss(animated: true)
-        }).disposed(by: disposebag)
+        }).disposed(by: disposeBag)
 
         // 覚えたボタンタップ
         memorizedButton.rx.tap.subscribe(onNext: { [weak self] in
             self?.kolodaView.swipe(.right)
             self?.cardSwipingSubject.onNext(())
-        }).disposed(by: disposebag)
+        }).disposed(by: disposeBag)
 
         // 覚えていないボタンタップ
         notMemorizedButton.rx.tap.subscribe(onNext: { [weak self] in
             self?.kolodaView.swipe(.left)
             self?.cardSwipingSubject.onNext(())
-        }).disposed(by: disposebag)
+        }).disposed(by: disposeBag)
     }
 
     /// 進捗バーを更新する
@@ -174,12 +174,12 @@ extension LearningUnitViewController: KolodaViewDataSource {
         // カードがタップされた場合はサブラベルを表示する
         cardTappedSubject.subscribe(onNext: { _ in
             subLabel.isHidden = false
-        }).disposed(by: disposebag)
+        }).disposed(by: disposeBag)
 
         // カードがスワイプされはじめたらサブラベルを非表示にする（次のカードのサブラベルが見えてしまう可能性があるため）
         cardSwipingSubject.subscribe(onNext: { _ in
             subLabel.isHidden = true
-        }).disposed(by: disposebag)
+        }).disposed(by: disposeBag)
 
         return view
     }
