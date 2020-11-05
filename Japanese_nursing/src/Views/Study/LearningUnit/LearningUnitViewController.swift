@@ -14,6 +14,7 @@ import RxCocoa
 /**
  * 学習画面VC
  */
+// TODO: 設定作成後にUIの調整をする
 class LearningUnitViewController: UIViewController {
 
     // MARK: - Outlets
@@ -60,7 +61,6 @@ class LearningUnitViewController: UIViewController {
 
         // 表示サイズや位置を調整して、viewに追加
         kolodaView.frame = cardFrame
-        // このへんあとで調整
         kolodaView.center = CGPoint(x: view.bounds.size.width / 2, y: (view.bounds.size.height / 2) - 50)
         self.view.addSubview(kolodaView)
     }
