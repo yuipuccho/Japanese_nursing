@@ -128,7 +128,7 @@
         <image name="check_mark_icon" width="56" height="56"/>
         <image name="close_icon" width="50" height="50"/>
         <namedColor name="MainBlue">
-            <color red="0.10980392156862745" green="0.6705882352941176" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.027450980392156862" green="0.72941176470588232" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="WeakText">
             <color red="0.67100000381469727" green="0.67100000381469727" blue="0.67100000381469727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
