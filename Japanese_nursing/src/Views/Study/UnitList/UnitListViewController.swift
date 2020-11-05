@@ -54,7 +54,7 @@ extension UnitListViewController {
 
 }
 
-// MARK: - makeInstance
+// MARK: - MakeInstance
 
 extension UnitListViewController {
 
