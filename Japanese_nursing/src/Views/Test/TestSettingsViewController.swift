@@ -25,7 +25,7 @@ class TestSettingsViewController: UIViewController {
     /// すべてButton
     @IBOutlet private weak var allButton: UIButton!
     /// すべてView
-    @IBOutlet weak var allView: UIView!
+    @IBOutlet private weak var allView: UIView!
     /// すべてLabel
     @IBOutlet private weak var allLabel: UILabel!
     /// すべての数Label
@@ -33,7 +33,7 @@ class TestSettingsViewController: UIViewController {
     /// 苦手Button
     @IBOutlet private weak var mistakeButton: UIButton!
     /// 苦手View
-    @IBOutlet weak var mistakeView: UIView!
+    @IBOutlet private weak var mistakeView: UIView!
     /// 苦手Label
     @IBOutlet private weak var mistakeLabel: UILabel!
     /// 苦手の数Label
@@ -41,11 +41,13 @@ class TestSettingsViewController: UIViewController {
     /// 未出題Button
     @IBOutlet private weak var untestedButton: UIButton!
     /// 未出題View
-    @IBOutlet weak var untestedView: UIView!
+    @IBOutlet private weak var untestedView: UIView!
     /// 未出題Label
     @IBOutlet private weak var untestedLabel: UILabel!
     /// 未出題の数Label
     @IBOutlet private weak var untestedCountLabel: UILabel!
+    /// 出題数Label
+    @IBOutlet private weak var questionsCountLabel: UILabel!
     /// プラスButton
     @IBOutlet private weak var plusButton: UIButton!
     /// マイナスButton
@@ -63,7 +65,19 @@ class TestSettingsViewController: UIViewController {
     }
 
     /// 選択中の出題範囲
-    private var selectingQuestionRange: [QuestionRangeType] = []
+    private var selectingQuestionRange: [QuestionRangeType] = [.all]
+
+    /// 選択中の出題範囲
+    private var selectingQuestionsCount: Int = 10
+
+    /// すべての単語数
+    private let allCount = 125 // 仮
+    /// 苦手の単語数
+    private let mistakeCount = 8 // 仮
+    /// 未出題の単語数
+    private let untestedCount = 60 // 仮
+    /// 正解数
+    private let perfectCount = 57 // 仮
 
     private var disposeBag = DisposeBag()
 
@@ -74,6 +88,11 @@ class TestSettingsViewController: UIViewController {
 
         setupChartView()
         subscribe()
+
+        // 一旦ここに
+        allCountLabel.text = "(" + String(allCount) + ")"
+        mistakeCountLabel.text = "(" + String(mistakeCount) + ")"
+        untestedCountLabel.text = "(" + String(untestedCount) + ")"
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -105,10 +124,19 @@ extension TestSettingsViewController {
         }).disposed(by: disposeBag)
 
         // プラスボタンタップ
+        plusButton.rx.tap.subscribe(onNext: { [weak self] in
+            self?.updateQuestionsCount(shouldPlus: true)
+        }).disposed(by: disposeBag)
 
         // マイナスボタンタップ
+        minusButton.rx.tap.subscribe(onNext: { [weak self] in
+            self?.updateQuestionsCount(shouldPlus: false)
+        }).disposed(by: disposeBag)
 
         // スタートボタンタップ
+        startButton.rx.tap.subscribe(onNext: { [weak self] in
+            // TODO: テスト画面へ遷移する処理を追加
+        }).disposed(by: disposeBag)
 
     }
 
@@ -152,6 +180,12 @@ extension TestSettingsViewController {
                 }
             }
         }
+        // 最大出題範囲数が、設定中の出題数を下回る場合は、出題数ラベルを更新する
+        let maxQuestionsCount = calculateMaxQuestionsCount()
+        if maxQuestionsCount <= selectingQuestionsCount {
+            selectingQuestionsCount = maxQuestionsCount
+            questionsCountLabel.text = String(selectingQuestionsCount)
+        }
     }
 
     /// 出題範囲ボタンの活性 / 非活性を更新する
@@ -186,13 +220,69 @@ extension TestSettingsViewController {
         }
     }
 
+    /// 出題数を更新する
+    private func updateQuestionsCount(shouldPlus: Bool) {
+        if shouldPlus {
+            // 最大出題数を求める
+            let maxQuestionsCount = calculateMaxQuestionsCount()
+            // 端数を切り捨てる
+            let count = Int(floor(Double(selectingQuestionsCount / 10))) * 10
+
+            if (count + 10) <= maxQuestionsCount {
+                selectingQuestionsCount = count + 10
+                questionsCountLabel.text = String(selectingQuestionsCount)
+            } else {
+                selectingQuestionsCount = maxQuestionsCount
+                questionsCountLabel.text = String(selectingQuestionsCount)
+            }
+
+        } else {
+            // 端数がある場合は、切り捨ててから+10する
+            var count = 0
+            if selectingQuestionsCount % 10 != 0 {
+                count = Int(ceil(Double(selectingQuestionsCount / 10))) * 10 + 10
+            } else {
+                count = selectingQuestionsCount
+            }
+
+            if (count - 10) >= 10 {
+                selectingQuestionsCount = count - 10
+                questionsCountLabel.text = String(selectingQuestionsCount)
+            } else {
+                // 何もしない
+                return
+            }
+
+        }
+    }
+
+    /// 最大出題数を求める
+    private func calculateMaxQuestionsCount() -> Int {
+        var maxQuestionsCount = 0
+        for i in selectingQuestionRange {
+            switch i {
+            case .all:
+                maxQuestionsCount += allCount
+            case .mistake:
+                maxQuestionsCount += mistakeCount
+            case .untested:
+                maxQuestionsCount += untestedCount
+            }
+        }
+        return maxQuestionsCount
+    }
+
+}
+
+extension TestSettingsViewController {
+
     /// 円形進捗バーの表示設定
     private func setupChartView() {
         // グラフに表示するデータ(仮)
         let dataEntries = [
-            PieChartDataEntry(value: 40),
-            PieChartDataEntry(value: 30),
-            PieChartDataEntry(value: 30)
+            PieChartDataEntry(value: Double(perfectCount)),
+            PieChartDataEntry(value: Double(mistakeCount)),
+            PieChartDataEntry(value: Double(untestedCount))
         ]
 
         // データをセットする
@@ -220,18 +310,7 @@ extension TestSettingsViewController {
                 self?.percentageLabel.alpha = 1
             }
         }
-    }
-
-}
-
-// 配列から値を指定して削除できるように拡張
-
-extension Array where Element: Equatable {
-
-    mutating func remove(value: Element) {
-        if let i = self.firstIndex(of: value) {
-            self.remove(at: i)
-        }
+        percentageLabel.text = String(perfectCount) + "%" // 仮
     }
 
 }

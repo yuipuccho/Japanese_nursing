@@ -193,36 +193,37 @@
                                         <rect key="frame" x="15" y="102" width="290" height="47"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="minus_icon" translatesAutoresizingMaskIntoConstraints="NO" id="IuZ-sC-nxb">
-                                                <rect key="frame" x="33" y="7.5" width="40" height="40"/>
+                                                <rect key="frame" x="11" y="5.5" width="44" height="44"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="40" id="85p-Sn-KDs"/>
+                                                    <constraint firstAttribute="width" constant="44" id="85p-Sn-KDs"/>
                                                     <constraint firstAttribute="width" secondItem="IuZ-sC-nxb" secondAttribute="height" multiplier="1:1" id="G2E-Fu-7mT"/>
                                                     <constraint firstAttribute="width" secondItem="IuZ-sC-nxb" secondAttribute="height" multiplier="1:1" id="KSL-YP-zKf"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus_icon" translatesAutoresizingMaskIntoConstraints="NO" id="nD1-PY-gft">
-                                                <rect key="frame" x="217.5" y="7.5" width="40" height="40"/>
+                                                <rect key="frame" x="235" y="5.5" width="44" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="nD1-PY-gft" secondAttribute="height" multiplier="1:1" id="FRF-fm-CHH"/>
-                                                    <constraint firstAttribute="height" constant="40" id="rUQ-zl-fU1"/>
+                                                    <constraint firstAttribute="height" constant="44" id="rUQ-zl-fU1"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJI-4f-0OY">
-                                                <rect key="frame" x="123" y="0.0" width="44.5" height="47"/>
+                                                <rect key="frame" x="95" y="0.0" width="100" height="47"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="nWC-UE-g5a"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Medium" family="NotoSansCJKjpSub-Medium" pointSize="40"/>
                                                 <color key="textColor" name="MainBlue"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nD1-PY-gft" secondAttribute="trailing" constant="20" id="055-Oc-FtQ"/>
-                                            <constraint firstItem="CJI-4f-0OY" firstAttribute="leading" secondItem="IuZ-sC-nxb" secondAttribute="trailing" constant="50" id="7NZ-f7-8Vt"/>
+                                            <constraint firstItem="CJI-4f-0OY" firstAttribute="leading" secondItem="IuZ-sC-nxb" secondAttribute="trailing" constant="40" id="7NZ-f7-8Vt"/>
                                             <constraint firstItem="CJI-4f-0OY" firstAttribute="centerY" secondItem="TLL-w7-RnR" secondAttribute="centerY" id="A40-LY-h2L"/>
                                             <constraint firstItem="IuZ-sC-nxb" firstAttribute="centerY" secondItem="TLL-w7-RnR" secondAttribute="centerY" constant="4" id="Ijd-8D-0sZ"/>
-                                            <constraint firstItem="IuZ-sC-nxb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="TLL-w7-RnR" secondAttribute="leading" constant="20" id="UZY-ho-xjx"/>
                                             <constraint firstItem="nD1-PY-gft" firstAttribute="centerY" secondItem="TLL-w7-RnR" secondAttribute="centerY" constant="4" id="ZJS-2u-5rS"/>
                                             <constraint firstAttribute="bottom" secondItem="CJI-4f-0OY" secondAttribute="bottom" id="f7f-O3-UlE"/>
-                                            <constraint firstItem="nD1-PY-gft" firstAttribute="leading" secondItem="CJI-4f-0OY" secondAttribute="trailing" constant="50" id="nj8-Ky-Pgb"/>
+                                            <constraint firstItem="nD1-PY-gft" firstAttribute="leading" secondItem="CJI-4f-0OY" secondAttribute="trailing" constant="40" id="nj8-Ky-Pgb"/>
                                             <constraint firstItem="CJI-4f-0OY" firstAttribute="top" secondItem="TLL-w7-RnR" secondAttribute="top" id="q2H-0x-8CQ"/>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="r1J-AF-upm"/>
                                             <constraint firstItem="CJI-4f-0OY" firstAttribute="centerX" secondItem="TLL-w7-RnR" secondAttribute="centerX" id="y7c-jP-sDM"/>
@@ -265,10 +266,10 @@
                                         <rect key="frame" x="210" y="20" width="80" height="62"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8mi-MR-IrJ">
-                                        <rect key="frame" x="48" y="109.5" width="40" height="40"/>
+                                        <rect key="frame" x="26" y="107.5" width="44" height="44"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLv-nG-HnJ">
-                                        <rect key="frame" x="232.5" y="109.5" width="40" height="40"/>
+                                        <rect key="frame" x="250" y="107.5" width="44" height="44"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -341,6 +342,7 @@
                         <outlet property="mistakeView" destination="sGX-Nx-0fA" id="g1i-pE-7Ni"/>
                         <outlet property="percentageLabel" destination="zhx-RK-DJ5" id="HrL-pY-3vr"/>
                         <outlet property="plusButton" destination="TLv-nG-HnJ" id="95h-L0-Ee8"/>
+                        <outlet property="questionsCountLabel" destination="CJI-4f-0OY" id="olU-KW-ncF"/>
                         <outlet property="startButton" destination="ekH-4z-FBz" id="dh0-kM-zEV"/>
                         <outlet property="untestedButton" destination="jCd-4b-0ye" id="wC8-1f-r7c"/>
                         <outlet property="untestedCountLabel" destination="rbT-Vr-VWQ" id="Ijk-0l-vSc"/>

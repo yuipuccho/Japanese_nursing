@@ -45,6 +45,7 @@
 		BAC59050249EECCF007D247B /* NotoSansCJKjpSub-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAC59049249EECCF007D247B /* NotoSansCJKjpSub-Medium.otf */; };
 		BAC59051249EECCF007D247B /* NotoSansCJKjpSub-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAC5904A249EECCF007D247B /* NotoSansCJKjpSub-Light.otf */; };
 		BAC59052249EECCF007D247B /* NotoSansCJKjpSub-DemiLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAC5904B249EECCF007D247B /* NotoSansCJKjpSub-DemiLight.otf */; };
+		BAE31B7A2555A87900A3FC6D /* Array+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE31B792555A87800A3FC6D /* Array+Extended.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,7 @@
 		BAC59049249EECCF007D247B /* NotoSansCJKjpSub-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKjpSub-Medium.otf"; sourceTree = "<group>"; };
 		BAC5904A249EECCF007D247B /* NotoSansCJKjpSub-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKjpSub-Light.otf"; sourceTree = "<group>"; };
 		BAC5904B249EECCF007D247B /* NotoSansCJKjpSub-DemiLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKjpSub-DemiLight.otf"; sourceTree = "<group>"; };
+		BAE31B792555A87800A3FC6D /* Array+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extended.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 		BA2A5DF22551663E0085A3EF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				BAE31B792555A87800A3FC6D /* Array+Extended.swift */,
 				BA2A5DF3255166600085A3EF /* UIViewController+Extended.swift */,
 			);
 			path = Extensions;
@@ -504,6 +507,7 @@
 				BA2A5DE9255139DB0085A3EF /* LearningUnitViewController.swift in Sources */,
 				BA133ACA24C04D850047E265 /* CustomTabBar.swift in Sources */,
 				BA2A5DF4255166600085A3EF /* UIViewController+Extended.swift in Sources */,
+				BAE31B7A2555A87900A3FC6D /* Array+Extended.swift in Sources */,
 				BA1E5B2F2487AC210055A5F4 /* AppDelegate.swift in Sources */,
 				BA66D67D24A6ECF000BE7273 /* TabBarController.swift in Sources */,
 				BA1E5B312487AC210055A5F4 /* SceneDelegate.swift in Sources */,
