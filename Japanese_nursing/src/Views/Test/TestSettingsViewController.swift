@@ -20,6 +20,7 @@ class TestSettingsViewController: UIViewController {
     @IBOutlet private weak var chartView: PieChartView!
     /// パーセンテージLabel
     @IBOutlet private weak var percentageLabel: UILabel!
+    
 
     // MARK: - Properties
 
