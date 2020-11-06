@@ -229,11 +229,11 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekH-4z-FBz">
-                                        <rect key="frame" x="30" y="169" width="260" height="52"/>
+                                        <rect key="frame" x="30" y="169" width="260" height="56"/>
                                         <color key="backgroundColor" name="MainBlue"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="350" id="cdq-Sm-GtW"/>
-                                            <constraint firstAttribute="height" constant="52" id="xKQ-Ja-B7E"/>
+                                            <constraint firstAttribute="height" constant="56" id="xKQ-Ja-B7E"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="20"/>
                                         <state key="normal" title="テストを開始する">
@@ -241,7 +241,7 @@
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <integer key="value" value="26"/>
+                                                <integer key="value" value="28"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
                                             <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowIBColor">
@@ -329,8 +329,23 @@
                     </view>
                     <navigationItem key="navigationItem" title="テスト" id="4td-hZ-rSQ"/>
                     <connections>
+                        <outlet property="allButton" destination="LV6-r0-Gjk" id="GeO-0A-G6p"/>
+                        <outlet property="allCountLabel" destination="VNB-Vy-uFc" id="cgB-hW-jUu"/>
+                        <outlet property="allLabel" destination="OTF-h8-SnE" id="bAn-1T-kZe"/>
+                        <outlet property="allView" destination="gp6-5i-pwv" id="aZH-g1-Hdl"/>
                         <outlet property="chartView" destination="Tlp-AG-jYh" id="Qh7-KE-ffQ"/>
+                        <outlet property="minusButton" destination="8mi-MR-IrJ" id="a5T-91-bjt"/>
+                        <outlet property="mistakeButton" destination="PaR-oD-lTY" id="X27-bK-heD"/>
+                        <outlet property="mistakeCountLabel" destination="X8i-1b-51Y" id="3st-aC-CV1"/>
+                        <outlet property="mistakeLabel" destination="Ndg-6R-wP6" id="3Z4-Wp-u9A"/>
+                        <outlet property="mistakeView" destination="sGX-Nx-0fA" id="g1i-pE-7Ni"/>
                         <outlet property="percentageLabel" destination="zhx-RK-DJ5" id="HrL-pY-3vr"/>
+                        <outlet property="plusButton" destination="TLv-nG-HnJ" id="95h-L0-Ee8"/>
+                        <outlet property="startButton" destination="ekH-4z-FBz" id="dh0-kM-zEV"/>
+                        <outlet property="untestedButton" destination="jCd-4b-0ye" id="wC8-1f-r7c"/>
+                        <outlet property="untestedCountLabel" destination="rbT-Vr-VWQ" id="Ijk-0l-vSc"/>
+                        <outlet property="untestedLabel" destination="t5I-5M-CMf" id="foa-Dh-lvo"/>
+                        <outlet property="untestedView" destination="rHk-P2-6DZ" id="2Kv-ME-bZQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzp-zz-9ff" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
