@@ -41,13 +41,13 @@ class TestSettingsViewController: UIViewController {
 
     // MARK: - Functions
 
-    /// 円形進捗バーの設定
+    /// 円形進捗バーの表示設定
     private func setupChartView() {
         // グラフに表示するデータ(仮)
         let dataEntries = [
             PieChartDataEntry(value: 40),
-            PieChartDataEntry(value: 35),
-            PieChartDataEntry(value: 25)
+            PieChartDataEntry(value: 30),
+            PieChartDataEntry(value: 30)
         ]
 
         // データをセットする
