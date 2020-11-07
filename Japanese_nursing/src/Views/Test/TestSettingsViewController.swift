@@ -109,12 +109,6 @@ extension TestSettingsViewController {
         mistakeCountLabel.text = "(" + String(mistakeCount) + ")"
         untestedCountLabel.text = "(" + String(untestedCount) + ")"
 
-        // 苦手の数が0の場合は、グレー表示にし、ボタンタップを無効にする
-        if mistakeCount == 0 {
-            //mistakeView.isHidden = true
-            mistakeButton.isEnabled = false
-        }
-
         // 未出題の数が0の場合は、未出題のボタンを非表示にする
         if untestedCount == 0 {
             untestedView.isHidden = true
@@ -130,6 +124,7 @@ extension TestSettingsViewController {
 
         // 苦手ボタンタップ
         mistakeButton.rx.tap.subscribe(onNext: { [weak self] in
+            // TODO: 苦手数が0の場合にアラートを表示する処理を追加する
             self?.updateSelectingQuestionRange(tappedType: .mistake)
         }).disposed(by: disposeBag)
 
@@ -235,7 +230,11 @@ extension TestSettingsViewController {
         }
     }
 
-    /// 出題数を更新する
+    /**
+     * 出題数を更新する
+     * - Note: プラスがタップされた場合、一番近い10の倍数まで増やす(33→40, 50→60),
+     *  マイナスがタップされた場合、一番近い10の倍数まで減らす(33→30, 50→40)
+     */
     private func updateQuestionsCount(shouldPlus: Bool) {
         if shouldPlus {
             // 最大出題数を求める
