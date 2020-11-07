@@ -88,11 +88,7 @@ class TestSettingsViewController: UIViewController {
 
         setupChartView()
         subscribe()
-
-        // 一旦ここに
-        allCountLabel.text = "(" + String(allCount) + ")"
-        mistakeCountLabel.text = "(" + String(mistakeCount) + ")"
-        untestedCountLabel.text = "(" + String(untestedCount) + ")"
+        setupUI()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -106,6 +102,25 @@ class TestSettingsViewController: UIViewController {
 // MARK: - Functions
 
 extension TestSettingsViewController {
+
+    private func setupUI() {
+        // 出題可能数を表示
+        allCountLabel.text = "(" + String(allCount) + ")"
+        mistakeCountLabel.text = "(" + String(mistakeCount) + ")"
+        untestedCountLabel.text = "(" + String(untestedCount) + ")"
+
+        // 苦手の数が0の場合は、グレー表示にし、ボタンタップを無効にする
+        if mistakeCount == 0 {
+            //mistakeView.isHidden = true
+            mistakeButton.isEnabled = false
+        }
+
+        // 未出題の数が0の場合は、未出題のボタンを非表示にする
+        if untestedCount == 0 {
+            untestedView.isHidden = true
+        }
+
+    }
 
     private func subscribe() {
         // すべてボタンタップ
