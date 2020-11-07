@@ -252,7 +252,6 @@ extension TestSettingsViewController {
                 // 何もしない
                 return
             }
-
         }
     }
 
@@ -310,7 +309,7 @@ extension TestSettingsViewController {
                 self?.percentageLabel.alpha = 1
             }
         }
-        percentageLabel.text = String(perfectCount) + "%" // 仮
+        percentageLabel.text = String(perfectCount * 100 / allCount) + "%" // 仮
     }
 
 }
