@@ -172,7 +172,7 @@
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
-                                                    <integer key="value" value="8"/>
+                                                    <integer key="value" value="12"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowIBColor">
