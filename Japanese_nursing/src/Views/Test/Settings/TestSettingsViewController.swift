@@ -82,7 +82,7 @@ class TestSettingsViewController: UIViewController {
 
     private var disposeBag = DisposeBag()
 
-    // MARK: - LyfeCycles
+    // MARK: - LifeCycles
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -150,7 +150,8 @@ extension TestSettingsViewController {
 
         // スタートボタンタップ
         startButton.rx.tap.subscribe(onNext: { [weak self] in
-            // TODO: テスト画面へ遷移する処理を追加
+            let vc = TestViewController.makeInstance()
+            self?.present(vc, animated: true)
         }).disposed(by: disposeBag)
 
     }
@@ -305,7 +306,7 @@ extension TestSettingsViewController {
 
         // データをセットする
         let dataSet = PieChartDataSet(entries: dataEntries)
-        dataSet.setColors(R.color.mainBlue()!, R.color.mistake()!, R.color.untested()!)  // グラフの色
+        dataSet.setColors(R.color.mainBlue()!, R.color.mistakePink()!, R.color.untested()!)  // グラフの色
         dataSet.drawValuesEnabled = false  // グラフ上のデータ値を非表示にする
         self.chartView.data = PieChartData(dataSet: dataSet)
 
