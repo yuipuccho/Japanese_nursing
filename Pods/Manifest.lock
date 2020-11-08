@@ -66,21 +66,21 @@ PODS:
     - nanopb/encode (= 1.30905.0)
   - nanopb/decode (1.30905.0)
   - nanopb/encode (1.30905.0)
+  - PKHUD (5.3.0)
   - pop (1.0.12)
   - PromisesObjC (1.2.9)
   - R.swift (5.2.2):
     - R.swift.Library (~> 5.2.0)
   - R.swift.Library (5.2.0)
   - RAMAnimatedTabBarController (5.2.0)
-  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - Charts
   - Firebase/Analytics
   - Koloda
+  - PKHUD (~> 5.0)
   - R.swift
   - RAMAnimatedTabBarController
-  - SVProgressHUD
 
 SPEC REPOS:
   trunk:
@@ -95,12 +95,12 @@ SPEC REPOS:
     - GoogleUtilities
     - Koloda
     - nanopb
+    - PKHUD
     - pop
     - PromisesObjC
     - R.swift
     - R.swift.Library
     - RAMAnimatedTabBarController
-    - SVProgressHUD
 
 SPEC CHECKSUMS:
   Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
@@ -114,13 +114,13 @@ SPEC CHECKSUMS:
   GoogleUtilities: e121a3867449ce16b0e35ddf1797ea7a389ffdf2
   Koloda: d07b9199a383abc5898b62aa945a599f5e7c0c4b
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
+  PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   PromisesObjC: b48e0338dbbac2207e611750777895f7a5811b75
   R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
   R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
   RAMAnimatedTabBarController: 6863a386e7ae2ab227cd60aa73ab8ff56cdacfdd
-  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 635a3ffe467a86b056fd985c18137dfbb414c7ce
+PODFILE CHECKSUM: 1ae9f55cf6b22b78f61cf29c0b4af3580d2c9257
 
 COCOAPODS: 1.10.0
