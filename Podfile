@@ -26,4 +26,6 @@ target 'Japanese_nursing' do
 
   pod 'PKHUD', '~> 5.0'
 
+  pod 'SCLAlertView'
+
 end

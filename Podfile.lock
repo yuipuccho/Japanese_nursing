@@ -73,6 +73,7 @@ PODS:
     - R.swift.Library (~> 5.2.0)
   - R.swift.Library (5.2.0)
   - RAMAnimatedTabBarController (5.2.0)
+  - SCLAlertView (0.8)
 
 DEPENDENCIES:
   - Charts
@@ -81,6 +82,7 @@ DEPENDENCIES:
   - PKHUD (~> 5.0)
   - R.swift
   - RAMAnimatedTabBarController
+  - SCLAlertView
 
 SPEC REPOS:
   trunk:
@@ -101,6 +103,7 @@ SPEC REPOS:
     - R.swift
     - R.swift.Library
     - RAMAnimatedTabBarController
+    - SCLAlertView
 
 SPEC CHECKSUMS:
   Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
@@ -120,7 +123,8 @@ SPEC CHECKSUMS:
   R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
   R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
   RAMAnimatedTabBarController: 6863a386e7ae2ab227cd60aa73ab8ff56cdacfdd
+  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
 
-PODFILE CHECKSUM: 1ae9f55cf6b22b78f61cf29c0b4af3580d2c9257
+PODFILE CHECKSUM: 539536b9bbd6d28b97b663043baa83fc7fbde5ef
 
 COCOAPODS: 1.10.0
