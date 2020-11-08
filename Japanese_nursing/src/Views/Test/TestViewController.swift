@@ -25,6 +25,8 @@ class TestViewController: UIViewController {
     @IBOutlet private weak var progressLabel: UILabel!
     /// 問題ラベル
     @IBOutlet private weak var questionLabel: UILabel!
+    /// 中央の大きなフィードバックImageView
+    @IBOutlet private weak var bigFeedbackImageView: UIImageView!
     /// フィードバックView
     @IBOutlet private weak var feedbackView: UIView!
     /// フィードバックImageView
@@ -66,7 +68,7 @@ class TestViewController: UIViewController {
     private enum ButtonStatus {
         case notSelected // 選択されていない
         case selectedCorrect // 正解をタップした
-        case selectedWrong // 不正解をタップした
+        case selectedMistake // 不正解をタップした
         case answer // 解答
     }
 
@@ -82,8 +84,9 @@ class TestViewController: UIViewController {
     }
 
     override func viewDidLayoutSubviews() {
-        setupInitialUI()
+        super.viewDidLayoutSubviews()
 
+        setupInitialUI()
     }
 
 }
@@ -118,7 +121,7 @@ extension TestViewController {
 
         // 2つ目の選択肢タップ
         secondOptionButton.rx.tap.subscribe(onNext: { [weak self] in
-            self?.wrong() // 仮
+            self?.mistake() // 仮
         }).disposed(by: disposeBag)
     }
 
@@ -128,8 +131,10 @@ extension TestViewController {
 
         // トップViewの色をMainBlueに変更
         topView.backgroundColor = R.color.mainBlue()
+        progressLabel.textColor = R.color.mainBlue()
 
         // フィードバックを非表示
+        bigFeedbackImageView.isHidden = true
         feedbackView.isHidden = true
         firstOptionImageView.isHidden = true
         secondOptionImageView.isHidden = true
@@ -145,6 +150,8 @@ extension TestViewController {
 
     /// 正解の処理
     private func correct() {
+        bigFeedbackImageView.isHidden = false
+        bigFeedbackImageView.image = R.image.big_circle()
         feedbackView.isHidden = false
         feedbackImageView.image = R.image.good_icon()
         feedbackLabel.text = "Good!"
@@ -164,23 +171,26 @@ extension TestViewController {
     }
 
     /// 不正解の処理
-    private func wrong() {
+    private func mistake() {
+        bigFeedbackImageView.isHidden = false
+        bigFeedbackImageView.image = R.image.big_cross()
         feedbackView.isHidden = false
         feedbackImageView.image = R.image.bad_icon()
         feedbackLabel.text = "Bad..."
         topView.backgroundColor = R.color.mistakePink()
+        progressLabel.textColor = R.color.mistakePink()
 
         // 仮
         // 不正解ボタンの表示
-        updateOptionButton(type: .second, status: .selectedWrong)
+        updateOptionButton(type: .second, status: .selectedMistake)
         // 解答ボタンの表示
         updateOptionButton(type: .first, status: .answer)
 
         // ボタンタップを無効化する
         buttonTapSetting(isEnabled: false)
 
-        // 2秒後に問題を更新し、ボタンタップを有効化する
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
+        // 1.5秒後に問題を更新し、ボタンタップを有効化する
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak self] in
             self?.buttonTapSetting(isEnabled: true)
             self?.updateQuestion()
         }
@@ -220,7 +230,7 @@ extension TestViewController {
             view?.backgroundColor = R.color.mainBlue()
             label?.textColor = UIColor.white
             imageView?.isHidden = true
-        case .selectedWrong:
+        case .selectedMistake:
             view?.backgroundColor = R.color.mistakeGrey()
             label?.textColor = UIColor.white
             imageView?.isHidden = false

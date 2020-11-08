@@ -72,6 +72,12 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="big_circle" translatesAutoresizingMaskIntoConstraints="NO" id="nfm-6h-g48">
+                                        <rect key="frame" x="93" y="90.666666666666671" width="228" height="227.66666666666663"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="nfm-6h-g48" secondAttribute="height" multiplier="1:1" id="3v4-Y7-pY2"/>
+                                        </constraints>
+                                    </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close_icon" translatesAutoresizingMaskIntoConstraints="NO" id="6y5-hC-xze">
                                         <rect key="frame" x="10" y="10" width="36" height="36"/>
                                         <constraints>
@@ -116,14 +122,17 @@
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="nfm-6h-g48" firstAttribute="centerX" secondItem="Brt-nJ-d7d" secondAttribute="centerX" id="04Q-pZ-L9G"/>
                                     <constraint firstItem="6y5-hC-xze" firstAttribute="top" secondItem="Brt-nJ-d7d" secondAttribute="top" constant="10" id="5qr-Z8-2U2"/>
                                     <constraint firstAttribute="bottom" secondItem="IwH-x9-D9U" secondAttribute="bottom" constant="20" id="9ke-1n-Nea"/>
                                     <constraint firstItem="kxk-6L-CMB" firstAttribute="bottom" secondItem="6y5-hC-xze" secondAttribute="bottom" id="D7U-a7-qYp"/>
                                     <constraint firstItem="kxk-6L-CMB" firstAttribute="top" secondItem="6y5-hC-xze" secondAttribute="top" id="QEN-kp-fao"/>
                                     <constraint firstItem="JKb-LF-Vn9" firstAttribute="centerX" secondItem="Brt-nJ-d7d" secondAttribute="centerX" id="ZRG-a6-4V8"/>
                                     <constraint firstAttribute="bottom" secondItem="4Qk-8u-fSP" secondAttribute="bottom" id="ajc-CG-wzp"/>
+                                    <constraint firstItem="nfm-6h-g48" firstAttribute="centerY" secondItem="Brt-nJ-d7d" secondAttribute="centerY" id="cIO-nx-UIk"/>
                                     <constraint firstItem="6y5-hC-xze" firstAttribute="leading" secondItem="Brt-nJ-d7d" secondAttribute="leading" constant="10" id="dX8-ch-iHl"/>
                                     <constraint firstItem="kxk-6L-CMB" firstAttribute="leading" secondItem="6y5-hC-xze" secondAttribute="leading" id="drv-QJ-N6a"/>
+                                    <constraint firstItem="nfm-6h-g48" firstAttribute="width" secondItem="Brt-nJ-d7d" secondAttribute="width" multiplier="0.55" id="dzl-ZO-xWz"/>
                                     <constraint firstItem="kxk-6L-CMB" firstAttribute="trailing" secondItem="6y5-hC-xze" secondAttribute="trailing" id="fej-BX-xQr"/>
                                     <constraint firstItem="4Qk-8u-fSP" firstAttribute="centerX" secondItem="Brt-nJ-d7d" secondAttribute="centerX" id="pd8-gx-yFs"/>
                                     <constraint firstItem="JKb-LF-Vn9" firstAttribute="centerY" secondItem="Brt-nJ-d7d" secondAttribute="centerY" id="qEO-z2-U3g"/>
@@ -380,6 +389,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bigFeedbackImageView" destination="nfm-6h-g48" id="voh-lW-7Lq"/>
                         <outlet property="closeButton" destination="kxk-6L-CMB" id="5Y5-tn-exk"/>
                         <outlet property="feedbackImageView" destination="4jQ-TZ-Grh" id="10n-I2-8YO"/>
                         <outlet property="feedbackLabel" destination="fJq-uM-nJ0" id="cdn-wR-BwY"/>
@@ -411,6 +421,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="big_circle" width="300" height="300"/>
         <image name="close_icon" width="50" height="50"/>
         <image name="correct_circle" width="37" height="37"/>
         <image name="good_icon" width="255" height="256"/>
