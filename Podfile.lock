@@ -59,6 +59,7 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (6.7.1):
     - GoogleUtilities/Logger
+  - IBAnimatable (6.1.0)
   - Koloda (5.0.1):
     - pop (~> 1.0)
   - nanopb (1.30905.0):
@@ -78,6 +79,7 @@ PODS:
 DEPENDENCIES:
   - Charts
   - Firebase/Analytics
+  - IBAnimatable
   - Koloda
   - PKHUD (~> 5.0)
   - R.swift
@@ -95,6 +97,7 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
+    - IBAnimatable
     - Koloda
     - nanopb
     - PKHUD
@@ -115,6 +118,7 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 345d365fd105e6682bf5084783a5352a3db26820
   GoogleDataTransport: af0c79193dc59acd37630b4833d0dc6912ae6bd5
   GoogleUtilities: e121a3867449ce16b0e35ddf1797ea7a389ffdf2
+  IBAnimatable: 99dddd4c0625884a301ba3ecbc1615f8a390368e
   Koloda: d07b9199a383abc5898b62aa945a599f5e7c0c4b
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
@@ -125,6 +129,6 @@ SPEC CHECKSUMS:
   RAMAnimatedTabBarController: 6863a386e7ae2ab227cd60aa73ab8ff56cdacfdd
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
 
-PODFILE CHECKSUM: 539536b9bbd6d28b97b663043baa83fc7fbde5ef
+PODFILE CHECKSUM: 6cb010c2948231b62c92a5ff5eb74366bc332b4a
 
 COCOAPODS: 1.10.0

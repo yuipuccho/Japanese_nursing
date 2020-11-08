@@ -28,4 +28,6 @@ target 'Japanese_nursing' do
 
   pod 'SCLAlertView'
 
+  pod 'IBAnimatable'
+
 end
