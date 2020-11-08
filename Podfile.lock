@@ -72,6 +72,7 @@ PODS:
     - R.swift.Library (~> 5.2.0)
   - R.swift.Library (5.2.0)
   - RAMAnimatedTabBarController (5.2.0)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - Charts
@@ -79,6 +80,7 @@ DEPENDENCIES:
   - Koloda
   - R.swift
   - RAMAnimatedTabBarController
+  - SVProgressHUD
 
 SPEC REPOS:
   trunk:
@@ -98,6 +100,7 @@ SPEC REPOS:
     - R.swift
     - R.swift.Library
     - RAMAnimatedTabBarController
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
   Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
@@ -116,7 +119,8 @@ SPEC CHECKSUMS:
   R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
   R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
   RAMAnimatedTabBarController: 6863a386e7ae2ab227cd60aa73ab8ff56cdacfdd
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 1c6358f7dad2a77601751c21400e1f43f24cf7e6
+PODFILE CHECKSUM: 635a3ffe467a86b056fd985c18137dfbb414c7ce
 
 COCOAPODS: 1.10.0

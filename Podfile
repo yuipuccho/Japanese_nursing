@@ -24,4 +24,6 @@ target 'Japanese_nursing' do
 
   pod 'Charts'
 
+  pod 'SVProgressHUD'
+
 end
