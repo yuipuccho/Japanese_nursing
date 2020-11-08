@@ -10,6 +10,7 @@ import UIKit
 import Koloda
 import RxSwift
 import RxCocoa
+import IBAnimatable
 
 /**
  * 学習画面VC
