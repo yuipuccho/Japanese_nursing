@@ -10,6 +10,7 @@ import UIKit
 import Koloda
 import RxSwift
 import RxCocoa
+import SCLAlertView
 
 /**
  * 学習画面VC
@@ -125,6 +126,33 @@ extension LearningUnitViewController: KolodaViewDelegate {
 //            break
 //        }
         updateProgressView(swipedCardIndex: index)
+
+        // 最後のカードがスワイプされたらモーダルを表示する
+        if index + 1 >= items.count {
+            let appearance = SCLAlertView.SCLAppearance(
+                kTitleFont: R.font.notoSansCJKjpSubBold(size: 16)!,
+                kTextFont: R.font.notoSansCJKjpSubMedium(size: 12)!,
+                showCloseButton: false, titleColor: R.color.textBlue()!
+            )
+            let alertView = SCLAlertView(appearance: appearance)
+            alertView.addButton("もう一度学習する") {
+                self.kolodaView.resetCurrentCardIndex()
+                self.updateProgressView(swipedCardIndex: -1)
+            }
+            alertView.addButton("終了する") {
+                self.dismiss(animated: true)
+            }
+
+            alertView.showTitle("学習が終了しました！",
+                                subTitle: "もう一度学習しますか？",
+                                timeout: nil,
+                                completeText: "",
+                                style: .success,
+                                colorStyle: 0x07BAFE,
+                                colorTextButton: nil,
+                                circleIconImage: nil,
+                                animationStyle: .bottomToTop)
+        }
     }
 
 }
