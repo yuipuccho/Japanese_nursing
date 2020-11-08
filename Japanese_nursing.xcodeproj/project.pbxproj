@@ -20,6 +20,7 @@
 		BA2A5DE5255135A50085A3EF /* UnitListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A5DE4255135A50085A3EF /* UnitListCell.swift */; };
 		BA2A5DE9255139DB0085A3EF /* LearningUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A5DE8255139DB0085A3EF /* LearningUnitViewController.swift */; };
 		BA2A5DF4255166600085A3EF /* UIViewController+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A5DF3255166600085A3EF /* UIViewController+Extended.swift */; };
+		BA2DF386255859E400064DA8 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2DF385255859E300064DA8 /* MyPageViewController.swift */; };
 		BA3711E7254C5DEB002D34A0 /* Pageboy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA3D89924C47F5300157FF2 /* Pageboy.framework */; };
 		BA40295D255436B800421276 /* TestSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA40295C255436B800421276 /* TestSettingsViewController.swift */; };
 		BA582A3924E170670089DA0B /* LearningUnit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA582A3824E170670089DA0B /* LearningUnit.storyboard */; };
@@ -33,7 +34,7 @@
 		BA66D67924A6E91500BE7273 /* AppBootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA66D67824A6E91500BE7273 /* AppBootstrap.swift */; };
 		BA66D67D24A6ECF000BE7273 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA66D67C24A6ECF000BE7273 /* TabBarController.swift */; };
 		BA66D67F24A6EE6C00BE7273 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA66D67E24A6EE6C00BE7273 /* Tabbar.storyboard */; };
-		BA66D68124A6EFFD00BE7273 /* Mypage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA66D68024A6EFFD00BE7273 /* Mypage.storyboard */; };
+		BA66D68124A6EFFD00BE7273 /* MypageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA66D68024A6EFFD00BE7273 /* MypageViewController.storyboard */; };
 		BA85A3FE24AB7F51003E6E85 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85A3FD24AB7F51003E6E85 /* R.generated.swift */; };
 		BAA3D8A324C47F5300157FF2 /* .Tabman.version in Resources */ = {isa = PBXBuildFile; fileRef = BAA3D89424C47F5300157FF2 /* .Tabman.version */; };
 		BAA3D8A624C47F5300157FF2 /* Tabman.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = BAA3D89824C47F5300157FF2 /* Tabman.framework.dSYM */; };
@@ -67,6 +68,7 @@
 		BA2A5DE4255135A50085A3EF /* UnitListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListCell.swift; sourceTree = "<group>"; };
 		BA2A5DE8255139DB0085A3EF /* LearningUnitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningUnitViewController.swift; sourceTree = "<group>"; };
 		BA2A5DF3255166600085A3EF /* UIViewController+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extended.swift"; sourceTree = "<group>"; };
+		BA2DF385255859E300064DA8 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		BA40295C255436B800421276 /* TestSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSettingsViewController.swift; sourceTree = "<group>"; };
 		BA582A3824E170670089DA0B /* LearningUnit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LearningUnit.storyboard; sourceTree = "<group>"; };
 		BA5EACE224D2AF8F0008E2D0 /* UnitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListViewController.swift; sourceTree = "<group>"; };
@@ -78,7 +80,7 @@
 		BA66D67824A6E91500BE7273 /* AppBootstrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBootstrap.swift; sourceTree = "<group>"; };
 		BA66D67C24A6ECF000BE7273 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		BA66D67E24A6EE6C00BE7273 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
-		BA66D68024A6EFFD00BE7273 /* Mypage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mypage.storyboard; sourceTree = "<group>"; };
+		BA66D68024A6EFFD00BE7273 /* MypageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MypageViewController.storyboard; sourceTree = "<group>"; };
 		BA85A3FD24AB7F51003E6E85 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		BAA3D89424C47F5300157FF2 /* .Tabman.version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .Tabman.version; sourceTree = "<group>"; };
 		BAA3D89824C47F5300157FF2 /* Tabman.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = Tabman.framework.dSYM; sourceTree = "<group>"; };
@@ -211,7 +213,8 @@
 		BA66D67524A6E70A00BE7273 /* Mypage */ = {
 			isa = PBXGroup;
 			children = (
-				BA66D68024A6EFFD00BE7273 /* Mypage.storyboard */,
+				BA66D68024A6EFFD00BE7273 /* MypageViewController.storyboard */,
+				BA2DF385255859E300064DA8 /* MyPageViewController.swift */,
 			);
 			path = Mypage;
 			sourceTree = "<group>";
@@ -399,7 +402,7 @@
 				BA06D2052557AB4C000216CC /* TestViewController.storyboard in Resources */,
 				BAA3D8A824C47F5300157FF2 /* Pageboy.framework.dSYM in Resources */,
 				BAC4F7FD24A6E4C5009ACEF3 /* UnitList.storyboard in Resources */,
-				BA66D68124A6EFFD00BE7273 /* Mypage.storyboard in Resources */,
+				BA66D68124A6EFFD00BE7273 /* MypageViewController.storyboard in Resources */,
 				BAA3D8AF24C47F5300157FF2 /* .Pageboy.version in Resources */,
 				BAC5904C249EECCF007D247B /* NotoSansCJKjpSub-Black.otf in Resources */,
 				BA66D67F24A6EE6C00BE7273 /* Tabbar.storyboard in Resources */,
@@ -525,6 +528,7 @@
 				BA2A5DF4255166600085A3EF /* UIViewController+Extended.swift in Sources */,
 				BAE31B7A2555A87900A3FC6D /* Array+Extended.swift in Sources */,
 				BA1E5B2F2487AC210055A5F4 /* AppDelegate.swift in Sources */,
+				BA2DF386255859E400064DA8 /* MyPageViewController.swift in Sources */,
 				BA66D67D24A6ECF000BE7273 /* TabBarController.swift in Sources */,
 				BA1E5B312487AC210055A5F4 /* SceneDelegate.swift in Sources */,
 				BA85A3FE24AB7F51003E6E85 /* R.generated.swift in Sources */,
