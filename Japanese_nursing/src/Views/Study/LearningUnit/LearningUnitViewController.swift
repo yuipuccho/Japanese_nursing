@@ -135,12 +135,14 @@ extension LearningUnitViewController: KolodaViewDelegate {
                 showCloseButton: false, titleColor: R.color.textBlue()!
             )
             let alertView = SCLAlertView(appearance: appearance)
-            alertView.addButton("もう一度学習する") {
-                self.kolodaView.resetCurrentCardIndex()
-                self.updateProgressView(swipedCardIndex: -1)
+            alertView.addButton("もう一度学習する") { [weak self] in
+                // カードをもう一度表示する
+                self?.kolodaView.resetCurrentCardIndex()
+                // プログレスバーを初期化する
+                self?.progressView.setProgress(0, animated: true)
             }
-            alertView.addButton("終了する") {
-                self.dismiss(animated: true)
+            alertView.addButton("終了する") { [weak self] in
+                self?.dismiss(animated: true)
             }
 
             alertView.showTitle("学習が終了しました！",
