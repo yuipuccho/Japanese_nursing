@@ -10,6 +10,7 @@ import UIKit
 import Charts
 import RxSwift
 import RxCocoa
+import PKHUD
 
 /**
  * テスト設定画面VC
@@ -124,7 +125,11 @@ extension TestSettingsViewController {
 
         // 苦手ボタンタップ
         mistakeButton.rx.tap.subscribe(onNext: { [weak self] in
-            // TODO: 苦手数が0の場合にアラートを表示する処理を追加する
+            // 苦手数が0の場合はアラートを表示してreturn
+            if self?.mistakeCount == 0 {
+                HUD.flash(.label("苦手な単語はありません"), delay: 1.0)
+                return
+            }
             self?.updateSelectingQuestionRange(tappedType: .mistake)
         }).disposed(by: disposeBag)
 
