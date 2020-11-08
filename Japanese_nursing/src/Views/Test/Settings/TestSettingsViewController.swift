@@ -82,7 +82,7 @@ class TestSettingsViewController: UIViewController {
 
     private var disposeBag = DisposeBag()
 
-    // MARK: - LyfeCycles
+    // MARK: - LifeCycles
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -150,7 +150,8 @@ extension TestSettingsViewController {
 
         // スタートボタンタップ
         startButton.rx.tap.subscribe(onNext: { [weak self] in
-            // TODO: テスト画面へ遷移する処理を追加
+            let vc = TestViewController.makeInstance()
+            self?.present(vc, animated: true)
         }).disposed(by: disposeBag)
 
     }
