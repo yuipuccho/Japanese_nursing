@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 /**
  * テスト画面VC
@@ -50,16 +52,38 @@ class TestViewController: UIViewController {
     @IBOutlet private weak var fourthOptionImageView: UIImageView!
     @IBOutlet private weak var fourthOptionLabel: UILabel!
 
+    // MARK: - Properties
+
+    /// 選択項目の管理用Enum
+    private enum SelectionType {
+        case first
+        case second
+        case third
+        case fourth
+    }
+
+    /// ボタンステータスの管理用Enum
+    private enum ButtonStatus {
+        case notSelected // 選択されていない
+        case selectedCorrect // 正解をタップした
+        case selectedWrong // 不正解をタップした
+        case answer // 解答
+    }
+
+    private var disposeBag = DisposeBag()
+
     // MARK: - LifeCycles
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        subscribe()
+        updateQuestion()
     }
 
     override func viewDidLayoutSubviews() {
         setupInitialUI()
-        updateQuestion()
+
     }
 
 }
@@ -82,12 +106,25 @@ extension TestViewController {
     }
 
     private func subscribe() {
+        // 閉じるボタンタップ
+        closeButton.rx.tap.subscribe(onNext: { [weak self] in
+            self?.dismiss(animated: true)
+        }).disposed(by: disposeBag)
 
+        // 1つ目の選択肢タップ
+        firstOptionButton.rx.tap.subscribe(onNext: { [weak self] in
+            self?.correct() //仮
+        }).disposed(by: disposeBag)
+
+        // 2つ目の選択肢タップ
+        secondOptionButton.rx.tap.subscribe(onNext: { [weak self] in
+            self?.wrong() // 仮
+        }).disposed(by: disposeBag)
     }
 
     /// 問題を更新する
     private func updateQuestion() {
-        // TODO: 問題ラベルを更新する処理を追加
+        // TODO: 問題ラベル、選択肢ラベルのテキストを更新する処理を追加
 
         // トップViewの色をMainBlueに変更
         topView.backgroundColor = R.color.mainBlue()
@@ -98,6 +135,110 @@ extension TestViewController {
         secondOptionImageView.isHidden = true
         thirdOptionImageView.isHidden = true
         fourthOptionImageView.isHidden = true
+
+        // ボタンの色を初期化
+        updateOptionButton(type: .first, status: .notSelected)
+        updateOptionButton(type: .second, status: .notSelected)
+        updateOptionButton(type: .third, status: .notSelected)
+        updateOptionButton(type: .fourth, status: .notSelected)
+    }
+
+    /// 正解の処理
+    private func correct() {
+        feedbackView.isHidden = false
+        feedbackImageView.image = R.image.good_icon()
+        feedbackLabel.text = "Good!"
+
+        // 仮
+        // 正解ボタンの表示
+        updateOptionButton(type: .first, status: .selectedCorrect)
+
+        // ボタンタップを無効化する
+        buttonTapSetting(isEnabled: false)
+
+        // 0.8秒後に問題を更新し、ボタンタップを有効化する
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) { [weak self] in
+            self?.buttonTapSetting(isEnabled: true)
+            self?.updateQuestion()
+        }
+    }
+
+    /// 不正解の処理
+    private func wrong() {
+        feedbackView.isHidden = false
+        feedbackImageView.image = R.image.bad_icon()
+        feedbackLabel.text = "Bad..."
+        topView.backgroundColor = R.color.mistakePink()
+
+        // 仮
+        // 不正解ボタンの表示
+        updateOptionButton(type: .second, status: .selectedWrong)
+        // 解答ボタンの表示
+        updateOptionButton(type: .first, status: .answer)
+
+        // ボタンタップを無効化する
+        buttonTapSetting(isEnabled: false)
+
+        // 2秒後に問題を更新し、ボタンタップを有効化する
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
+            self?.buttonTapSetting(isEnabled: true)
+            self?.updateQuestion()
+        }
+    }
+
+    /// 選択肢ボタンの更新
+    private func updateOptionButton(type: SelectionType, status: ButtonStatus) {
+        var view = firstOptionView
+        var label = firstOptionLabel
+        var imageView = firstOptionImageView
+
+        switch type {
+        case .first:
+            view = firstOptionView
+            label = firstOptionLabel
+            imageView = firstOptionImageView
+        case .second:
+            view = secondOptionView
+            label = secondOptionLabel
+            imageView = secondOptionImageView
+        case .third:
+            view = thirdOptionView
+            label = thirdOptionLabel
+            imageView = thirdOptionImageView
+        case .fourth:
+            view = fourthOptionView
+            label = fourthOptionLabel
+            imageView = fourthOptionImageView
+        }
+
+        switch status {
+        case .notSelected:
+            view?.backgroundColor = UIColor.white
+            label?.textColor = R.color.mainBlue()
+            imageView?.isHidden = true
+        case .selectedCorrect:
+            view?.backgroundColor = R.color.mainBlue()
+            label?.textColor = UIColor.white
+            imageView?.isHidden = true
+        case .selectedWrong:
+            view?.backgroundColor = R.color.mistakeGrey()
+            label?.textColor = UIColor.white
+            imageView?.isHidden = false
+            imageView?.image = R.image.mistake_cross()
+        case .answer:
+            view?.backgroundColor = UIColor.white
+            label?.textColor = R.color.mainBlue()
+            imageView?.isHidden = false
+            imageView?.image = R.image.correct_circle()
+        }
+    }
+
+    /// ボタンタップの有効 / 無効を切り替える
+    private func buttonTapSetting(isEnabled: Bool) {
+        firstOptionButton.isEnabled = isEnabled
+        secondOptionButton.isEnabled = isEnabled
+        thirdOptionButton.isEnabled = isEnabled
+        fourthOptionButton.isEnabled = isEnabled
     }
 
 }
