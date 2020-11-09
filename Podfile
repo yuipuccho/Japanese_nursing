@@ -20,6 +20,10 @@ target 'Japanese_nursing' do
 
   pod 'R.swift'
 
+  pod 'RxSwift'
+
+  pod 'RxCocoa'
+
   pod 'Koloda'
 
   pod 'Charts'

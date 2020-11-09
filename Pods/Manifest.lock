@@ -74,6 +74,12 @@ PODS:
     - R.swift.Library (~> 5.2.0)
   - R.swift.Library (5.2.0)
   - RAMAnimatedTabBarController (5.2.0)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
   - SCLAlertView (0.8)
 
 DEPENDENCIES:
@@ -84,6 +90,8 @@ DEPENDENCIES:
   - PKHUD (~> 5.0)
   - R.swift
   - RAMAnimatedTabBarController
+  - RxCocoa
+  - RxSwift
   - SCLAlertView
 
 SPEC REPOS:
@@ -106,6 +114,9 @@ SPEC REPOS:
     - R.swift
     - R.swift.Library
     - RAMAnimatedTabBarController
+    - RxCocoa
+    - RxRelay
+    - RxSwift
     - SCLAlertView
 
 SPEC CHECKSUMS:
@@ -127,8 +138,11 @@ SPEC CHECKSUMS:
   R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
   R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
   RAMAnimatedTabBarController: 6863a386e7ae2ab227cd60aa73ab8ff56cdacfdd
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
 
-PODFILE CHECKSUM: 6cb010c2948231b62c92a5ff5eb74366bc332b4a
+PODFILE CHECKSUM: 437c002a1708f0a213dbd1f6a33ec593e5819c30
 
 COCOAPODS: 1.10.0

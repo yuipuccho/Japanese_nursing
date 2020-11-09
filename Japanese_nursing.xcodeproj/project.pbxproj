@@ -24,22 +24,13 @@
 		BA3711E7254C5DEB002D34A0 /* Pageboy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA3D89924C47F5300157FF2 /* Pageboy.framework */; };
 		BA40295D255436B800421276 /* TestSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA40295C255436B800421276 /* TestSettingsViewController.swift */; };
 		BA582A3924E170670089DA0B /* LearningUnit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA582A3824E170670089DA0B /* LearningUnit.storyboard */; };
-		BA5EACD624D261F50008E2D0 /* Pageboy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA3D89924C47F5300157FF2 /* Pageboy.framework */; };
-		BA5EACD824D262050008E2D0 /* Tabman.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA3D89B24C47F5300157FF2 /* Tabman.framework */; };
 		BA5EACE324D2AF8F0008E2D0 /* UnitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5EACE224D2AF8F0008E2D0 /* UnitListViewController.swift */; };
-		BA5EACEC24D2E34D0008E2D0 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5EACEB24D2E34D0008E2D0 /* RxSwift.framework */; };
-		BA5EACF024D2E3990008E2D0 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5EACEF24D2E3990008E2D0 /* RxCocoa.framework */; };
-		BA5EACF424D2E3C50008E2D0 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5EACF324D2E3C50008E2D0 /* RxRelay.framework */; };
 		BA5EAD4C24D453520008E2D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA5EAD4B24D453520008E2D0 /* GoogleService-Info.plist */; };
 		BA66D67924A6E91500BE7273 /* AppBootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA66D67824A6E91500BE7273 /* AppBootstrap.swift */; };
 		BA66D67D24A6ECF000BE7273 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA66D67C24A6ECF000BE7273 /* TabBarController.swift */; };
 		BA66D67F24A6EE6C00BE7273 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA66D67E24A6EE6C00BE7273 /* Tabbar.storyboard */; };
 		BA66D68124A6EFFD00BE7273 /* MypageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA66D68024A6EFFD00BE7273 /* MypageViewController.storyboard */; };
 		BA85A3FE24AB7F51003E6E85 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85A3FD24AB7F51003E6E85 /* R.generated.swift */; };
-		BAA3D8A324C47F5300157FF2 /* .Tabman.version in Resources */ = {isa = PBXBuildFile; fileRef = BAA3D89424C47F5300157FF2 /* .Tabman.version */; };
-		BAA3D8A624C47F5300157FF2 /* Tabman.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = BAA3D89824C47F5300157FF2 /* Tabman.framework.dSYM */; };
-		BAA3D8A824C47F5300157FF2 /* Pageboy.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = BAA3D89A24C47F5300157FF2 /* Pageboy.framework.dSYM */; };
-		BAA3D8AF24C47F5300157FF2 /* .Pageboy.version in Resources */ = {isa = PBXBuildFile; fileRef = BAA3D8A224C47F5300157FF2 /* .Pageboy.version */; };
 		BAC4F7FD24A6E4C5009ACEF3 /* UnitList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC4F7FC24A6E4C5009ACEF3 /* UnitList.storyboard */; };
 		BAC5904C249EECCF007D247B /* NotoSansCJKjpSub-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAC59045249EECCF007D247B /* NotoSansCJKjpSub-Black.otf */; };
 		BAC5904D249EECCF007D247B /* NotoSansCJKjpSub-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAC59046249EECCF007D247B /* NotoSansCJKjpSub-Regular.otf */; };
@@ -72,9 +63,6 @@
 		BA40295C255436B800421276 /* TestSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSettingsViewController.swift; sourceTree = "<group>"; };
 		BA582A3824E170670089DA0B /* LearningUnit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LearningUnit.storyboard; sourceTree = "<group>"; };
 		BA5EACE224D2AF8F0008E2D0 /* UnitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListViewController.swift; sourceTree = "<group>"; };
-		BA5EACEB24D2E34D0008E2D0 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		BA5EACEF24D2E3990008E2D0 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
-		BA5EACF324D2E3C50008E2D0 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		BA5EAD4B24D453520008E2D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../FetiLip-develop/fetilip/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BA5EAD4F24D522F80008E2D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Japanese_nursing/Info.plist; sourceTree = SOURCE_ROOT; };
 		BA66D67824A6E91500BE7273 /* AppBootstrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBootstrap.swift; sourceTree = "<group>"; };
@@ -104,13 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA5EACEC24D2E34D0008E2D0 /* RxSwift.framework in Frameworks */,
-				BA3711E7254C5DEB002D34A0 /* Pageboy.framework in Frameworks */,
-				BA5EACD624D261F50008E2D0 /* Pageboy.framework in Frameworks */,
-				BA5EACF424D2E3C50008E2D0 /* RxRelay.framework in Frameworks */,
 				6957F40151887726FC69D034 /* Pods_Japanese_nursing.framework in Frameworks */,
-				BA5EACF024D2E3990008E2D0 /* RxCocoa.framework in Frameworks */,
-				BA5EACD824D262050008E2D0 /* Tabman.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,9 +310,6 @@
 		C87E173A7739EAF8084E6F1B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BA5EACF324D2E3C50008E2D0 /* RxRelay.framework */,
-				BA5EACEF24D2E3990008E2D0 /* RxCocoa.framework */,
-				BA5EACEB24D2E34D0008E2D0 /* RxSwift.framework */,
 				BAA3D89324C47F5300157FF2 /* Build */,
 				0B94643ECC484CCF846EA499 /* Pods_Japanese_nursing.framework */,
 			);
@@ -400,20 +379,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA06D2052557AB4C000216CC /* TestViewController.storyboard in Resources */,
-				BAA3D8A824C47F5300157FF2 /* Pageboy.framework.dSYM in Resources */,
 				BAC4F7FD24A6E4C5009ACEF3 /* UnitList.storyboard in Resources */,
 				BA66D68124A6EFFD00BE7273 /* MypageViewController.storyboard in Resources */,
 				BAA3D8AF24C47F5300157FF2 /* .Pageboy.version in Resources */,
+				BA66D68124A6EFFD00BE7273 /* Mypage.storyboard in Resources */,
 				BAC5904C249EECCF007D247B /* NotoSansCJKjpSub-Black.otf in Resources */,
 				BA66D67F24A6EE6C00BE7273 /* Tabbar.storyboard in Resources */,
-				BAA3D8A324C47F5300157FF2 /* .Tabman.version in Resources */,
 				BA5EAD4C24D453520008E2D0 /* GoogleService-Info.plist in Resources */,
 				BA582A3924E170670089DA0B /* LearningUnit.storyboard in Resources */,
 				BAC5904F249EECCF007D247B /* NotoSansCJKjpSub-Thin.otf in Resources */,
 				BAC5904E249EECCF007D247B /* NotoSansCJKjpSub-Bold.otf in Resources */,
 				BA27FB35248CECDA002840B8 /* Colors.xcassets in Resources */,
 				BA1E5B3B2487AC250055A5F4 /* LaunchScreen.storyboard in Resources */,
-				BAA3D8A624C47F5300157FF2 /* Tabman.framework.dSYM in Resources */,
 				BA133AC624BB28B80047E265 /* TestSettings.storyboard in Resources */,
 				BAC5904D249EECCF007D247B /* NotoSansCJKjpSub-Regular.otf in Resources */,
 				BA1E5B382487AC250055A5F4 /* Assets.xcassets in Resources */,
@@ -492,25 +469,15 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)//Carthage/Build/iOS/Tabman.framework",
-				"$(SRCROOT)//Carthage/Build/iOS/Pageboy.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
 			);
 			name = "[Carthage] Run Script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Tabman.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Pageboy.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxRelay.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+			shellScript = "
+";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -677,11 +644,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69H3H2U752;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Build/tvOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Japanese_nursing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -701,11 +664,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69H3H2U752;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Build/tvOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Japanese_nursing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
