@@ -119,16 +119,16 @@ extension MyPageViewController {
 
 }
 
-// MARK: - MakeInstance
-
-extension MyPageViewController {
-
-    static func makeInstance() -> UIViewController {
-        guard let vc = R.storyboard.mypageViewController.myPageViewController() else {
-            assertionFailure("Can't make instance 'MyPageViewController'.")
-            return UIViewController()
-        }
-        return vc
-    }
-
-}
+//// MARK: - MakeInstance
+//
+//extension MyPageViewController {
+//
+//    static func makeInstance() -> UIViewController {
+//        guard let vc = R.storyboard.mypageViewController.mypageViewController() else {
+//            assertionFailure("Can't make instance 'MyPageViewController'.")
+//            return UIViewController()
+//        }
+//        return vc
+//    }
+//
+//}
