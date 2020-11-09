@@ -19,6 +19,8 @@ class MyPageViewController: UIViewController {
     @IBOutlet weak var studyPieChartView: PieChartView!
     /// テスト円形進捗バー
     @IBOutlet weak var testPieChartView: PieChartView!
+    @IBOutlet weak var studyImageView: UIImageView!
+    @IBOutlet weak var testImageView: UIImageView!
 
     // MARK: - LifeCycles
 
@@ -30,6 +32,9 @@ class MyPageViewController: UIViewController {
 
         setupPieChartView(pieChartView: studyPieChartView)
         setupPieChartView(pieChartView: testPieChartView)
+
+        view.bringSubviewToFront(studyImageView)
+        view.bringSubviewToFront(testImageView)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -54,7 +59,7 @@ extension MyPageViewController {
         // X軸のラベルの位置を下に設定
         barChartView.xAxis.labelPosition = .bottom
         // X軸のラベルの色を設定
-        barChartView.xAxis.labelTextColor = .systemGray
+        barChartView.xAxis.labelTextColor = R.color.weakTextBlue()!
         // X軸の線、グリッドを非表示にする
         barChartView.xAxis.drawGridLinesEnabled = false
         barChartView.xAxis.drawAxisLineEnabled = false
@@ -65,13 +70,13 @@ extension MyPageViewController {
         // Y座標の値が0始まりになるように設定
         barChartView.leftAxis.axisMinimum = 0.0
         barChartView.leftAxis.drawZeroLineEnabled = true
-        barChartView.leftAxis.zeroLineColor = .systemGray
+        barChartView.leftAxis.zeroLineColor = R.color.weakTextBlue()
         // ラベルの数を設定
         barChartView.leftAxis.labelCount = 5
         // ラベルの色を設定
-        barChartView.leftAxis.labelTextColor = .systemGray
+        barChartView.leftAxis.labelTextColor = R.color.weakTextBlue()!
         // グリッドの色を設定
-        barChartView.leftAxis.gridColor = .systemGray
+        barChartView.leftAxis.gridColor = R.color.weakTextBlue()!
         // 軸線は非表示にする
         barChartView.leftAxis.drawAxisLineEnabled = false
 
@@ -115,20 +120,7 @@ extension MyPageViewController {
 //                self?.percentageLabel.alpha = 1
 //            }
 //        }
+
     }
 
 }
-
-//// MARK: - MakeInstance
-//
-//extension MyPageViewController {
-//
-//    static func makeInstance() -> UIViewController {
-//        guard let vc = R.storyboard.mypageViewController.mypageViewController() else {
-//            assertionFailure("Can't make instance 'MyPageViewController'.")
-//            return UIViewController()
-//        }
-//        return vc
-//    }
-//
-//}
