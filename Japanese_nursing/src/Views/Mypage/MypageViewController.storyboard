@@ -106,7 +106,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ぷっちょ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIg-m4-OMV">
-                                <rect key="frame" x="76" y="114" width="88" height="26"/>
+                                <rect key="frame" x="70" y="114" width="88" height="26"/>
                                 <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="22"/>
                                 <color key="textColor" name="MainBlue"/>
                                 <nil key="highlightedColor"/>
@@ -116,7 +116,7 @@
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="2uF-A6-DDP" firstAttribute="top" secondItem="jIg-m4-OMV" secondAttribute="bottom" constant="18" id="0e6-o7-edQ"/>
-                            <constraint firstItem="jIg-m4-OMV" firstAttribute="leading" secondItem="SrP-An-jhK" secondAttribute="trailing" constant="16" id="18v-sz-7mX"/>
+                            <constraint firstItem="jIg-m4-OMV" firstAttribute="leading" secondItem="SrP-An-jhK" secondAttribute="trailing" constant="10" id="18v-sz-7mX"/>
                             <constraint firstItem="e7a-cz-VOe" firstAttribute="width" secondItem="ulG-hZ-hgv" secondAttribute="width" multiplier="0.25" id="1hz-Xi-adx"/>
                             <constraint firstItem="yIT-zB-TQM" firstAttribute="width" secondItem="2uF-A6-DDP" secondAttribute="width" multiplier="0.25" id="88b-k8-uid"/>
                             <constraint firstItem="e7a-cz-VOe" firstAttribute="centerX" secondItem="ulG-hZ-hgv" secondAttribute="centerX" id="8uG-x1-E1Z"/>
