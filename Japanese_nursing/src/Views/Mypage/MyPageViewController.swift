@@ -92,12 +92,12 @@ extension MyPageViewController {
 
         // データをセットする
         let dataSet = PieChartDataSet(entries: dataEntries)
-        dataSet.setColors(R.color.mainBlue()!, R.color.mistakePink()!, R.color.untested()!)  // グラフの色
+        dataSet.setColors(R.color.mainBlue()!, R.color.untested()!)  // グラフの色
         dataSet.drawValuesEnabled = false  // グラフ上のデータ値を非表示にする
         pieChartView.data = PieChartData(dataSet: dataSet)
 
-        pieChartView.holeRadiusPercent = 0.85  // 中心の穴の大きさ
-        pieChartView.holeColor = UIColor.clear  // 中心の穴の色
+        pieChartView.holeRadiusPercent = 0.88  // 中心の穴の大きさ
+        pieChartView.holeColor = UIColor.white  // 中心の穴の色
 
         pieChartView.highlightPerTapEnabled = false  // グラフがタップされたときのハイライトを無効化
         pieChartView.chartDescription?.enabled = false  // グラフの説明を非表示

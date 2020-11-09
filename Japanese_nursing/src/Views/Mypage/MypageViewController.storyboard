@@ -57,39 +57,57 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2uF-A6-DDP" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="16.5" y="391" width="186.5" height="186"/>
+                                <rect key="frame" x="20.5" y="391" width="186.5" height="186"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2uF-A6-DDP" secondAttribute="height" multiplier="1:1" id="3bJ-DL-Ttm"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ulG-hZ-hgv" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="211" y="391" width="186.5" height="186"/>
+                                <rect key="frame" x="207" y="391" width="186.5" height="186"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ulG-hZ-hgv" secondAttribute="height" multiplier="1:1" id="CJe-Xu-biH"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test_icon_mypage" translatesAutoresizingMaskIntoConstraints="NO" id="e7a-cz-VOe">
+                                <rect key="frame" x="277" y="460.5" width="46.5" height="46.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="e7a-cz-VOe" secondAttribute="height" multiplier="1:1" id="xQj-4P-z9V"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="study_icon_mypage" translatesAutoresizingMaskIntoConstraints="NO" id="yIT-zB-TQM">
+                                <rect key="frame" x="90.5" y="460.5" width="46.5" height="46.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yIT-zB-TQM" secondAttribute="height" multiplier="1:1" id="GjP-ub-fzZ"/>
+                                </constraints>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rP0-vs-LhP">
-                                <rect key="frame" x="203" y="391" width="8" height="186"/>
+                                <rect key="frame" x="207" y="391" width="0.0" height="186"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BWE-z8-TPh"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
+                            <constraint firstItem="e7a-cz-VOe" firstAttribute="width" secondItem="ulG-hZ-hgv" secondAttribute="width" multiplier="0.25" id="1hz-Xi-adx"/>
+                            <constraint firstItem="yIT-zB-TQM" firstAttribute="width" secondItem="2uF-A6-DDP" secondAttribute="width" multiplier="0.25" id="88b-k8-uid"/>
+                            <constraint firstItem="e7a-cz-VOe" firstAttribute="centerX" secondItem="ulG-hZ-hgv" secondAttribute="centerX" id="8uG-x1-E1Z"/>
+                            <constraint firstItem="yIT-zB-TQM" firstAttribute="centerX" secondItem="2uF-A6-DDP" secondAttribute="centerX" id="9Ip-kl-P62"/>
                             <constraint firstItem="2uF-A6-DDP" firstAttribute="top" secondItem="Ho2-HA-nOm" secondAttribute="bottom" constant="20" id="BHR-uI-dOL"/>
                             <constraint firstItem="Ho2-HA-nOm" firstAttribute="height" secondItem="htT-eu-QUw" secondAttribute="height" multiplier="0.3" id="DCb-K3-xGT"/>
                             <constraint firstItem="ulG-hZ-hgv" firstAttribute="leading" secondItem="rP0-vs-LhP" secondAttribute="trailing" id="Fs1-0t-8zW"/>
                             <constraint firstItem="rP0-vs-LhP" firstAttribute="centerX" secondItem="htT-eu-QUw" secondAttribute="centerX" id="Gbe-at-XKt"/>
                             <constraint firstItem="ulG-hZ-hgv" firstAttribute="width" secondItem="2uF-A6-DDP" secondAttribute="width" id="HQL-En-R5y"/>
                             <constraint firstItem="ulG-hZ-hgv" firstAttribute="centerY" secondItem="2uF-A6-DDP" secondAttribute="centerY" id="MrI-wJ-1g9"/>
+                            <constraint firstItem="yIT-zB-TQM" firstAttribute="centerY" secondItem="2uF-A6-DDP" secondAttribute="centerY" id="PVd-Wb-BQK"/>
                             <constraint firstItem="rP0-vs-LhP" firstAttribute="centerY" secondItem="2uF-A6-DDP" secondAttribute="centerY" id="Vp7-dt-rvp"/>
                             <constraint firstItem="2uF-A6-DDP" firstAttribute="width" secondItem="htT-eu-QUw" secondAttribute="width" multiplier="0.45" id="XOX-Oy-nhc"/>
                             <constraint firstItem="BWE-z8-TPh" firstAttribute="trailing" secondItem="Ho2-HA-nOm" secondAttribute="trailing" constant="14" id="YYZ-Xl-hTt"/>
                             <constraint firstItem="rP0-vs-LhP" firstAttribute="height" secondItem="2uF-A6-DDP" secondAttribute="height" id="hDA-q0-uww"/>
                             <constraint firstItem="rP0-vs-LhP" firstAttribute="leading" secondItem="2uF-A6-DDP" secondAttribute="trailing" id="i20-t2-SbB"/>
                             <constraint firstItem="Ho2-HA-nOm" firstAttribute="top" secondItem="BWE-z8-TPh" secondAttribute="top" constant="14" id="oGI-0F-xje"/>
-                            <constraint firstItem="rP0-vs-LhP" firstAttribute="width" secondItem="htT-eu-QUw" secondAttribute="width" multiplier="0.02" id="r1N-a1-nzl"/>
+                            <constraint firstItem="rP0-vs-LhP" firstAttribute="width" secondItem="htT-eu-QUw" secondAttribute="width" multiplier="0.001" id="r1N-a1-nzl"/>
+                            <constraint firstItem="e7a-cz-VOe" firstAttribute="centerY" secondItem="ulG-hZ-hgv" secondAttribute="centerY" id="uwr-QV-gEG"/>
                             <constraint firstItem="Ho2-HA-nOm" firstAttribute="leading" secondItem="BWE-z8-TPh" secondAttribute="leading" constant="14" id="ydi-wz-W8i"/>
                         </constraints>
                     </view>
@@ -108,6 +126,8 @@
     <resources>
         <image name="mypage_icon_active" width="30" height="30"/>
         <image name="mypage_icon_inactive" width="30" height="30"/>
+        <image name="study_icon_mypage" width="58" height="58"/>
+        <image name="test_icon_mypage" width="136" height="136"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
