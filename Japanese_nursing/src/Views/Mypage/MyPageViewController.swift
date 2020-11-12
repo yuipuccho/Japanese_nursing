@@ -8,21 +8,41 @@
 
 import UIKit
 import Charts
+import RxCocoa
+import RxSwift
 
 class MyPageViewController: UIViewController {
 
     // MARK: - Outlets
 
     /// 棒グラフ
-    @IBOutlet weak var barChartView: BarChartView!
+    @IBOutlet private weak var barChartView: BarChartView!
     /// 学習円形進捗バー
-    @IBOutlet weak var studyPieChartView: PieChartView!
+    @IBOutlet private weak var studyPieChartView: PieChartView!
     /// テスト円形進捗バー
-    @IBOutlet weak var testPieChartView: PieChartView!
-    @IBOutlet weak var studyImageView: UIImageView!
-    @IBOutlet weak var testImageView: UIImageView!
-    @IBOutlet weak var studyCurrentCountLabel: UILabel!
-    @IBOutlet weak var testCurrentCountLabel: UILabel!
+    @IBOutlet private weak var testPieChartView: PieChartView!
+    /// 学習イメージ
+    @IBOutlet private weak var studyImageView: UIImageView!
+    /// テストイメージ
+    @IBOutlet private weak var testImageView: UIImageView!
+    /// 現在の学習済単語数
+    @IBOutlet private weak var studyCurrentCountLabel: UILabel!
+    /// 現在のテスト済単語数
+    @IBOutlet private weak var testCurrentCountLabel: UILabel!
+    /// 学習目標ラベル
+    @IBOutlet private weak var studyTargetLabel: UILabel!
+    /// テスト目標ラベル
+    @IBOutlet private weak var testTargetLabel: UILabel!
+    /// 学習円形進捗バーボタン
+    @IBOutlet private weak var studyPieChartButton: UIButton!
+    /// テスト円形進捗バーボタン
+    @IBOutlet private weak var testPieChartButton: UIButton!
+    /// 設定ボタン
+    @IBOutlet private weak var settingButton: UIBarButtonItem!
+
+    // MARK: - Properties
+
+    private var disposeBag = DisposeBag()
 
     // MARK: - LifeCycles
 
@@ -30,26 +50,46 @@ class MyPageViewController: UIViewController {
         super.viewDidLoad()
 
         setupBarChartView()
-        barChartView.animate(yAxisDuration: 0.5)
-
         setupPieChartView(pieChartView: studyPieChartView)
         setupPieChartView(pieChartView: testPieChartView)
+        bringIconToFront()
 
-        view.bringSubviewToFront(studyImageView)
-        view.bringSubviewToFront(testImageView)
-        view.bringSubviewToFront(studyCurrentCountLabel)
-        view.bringSubviewToFront(testCurrentCountLabel)
+        subscribe()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        barChartView.animate(yAxisDuration: 0.5)
+        setupBarChartView()
+        setupPieChartView(pieChartView: studyPieChartView)
+        setupPieChartView(pieChartView: testPieChartView)
+        bringIconToFront()
     }
 
 }
 
 // MARK: - Functions
+
+extension MyPageViewController {
+
+    private func subscribe() {
+        // 学習円形進捗バーボタンタップ
+        studyPieChartButton.rx.tap.subscribe(onNext: { [weak self] in
+            // TODO: 学習目標設定画面へ遷移する処理を追加する
+        }).disposed(by: disposeBag)
+
+        // テスト円形進捗バーボタンタップ
+        studyPieChartButton.rx.tap.subscribe(onNext: { [weak self] in
+            // TODO: テスト目標設定画面へ遷移する処理を追加する
+        }).disposed(by: disposeBag)
+
+        // 設定ボタンタップ
+        settingButton.rx.tap.subscribe(onNext: { [weak self] in
+            // TODO: 設定一覧画面へ遷移する処理を追加する
+        }).disposed(by: disposeBag)
+    }
+
+}
 
 extension MyPageViewController {
 
@@ -93,6 +133,8 @@ extension MyPageViewController {
         // グラフの上に値を表示しない
         dataSet.drawValuesEnabled = false
         dataSet.colors = [R.color.mainBlue()!]
+
+        barChartView.animate(yAxisDuration: 0.8)
     }
 
     /// 円形進捗バーの表示設定
@@ -120,15 +162,14 @@ extension MyPageViewController {
 
         view.addSubview(pieChartView)
         pieChartView.animate(xAxisDuration: 1.2, yAxisDuration: 0.8) // アニメーション
+    }
 
-        /// 進捗ラベルの表示にもアニメーションをつける
-//        percentageLabel.alpha = 0
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-//            UIView.animate(withDuration: 0.6) { [weak self] in
-//                self?.percentageLabel.alpha = 1
-//            }
-//        }
-
+    /// 円形プロフレスバーの中心のアイコンとラベルを前面に持ってくる
+    private func bringIconToFront() {
+        view.bringSubviewToFront(studyCurrentCountLabel)
+        view.bringSubviewToFront(testCurrentCountLabel)
+        view.bringSubviewToFront(studyImageView)
+        view.bringSubviewToFront(testImageView)
     }
 
 }
