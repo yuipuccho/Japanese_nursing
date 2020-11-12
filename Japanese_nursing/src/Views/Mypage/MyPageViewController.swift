@@ -21,6 +21,8 @@ class MyPageViewController: UIViewController {
     @IBOutlet weak var testPieChartView: PieChartView!
     @IBOutlet weak var studyImageView: UIImageView!
     @IBOutlet weak var testImageView: UIImageView!
+    @IBOutlet weak var studyCurrentCountLabel: UILabel!
+    @IBOutlet weak var testCurrentCountLabel: UILabel!
 
     // MARK: - LifeCycles
 
@@ -35,6 +37,8 @@ class MyPageViewController: UIViewController {
 
         view.bringSubviewToFront(studyImageView)
         view.bringSubviewToFront(testImageView)
+        view.bringSubviewToFront(studyCurrentCountLabel)
+        view.bringSubviewToFront(testCurrentCountLabel)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -81,6 +85,10 @@ extension MyPageViewController {
         barChartView.leftAxis.drawAxisLineEnabled = false
 
         barChartView.legend.enabled = false
+        barChartView.doubleTapToZoomEnabled = false
+        barChartView.dragEnabled = false
+        barChartView.pinchZoomEnabled = false
+        barChartView.highlightPerTapEnabled = false    // グラフがタップされたときのハイライトを無効化
 
         // グラフの上に値を表示しない
         dataSet.drawValuesEnabled = false
