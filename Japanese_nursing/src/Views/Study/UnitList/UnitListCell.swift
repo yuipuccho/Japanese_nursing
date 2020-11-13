@@ -18,8 +18,6 @@ class UnitListCell: UITableViewCell {
     @IBOutlet weak var unitTitleLabel: UILabel!
     /// 単語数
     @IBOutlet weak var wordsCountLabel: UILabel!
-    /// ブックマーク数
-    @IBOutlet weak var bookMarksCountLabel: UILabel!
     /// チェックマーク率
     @IBOutlet weak var checkMarkPercentageLabel: UILabel!
     /// セルボタン（セルのタップだとセルが白くなる不具合がなぜか発生するため、応急処置）
@@ -50,7 +48,6 @@ class UnitListCell: UITableViewCell {
     func clearConfigure() {
         unitTitleLabel.text = nil
         wordsCountLabel.text = nil
-        bookMarksCountLabel.text = nil
         checkMarkPercentageLabel.text = nil
     }
 
