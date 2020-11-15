@@ -20,6 +20,11 @@
 		BA1E5B312487AC210055A5F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E5B302487AC210055A5F4 /* SceneDelegate.swift */; };
 		BA1E5B382487AC250055A5F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA1E5B372487AC250055A5F4 /* Assets.xcassets */; };
 		BA1E5B3B2487AC250055A5F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1E5B392487AC250055A5F4 /* LaunchScreen.storyboard */; };
+		BA27BD4B255FAA61002C46AB /* JapaneseNursingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA27BD4A255FAA61002C46AB /* JapaneseNursingAPI.swift */; };
+		BA27BDBF255FAEDF002C46AB /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA27BDBE255FAEDF002C46AB /* ResponseError.swift */; };
+		BA27BDC2255FB06B002C46AB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA27BDC1255FB06B002C46AB /* Constants.swift */; };
+		BA27BDC6255FB1D9002C46AB /* Session+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA27BDC5255FB1D9002C46AB /* Session+RxSwift.swift */; };
+		BA27BDCA255FB29E002C46AB /* APIEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA27BDC9255FB29E002C46AB /* APIEvent.swift */; };
 		BA27FB35248CECDA002840B8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA27FB34248CECDA002840B8 /* Colors.xcassets */; };
 		BA2A5DE5255135A50085A3EF /* UnitListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A5DE4255135A50085A3EF /* UnitListCell.swift */; };
 		BA2A5DE9255139DB0085A3EF /* LearningUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A5DE8255139DB0085A3EF /* LearningUnitViewController.swift */; };
@@ -62,6 +67,11 @@
 		BA1E5B302487AC210055A5F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BA1E5B372487AC250055A5F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA1E5B3A2487AC250055A5F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BA27BD4A255FAA61002C46AB /* JapaneseNursingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapaneseNursingAPI.swift; sourceTree = "<group>"; };
+		BA27BDBE255FAEDF002C46AB /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
+		BA27BDC1255FB06B002C46AB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BA27BDC5255FB1D9002C46AB /* Session+RxSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Session+RxSwift.swift"; sourceTree = "<group>"; };
+		BA27BDC9255FB29E002C46AB /* APIEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEvent.swift; sourceTree = "<group>"; };
 		BA27FB34248CECDA002840B8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		BA2A5DE4255135A50085A3EF /* UnitListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListCell.swift; sourceTree = "<group>"; };
 		BA2A5DE8255139DB0085A3EF /* LearningUnitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningUnitViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +160,7 @@
 				C87E173A7739EAF8084E6F1B /* Frameworks */,
 				C07CEA2183146A04CA3CFB85 /* Pods */,
 				BA1E5B2C2487AC210055A5F4 /* Products */,
+				BA27BD46255FA39D002C46AB /* JapaneseNursingAPI */,
 				BA1E5B2D2487AC210055A5F4 /* Japanese_nursing */,
 			);
 			sourceTree = "<group>";
@@ -172,6 +183,42 @@
 				BA27FB34248CECDA002840B8 /* Colors.xcassets */,
 			);
 			path = Japanese_nursing;
+			sourceTree = "<group>";
+		};
+		BA27BD46255FA39D002C46AB /* JapaneseNursingAPI */ = {
+			isa = PBXGroup;
+			children = (
+				BA27BDC4255FB18C002C46AB /* Extensions */,
+				BA27BD49255FAA24002C46AB /* Communications */,
+				BA27BDBD255FAEA5002C46AB /* Errors */,
+				BA27BDC1255FB06B002C46AB /* Constants.swift */,
+			);
+			path = JapaneseNursingAPI;
+			sourceTree = "<group>";
+		};
+		BA27BD49255FAA24002C46AB /* Communications */ = {
+			isa = PBXGroup;
+			children = (
+				BA27BD4A255FAA61002C46AB /* JapaneseNursingAPI.swift */,
+			);
+			path = Communications;
+			sourceTree = "<group>";
+		};
+		BA27BDBD255FAEA5002C46AB /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				BA27BDC9255FB29E002C46AB /* APIEvent.swift */,
+				BA27BDBE255FAEDF002C46AB /* ResponseError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		BA27BDC4255FB18C002C46AB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BA27BDC5255FB1D9002C46AB /* Session+RxSwift.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		BA27FB2F248CE86E002840B8 /* Resources */ = {
@@ -515,9 +562,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA66D67924A6E91500BE7273 /* AppBootstrap.swift in Sources */,
+				BA27BDC2255FB06B002C46AB /* Constants.swift in Sources */,
+				BA27BD4B255FAA61002C46AB /* JapaneseNursingAPI.swift in Sources */,
 				BA2A5DE5255135A50085A3EF /* UnitListCell.swift in Sources */,
+				BA27BDBF255FAEDF002C46AB /* ResponseError.swift in Sources */,
 				BA5EACE324D2AF8F0008E2D0 /* UnitListViewController.swift in Sources */,
 				BA00E891255E4A8C001C4E06 /* UserNameSettingViewController.swift in Sources */,
+				BA27BDCA255FB29E002C46AB /* APIEvent.swift in Sources */,
 				BA2A5DE9255139DB0085A3EF /* LearningUnitViewController.swift in Sources */,
 				BA133ACA24C04D850047E265 /* CustomTabBar.swift in Sources */,
 				BA06D2012557AB26000216CC /* TestViewController.swift in Sources */,
@@ -529,6 +580,7 @@
 				BA66D67D24A6ECF000BE7273 /* TabBarController.swift in Sources */,
 				BA1E5B312487AC210055A5F4 /* SceneDelegate.swift in Sources */,
 				BA85A3FE24AB7F51003E6E85 /* R.generated.swift in Sources */,
+				BA27BDC6255FB1D9002C46AB /* Session+RxSwift.swift in Sources */,
 				BA40295D255436B800421276 /* TestSettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

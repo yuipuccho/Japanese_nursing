@@ -2,7 +2,6 @@
 # platform :ios, '9.0'
 
 # add the Firebase pod for Google Analytics
-pod 'Firebase/Analytics'
 # add pods for any other desired Firebase products
 # https://firebase.google.com/docs/ios/setup#available-pods
 
@@ -33,5 +32,13 @@ target 'Japanese_nursing' do
   pod 'SCLAlertView'
 
   pod 'IBAnimatable'
+
+  pod 'APIKit', '~> 5.0'
+
+  pod 'SwiftDate'
+
+  pod 'SwiftyJSON'
+
+  pod 'XCGLogger'
 
 end
