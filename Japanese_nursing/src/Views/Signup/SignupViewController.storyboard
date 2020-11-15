@@ -73,7 +73,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ユーザー名はあとで変更できます。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92u-a0-XE1">
-                                        <rect key="frame" x="20" y="90" width="160" height="15"/>
+                                        <rect key="frame" x="20" y="90" width="160" height="12"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Regular" family="NotoSansCJKjpSub-Regular" pointSize="10"/>
                                         <color key="textColor" name="WeakTextBlue"/>
                                         <nil key="highlightedColor"/>
@@ -143,12 +143,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vgx-WE-dxX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-467" y="67"/>
+            <point key="canvasLocation" x="-468.11594202898556" y="66.964285714285708"/>
         </scene>
     </scenes>
     <designables>
         <designable name="NTe-lo-HXc">
-            <size key="intrinsicContentSize" width="162" height="24"/>
+            <size key="intrinsicContentSize" width="159.5" height="19"/>
         </designable>
     </designables>
     <resources>

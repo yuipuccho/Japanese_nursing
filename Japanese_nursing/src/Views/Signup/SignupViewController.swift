@@ -9,6 +9,8 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import PKHUD
+import SCLAlertView
 
 class SignupViewController: UIViewController {
 
@@ -20,6 +22,8 @@ class SignupViewController: UIViewController {
     @IBOutlet private weak var nameAlertLabel: UILabel!
     /// スタートButton
     @IBOutlet weak var startButton: UIButton!
+
+    //@IBOutlet weak var activityIndicatorView: NVActivityIndicatorView!
 
     // MARK: - Properties
 
@@ -44,7 +48,7 @@ class SignupViewController: UIViewController {
         /// スタートButton
         startButton.rx.tap.subscribe(onNext: { [weak self] in
             if let text = self?.nameUnderLineTextField.text, !text.isEmpty, text.count <= 12 {
-
+                HUD.show(.progress)
                 // TODO: 遷移処理を追加
             } else if let text = self?.nameUnderLineTextField.text, text.isEmpty {
                 self?.nameAlertLabel.text = "ユーザー名を入力してください"
