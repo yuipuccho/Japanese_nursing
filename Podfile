@@ -41,4 +41,6 @@ target 'Japanese_nursing' do
 
   pod 'XCGLogger'
 
+  pod 'NVActivityIndicatorView'
+
 end

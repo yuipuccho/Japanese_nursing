@@ -6,6 +6,9 @@ PODS:
   - IBAnimatable (6.1.0)
   - Koloda (5.0.1):
     - pop (~> 1.0)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
@@ -34,6 +37,7 @@ DEPENDENCIES:
   - Charts
   - IBAnimatable
   - Koloda
+  - NVActivityIndicatorView
   - PKHUD (~> 5.0)
   - R.swift
   - RAMAnimatedTabBarController
@@ -50,6 +54,7 @@ SPEC REPOS:
     - Charts
     - IBAnimatable
     - Koloda
+    - NVActivityIndicatorView
     - ObjcExceptionBridging
     - PKHUD
     - pop
@@ -69,6 +74,7 @@ SPEC CHECKSUMS:
   Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
   IBAnimatable: 99dddd4c0625884a301ba3ecbc1615f8a390368e
   Koloda: d07b9199a383abc5898b62aa945a599f5e7c0c4b
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
   PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
@@ -83,6 +89,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   XCGLogger: 1943831ef907df55108b0b18657953f868de973b
 
-PODFILE CHECKSUM: 1d1c5683d0d24f5d6211613525b78f90073df233
+PODFILE CHECKSUM: 1c6f7a8ff2e604d61d6c87451dbf94d8d8145718
 
 COCOAPODS: 1.10.0
