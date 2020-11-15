@@ -33,6 +33,11 @@
 		BA40295D255436B800421276 /* TestSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA40295C255436B800421276 /* TestSettingsViewController.swift */; };
 		BA4628AD2560DE4600D5AE8A /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4628AC2560DE4600D5AE8A /* Signup.swift */; };
 		BA4628B32560E16700D5AE8A /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4628B22560E16700D5AE8A /* SignupModel.swift */; };
+		BA4628BA2560E2CE00D5AE8A /* SignupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4628B92560E2CE00D5AE8A /* SignupViewController.storyboard */; };
+		BA4628BD2560E2E000D5AE8A /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4628BC2560E2E000D5AE8A /* SignupViewController.swift */; };
+		BA4628C12560E91300D5AE8A /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4628C02560E91300D5AE8A /* UnderlineTextField.swift */; };
+		BA4628C52560EC0200D5AE8A /* UITextField+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4628C42560EC0200D5AE8A /* UITextField+IBInspectable.swift */; };
+		BA4628C82560ECBB00D5AE8A /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4628C72560ECBB00D5AE8A /* BaseTextField.swift */; };
 		BA582A3924E170670089DA0B /* LearningUnit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA582A3824E170670089DA0B /* LearningUnit.storyboard */; };
 		BA5EACE324D2AF8F0008E2D0 /* UnitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5EACE224D2AF8F0008E2D0 /* UnitListViewController.swift */; };
 		BA5EAD4C24D453520008E2D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA5EAD4B24D453520008E2D0 /* GoogleService-Info.plist */; };
@@ -82,6 +87,11 @@
 		BA40295C255436B800421276 /* TestSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSettingsViewController.swift; sourceTree = "<group>"; };
 		BA4628AC2560DE4600D5AE8A /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
 		BA4628B22560E16700D5AE8A /* SignupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
+		BA4628B92560E2CE00D5AE8A /* SignupViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignupViewController.storyboard; sourceTree = "<group>"; };
+		BA4628BC2560E2E000D5AE8A /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		BA4628C02560E91300D5AE8A /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
+		BA4628C42560EC0200D5AE8A /* UITextField+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+IBInspectable.swift"; sourceTree = "<group>"; };
+		BA4628C72560ECBB00D5AE8A /* BaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
 		BA582A3824E170670089DA0B /* LearningUnit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LearningUnit.storyboard; sourceTree = "<group>"; };
 		BA5EACE224D2AF8F0008E2D0 /* UnitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListViewController.swift; sourceTree = "<group>"; };
 		BA5EAD4B24D453520008E2D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../FetiLip-develop/fetilip/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -248,6 +258,8 @@
 			isa = PBXGroup;
 			children = (
 				BAE31B792555A87800A3FC6D /* Array+Extended.swift */,
+				BA4628C72560ECBB00D5AE8A /* BaseTextField.swift */,
+				BA4628C42560EC0200D5AE8A /* UITextField+IBInspectable.swift */,
 				BA2A5DF3255166600085A3EF /* UIViewController+Extended.swift */,
 			);
 			path = Extensions;
@@ -274,6 +286,23 @@
 				BA4628B22560E16700D5AE8A /* SignupModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		BA4628B82560E2B400D5AE8A /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				BA4628B92560E2CE00D5AE8A /* SignupViewController.storyboard */,
+				BA4628BC2560E2E000D5AE8A /* SignupViewController.swift */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		BA4628BF2560E8BB00D5AE8A /* InheritedView */ = {
+			isa = PBXGroup;
+			children = (
+				BA4628C02560E91300D5AE8A /* UnderlineTextField.swift */,
+			);
+			path = InheritedView;
 			sourceTree = "<group>";
 		};
 		BA582A3724E170190089DA0B /* LearningUnit */ = {
@@ -348,6 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				BA2A5DF22551663E0085A3EF /* Extensions */,
+				BA4628BF2560E8BB00D5AE8A /* InheritedView */,
 				BAC4F7EE24A64211009ACEF3 /* Views */,
 				BA66D67A24A6EC9C00BE7273 /* Feature */,
 				BA66D67824A6E91500BE7273 /* AppBootstrap.swift */,
@@ -363,6 +393,7 @@
 			children = (
 				BA66D67524A6E70A00BE7273 /* Mypage */,
 				BA00E850255DA1D7001C4E06 /* Settings */,
+				BA4628B82560E2B400D5AE8A /* Signup */,
 				BAC4F7F024A6421F009ACEF3 /* Study */,
 				BA133AC224BB28680047E265 /* Test */,
 			);
@@ -496,6 +527,7 @@
 				BA00E88D255E4A4D001C4E06 /* UserNameSettingViewController.storyboard in Resources */,
 				BA27FB35248CECDA002840B8 /* Colors.xcassets in Resources */,
 				BA1E5B3B2487AC250055A5F4 /* LaunchScreen.storyboard in Resources */,
+				BA4628BA2560E2CE00D5AE8A /* SignupViewController.storyboard in Resources */,
 				BA133AC624BB28B80047E265 /* TestSettings.storyboard in Resources */,
 				BAC5904D249EECCF007D247B /* NotoSansCJKjpSub-Regular.otf in Resources */,
 				BA1E5B382487AC250055A5F4 /* Assets.xcassets in Resources */,
@@ -597,8 +629,10 @@
 				BA2A5DE5255135A50085A3EF /* UnitListCell.swift in Sources */,
 				BA27BDBF255FAEDF002C46AB /* ResponseError.swift in Sources */,
 				BA5EACE324D2AF8F0008E2D0 /* UnitListViewController.swift in Sources */,
+				BA4628C12560E91300D5AE8A /* UnderlineTextField.swift in Sources */,
 				BA00E891255E4A8C001C4E06 /* UserNameSettingViewController.swift in Sources */,
 				BA4628AD2560DE4600D5AE8A /* Signup.swift in Sources */,
+				BA4628C52560EC0200D5AE8A /* UITextField+IBInspectable.swift in Sources */,
 				BA27BDCA255FB29E002C46AB /* APIEvent.swift in Sources */,
 				BA2A5DE9255139DB0085A3EF /* LearningUnitViewController.swift in Sources */,
 				BA133ACA24C04D850047E265 /* CustomTabBar.swift in Sources */,
@@ -609,6 +643,8 @@
 				BA2DF386255859E400064DA8 /* MyPageViewController.swift in Sources */,
 				BA00E855255DA29C001C4E06 /* SettingListViewController.swift in Sources */,
 				BA66D67D24A6ECF000BE7273 /* TabBarController.swift in Sources */,
+				BA4628BD2560E2E000D5AE8A /* SignupViewController.swift in Sources */,
+				BA4628C82560ECBB00D5AE8A /* BaseTextField.swift in Sources */,
 				BA4628B32560E16700D5AE8A /* SignupModel.swift in Sources */,
 				BA1E5B312487AC210055A5F4 /* SceneDelegate.swift in Sources */,
 				BA85A3FE24AB7F51003E6E85 /* R.generated.swift in Sources */,
