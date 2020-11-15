@@ -30,7 +30,6 @@ class SignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         subscribe()
-        //startButton.isEnabled = false
     }
 
     // MARK: - Functions
@@ -45,6 +44,7 @@ class SignupViewController: UIViewController {
         /// スタートButton
         startButton.rx.tap.subscribe(onNext: { [weak self] in
             if let text = self?.nameUnderLineTextField.text, !text.isEmpty, text.count <= 12 {
+
                 // TODO: 遷移処理を追加
             } else if let text = self?.nameUnderLineTextField.text, text.isEmpty {
                 self?.nameAlertLabel.text = "ユーザー名を入力してください"
