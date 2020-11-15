@@ -1,5 +1,5 @@
 //
-//  CreateAccount.swift
+//  Signup.swift
 //  Japanese_nursing
 //
 //  Created by 吉澤優衣 on 2020/11/15.
