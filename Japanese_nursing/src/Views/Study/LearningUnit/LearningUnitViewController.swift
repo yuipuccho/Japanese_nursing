@@ -157,6 +157,10 @@ extension LearningUnitViewController: KolodaViewDelegate {
         }
     }
 
+    func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
+        return R.nib.overlayView(owner: self)
+    }
+
 }
 
 // MARK: - KolodaViewDataSource
