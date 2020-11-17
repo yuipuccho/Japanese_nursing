@@ -156,6 +156,7 @@ extension LearningUnitViewController: KolodaViewDelegate {
                                 animationStyle: .bottomToTop)
         }
     }
+
     func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
         return R.nib.overlayView(owner: self)
     }
