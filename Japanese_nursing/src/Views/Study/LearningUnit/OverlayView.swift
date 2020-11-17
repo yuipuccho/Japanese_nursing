@@ -23,11 +23,12 @@ class CustomOverlayView: OverlayView {
     @IBOutlet weak var batuImageView: UIImageView!
     @IBOutlet weak var batuLabel: UILabel!
 
+    // MARK: - Properties
 
-    override var overlayState: SwipeResultDirection?  {
+    override var overlayState: SwipeResultDirection? {
         didSet {
             switch overlayState {
-            case .left?:
+            case .left:
                 checkImageView.isHidden = true
                 checkLabel.isHidden = true
                 batuImageView.isHidden = false
@@ -35,7 +36,7 @@ class CustomOverlayView: OverlayView {
                 let color = R.color.mistakePink()
                 self.backgroundColor = color?.withAlphaComponent(0.5)
 
-            case .right?:
+            case .right:
                 checkImageView.isHidden = false
                 checkLabel.isHidden = false
                 batuImageView.isHidden = true
@@ -46,7 +47,7 @@ class CustomOverlayView: OverlayView {
             default:
                 break
             }
-
         }
     }
+
 }
