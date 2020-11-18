@@ -57,19 +57,31 @@ class SettingListViewController: UITableViewController {
             guard let cell = self.tableView.cellForRow(at: indexPath) else { return }
 
             switch cell {
+            // ユーザ名の変更
             case self.userNameSettingCell:
                 break
+
+            // 目標学習数の変更
             case self.studyTargetSettingCell:
                 let vc = StudyTargetSettingViewController.makeInstance()
                 present(vc, animated: true)
+
+            // 目標テスト数の変更
             case self.testTargetSettingCell:
                 break
+
+            // お問い合わせ
             case self.questionAndAnswerCell:
                 break
+
+            // 利用規約
             case self.termOfServiceCell:
                 break
+
+            // プライバシーポリシー
             case self.privacyPolicyCell:
                 break
+
             default:
                 break
             }
