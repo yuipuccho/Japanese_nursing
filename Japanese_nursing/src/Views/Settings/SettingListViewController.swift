@@ -60,7 +60,8 @@ class SettingListViewController: UITableViewController {
             case self.userNameSettingCell:
                 break
             case self.studyTargetSettingCell:
-                break
+                let vc = StudyTargetSettingViewController.makeInstance()
+                present(vc, animated: true)
             case self.testTargetSettingCell:
                 break
             case self.questionAndAnswerCell:
