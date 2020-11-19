@@ -37,7 +37,7 @@ class TargetSettingViewController: UIViewController, UIPickerViewDelegate, UIPic
 
     private var disposeBag = DisposeBag()
 
-    var targetNumber: Int = 0
+    var targetNumber: Int = 100
 
     private var pickerDataList: [Int] {
         var list: [Int] = []
@@ -98,7 +98,8 @@ extension TargetSettingViewController {
 
     /// ピッカーの初期値を設定する
     private func setupInitialPickerView() {
-        pickerView.selectRow(2, inComponent: 0, animated: false)
+        let index = pickerDataList.firstIndex(of: targetNumber) ?? 0
+        pickerView.selectRow(index, inComponent: 0, animated: false)
     }
 
 }

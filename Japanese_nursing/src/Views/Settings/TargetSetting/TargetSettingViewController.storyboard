@@ -55,24 +55,30 @@
                                     <constraint firstItem="v33-5A-6Hw" firstAttribute="top" secondItem="RxU-hy-TbH" secondAttribute="top" constant="-100" id="zkH-CP-JXx"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目標学習数の設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ki-oa-OIG">
+                                <rect key="frame" x="20" y="64" width="144" height="27"/>
+                                <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="PgO-xT-54N">
-                                <rect key="frame" x="136.5" y="401.5" width="141" height="14"/>
+                                <rect key="frame" x="125.5" y="411.5" width="163" height="21"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEARN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PiG-Oz-F4d">
-                                        <rect key="frame" x="0.0" y="0.0" width="39" height="14"/>
-                                        <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="12"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="21"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8E-nR-egw">
-                                        <rect key="frame" x="42" y="0.0" width="13.5" height="14"/>
-                                        <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="12"/>
+                                        <rect key="frame" x="49" y="0.0" width="16.5" height="21"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORDS A DAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZY-pu-BPB">
-                                        <rect key="frame" x="58.5" y="0.0" width="82.5" height="14"/>
-                                        <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="12"/>
+                                        <rect key="frame" x="68.5" y="0.0" width="94.5" height="21"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -100,13 +106,13 @@
                                         <rect key="frame" x="10" y="15" width="394" height="195"/>
                                     </pickerView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORDS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hCw-Yh-4vL">
-                                        <rect key="frame" x="262" y="102.5" width="118" height="20"/>
+                                        <rect key="frame" x="262" y="99.5" width="118" height="25.5"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="17"/>
                                         <color key="textColor" name="TextBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEARN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nUi-Aq-7hL">
-                                        <rect key="frame" x="30" y="102.5" width="122" height="20"/>
+                                        <rect key="frame" x="30" y="99.5" width="122" height="25.5"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="17"/>
                                         <color key="textColor" name="TextBlue"/>
                                         <nil key="highlightedColor"/>
@@ -209,7 +215,9 @@
                             <constraint firstItem="xr7-2R-aKS" firstAttribute="trailing" secondItem="RxU-hy-TbH" secondAttribute="trailing" id="a6m-1M-kyc"/>
                             <constraint firstItem="RxU-hy-TbH" firstAttribute="leading" secondItem="41E-Jh-FHP" secondAttribute="leading" id="eSk-6G-CIP"/>
                             <constraint firstItem="wAx-q8-BFY" firstAttribute="leading" secondItem="xr7-2R-aKS" secondAttribute="leading" constant="30" id="egq-Iu-iyh"/>
-                            <constraint firstItem="PgO-xT-54N" firstAttribute="top" secondItem="MdA-H9-SOO" secondAttribute="bottom" constant="-10" id="pNH-h0-xnj"/>
+                            <constraint firstItem="4ki-oa-OIG" firstAttribute="top" secondItem="xr7-2R-aKS" secondAttribute="top" constant="20" id="fWH-3X-okI"/>
+                            <constraint firstItem="4ki-oa-OIG" firstAttribute="leading" secondItem="xr7-2R-aKS" secondAttribute="leading" constant="20" id="jrN-nT-CpR"/>
+                            <constraint firstItem="PgO-xT-54N" firstAttribute="top" secondItem="MdA-H9-SOO" secondAttribute="bottom" id="pNH-h0-xnj"/>
                             <constraint firstItem="RxU-hy-TbH" firstAttribute="height" secondItem="41E-Jh-FHP" secondAttribute="height" multiplier="0.55" id="uKr-Cy-g0J"/>
                             <constraint firstItem="xr7-2R-aKS" firstAttribute="trailing" secondItem="ipU-NT-2Ak" secondAttribute="trailing" id="xfR-2W-AX9"/>
                         </constraints>
