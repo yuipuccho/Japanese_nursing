@@ -14,26 +14,40 @@ import RxSwift
 /**
  * 目標の設定画面VC
  */
-class TargetSettingViewController: UIViewController {
+class TargetSettingViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     // MARK: - Outlets
 
     /// 円形進捗バー
     @IBOutlet private weak var pieChartView: PieChartView!
+    /// 目標タイプアイコン
+    @IBOutlet private weak var targetIconImageView: UIImageView!
+    /// 目標タイプラベル
+    @IBOutlet private weak var targetTypeLabel: UILabel!
     /// 目標数ラベル
-    @IBOutlet weak var targetNumberLabel: UILabel!
+    @IBOutlet private weak var targetNumberLabel: UILabel!
     /// 目標数ピッカー
-    @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet private weak var pickerView: UIPickerView!
     /// キャンセルボタン
-    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet private weak var cancelButton: UIButton!
     /// 保存ボタン
-    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet private weak var saveButton: UIButton!
 
     // MARK: - Properties
 
     private var disposeBag = DisposeBag()
 
     var targetNumber: Int = 0
+
+    private var pickerDataList: [Int] {
+        var list: [Int] = []
+        var num = 0
+        while num < 2000 {
+            num += 10
+            list.append(num)
+        }
+        return list
+    }
 
     /// 目標タイプ区別用Enum
     enum TargetTypeEnum {
@@ -60,7 +74,13 @@ class TargetSettingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupPieChartView(pieChartView: pieChartView)
         subscribe()
+
+        // Delegate設定
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        setupInitialPickerView()
     }
 
 }
@@ -74,6 +94,79 @@ extension TargetSettingViewController {
         cancelButton.rx.tap.subscribe(onNext: { [weak self] in
             self?.dismiss(animated: true)
         }).disposed(by: disposeBag)
+    }
+
+    /// ピッカーの初期値を設定する
+    private func setupInitialPickerView() {
+        pickerView.selectRow(2, inComponent: 0, animated: false)
+    }
+
+}
+
+extension TargetSettingViewController {
+
+    // UIPickerViewの列の数
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+
+    // UIPickerViewの行数、リストの数
+    func pickerView(_ pickerView: UIPickerView,
+                    numberOfRowsInComponent component: Int) -> Int {
+        return pickerDataList.count
+    }
+
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+
+            // 表示するラベルを生成する
+            let label = UILabel(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 50))
+            label.textAlignment = .center
+            label.text = String(pickerDataList[row])
+            label.font = R.font.notoSansCJKjpSubBold(size: 20)!
+            label.textColor = R.color.textBlue()
+            return label
+        }
+
+    // UIPickerViewのRowが選択された時の挙動
+    func pickerView(_ pickerView: UIPickerView,
+                    didSelectRow row: Int,
+                    inComponent component: Int) {
+
+        //label.text = pickerDataList[row]
+
+    }
+
+
+}
+
+extension TargetSettingViewController {
+
+    /// 円形進捗バーの表示設定
+    private func setupPieChartView(pieChartView: PieChartView) {
+        // グラフに表示するデータ(仮)
+        let dataEntries = [
+            PieChartDataEntry(value: Double(100))
+        ]
+
+        // データをセットする
+        let dataSet = PieChartDataSet(entries: dataEntries)
+        dataSet.setColors(R.color.mainBlueDark()!)  // グラフの色
+        dataSet.drawValuesEnabled = false  // グラフ上のデータ値を非表示にする
+        pieChartView.data = PieChartData(dataSet: dataSet)
+
+        pieChartView.holeRadiusPercent = 0.88  // 中心の穴の大きさ
+        pieChartView.holeColor = UIColor.clear  // 中心の穴の色
+
+        pieChartView.highlightPerTapEnabled = false  // グラフがタップされたときのハイライトを無効化
+        pieChartView.chartDescription?.enabled = false  // グラフの説明を非表示
+        pieChartView.drawEntryLabelsEnabled = false  // グラフ上のデータラベルを非表示
+        pieChartView.legend.enabled = false  // グラフの注釈を非表示
+        pieChartView.rotationEnabled = false // グラフが動くのを無効化
+
+        view.addSubview(pieChartView)
+
+        // アニメーションはなし
+        //pieChartView.animate(xAxisDuration: 1.2, yAxisDuration: 0.8) // アニメーション
     }
 
 }

@@ -13,7 +13,7 @@
         <!--Learning Unit View Controller-->
         <scene sceneID="ktY-am-LAB">
             <objects>
-                <viewController storyboardIdentifier="LearningUnitViewController" id="NIa-Q6-Xln" customClass="LearningUnitViewController" customModule="d_介護の日本語" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LearningUnitViewController" modalPresentationStyle="fullScreen" id="NIa-Q6-Xln" customClass="LearningUnitViewController" customModule="d_介護の日本語" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="riQ-i0-sgE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

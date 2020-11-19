@@ -227,15 +227,15 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="設定" id="5LB-Vn-1Bp">
-                        <barButtonItem key="rightBarButtonItem" image="close_bar_button_icon" id="bez-1O-fvx">
-                            <color key="tintColor" name="WeakTextBlue"/>
+                        <barButtonItem key="leftBarButtonItem" title="close" id="iqS-E7-Jxc">
+                            <color key="tintColor" name="TextBlue"/>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
-                        <outlet property="closeButton" destination="bez-1O-fvx" id="iDp-6f-bx4"/>
+                        <outlet property="closeButton" destination="iqS-E7-Jxc" id="2jo-HO-cDI"/>
                         <outlet property="privacyPolicyCell" destination="tDU-1M-JA0" id="brC-bN-jKd"/>
                         <outlet property="questionAndAnswerCell" destination="pCr-Mq-dDG" id="ehg-r5-zVm"/>
                         <outlet property="studyTargetSettingCell" destination="ZLL-VG-7uc" id="1RQ-DC-0dB"/>
@@ -250,7 +250,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="close_bar_button_icon" width="24" height="24"/>
         <namedColor name="TextBlue">
             <color red="0.050999999046325684" green="0.14100000262260437" blue="0.50199997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

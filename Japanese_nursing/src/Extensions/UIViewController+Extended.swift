@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 
 extension UIViewController {
-
-    func present(_ viewController: UIViewController, animated: Bool) {
-        if #available(iOS 13.0, *) {
-            if viewController.modalPresentationStyle == .automatic || viewController.modalPresentationStyle == .pageSheet {
-                viewController.modalPresentationStyle = .fullScreen
-            }
-        }
-        present(viewController, animated: animated, completion: nil)
-    }
+//
+//    func present(_ viewController: UIViewController, animated: Bool) {
+//        if #available(iOS 13.0, *) {
+//            if viewController.modalPresentationStyle == .automatic || viewController.modalPresentationStyle == .pageSheet {
+//                viewController.modalPresentationStyle = .fullScreen
+//            }
+//        }
+//        present(viewController, animated: animated, completion: nil)
+//    }
 
 }
