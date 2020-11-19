@@ -18,10 +18,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Study Target Setting View Controller-->
+        <!--Target Setting View Controller-->
         <scene sceneID="0Us-Rr-GmF">
             <objects>
-                <viewController storyboardIdentifier="StudyTargetSettingViewController" id="qb6-gf-CLu" customClass="StudyTargetSettingViewController" customModule="d_介護の日本語" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TargetSettingViewController" id="qb6-gf-CLu" customClass="TargetSettingViewController" customModule="d_介護の日本語" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="41E-Jh-FHP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,7 +29,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RxU-hy-TbH">
                                 <rect key="frame" x="0.0" y="44" width="414" height="448"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MdA-H9-SOO">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MdA-H9-SOO" customClass="PieChartView" customModule="Charts">
                                         <rect key="frame" x="95" y="112" width="224" height="224"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <constraints>
@@ -37,7 +37,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1日30単語学習する" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrZ-3c-mAH">
-                                        <rect key="frame" x="0.0" y="346" width="414" height="20"/>
+                                        <rect key="frame" x="0.0" y="346" width="414" height="25.5"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Medium" family="NotoSansCJKjpSub-Medium" pointSize="17"/>
                                         <color key="textColor" name="WeakTextBlue"/>
                                         <nil key="highlightedColor"/>
@@ -62,7 +62,7 @@
                                         </constraints>
                                     </pickerView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="words a day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hCw-Yh-4vL">
-                                        <rect key="frame" x="277" y="98" width="127" height="20"/>
+                                        <rect key="frame" x="277" y="95.5" width="127" height="25.5"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Medium" family="NotoSansCJKjpSub-Medium" pointSize="17"/>
                                         <color key="textColor" name="WeakTextBlue"/>
                                         <nil key="highlightedColor"/>
@@ -153,6 +153,13 @@
                             <constraint firstItem="xr7-2R-aKS" firstAttribute="trailing" secondItem="ipU-NT-2Ak" secondAttribute="trailing" id="xfR-2W-AX9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="y2K-1g-l4d" id="eKA-LD-wOr"/>
+                        <outlet property="pickerView" destination="1Ty-g9-0om" id="xIl-Gv-n6U"/>
+                        <outlet property="pieChartView" destination="MdA-H9-SOO" id="lIS-sK-54z"/>
+                        <outlet property="saveButton" destination="V74-1k-koQ" id="FtW-cJ-oJl"/>
+                        <outlet property="targetNumberLabel" destination="GrZ-3c-mAH" id="a4V-Rl-D29"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5lb-mR-1Dn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

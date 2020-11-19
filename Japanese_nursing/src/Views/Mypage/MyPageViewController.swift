@@ -76,6 +76,8 @@ extension MyPageViewController {
         // 学習円形進捗バーボタンタップ
         studyPieChartButton.rx.tap.subscribe(onNext: { [weak self] in
             // TODO: 学習目標設定画面へ遷移する処理を追加する
+            let vc = TargetSettingViewController.makeInstance()
+            self?.present(vc, animated: true)
         }).disposed(by: disposeBag)
 
         // テスト円形進捗バーボタンタップ
@@ -172,6 +174,8 @@ extension MyPageViewController {
         view.bringSubviewToFront(testCurrentCountLabel)
         view.bringSubviewToFront(studyImageView)
         view.bringSubviewToFront(testImageView)
+        view.bringSubviewToFront(studyPieChartButton)
+        view.bringSubviewToFront(testPieChartButton)
     }
 
 }

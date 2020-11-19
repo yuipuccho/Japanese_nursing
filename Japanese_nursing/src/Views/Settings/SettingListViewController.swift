@@ -63,7 +63,7 @@ class SettingListViewController: UITableViewController {
 
             // 目標学習数の変更
             case self.studyTargetSettingCell:
-                let vc = StudyTargetSettingViewController.makeInstance()
+                let vc = TargetSettingViewController.makeInstance()
                 present(vc, animated: true)
 
             // 目標テスト数の変更
