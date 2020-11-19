@@ -38,11 +38,12 @@ class TargetSettingViewController: UIViewController, UIPickerViewDelegate, UIPic
     private var disposeBag = DisposeBag()
 
     /// 初期目標値
-    var initialTargetNumber: Int = 100
+    var initialTargetNumber: Int = 30
 
     /// ピッカーで選択した目標値
     var selectedTargetNumber: Int = 30
 
+    /// ピッカーで表示するデータリスト
     private var pickerDataList: [Int] {
         var list: [Int] = []
         var num = 0
@@ -72,6 +73,8 @@ class TargetSettingViewController: UIViewController, UIPickerViewDelegate, UIPic
             }
         }
     }
+
+    var targetType: TargetTypeEnum = .study
 
     // MARK: - LifeCycles
     
@@ -147,9 +150,9 @@ extension TargetSettingViewController {
 
 extension TargetSettingViewController {
 
-    /// 円形進捗バーの表示設定
+    /// 円形進捗バーの表示設定 (アニメーションはつけない)
     private func setupPieChartView(pieChartView: PieChartView) {
-        // グラフに表示するデータ(仮)
+        // グラフに表示するデータ
         let dataEntries = [
             PieChartDataEntry(value: Double(100))
         ]
@@ -170,8 +173,6 @@ extension TargetSettingViewController {
         pieChartView.rotationEnabled = false // グラフが動くのを無効化
 
         view.addSubview(pieChartView)
-
-        // アニメーションはつけない
     }
 
 }
@@ -180,16 +181,19 @@ extension TargetSettingViewController {
 
 extension TargetSettingViewController {
 
-    static func makeInstance() -> UIViewController {
+    static func makeInstance(targetType: TargetTypeEnum, initialTargetNumber: Int = 30) -> UIViewController {
         guard let vc = R.storyboard.targetSettingViewController.targetSettingViewController() else {
             assertionFailure("Can't make instance 'TargetSettingViewController'.")
             return UIViewController()
         }
+        vc.targetType = targetType
+        vc.initialTargetNumber = initialTargetNumber
         return vc
     }
 
-    static func makeInstanceInNavigationController() -> UIViewController {
-        return UINavigationController(rootViewController: makeInstance())
+    static func makeInstanceInNavigationController(targetType: TargetTypeEnum, initialTargetNumber: Int = 30) -> UIViewController {
+        let vc = makeInstance(targetType: targetType, initialTargetNumber: initialTargetNumber)
+        return UINavigationController(rootViewController: vc)
     }
 
 }
