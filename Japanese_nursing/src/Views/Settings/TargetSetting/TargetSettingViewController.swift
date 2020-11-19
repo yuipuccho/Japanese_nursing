@@ -18,12 +18,16 @@ class TargetSettingViewController: UIViewController, UIPickerViewDelegate, UIPic
 
     // MARK: - Outlets
 
+    /// タイトルラベル
+    @IBOutlet private weak var titleLabel: UILabel!
     /// 円形進捗バー
     @IBOutlet private weak var pieChartView: PieChartView!
     /// 目標タイプアイコン
     @IBOutlet private weak var targetIconImageView: UIImageView!
     /// 目標タイプラベル
     @IBOutlet private weak var targetTypeLabel: UILabel!
+    /// 目標タイプピッカーラベル
+    @IBOutlet private weak var targetTypePickerLabel: UILabel!
     /// 目標数ラベル
     @IBOutlet private weak var targetNumberLabel: UILabel!
     /// 目標数ピッカー
@@ -61,6 +65,17 @@ class TargetSettingViewController: UIViewController, UIPickerViewDelegate, UIPic
         /// テスト
         case test
 
+        /// タイトル
+        var title: String {
+            get {
+                switch self {
+                case .study:
+                    return "目標学習数の設定"
+                case .test:
+                    return "目標テスト数の設定"
+                }
+            }
+        }
         /// 目標文字列
         var targetString: String {
             get {
@@ -69,6 +84,17 @@ class TargetSettingViewController: UIViewController, UIPickerViewDelegate, UIPic
                     return "LEARN"
                 case .test:
                     return "TEST"
+                }
+            }
+        }
+        /// アイコン
+        var icon: UIImage {
+            get {
+                switch self {
+                case .study:
+                    return R.image.study_icon_white()!
+                case .test:
+                    return R.image.test_icon_white()!
                 }
             }
         }
@@ -88,6 +114,7 @@ class TargetSettingViewController: UIViewController, UIPickerViewDelegate, UIPic
         pickerView.delegate = self
         pickerView.dataSource = self
         setupInitialPickerView()
+        setupUI(type: targetType)
     }
 
 }
@@ -108,6 +135,14 @@ extension TargetSettingViewController {
     private func setupInitialPickerView() {
         let index = pickerDataList.firstIndex(of: initialTargetNumber) ?? 0
         pickerView.selectRow(index, inComponent: 0, animated: false)
+    }
+
+    /// 目標タイプによってUIを設定する
+    private func setupUI(type: TargetTypeEnum) {
+        titleLabel.text = type.title
+        targetTypeLabel.text = type.targetString
+        targetTypePickerLabel.text = type.targetString
+        targetIconImageView.image = type.icon
     }
 
 }
