@@ -37,7 +37,11 @@ class TargetSettingViewController: UIViewController, UIPickerViewDelegate, UIPic
 
     private var disposeBag = DisposeBag()
 
-    var targetNumber: Int = 100
+    /// 初期目標値
+    var initialTargetNumber: Int = 100
+
+    /// ピッカーで選択した目標値
+    var selectedTargetNumber: Int = 30
 
     private var pickerDataList: [Int] {
         var list: [Int] = []
@@ -94,11 +98,12 @@ extension TargetSettingViewController {
         cancelButton.rx.tap.subscribe(onNext: { [weak self] in
             self?.dismiss(animated: true)
         }).disposed(by: disposeBag)
+
     }
 
     /// ピッカーの初期値を設定する
     private func setupInitialPickerView() {
-        let index = pickerDataList.firstIndex(of: targetNumber) ?? 0
+        let index = pickerDataList.firstIndex(of: initialTargetNumber) ?? 0
         pickerView.selectRow(index, inComponent: 0, animated: false)
     }
 
@@ -133,10 +138,10 @@ extension TargetSettingViewController {
                     didSelectRow row: Int,
                     inComponent component: Int) {
 
-        //label.text = pickerDataList[row]
-
+        selectedTargetNumber = pickerDataList[row]
+        // ラベルに選択された値を反映する
+        targetNumberLabel.text = String(selectedTargetNumber)
     }
-
 
 }
 
@@ -166,8 +171,7 @@ extension TargetSettingViewController {
 
         view.addSubview(pieChartView)
 
-        // アニメーションはなし
-        //pieChartView.animate(xAxisDuration: 1.2, yAxisDuration: 0.8) // アニメーション
+        // アニメーションはつけない
     }
 
 }
