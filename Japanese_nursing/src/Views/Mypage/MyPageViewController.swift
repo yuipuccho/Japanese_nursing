@@ -13,6 +13,8 @@ import RxSwift
 
 class MyPageViewController: UIViewController {
 
+    lazy var vc = TargetSettingViewController()
+
     // MARK: - Outlets
 
     /// 棒グラフ
@@ -87,7 +89,6 @@ extension MyPageViewController {
 
         // 設定ボタンタップ
         settingButton.rx.tap.subscribe(onNext: { [weak self] in
-            // TODO: 設定一覧画面へ遷移する処理を追加する
             let vc = SettingListViewController.makeInstanceInNavigationController()
             self?.present(vc, animated: true)
         }).disposed(by: disposeBag)

@@ -16,6 +16,8 @@ import RxSwift
  */
 class TargetSettingViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    public static let shared: TargetSettingViewController = TargetSettingViewController()
+
     // MARK: - Outlets
 
     /// タイトルラベル
@@ -129,6 +131,12 @@ extension TargetSettingViewController {
             self?.dismiss(animated: true)
         }).disposed(by: disposeBag)
 
+        // 保存ボタンタップ
+        saveButton.rx.tap.subscribe(onNext: { [unowned self] in
+            // TODO: 保存処理を追加する
+            self.dismiss(animated: true) { [unowned self] in
+            }
+        }).disposed(by: disposeBag)
     }
 
     /// ピッカーの初期値を設定する
