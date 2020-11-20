@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,7 +36,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アカウント設定" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pi9-eG-hTD">
-                                                    <rect key="frame" x="16" y="17" width="126" height="27"/>
+                                                    <rect key="frame" x="16" y="23" width="126" height="21"/>
                                                     <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Black" family="NotoSansCJKjpSub-Black" pointSize="18"/>
                                                     <color key="textColor" name="WeakTextBlue"/>
                                                     <nil key="highlightedColor"/>
@@ -73,7 +73,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目標設定" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Enh-x3-thf">
-                                                    <rect key="frame" x="16" y="17" width="72" height="27"/>
+                                                    <rect key="frame" x="16" y="23" width="72" height="21"/>
                                                     <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Black" family="NotoSansCJKjpSub-Black" pointSize="18"/>
                                                     <color key="textColor" name="WeakTextBlue"/>
                                                     <nil key="highlightedColor"/>
@@ -127,7 +127,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="サポート" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQz-cc-Vi1">
-                                                    <rect key="frame" x="16" y="17" width="72" height="27"/>
+                                                    <rect key="frame" x="16" y="23" width="72" height="21"/>
                                                     <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Black" family="NotoSansCJKjpSub-Black" pointSize="18"/>
                                                     <color key="textColor" name="WeakTextBlue"/>
                                                     <nil key="highlightedColor"/>
@@ -164,7 +164,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="その他" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FfV-7x-5cC">
-                                                    <rect key="frame" x="16" y="17" width="54" height="27"/>
+                                                    <rect key="frame" x="16" y="23" width="54" height="21"/>
                                                     <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Black" family="NotoSansCJKjpSub-Black" pointSize="18"/>
                                                     <color key="textColor" name="WeakTextBlue"/>
                                                     <nil key="highlightedColor"/>
@@ -227,15 +227,15 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="設定" id="5LB-Vn-1Bp">
-                        <barButtonItem key="rightBarButtonItem" image="close_bar_button_icon" id="bez-1O-fvx">
-                            <color key="tintColor" name="WeakTextBlue"/>
+                        <barButtonItem key="leftBarButtonItem" title="close" id="iqS-E7-Jxc">
+                            <color key="tintColor" name="TextBlue"/>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
-                        <outlet property="closeButton" destination="bez-1O-fvx" id="iDp-6f-bx4"/>
+                        <outlet property="closeButton" destination="iqS-E7-Jxc" id="2jo-HO-cDI"/>
                         <outlet property="privacyPolicyCell" destination="tDU-1M-JA0" id="brC-bN-jKd"/>
                         <outlet property="questionAndAnswerCell" destination="pCr-Mq-dDG" id="ehg-r5-zVm"/>
                         <outlet property="studyTargetSettingCell" destination="ZLL-VG-7uc" id="1RQ-DC-0dB"/>
@@ -250,7 +250,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="close_bar_button_icon" width="24" height="24"/>
         <namedColor name="TextBlue">
             <color red="0.050999999046325684" green="0.14100000262260437" blue="0.50199997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

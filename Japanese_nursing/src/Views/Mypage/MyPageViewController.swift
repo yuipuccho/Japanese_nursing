@@ -75,17 +75,18 @@ extension MyPageViewController {
     private func subscribe() {
         // 学習円形進捗バーボタンタップ
         studyPieChartButton.rx.tap.subscribe(onNext: { [weak self] in
-            // TODO: 学習目標設定画面へ遷移する処理を追加する
+            let vc = TargetSettingViewController.makeInstance(targetType: .study)
+            self?.present(vc, animated: true)
         }).disposed(by: disposeBag)
 
         // テスト円形進捗バーボタンタップ
-        studyPieChartButton.rx.tap.subscribe(onNext: { [weak self] in
-            // TODO: テスト目標設定画面へ遷移する処理を追加する
+        testPieChartButton.rx.tap.subscribe(onNext: { [weak self] in
+            let vc = TargetSettingViewController.makeInstance(targetType: .test)
+            self?.present(vc, animated: true)
         }).disposed(by: disposeBag)
 
         // 設定ボタンタップ
         settingButton.rx.tap.subscribe(onNext: { [weak self] in
-            // TODO: 設定一覧画面へ遷移する処理を追加する
             let vc = SettingListViewController.makeInstanceInNavigationController()
             self?.present(vc, animated: true)
         }).disposed(by: disposeBag)
@@ -172,6 +173,8 @@ extension MyPageViewController {
         view.bringSubviewToFront(testCurrentCountLabel)
         view.bringSubviewToFront(studyImageView)
         view.bringSubviewToFront(testImageView)
+        view.bringSubviewToFront(studyPieChartButton)
+        view.bringSubviewToFront(testPieChartButton)
     }
 
 }

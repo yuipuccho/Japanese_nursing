@@ -23,11 +23,12 @@
 		BA27FB35248CECDA002840B8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA27FB34248CECDA002840B8 /* Colors.xcassets */; };
 		BA2A5DE5255135A50085A3EF /* UnitListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A5DE4255135A50085A3EF /* UnitListCell.swift */; };
 		BA2A5DE9255139DB0085A3EF /* LearningUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A5DE8255139DB0085A3EF /* LearningUnitViewController.swift */; };
-		BA2A5DF4255166600085A3EF /* UIViewController+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A5DF3255166600085A3EF /* UIViewController+Extended.swift */; };
 		BA2DF386255859E400064DA8 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2DF385255859E300064DA8 /* MyPageViewController.swift */; };
 		BA40295D255436B800421276 /* TestSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA40295C255436B800421276 /* TestSettingsViewController.swift */; };
 		BA46290025640DE200D5AE8A /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA4628FF25640DE200D5AE8A /* OverlayView.xib */; };
 		BA46290325640E6300D5AE8A /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA46290225640E6300D5AE8A /* OverlayView.swift */; };
+		BA46290B2565780700D5AE8A /* TargetSettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA46290A2565780700D5AE8A /* TargetSettingViewController.storyboard */; };
+		BA46290E2565782400D5AE8A /* TargetSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA46290D2565782400D5AE8A /* TargetSettingViewController.swift */; };
 		BA582A3924E170670089DA0B /* LearningUnit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA582A3824E170670089DA0B /* LearningUnit.storyboard */; };
 		BA5EACE324D2AF8F0008E2D0 /* UnitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5EACE224D2AF8F0008E2D0 /* UnitListViewController.swift */; };
 		BA5EAD4C24D453520008E2D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA5EAD4B24D453520008E2D0 /* GoogleService-Info.plist */; };
@@ -67,11 +68,12 @@
 		BA27FB34248CECDA002840B8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		BA2A5DE4255135A50085A3EF /* UnitListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListCell.swift; sourceTree = "<group>"; };
 		BA2A5DE8255139DB0085A3EF /* LearningUnitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningUnitViewController.swift; sourceTree = "<group>"; };
-		BA2A5DF3255166600085A3EF /* UIViewController+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extended.swift"; sourceTree = "<group>"; };
 		BA2DF385255859E300064DA8 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		BA40295C255436B800421276 /* TestSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSettingsViewController.swift; sourceTree = "<group>"; };
 		BA4628FF25640DE200D5AE8A /* OverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
 		BA46290225640E6300D5AE8A /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		BA46290A2565780700D5AE8A /* TargetSettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TargetSettingViewController.storyboard; sourceTree = "<group>"; };
+		BA46290D2565782400D5AE8A /* TargetSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetSettingViewController.swift; sourceTree = "<group>"; };
 		BA582A3824E170670089DA0B /* LearningUnit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LearningUnit.storyboard; sourceTree = "<group>"; };
 		BA5EACE224D2AF8F0008E2D0 /* UnitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListViewController.swift; sourceTree = "<group>"; };
 		BA5EAD4B24D453520008E2D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../FetiLip-develop/fetilip/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		BA00E850255DA1D7001C4E06 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				BA462909256576A600D5AE8A /* TargetSetting */,
 				BA00E88F255E4A63001C4E06 /* UserNameSetting */,
 				BA00E851255DA288001C4E06 /* SetteingListViewController.storyboard */,
 				BA00E854255DA29C001C4E06 /* SettingListViewController.swift */,
@@ -198,9 +201,17 @@
 			isa = PBXGroup;
 			children = (
 				BAE31B792555A87800A3FC6D /* Array+Extended.swift */,
-				BA2A5DF3255166600085A3EF /* UIViewController+Extended.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BA462909256576A600D5AE8A /* TargetSetting */ = {
+			isa = PBXGroup;
+			children = (
+				BA46290A2565780700D5AE8A /* TargetSettingViewController.storyboard */,
+				BA46290D2565782400D5AE8A /* TargetSettingViewController.swift */,
+			);
+			path = TargetSetting;
 			sourceTree = "<group>";
 		};
 		BA582A3724E170190089DA0B /* LearningUnit */ = {
@@ -411,6 +422,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA46290B2565780700D5AE8A /* TargetSettingViewController.storyboard in Resources */,
 				BA06D2052557AB4C000216CC /* TestViewController.storyboard in Resources */,
 				BAC4F7FD24A6E4C5009ACEF3 /* UnitList.storyboard in Resources */,
 				BA66D68124A6EFFD00BE7273 /* MypageViewController.storyboard in Resources */,
@@ -525,11 +537,11 @@
 				BA2A5DE5255135A50085A3EF /* UnitListCell.swift in Sources */,
 				BA5EACE324D2AF8F0008E2D0 /* UnitListViewController.swift in Sources */,
 				BA00E891255E4A8C001C4E06 /* UserNameSettingViewController.swift in Sources */,
+				BA46290E2565782400D5AE8A /* TargetSettingViewController.swift in Sources */,
 				BA2A5DE9255139DB0085A3EF /* LearningUnitViewController.swift in Sources */,
 				BA133ACA24C04D850047E265 /* CustomTabBar.swift in Sources */,
 				BA06D2012557AB26000216CC /* TestViewController.swift in Sources */,
 				BA46290325640E6300D5AE8A /* OverlayView.swift in Sources */,
-				BA2A5DF4255166600085A3EF /* UIViewController+Extended.swift in Sources */,
 				BAE31B7A2555A87900A3FC6D /* Array+Extended.swift in Sources */,
 				BA1E5B2F2487AC210055A5F4 /* AppDelegate.swift in Sources */,
 				BA2DF386255859E400064DA8 /* MyPageViewController.swift in Sources */,
