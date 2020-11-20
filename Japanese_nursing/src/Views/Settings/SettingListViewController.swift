@@ -77,16 +77,21 @@ class SettingListViewController: UITableViewController {
 
             // 利用規約
             case self.termOfServiceCell:
-                break
+                let url = "https://yuipuccho.github.io/Japanese_nursing_terms_of_service/"
+                let vc = WebViewController.makeInstance(url: url, titleText: "利用規約")
+                navigationController?.pushViewController(vc, animated: true)
 
             // プライバシーポリシー
             case self.privacyPolicyCell:
-                break
+                let url = "https://yuipuccho.github.io/Japanese_nursing_privacy_policy/"
+                let vc = WebViewController.makeInstance(url: url, titleText: "プライバシーポリシー")
+                navigationController?.pushViewController(vc, animated: true)
 
             default:
                 break
             }
             self.tableView.deselectRow(at: indexPath, animated: true)
+
         }).disposed(by: disposeBag)
     }
 

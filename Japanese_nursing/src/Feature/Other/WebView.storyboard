@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Web View Controller-->
+        <scene sceneID="KoI-BN-Ug6">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="fwR-h1-q7h" customClass="WebViewController" customModule="d_介護の日本語" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gu2-sf-WFu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rss-H9-c8s">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PFH-Zz-705"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PFH-Zz-705" firstAttribute="bottom" secondItem="rss-H9-c8s" secondAttribute="bottom" id="3ME-Qv-Dw3"/>
+                            <constraint firstItem="rss-H9-c8s" firstAttribute="top" secondItem="PFH-Zz-705" secondAttribute="top" id="3hV-3v-XxK"/>
+                            <constraint firstItem="rss-H9-c8s" firstAttribute="leading" secondItem="PFH-Zz-705" secondAttribute="leading" id="5Cz-k7-f72"/>
+                            <constraint firstItem="PFH-Zz-705" firstAttribute="trailing" secondItem="rss-H9-c8s" secondAttribute="trailing" id="ixu-Hw-x2s"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="agU-BZ-oxP">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Mpg-yo-Nb8"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="webView" destination="rss-H9-c8s" id="8PT-Ul-4LR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u5z-eB-eE2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="25" y="109"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" name="TextBlue"/>
+    <resources>
+        <namedColor name="TextBlue">
+            <color red="0.050999999046325684" green="0.14100000262260437" blue="0.50199997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
