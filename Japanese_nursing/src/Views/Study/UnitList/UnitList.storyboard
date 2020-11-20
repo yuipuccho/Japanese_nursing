@@ -67,7 +67,7 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGI-32-W1B">
-                                                                            <rect key="frame" x="8" y="8.5" width="38" height="27"/>
+                                                                            <rect key="frame" x="8" y="11.5" width="33" height="21"/>
                                                                             <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Medium" family="NotoSansCJKjpSub-Medium" pointSize="18"/>
                                                                             <color key="textColor" name="MainBlue"/>
                                                                             <nil key="highlightedColor"/>

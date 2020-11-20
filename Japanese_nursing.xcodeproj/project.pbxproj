@@ -37,6 +37,8 @@
 		BA66D67F24A6EE6C00BE7273 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA66D67E24A6EE6C00BE7273 /* Tabbar.storyboard */; };
 		BA66D68124A6EFFD00BE7273 /* MypageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA66D68024A6EFFD00BE7273 /* MypageViewController.storyboard */; };
 		BA85A3FE24AB7F51003E6E85 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85A3FD24AB7F51003E6E85 /* R.generated.swift */; };
+		BAB9C27325680521004D653F /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB9C27225680521004D653F /* WebView.storyboard */; };
+		BAB9C2762568057E004D653F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB9C2752568057E004D653F /* WebViewController.swift */; };
 		BAC4F7FD24A6E4C5009ACEF3 /* UnitList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC4F7FC24A6E4C5009ACEF3 /* UnitList.storyboard */; };
 		BAC5904C249EECCF007D247B /* NotoSansCJKjpSub-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAC59045249EECCF007D247B /* NotoSansCJKjpSub-Black.otf */; };
 		BAC5904D249EECCF007D247B /* NotoSansCJKjpSub-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAC59046249EECCF007D247B /* NotoSansCJKjpSub-Regular.otf */; };
@@ -89,6 +91,8 @@
 		BAA3D89A24C47F5300157FF2 /* Pageboy.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = Pageboy.framework.dSYM; sourceTree = "<group>"; };
 		BAA3D89B24C47F5300157FF2 /* Tabman.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Tabman.framework; sourceTree = "<group>"; };
 		BAA3D8A224C47F5300157FF2 /* .Pageboy.version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .Pageboy.version; sourceTree = "<group>"; };
+		BAB9C27225680521004D653F /* WebView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
+		BAB9C2752568057E004D653F /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		BAC4F7FC24A6E4C5009ACEF3 /* UnitList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UnitList.storyboard; sourceTree = "<group>"; };
 		BAC59045249EECCF007D247B /* NotoSansCJKjpSub-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKjpSub-Black.otf"; sourceTree = "<group>"; };
 		BAC59046249EECCF007D247B /* NotoSansCJKjpSub-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKjpSub-Regular.otf"; sourceTree = "<group>"; };
@@ -247,6 +251,7 @@
 		BA66D67A24A6EC9C00BE7273 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				BAB9C271256804F8004D653F /* Other */,
 				BA66D67B24A6ECB300BE7273 /* TabViews */,
 			);
 			path = Feature;
@@ -282,6 +287,15 @@
 				BAA3D89B24C47F5300157FF2 /* Tabman.framework */,
 			);
 			path = iOS;
+			sourceTree = "<group>";
+		};
+		BAB9C271256804F8004D653F /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				BAB9C27225680521004D653F /* WebView.storyboard */,
+				BAB9C2752568057E004D653F /* WebViewController.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		BAC4F7ED24A641FF009ACEF3 /* src */ = {
@@ -425,6 +439,7 @@
 				BA46290B2565780700D5AE8A /* TargetSettingViewController.storyboard in Resources */,
 				BA06D2052557AB4C000216CC /* TestViewController.storyboard in Resources */,
 				BAC4F7FD24A6E4C5009ACEF3 /* UnitList.storyboard in Resources */,
+				BAB9C27325680521004D653F /* WebView.storyboard in Resources */,
 				BA66D68124A6EFFD00BE7273 /* MypageViewController.storyboard in Resources */,
 				BA66D68124A6EFFD00BE7273 /* MypageViewController.storyboard in Resources */,
 				BAC5904C249EECCF007D247B /* NotoSansCJKjpSub-Black.otf in Resources */,
@@ -534,6 +549,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA66D67924A6E91500BE7273 /* AppBootstrap.swift in Sources */,
+				BAB9C2762568057E004D653F /* WebViewController.swift in Sources */,
 				BA2A5DE5255135A50085A3EF /* UnitListCell.swift in Sources */,
 				BA5EACE324D2AF8F0008E2D0 /* UnitListViewController.swift in Sources */,
 				BA00E891255E4A8C001C4E06 /* UserNameSettingViewController.swift in Sources */,
