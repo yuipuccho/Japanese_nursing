@@ -13,8 +13,6 @@ import RxSwift
 
 class MyPageViewController: UIViewController {
 
-    lazy var vc = TargetSettingViewController()
-
     // MARK: - Outlets
 
     /// 棒グラフ

@@ -23,7 +23,6 @@
 		BA27FB35248CECDA002840B8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA27FB34248CECDA002840B8 /* Colors.xcassets */; };
 		BA2A5DE5255135A50085A3EF /* UnitListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A5DE4255135A50085A3EF /* UnitListCell.swift */; };
 		BA2A5DE9255139DB0085A3EF /* LearningUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A5DE8255139DB0085A3EF /* LearningUnitViewController.swift */; };
-		BA2A5DF4255166600085A3EF /* UIViewController+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A5DF3255166600085A3EF /* UIViewController+Extended.swift */; };
 		BA2DF386255859E400064DA8 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2DF385255859E300064DA8 /* MyPageViewController.swift */; };
 		BA40295D255436B800421276 /* TestSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA40295C255436B800421276 /* TestSettingsViewController.swift */; };
 		BA46290025640DE200D5AE8A /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA4628FF25640DE200D5AE8A /* OverlayView.xib */; };
@@ -69,7 +68,6 @@
 		BA27FB34248CECDA002840B8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		BA2A5DE4255135A50085A3EF /* UnitListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListCell.swift; sourceTree = "<group>"; };
 		BA2A5DE8255139DB0085A3EF /* LearningUnitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningUnitViewController.swift; sourceTree = "<group>"; };
-		BA2A5DF3255166600085A3EF /* UIViewController+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extended.swift"; sourceTree = "<group>"; };
 		BA2DF385255859E300064DA8 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		BA40295C255436B800421276 /* TestSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSettingsViewController.swift; sourceTree = "<group>"; };
 		BA4628FF25640DE200D5AE8A /* OverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
@@ -203,7 +201,6 @@
 			isa = PBXGroup;
 			children = (
 				BAE31B792555A87800A3FC6D /* Array+Extended.swift */,
-				BA2A5DF3255166600085A3EF /* UIViewController+Extended.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -545,7 +542,6 @@
 				BA133ACA24C04D850047E265 /* CustomTabBar.swift in Sources */,
 				BA06D2012557AB26000216CC /* TestViewController.swift in Sources */,
 				BA46290325640E6300D5AE8A /* OverlayView.swift in Sources */,
-				BA2A5DF4255166600085A3EF /* UIViewController+Extended.swift in Sources */,
 				BAE31B7A2555A87900A3FC6D /* Array+Extended.swift in Sources */,
 				BA1E5B2F2487AC210055A5F4 /* AppDelegate.swift in Sources */,
 				BA2DF386255859E400064DA8 /* MyPageViewController.swift in Sources */,
