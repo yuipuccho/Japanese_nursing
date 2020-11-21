@@ -24,6 +24,14 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcv-PL-ekf">
+                                <rect key="frame" x="177" y="794" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gcv-PL-ekf" secondAttribute="height" multiplier="1:1" id="FA7-5V-RVs"/>
+                                    <constraint firstAttribute="width" constant="60" id="qDS-hq-ZoS"/>
+                                </constraints>
+                                <state key="normal" image="back_button_icon"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PFH-Zz-705"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -31,7 +39,9 @@
                             <constraint firstItem="PFH-Zz-705" firstAttribute="bottom" secondItem="rss-H9-c8s" secondAttribute="bottom" id="3ME-Qv-Dw3"/>
                             <constraint firstItem="rss-H9-c8s" firstAttribute="top" secondItem="PFH-Zz-705" secondAttribute="top" id="3hV-3v-XxK"/>
                             <constraint firstItem="rss-H9-c8s" firstAttribute="leading" secondItem="PFH-Zz-705" secondAttribute="leading" id="5Cz-k7-f72"/>
+                            <constraint firstItem="PFH-Zz-705" firstAttribute="bottom" secondItem="gcv-PL-ekf" secondAttribute="bottom" constant="8" id="cqW-X9-Sw4"/>
                             <constraint firstItem="PFH-Zz-705" firstAttribute="trailing" secondItem="rss-H9-c8s" secondAttribute="trailing" id="ixu-Hw-x2s"/>
+                            <constraint firstItem="gcv-PL-ekf" firstAttribute="centerX" secondItem="gu2-sf-WFu" secondAttribute="centerX" id="ljM-ex-Kgr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="agU-BZ-oxP">
@@ -49,6 +59,7 @@
     </scenes>
     <color key="tintColor" name="TextBlue"/>
     <resources>
+        <image name="back_button_icon" width="88" height="88"/>
         <namedColor name="TextBlue">
             <color red="0.050999999046325684" green="0.14100000262260437" blue="0.50199997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

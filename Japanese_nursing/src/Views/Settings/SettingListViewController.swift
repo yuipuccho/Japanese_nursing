@@ -18,7 +18,7 @@ class SettingListViewController: UITableViewController {
     // MARK: - Outlets
 
     /// 閉じるボタン
-    @IBOutlet private weak var closeButton: UIBarButtonItem!
+//    @IBOutlet private weak var closeButton: UIBarButtonItem!
 
     /// ユーザ名の変更
     @IBOutlet private weak var userNameSettingCell: UITableViewCell!
@@ -41,16 +41,16 @@ class SettingListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationController?.setNavigationBarHidden(true, animated: true)
         subscribe()
     }
 
     // MARK: - Functions
     private func subscribe() {
-        // 閉じるボタンタップ
-        closeButton.rx.tap.subscribe(onNext: { [weak self] in
-            self?.dismiss(animated: true)
-        }).disposed(by: disposeBag)
+//        // 閉じるボタンタップ
+//        closeButton.rx.tap.subscribe(onNext: { [weak self] in
+//            self?.dismiss(animated: true)
+//        }).disposed(by: disposeBag)
 
         // tableViewCellタップイベント
         tableView.rx.itemSelected.subscribe(onNext: { [unowned self] indexPath in

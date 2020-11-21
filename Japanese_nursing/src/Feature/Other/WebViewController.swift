@@ -29,6 +29,7 @@ class WebViewController: UIViewController {
 
         navigationController?.navigationBar.tintColor = R.color.textBlue()
         navigationItem.title = titleText
+        navigationController?.setNavigationBarHidden(true, animated: true)
 
         if let url = NSURL(string: url) {
             let request = NSURLRequest(url: url as URL)
@@ -44,6 +45,11 @@ class WebViewController: UIViewController {
         progressView.progressViewStyle = .bar
         progressView.progressTintColor = R.color.textBlue()
         navigationController?.navigationBar.addSubview(progressView)
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+            self.navigationController?.popViewController(animated: true)
+        }
+
     }
 
     override func viewWillDisappear(_ animated: Bool) {

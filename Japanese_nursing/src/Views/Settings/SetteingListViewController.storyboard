@@ -21,7 +21,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="SettingListViewController" automaticallyAdjustsScrollViewInsets="NO" id="Nyt-9u-44v" customClass="SettingListViewController" customModule="d_介護の日本語" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" id="yvw-Dh-SXQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="912"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -226,16 +226,11 @@
                             <outlet property="delegate" destination="Nyt-9u-44v" id="IlW-ea-mOb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="設定" id="5LB-Vn-1Bp">
-                        <barButtonItem key="leftBarButtonItem" title="close" id="iqS-E7-Jxc">
-                            <color key="tintColor" name="TextBlue"/>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationItem key="navigationItem" title="設定" id="5LB-Vn-1Bp"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
-                        <outlet property="closeButton" destination="iqS-E7-Jxc" id="2jo-HO-cDI"/>
                         <outlet property="privacyPolicyCell" destination="tDU-1M-JA0" id="brC-bN-jKd"/>
                         <outlet property="questionAndAnswerCell" destination="pCr-Mq-dDG" id="ehg-r5-zVm"/>
                         <outlet property="studyTargetSettingCell" destination="ZLL-VG-7uc" id="1RQ-DC-0dB"/>
