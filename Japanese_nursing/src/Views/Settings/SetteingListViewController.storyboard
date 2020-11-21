@@ -10,239 +10,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="NotoSansCJKjpSub-Black.otf">
-            <string>NotoSansCJKjpSub-Black</string>
-        </array>
         <array key="NotoSansCJKjpSub-Bold.otf">
             <string>NotoSansCJKjpSub-Bold</string>
         </array>
         <array key="NotoSansCJKjpSub-Medium.otf">
             <string>NotoSansCJKjpSub-Medium</string>
         </array>
-        <array key="NotoSansCJKjpSub-Regular.otf">
-            <string>NotoSansCJKjpSub-Regular</string>
-        </array>
     </customFonts>
     <scenes>
-        <!--設定-->
-        <scene sceneID="zub-Di-3s8">
-            <objects>
-                <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="Nyt-9u-44v" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" id="yvw-Dh-SXQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="drg-FR-okY">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TB9-5f-LIw">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="Epl-1N-Dc7">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
-                                        </imageView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="setting_icon_main_blue" translatesAutoresizingMaskIntoConstraints="NO" id="hfy-gd-XuP">
-                                            <rect key="frame" x="172.5" y="64.5" width="30" height="30"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="hfy-gd-XuP" secondAttribute="height" multiplier="1:1" id="CyG-P8-sBH"/>
-                                                <constraint firstAttribute="width" constant="30" id="zMG-mq-jgW"/>
-                                            </constraints>
-                                        </imageView>
-                                    </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    <constraints>
-                                        <constraint firstItem="hfy-gd-XuP" firstAttribute="centerX" secondItem="TB9-5f-LIw" secondAttribute="centerX" id="6ww-xV-asm"/>
-                                        <constraint firstAttribute="trailing" secondItem="Epl-1N-Dc7" secondAttribute="trailing" id="Ftg-tA-JFI"/>
-                                        <constraint firstAttribute="bottom" secondItem="Epl-1N-Dc7" secondAttribute="bottom" id="HOL-P2-IlV"/>
-                                        <constraint firstItem="Epl-1N-Dc7" firstAttribute="leading" secondItem="TB9-5f-LIw" secondAttribute="leading" id="MpI-rf-qzq"/>
-                                        <constraint firstItem="hfy-gd-XuP" firstAttribute="centerY" secondItem="TB9-5f-LIw" secondAttribute="centerY" constant="22" id="bT0-JW-qIO"/>
-                                        <constraint firstItem="Epl-1N-Dc7" firstAttribute="top" secondItem="TB9-5f-LIw" secondAttribute="top" id="vNx-od-aI9"/>
-                                    </constraints>
-                                </view>
-                            </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <constraints>
-                                <constraint firstAttribute="trailing" secondItem="TB9-5f-LIw" secondAttribute="trailing" id="BgW-Ej-V4t"/>
-                                <constraint firstItem="TB9-5f-LIw" firstAttribute="leading" secondItem="drg-FR-okY" secondAttribute="leading" id="cZg-kx-6aS"/>
-                                <constraint firstItem="TB9-5f-LIw" firstAttribute="top" secondItem="drg-FR-okY" secondAttribute="top" id="kYe-XW-Mdf"/>
-                                <constraint firstAttribute="bottom" secondItem="TB9-5f-LIw" secondAttribute="bottom" id="sTM-jw-xcs"/>
-                            </constraints>
-                        </view>
-                        <sections>
-                            <tableViewSection id="aKi-IP-Rpc" userLabel="アカウント設定">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="erC-5b-G2Y">
-                                        <rect key="frame" x="0.0" y="143" width="375" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="erC-5b-G2Y" id="4bO-l6-tvZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目標設定" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Enh-x3-thf">
-                                                    <rect key="frame" x="16" y="23" width="72" height="21"/>
-                                                    <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Black" family="NotoSansCJKjpSub-Black" pointSize="18"/>
-                                                    <color key="textColor" name="WeakTextBlue"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Enh-x3-thf" firstAttribute="leading" secondItem="4bO-l6-tvZ" secondAttribute="leading" constant="16" id="6YZ-Sf-zOY"/>
-                                                <constraint firstAttribute="bottom" secondItem="Enh-x3-thf" secondAttribute="bottom" constant="6" id="97C-tE-eXc"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="cyT-sS-v5v" style="IBUITableViewCellStyleDefault" id="ZLL-VG-7uc">
-                                        <rect key="frame" x="0.0" y="193" width="375" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZLL-VG-7uc" id="gBB-8J-cQv">
-                                            <rect key="frame" x="0.0" y="0.0" width="344" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="目標学習数の変更" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cyT-sS-v5v">
-                                                    <rect key="frame" x="20" y="0.0" width="316" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Regular" family="NotoSansCJKjpSub-Regular" pointSize="14"/>
-                                                    <color key="textColor" name="TextBlue"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="CrA-qv-MaU" style="IBUITableViewCellStyleDefault" id="joV-EB-hpz">
-                                        <rect key="frame" x="0.0" y="243" width="375" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="joV-EB-hpz" id="oTG-Nc-URB">
-                                            <rect key="frame" x="0.0" y="0.0" width="344" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="目標テスト数の変更" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CrA-qv-MaU">
-                                                    <rect key="frame" x="20" y="0.0" width="316" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Regular" family="NotoSansCJKjpSub-Regular" pointSize="14"/>
-                                                    <color key="textColor" name="TextBlue"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Sca-i2-t1C">
-                                        <rect key="frame" x="0.0" y="293" width="375" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sca-i2-t1C" id="a0T-nT-1tx">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="サポート" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQz-cc-Vi1">
-                                                    <rect key="frame" x="16" y="23" width="72" height="21"/>
-                                                    <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Black" family="NotoSansCJKjpSub-Black" pointSize="18"/>
-                                                    <color key="textColor" name="WeakTextBlue"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="MQz-cc-Vi1" firstAttribute="leading" secondItem="a0T-nT-1tx" secondAttribute="leading" constant="16" id="ULx-Dv-va8"/>
-                                                <constraint firstAttribute="bottom" secondItem="MQz-cc-Vi1" secondAttribute="bottom" constant="6" id="sRo-1S-jz8"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Aht-Zl-tYi" style="IBUITableViewCellStyleDefault" id="pCr-Mq-dDG">
-                                        <rect key="frame" x="0.0" y="343" width="375" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pCr-Mq-dDG" id="yje-dl-P9u">
-                                            <rect key="frame" x="0.0" y="0.0" width="344" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="お問い合わせ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Aht-Zl-tYi">
-                                                    <rect key="frame" x="20" y="0.0" width="316" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Regular" family="NotoSansCJKjpSub-Regular" pointSize="14"/>
-                                                    <color key="textColor" name="TextBlue"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="D5b-Yk-yAH">
-                                        <rect key="frame" x="0.0" y="393" width="375" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D5b-Yk-yAH" id="487-ON-2Go">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="その他" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FfV-7x-5cC">
-                                                    <rect key="frame" x="16" y="23" width="54" height="21"/>
-                                                    <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Black" family="NotoSansCJKjpSub-Black" pointSize="18"/>
-                                                    <color key="textColor" name="WeakTextBlue"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="FfV-7x-5cC" secondAttribute="bottom" constant="6" id="47r-nT-zAn"/>
-                                                <constraint firstItem="FfV-7x-5cC" firstAttribute="leading" secondItem="487-ON-2Go" secondAttribute="leading" constant="16" id="zvp-ik-0f9"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="z5w-Ny-gc4" style="IBUITableViewCellStyleDefault" id="1GH-En-wfA">
-                                        <rect key="frame" x="0.0" y="443" width="375" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1GH-En-wfA" id="DFO-i8-7P1">
-                                            <rect key="frame" x="0.0" y="0.0" width="344" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="利用規約" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="z5w-Ny-gc4">
-                                                    <rect key="frame" x="20" y="0.0" width="316" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Regular" family="NotoSansCJKjpSub-Regular" pointSize="14"/>
-                                                    <color key="textColor" name="TextBlue"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="AGk-4M-ARH" style="IBUITableViewCellStyleDefault" id="tDU-1M-JA0">
-                                        <rect key="frame" x="0.0" y="493" width="375" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tDU-1M-JA0" id="bNT-iH-IIS">
-                                            <rect key="frame" x="0.0" y="0.0" width="344" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="プライバシーポリシー" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AGk-4M-ARH">
-                                                    <rect key="frame" x="20" y="0.0" width="316" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Regular" family="NotoSansCJKjpSub-Regular" pointSize="14"/>
-                                                    <color key="textColor" name="TextBlue"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                <real key="value" value="0.0"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                        <connections>
-                            <outlet property="dataSource" destination="Nyt-9u-44v" id="pt7-9q-m8V"/>
-                            <outlet property="delegate" destination="Nyt-9u-44v" id="IlW-ea-mOb"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="設定" id="5LB-Vn-1Bp"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="1000"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="z9N-a8-dPW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1031" y="442"/>
-        </scene>
         <!--Setting List View Controller-->
         <scene sceneID="JTz-f8-U9v">
             <objects>
@@ -261,7 +36,7 @@
                                 <rect key="frame" x="0.0" y="171" width="414" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アカウント設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edf-7i-9iA">
-                                        <rect key="frame" x="16" y="14.5" width="126" height="21"/>
+                                        <rect key="frame" x="16" y="11.5" width="126" height="27"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="18"/>
                                         <color key="textColor" name="WeakTextBlue"/>
                                         <nil key="highlightedColor"/>
@@ -277,7 +52,7 @@
                                 <rect key="frame" x="0.0" y="221" width="414" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ユーザー名の変更" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PLD-76-teF">
-                                        <rect key="frame" x="20" y="16.5" width="112" height="16.5"/>
+                                        <rect key="frame" x="20" y="14.5" width="112" height="21"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Medium" family="NotoSansCJKjpSub-Medium" pointSize="14"/>
                                         <color key="textColor" name="TextBlue"/>
                                         <nil key="highlightedColor"/>
@@ -310,7 +85,7 @@
                                 <rect key="frame" x="0.0" y="271" width="414" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目標設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PrV-9a-WQP">
-                                        <rect key="frame" x="16" y="14.5" width="72" height="21"/>
+                                        <rect key="frame" x="16" y="11.5" width="72" height="27"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="18"/>
                                         <color key="textColor" name="WeakTextBlue"/>
                                         <nil key="highlightedColor"/>
@@ -326,7 +101,7 @@
                                 <rect key="frame" x="0.0" y="321" width="414" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目標学習数の変更" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2G-xV-FmT">
-                                        <rect key="frame" x="20" y="16.5" width="112" height="16.5"/>
+                                        <rect key="frame" x="20" y="14.5" width="112" height="21"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Medium" family="NotoSansCJKjpSub-Medium" pointSize="14"/>
                                         <color key="textColor" name="TextBlue"/>
                                         <nil key="highlightedColor"/>
@@ -359,7 +134,7 @@
                                 <rect key="frame" x="0.0" y="371" width="414" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目標テスト数の変更" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohy-xW-cPj">
-                                        <rect key="frame" x="20" y="16.5" width="126" height="16.5"/>
+                                        <rect key="frame" x="20" y="14.5" width="126" height="21"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Medium" family="NotoSansCJKjpSub-Medium" pointSize="14"/>
                                         <color key="textColor" name="TextBlue"/>
                                         <nil key="highlightedColor"/>
@@ -392,7 +167,7 @@
                                 <rect key="frame" x="0.0" y="421" width="414" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="その他" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rI3-BN-D5X">
-                                        <rect key="frame" x="16" y="14.5" width="54" height="21"/>
+                                        <rect key="frame" x="16" y="11.5" width="54" height="27"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="18"/>
                                         <color key="textColor" name="WeakTextBlue"/>
                                         <nil key="highlightedColor"/>
@@ -408,7 +183,7 @@
                                 <rect key="frame" x="0.0" y="471" width="414" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="利用規約" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQt-qF-t73">
-                                        <rect key="frame" x="20" y="16.5" width="56" height="16.5"/>
+                                        <rect key="frame" x="20" y="14.5" width="56" height="21"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Medium" family="NotoSansCJKjpSub-Medium" pointSize="14"/>
                                         <color key="textColor" name="TextBlue"/>
                                         <nil key="highlightedColor"/>
@@ -441,7 +216,7 @@
                                 <rect key="frame" x="0.0" y="521" width="414" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="プライバシーポリシー" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sV3-2q-XX6">
-                                        <rect key="frame" x="20" y="16.5" width="140" height="16.5"/>
+                                        <rect key="frame" x="20" y="14.5" width="140" height="21"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Medium" family="NotoSansCJKjpSub-Medium" pointSize="14"/>
                                         <color key="textColor" name="TextBlue"/>
                                         <nil key="highlightedColor"/>
@@ -518,9 +293,7 @@
     </scenes>
     <resources>
         <image name="chevron.forward" catalog="system" width="96" height="128"/>
-        <image name="header" width="375" height="115"/>
         <image name="setting_header" width="375" height="115"/>
-        <image name="setting_icon_main_blue" width="255" height="256"/>
         <namedColor name="TextBlue">
             <color red="0.050999999046325684" green="0.14100000262260437" blue="0.50199997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
