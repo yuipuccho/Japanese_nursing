@@ -57,12 +57,14 @@ class SettingListViewController: UIViewController {
 
         // 目標学習数タップ
         studyTargetSettingButton.rx.tap.subscribe(onNext: { [weak self] in
-            self?.dismiss(animated: true)
+            let vc = TargetSettingViewController.makeInstance(targetType: .study)
+            self?.navigationController?.pushViewController(vc, animated: true)
         }).disposed(by: disposeBag)
 
         // 目標テストタップ
         testTargetSettingButton.rx.tap.subscribe(onNext: { [weak self] in
-            self?.dismiss(animated: true)
+            let vc = TargetSettingViewController.makeInstance(targetType: .test)
+            self?.navigationController?.pushViewController(vc, animated: true)
         }).disposed(by: disposeBag)
 
         // 利用規約タップ

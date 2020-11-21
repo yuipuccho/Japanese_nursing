@@ -26,33 +26,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RxU-hy-TbH">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="463"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v33-5A-6Hw">
-                                        <rect key="frame" x="-793" y="-100" width="2000" height="563"/>
-                                        <color key="backgroundColor" name="MainBlue"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="2000" id="qOi-6Y-4Ws"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <integer key="value" value="1000"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowIBColor">
-                                                <color key="value" systemColor="systemGray2Color"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
-                                                <real key="value" value="0.20000000000000001"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                                <size key="value" width="1" height="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="round_blue" translatesAutoresizingMaskIntoConstraints="NO" id="6Q1-K5-UQT">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="463"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="v33-5A-6Hw" firstAttribute="centerX" secondItem="RxU-hy-TbH" secondAttribute="centerX" id="OVQ-Ac-8nf"/>
-                                    <constraint firstAttribute="bottom" secondItem="v33-5A-6Hw" secondAttribute="bottom" id="juJ-tO-feb"/>
-                                    <constraint firstItem="v33-5A-6Hw" firstAttribute="top" secondItem="RxU-hy-TbH" secondAttribute="top" constant="-100" id="zkH-CP-JXx"/>
+                                    <constraint firstItem="6Q1-K5-UQT" firstAttribute="leading" secondItem="RxU-hy-TbH" secondAttribute="leading" id="FQZ-di-gL4"/>
+                                    <constraint firstAttribute="trailing" secondItem="6Q1-K5-UQT" secondAttribute="trailing" id="LcN-P5-7Qq"/>
+                                    <constraint firstItem="6Q1-K5-UQT" firstAttribute="top" secondItem="RxU-hy-TbH" secondAttribute="top" id="h5q-SG-wO8"/>
+                                    <constraint firstAttribute="bottom" secondItem="6Q1-K5-UQT" secondAttribute="bottom" id="yta-3b-kGc"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目標学習数の設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ki-oa-OIG">
@@ -258,6 +240,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="round_blue" width="375" height="600"/>
         <image name="study_icon_white" width="58" height="58"/>
         <namedColor name="MainBlue">
             <color red="0.027450980392156862" green="0.72941176470588232" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
