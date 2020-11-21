@@ -139,7 +139,6 @@ extension TargetSettingViewController {
         // 保存ボタンタップ
         saveButton.rx.tap.subscribe(onNext: { [unowned self] in
             // TODO: 保存処理を追加する
-            // TODO: 保存しましたポップアップも追加する
             HUD.flash(.label("保存しました！"), delay: 0.5) {_ in
                 if let nc = self.navigationController {
                     nc.popViewController(animated: true)
