@@ -13,25 +13,23 @@ import RxCocoa
 /**
  * 設定一覧VC
  */
-class SettingListViewController: UITableViewController {
+class SettingListViewController: UIViewController {
 
     // MARK: - Outlets
 
     /// 閉じるボタン
-    @IBOutlet private weak var closeButton: UIBarButtonItem!
+    @IBOutlet private weak var closeButton: UIButton!
 
     /// ユーザ名の変更
-    @IBOutlet private weak var userNameSettingCell: UITableViewCell!
+    @IBOutlet private weak var userNameSettingButton: UIButton!
     /// 目標学習数の変更
-    @IBOutlet private weak var studyTargetSettingCell: UITableViewCell!
+    @IBOutlet private weak var studyTargetSettingButton: UIButton!
     /// 目標テスト数の変更
-    @IBOutlet private weak var testTargetSettingCell: UITableViewCell!
-    /// お問い合わせ
-    @IBOutlet private weak var questionAndAnswerCell: UITableViewCell!
+    @IBOutlet private weak var testTargetSettingButton: UIButton!
     /// 利用規約
-    @IBOutlet private weak var termOfServiceCell: UITableViewCell!
+    @IBOutlet private weak var termOfServiceButton: UIButton!
     /// プライバシーポリシー
-    @IBOutlet private weak var privacyPolicyCell: UITableViewCell!
+    @IBOutlet private weak var privacyPolicyButton: UIButton!
 
     // MARK: - Properties
 
@@ -41,7 +39,7 @@ class SettingListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationController?.setNavigationBarHidden(true, animated: true)
         subscribe()
     }
 
@@ -52,46 +50,35 @@ class SettingListViewController: UITableViewController {
             self?.dismiss(animated: true)
         }).disposed(by: disposeBag)
 
-        // tableViewCellタップイベント
-        tableView.rx.itemSelected.subscribe(onNext: { [unowned self] indexPath in
-            guard let cell = self.tableView.cellForRow(at: indexPath) else { return }
+        // ユーザー名の変更タップ
+        userNameSettingButton.rx.tap.subscribe(onNext: { [weak self] in
+            self?.dismiss(animated: true)
+        }).disposed(by: disposeBag)
 
-            switch cell {
-            // ユーザ名の変更
-            case self.userNameSettingCell:
-                break
+        // 目標学習数タップ
+        studyTargetSettingButton.rx.tap.subscribe(onNext: { [weak self] in
+            let vc = TargetSettingViewController.makeInstance(targetType: .study)
+            self?.navigationController?.pushViewController(vc, animated: true)
+        }).disposed(by: disposeBag)
 
-            // 目標学習数の変更
-            case self.studyTargetSettingCell:
-//                let vc = TargetSettingViewController.makeInstance(targetType: .study)
-//                navigationController?.pushViewController(vc, animated: true)
-                break
+        // 目標テストタップ
+        testTargetSettingButton.rx.tap.subscribe(onNext: { [weak self] in
+            let vc = TargetSettingViewController.makeInstance(targetType: .test)
+            self?.navigationController?.pushViewController(vc, animated: true)
+        }).disposed(by: disposeBag)
 
-            // 目標テスト数の変更
-            case self.testTargetSettingCell:
-                break
+        // 利用規約タップ
+        termOfServiceButton.rx.tap.subscribe(onNext: { [weak self] in
+            let url = "https://yuipuccho.github.io/Japanese_nursing_terms_of_service/"
+            let vc = WebViewController.makeInstance(url: url, titleText: "利用規約")
+            self?.navigationController?.pushViewController(vc, animated: true)
+        }).disposed(by: disposeBag)
 
-            // お問い合わせ
-            case self.questionAndAnswerCell:
-                break
-
-            // 利用規約
-            case self.termOfServiceCell:
-                let url = "https://yuipuccho.github.io/Japanese_nursing_terms_of_service/"
-                let vc = WebViewController.makeInstance(url: url, titleText: "利用規約")
-                navigationController?.pushViewController(vc, animated: true)
-
-            // プライバシーポリシー
-            case self.privacyPolicyCell:
-                let url = "https://yuipuccho.github.io/Japanese_nursing_privacy_policy/"
-                let vc = WebViewController.makeInstance(url: url, titleText: "プライバシーポリシー")
-                navigationController?.pushViewController(vc, animated: true)
-
-            default:
-                break
-            }
-            self.tableView.deselectRow(at: indexPath, animated: true)
-
+        // プライバシーポリシータップ
+        privacyPolicyButton.rx.tap.subscribe(onNext: { [weak self] in
+            let url = "https://yuipuccho.github.io/Japanese_nursing_privacy_policy/"
+            let vc = WebViewController.makeInstance(url: url, titleText: "プライバシーポリシー")
+            self?.navigationController?.pushViewController(vc, animated: true)
         }).disposed(by: disposeBag)
     }
 

@@ -7,6 +7,7 @@
 //
 
 import RxSwift
+import RxCocoa
 import UIKit
 import WebKit
 
@@ -14,13 +15,15 @@ class WebViewController: UIViewController {
 
     // MARK: - Outlets
 
-    @IBOutlet weak var webView: WKWebView!
+    @IBOutlet private weak var webView: WKWebView!
+    @IBOutlet private weak var backButton: UIButton!
 
     // MARK: - Properties
 
     var url: String = ""
     var titleText: String = ""
-    var progressView = UIProgressView()
+    private var progressView = UIProgressView()
+    private var disposeBag = DisposeBag()
 
     // MARK: - LifeCycles
 
@@ -29,6 +32,7 @@ class WebViewController: UIViewController {
 
         navigationController?.navigationBar.tintColor = R.color.textBlue()
         navigationItem.title = titleText
+        navigationController?.setNavigationBarHidden(true, animated: true)
 
         if let url = NSURL(string: url) {
             let request = NSURLRequest(url: url as URL)
@@ -40,10 +44,12 @@ class WebViewController: UIViewController {
         webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
 
         // プログレスバー
-        progressView = UIProgressView(frame: CGRect(x: 0, y: navigationController!.navigationBar.frame.size.height - 2, width: view.frame.size.width, height: 10))
+        progressView = UIProgressView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 10))
         progressView.progressViewStyle = .bar
         progressView.progressTintColor = R.color.textBlue()
-        navigationController?.navigationBar.addSubview(progressView)
+        view.addSubview(progressView)
+
+        subscribe()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -61,6 +67,17 @@ class WebViewController: UIViewController {
                 progressView.setProgress(0.0, animated: false)
             }
         }
+    }
+
+    private func subscribe() {
+        // 戻るボタンタップ
+        backButton.rx.tap.subscribe(onNext: { [weak self] in
+            if let nc = self?.navigationController {
+                nc.popViewController(animated: true)
+            } else {
+                self?.dismiss(animated: true)
+            }
+        }).disposed(by: disposeBag)
     }
     
 }

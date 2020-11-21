@@ -10,6 +10,7 @@ import UIKit
 import Charts
 import RxCocoa
 import RxSwift
+import PKHUD
 
 /**
  * 目標の設定画面VC
@@ -128,13 +129,22 @@ extension TargetSettingViewController {
     private func subscribe() {
         // キャンセルボタンタップ
         cancelButton.rx.tap.subscribe(onNext: { [weak self] in
-            self?.dismiss(animated: true)
+            if let nc = self?.navigationController {
+                nc.popViewController(animated: true)
+            } else {
+                self?.dismiss(animated: true)
+            }
         }).disposed(by: disposeBag)
 
         // 保存ボタンタップ
         saveButton.rx.tap.subscribe(onNext: { [unowned self] in
             // TODO: 保存処理を追加する
-            self.dismiss(animated: true) { [unowned self] in
+            HUD.flash(.label("保存しました！"), delay: 0.5) {_ in
+                if let nc = self.navigationController {
+                    nc.popViewController(animated: true)
+                } else {
+                    self.dismiss(animated: true)
+                }
             }
         }).disposed(by: disposeBag)
     }
