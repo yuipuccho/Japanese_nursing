@@ -15,8 +15,8 @@ class WebViewController: UIViewController {
 
     // MARK: - Outlets
 
-    @IBOutlet weak var webView: WKWebView!
-    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet private weak var webView: WKWebView!
+    @IBOutlet private weak var backButton: UIButton!
 
     // MARK: - Properties
 
