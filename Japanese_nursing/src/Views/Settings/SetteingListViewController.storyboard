@@ -275,6 +275,14 @@
                                     <constraint firstAttribute="trailing" secondItem="mMF-Kz-gfe" secondAttribute="trailing" id="pxe-eC-bfI"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8U-Fu-xWb">
+                                <rect key="frame" x="177" y="794" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="D8U-Fu-xWb" secondAttribute="height" multiplier="1:1" id="9QD-01-48B"/>
+                                    <constraint firstAttribute="width" constant="60" id="u6F-7z-NuF"/>
+                                </constraints>
+                                <state key="normal" image="close_button_icon"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3F8-54-ZYa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -284,6 +292,7 @@
                             <constraint firstItem="3F8-54-ZYa" firstAttribute="trailing" secondItem="vqk-AA-dD5" secondAttribute="trailing" id="5M9-cg-tUb"/>
                             <constraint firstItem="vqk-AA-dD5" firstAttribute="top" secondItem="3kh-ED-YHU" secondAttribute="bottom" id="5UR-uy-eyN"/>
                             <constraint firstItem="3F8-54-ZYa" firstAttribute="trailing" secondItem="3kh-ED-YHU" secondAttribute="trailing" id="6CR-nX-7DV"/>
+                            <constraint firstItem="3F8-54-ZYa" firstAttribute="bottom" secondItem="D8U-Fu-xWb" secondAttribute="bottom" constant="8" id="6uH-dw-jFG"/>
                             <constraint firstItem="3kh-ED-YHU" firstAttribute="top" secondItem="3F8-54-ZYa" secondAttribute="top" id="82M-FF-Ffq"/>
                             <constraint firstItem="vqk-AA-dD5" firstAttribute="leading" secondItem="3F8-54-ZYa" secondAttribute="leading" id="9Uk-Sa-mXW"/>
                             <constraint firstItem="vpb-2p-di5" firstAttribute="leading" secondItem="3F8-54-ZYa" secondAttribute="leading" id="F6n-kL-0Zf"/>
@@ -302,6 +311,7 @@
                             <constraint firstItem="3kh-ED-YHU" firstAttribute="leading" secondItem="3F8-54-ZYa" secondAttribute="leading" id="lkB-ty-pai"/>
                             <constraint firstItem="vpb-2p-di5" firstAttribute="trailing" secondItem="3F8-54-ZYa" secondAttribute="trailing" id="mwW-N8-xNy"/>
                             <constraint firstItem="7bd-tN-7Dg" firstAttribute="trailing" secondItem="3F8-54-ZYa" secondAttribute="trailing" id="nzz-qR-oeH"/>
+                            <constraint firstItem="D8U-Fu-xWb" firstAttribute="centerX" secondItem="c8U-dy-siD" secondAttribute="centerX" id="qXo-Uo-Z27"/>
                             <constraint firstItem="05h-RW-sri" firstAttribute="leading" secondItem="3F8-54-ZYa" secondAttribute="leading" id="qdx-XC-xl6"/>
                             <constraint firstItem="cPr-wC-A3T" firstAttribute="top" secondItem="hrG-QO-eWs" secondAttribute="bottom" id="rj1-yC-POc"/>
                             <constraint firstAttribute="trailing" secondItem="TlH-4m-e5t" secondAttribute="trailing" id="sqe-Tr-7I7"/>
@@ -309,6 +319,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="closeButton" destination="D8U-Fu-xWb" id="ZD7-sE-O4X"/>
                         <outlet property="privacyPolicyButton" destination="mMF-Kz-gfe" id="ihg-TD-NXK"/>
                         <outlet property="studyTargetSettingButton" destination="A9u-2n-FTY" id="YTr-s4-mIx"/>
                         <outlet property="termOfServiceButton" destination="cR7-U6-B3w" id="mjv-eT-rOo"/>
@@ -323,6 +334,7 @@
     </scenes>
     <resources>
         <image name="chevron.forward" catalog="system" width="96" height="128"/>
+        <image name="close_button_icon" width="88" height="88"/>
         <image name="setting_header" width="375" height="115"/>
         <namedColor name="MainBlue">
             <color red="0.027450980392156862" green="0.72941176470588232" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -18,7 +18,7 @@ class SettingListViewController: UIViewController {
     // MARK: - Outlets
 
     /// 閉じるボタン
-//    @IBOutlet private weak var closeButton: UIBarButtonItem!
+    @IBOutlet private weak var closeButton: UIButton!
 
     /// ユーザ名の変更
     @IBOutlet private weak var userNameSettingButton: UIButton!
@@ -45,10 +45,10 @@ class SettingListViewController: UIViewController {
 
     // MARK: - Functions
     private func subscribe() {
-//        // 閉じるボタンタップ
-//        closeButton.rx.tap.subscribe(onNext: { [weak self] in
-//            self?.dismiss(animated: true)
-//        }).disposed(by: disposeBag)
+        // 閉じるボタンタップ
+        closeButton.rx.tap.subscribe(onNext: { [weak self] in
+            self?.dismiss(animated: true)
+        }).disposed(by: disposeBag)
 
         // ユーザー名の変更タップ
         userNameSettingButton.rx.tap.subscribe(onNext: { [weak self] in
