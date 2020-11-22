@@ -1,27 +1,14 @@
 //
-//  CustomTabBar.swift
-//  Japanese_nursing
+//  SHCircleBar.swift
+//  SHCircleBar
 //
-//  Created by 吉澤優衣 on 2020/07/16.
-//  Copyright © 2020 吉澤優衣. All rights reserved.
+//  Created by Adrian Perțe on 19/02/2019.
+//  Copyright © 2019 softhaus. All rights reserved.
 //
 
 import UIKit
 
-//class CustomTabBar: UITabBar {
-//
-//    override func sizeThatFits(_ size: CGSize) -> CGSize {
-//        super.sizeThatFits(size)
-//        var sizeThatFits = super.sizeThatFits(size)
-//        sizeThatFits.height = 75
-//        sizeThatFits.height += safeAreaInsets.bottom
-//
-//        return sizeThatFits
-//    }
-//
-//}
-
-@IBDesignable class CustomTabBar: UITabBar {
+@IBDesignable class SHCircleBar: UITabBar {
     var tabWidth: CGFloat = 0
     var index: CGFloat = 0 {
         willSet{
@@ -35,17 +22,17 @@ import UIKit
         super.init(frame: frame)
         customInit()
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         customInit()
-
+        
     }
     override func draw(_ rect: CGRect) {
         let fillColor: UIColor = .white
         tabWidth = self.bounds.width / CGFloat(self.items!.count)
         let bezPath = drawPath(for: index)
-
+        
         bezPath.close()
         fillColor.setFill()
         bezPath.fill()
@@ -65,7 +52,7 @@ import UIKit
         self.layer.mask = mask
 
     }
-
+    
     func select(itemAt: Int, animated: Bool) {
         self.index = CGFloat(itemAt)
         self.animated = animated
@@ -73,7 +60,7 @@ import UIKit
         self.selectedItem?.selectedImage = nil
         self.setNeedsDisplay()
     }
-
+    
     func customInit(){
         self.tintColor = .white
         self.barTintColor = .white
@@ -97,5 +84,6 @@ import UIKit
         bezPath.append(UIBezierPath(rect: self.bounds))
         return bezPath
     }
+    
 
 }
