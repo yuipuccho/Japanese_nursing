@@ -1,5 +1,5 @@
 //
-//  Signup.swift
+//  CreateUser.swift
 //  Japanese_nursing
 //
 //  Created by 吉澤優衣 on 2020/11/15.
@@ -12,18 +12,21 @@ import Foundation
 /**
  * ユーザ作成API Request.
  */
-public struct PostSignupRequest: JapaneseNursingRequest {
+public struct PostCreateUserRequest: JapaneseNursingRequest {
 
+    /// 匿名ユーザかどうか
+    private var isAnonymous: Bool
     /// ユーザ名
     private var userName: String
 
     /// init and set query parameters.
-    public init(userName: String) {
+    public init(isAnonymous: Bool, userName: String) {
+        self.isAnonymous = isAnonymous
         self.userName = userName
     }
 
     // MARK: APIKit.Request
-    public typealias Response = PostSignupResponse
+    public typealias Response = PostCreateUserResponse
 
     public var method: HTTPMethod {
         return .post
@@ -36,6 +39,7 @@ public struct PostSignupRequest: JapaneseNursingRequest {
     /// The actual parameters.
     public var parameters: Any? {
         var params = parametersWithToken
+        params["is_anonymous"] = isAnonymous
         params["user_name"] = userName
         return params
     }
@@ -45,9 +49,9 @@ public struct PostSignupRequest: JapaneseNursingRequest {
 /**
  * ユーザ作成API Response
  */
-public struct PostSignupResponse: JapaneseNursingResponse {
+public struct PostCreateUserResponse: JapaneseNursingResponse {
 
-    public typealias Entity = [String: String]
+    public typealias Entity = CreateUserEntity
 
     public let result: Bool
 

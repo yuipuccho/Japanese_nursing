@@ -1,5 +1,5 @@
 //
-//  SignupViewController.swift
+//  CreateUserViewController.swift
 //  Japanese_nursing
 //
 //  Created by 吉澤優衣 on 2020/11/15.
@@ -12,7 +12,9 @@ import RxCocoa
 import PKHUD
 import SCLAlertView
 
-class SignupViewController: UIViewController {
+class CreateUserViewController: UIViewController {
+
+    private lazy var viewModel: CreateUserViewModel = CreateUserViewModel()
 
     // MARK: - Outlets
 
@@ -50,6 +52,11 @@ class SignupViewController: UIViewController {
             if let text = self?.nameUnderLineTextField.text, !text.isEmpty, text.count <= 12 {
                 HUD.show(.progress)
                 // TODO: 遷移処理を追加
+                self?.viewModel.fetch()
+                    .subscribe(onNext: { _ in
+                        print("popo")
+                    })
+
             } else if let text = self?.nameUnderLineTextField.text, text.isEmpty {
                 self?.nameAlertLabel.text = "ユーザー名を入力してください"
             } else {
@@ -72,11 +79,11 @@ class SignupViewController: UIViewController {
 
 // MARK: - MakeInstance
 
-extension SignupViewController {
+extension CreateUserViewController {
 
     static func makeInstance() -> UIViewController {
-        guard let vc = R.storyboard.signupViewController.signupViewController() else {
-            assertionFailure("Can't make instance 'SignupViewController'.")
+        guard let vc = R.storyboard.createUserViewController.createUserViewController() else {
+            assertionFailure("Can't make instance 'CreateUserViewController'.")
             return UIViewController()
         }
         return vc

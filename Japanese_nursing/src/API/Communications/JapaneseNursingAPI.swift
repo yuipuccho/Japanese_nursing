@@ -128,9 +128,12 @@ extension JapaneseNursingRequest {
         var compo = URLComponents()
         compo.scheme = API.scheme
         compo.host = API.host
-        if let url = compo.url {
-            return url
-        }
+//        if let url = compo.url {
+//            print(url)
+//            return url
+//        }
+        return URL(string: "http://localhost:3000")!
+//        return URL(strin: "")
         assertionFailure()
         return URL(string: "")!
     }

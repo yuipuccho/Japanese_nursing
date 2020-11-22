@@ -12,6 +12,9 @@
 		BA00E855255DA29C001C4E06 /* SettingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00E854255DA29C001C4E06 /* SettingListViewController.swift */; };
 		BA00E88D255E4A4D001C4E06 /* UserNameSettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA00E88C255E4A4C001C4E06 /* UserNameSettingViewController.storyboard */; };
 		BA00E891255E4A8C001C4E06 /* UserNameSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00E890255E4A8C001C4E06 /* UserNameSettingViewController.swift */; };
+		BA02F95E256A213900D93643 /* CreateUserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA02F95D256A213900D93643 /* CreateUserEntity.swift */; };
+		BA02F963256A2C9D00D93643 /* CreateUserDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA02F962256A2C9D00D93643 /* CreateUserDomainModel.swift */; };
+		BA02F968256A2E7A00D93643 /* CreateUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA02F967256A2E7A00D93643 /* CreateUserViewModel.swift */; };
 		BA06D2012557AB26000216CC /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA06D2002557AB26000216CC /* TestViewController.swift */; };
 		BA06D2052557AB4C000216CC /* TestViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA06D2042557AB4C000216CC /* TestViewController.storyboard */; };
 		BA133AC624BB28B80047E265 /* TestSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA133AC524BB28B80047E265 /* TestSettings.storyboard */; };
@@ -31,10 +34,10 @@
 		BA2A5DF4255166600085A3EF /* UIViewController+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A5DF3255166600085A3EF /* UIViewController+Extended.swift */; };
 		BA2DF386255859E400064DA8 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2DF385255859E300064DA8 /* MyPageViewController.swift */; };
 		BA40295D255436B800421276 /* TestSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA40295C255436B800421276 /* TestSettingsViewController.swift */; };
-		BA4628AD2560DE4600D5AE8A /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4628AC2560DE4600D5AE8A /* Signup.swift */; };
-		BA4628B32560E16700D5AE8A /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4628B22560E16700D5AE8A /* SignupModel.swift */; };
-		BA4628BA2560E2CE00D5AE8A /* SignupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4628B92560E2CE00D5AE8A /* SignupViewController.storyboard */; };
-		BA4628BD2560E2E000D5AE8A /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4628BC2560E2E000D5AE8A /* SignupViewController.swift */; };
+		BA4628AD2560DE4600D5AE8A /* CreateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4628AC2560DE4600D5AE8A /* CreateUser.swift */; };
+		BA4628B32560E16700D5AE8A /* CreateUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4628B22560E16700D5AE8A /* CreateUserModel.swift */; };
+		BA4628BA2560E2CE00D5AE8A /* CreateUserViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4628B92560E2CE00D5AE8A /* CreateUserViewController.storyboard */; };
+		BA4628BD2560E2E000D5AE8A /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4628BC2560E2E000D5AE8A /* CreateUserViewController.swift */; };
 		BA4628C12560E91300D5AE8A /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4628C02560E91300D5AE8A /* UnderlineTextField.swift */; };
 		BA4628C52560EC0200D5AE8A /* UITextField+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4628C42560EC0200D5AE8A /* UITextField+IBInspectable.swift */; };
 		BA4628C82560ECBB00D5AE8A /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4628C72560ECBB00D5AE8A /* BaseTextField.swift */; };
@@ -65,6 +68,9 @@
 		BA00E854255DA29C001C4E06 /* SettingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingListViewController.swift; sourceTree = "<group>"; };
 		BA00E88C255E4A4C001C4E06 /* UserNameSettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserNameSettingViewController.storyboard; sourceTree = "<group>"; };
 		BA00E890255E4A8C001C4E06 /* UserNameSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameSettingViewController.swift; sourceTree = "<group>"; };
+		BA02F95D256A213900D93643 /* CreateUserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserEntity.swift; sourceTree = "<group>"; };
+		BA02F962256A2C9D00D93643 /* CreateUserDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserDomainModel.swift; sourceTree = "<group>"; };
+		BA02F967256A2E7A00D93643 /* CreateUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewModel.swift; sourceTree = "<group>"; };
 		BA06D2002557AB26000216CC /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		BA06D2042557AB4C000216CC /* TestViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestViewController.storyboard; sourceTree = "<group>"; };
 		BA133AC524BB28B80047E265 /* TestSettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestSettings.storyboard; sourceTree = "<group>"; };
@@ -85,10 +91,10 @@
 		BA2A5DF3255166600085A3EF /* UIViewController+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extended.swift"; sourceTree = "<group>"; };
 		BA2DF385255859E300064DA8 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		BA40295C255436B800421276 /* TestSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSettingsViewController.swift; sourceTree = "<group>"; };
-		BA4628AC2560DE4600D5AE8A /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
-		BA4628B22560E16700D5AE8A /* SignupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
-		BA4628B92560E2CE00D5AE8A /* SignupViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignupViewController.storyboard; sourceTree = "<group>"; };
-		BA4628BC2560E2E000D5AE8A /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		BA4628AC2560DE4600D5AE8A /* CreateUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUser.swift; sourceTree = "<group>"; };
+		BA4628B22560E16700D5AE8A /* CreateUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserModel.swift; sourceTree = "<group>"; };
+		BA4628B92560E2CE00D5AE8A /* CreateUserViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateUserViewController.storyboard; sourceTree = "<group>"; };
+		BA4628BC2560E2E000D5AE8A /* CreateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
 		BA4628C02560E91300D5AE8A /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
 		BA4628C42560EC0200D5AE8A /* UITextField+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+IBInspectable.swift"; sourceTree = "<group>"; };
 		BA4628C72560ECBB00D5AE8A /* BaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
@@ -149,6 +155,31 @@
 			path = UserNameSetting;
 			sourceTree = "<group>";
 		};
+		BA02F960256A2C6800D93643 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BA02F966256A2E6200D93643 /* CreateUser */,
+				BA02F961256A2C7F00D93643 /* Domains */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		BA02F961256A2C7F00D93643 /* Domains */ = {
+			isa = PBXGroup;
+			children = (
+				BA02F962256A2C9D00D93643 /* CreateUserDomainModel.swift */,
+			);
+			path = Domains;
+			sourceTree = "<group>";
+		};
+		BA02F966256A2E6200D93643 /* CreateUser */ = {
+			isa = PBXGroup;
+			children = (
+				BA02F967256A2E7A00D93643 /* CreateUserViewModel.swift */,
+			);
+			path = CreateUser;
+			sourceTree = "<group>";
+		};
 		BA06D1FE2557AAE2000216CC /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,7 +205,6 @@
 				C87E173A7739EAF8084E6F1B /* Frameworks */,
 				C07CEA2183146A04CA3CFB85 /* Pods */,
 				BA1E5B2C2487AC210055A5F4 /* Products */,
-				BA27BD46255FA39D002C46AB /* JapaneseNursingAPI */,
 				BA1E5B2D2487AC210055A5F4 /* Japanese_nursing */,
 			);
 			sourceTree = "<group>";
@@ -199,7 +229,7 @@
 			path = Japanese_nursing;
 			sourceTree = "<group>";
 		};
-		BA27BD46255FA39D002C46AB /* JapaneseNursingAPI */ = {
+		BA27BD46255FA39D002C46AB /* API */ = {
 			isa = PBXGroup;
 			children = (
 				BA27BD49255FAA24002C46AB /* Communications */,
@@ -209,13 +239,13 @@
 				BA4628B12560E0F500D5AE8A /* Models */,
 				BA27BDC1255FB06B002C46AB /* Constants.swift */,
 			);
-			path = JapaneseNursingAPI;
+			path = API;
 			sourceTree = "<group>";
 		};
 		BA27BD49255FAA24002C46AB /* Communications */ = {
 			isa = PBXGroup;
 			children = (
-				BA4628AB2560DE2500D5AE8A /* Signup */,
+				BA4628AB2560DE2500D5AE8A /* CreateUser */,
 				BA27BD4A255FAA61002C46AB /* JapaneseNursingAPI.swift */,
 			);
 			path = Communications;
@@ -265,17 +295,18 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		BA4628AB2560DE2500D5AE8A /* Signup */ = {
+		BA4628AB2560DE2500D5AE8A /* CreateUser */ = {
 			isa = PBXGroup;
 			children = (
-				BA4628AC2560DE4600D5AE8A /* Signup.swift */,
+				BA4628AC2560DE4600D5AE8A /* CreateUser.swift */,
 			);
-			path = Signup;
+			path = CreateUser;
 			sourceTree = "<group>";
 		};
 		BA4628B02560E0E300D5AE8A /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				BA02F95D256A213900D93643 /* CreateUserEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -283,18 +314,18 @@
 		BA4628B12560E0F500D5AE8A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BA4628B22560E16700D5AE8A /* SignupModel.swift */,
+				BA4628B22560E16700D5AE8A /* CreateUserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		BA4628B82560E2B400D5AE8A /* Signup */ = {
+		BA4628B82560E2B400D5AE8A /* CreateUser */ = {
 			isa = PBXGroup;
 			children = (
-				BA4628B92560E2CE00D5AE8A /* SignupViewController.storyboard */,
-				BA4628BC2560E2E000D5AE8A /* SignupViewController.swift */,
+				BA4628B92560E2CE00D5AE8A /* CreateUserViewController.storyboard */,
+				BA4628BC2560E2E000D5AE8A /* CreateUserViewController.swift */,
 			);
-			path = Signup;
+			path = CreateUser;
 			sourceTree = "<group>";
 		};
 		BA4628BF2560E8BB00D5AE8A /* InheritedView */ = {
@@ -376,8 +407,10 @@
 		BAC4F7ED24A641FF009ACEF3 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				BA27BD46255FA39D002C46AB /* API */,
 				BA2A5DF22551663E0085A3EF /* Extensions */,
 				BA4628BF2560E8BB00D5AE8A /* InheritedView */,
+				BA02F960256A2C6800D93643 /* ViewModels */,
 				BAC4F7EE24A64211009ACEF3 /* Views */,
 				BA66D67A24A6EC9C00BE7273 /* Feature */,
 				BA66D67824A6E91500BE7273 /* AppBootstrap.swift */,
@@ -391,9 +424,9 @@
 		BAC4F7EE24A64211009ACEF3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BA4628B82560E2B400D5AE8A /* CreateUser */,
 				BA66D67524A6E70A00BE7273 /* Mypage */,
 				BA00E850255DA1D7001C4E06 /* Settings */,
-				BA4628B82560E2B400D5AE8A /* Signup */,
 				BAC4F7F024A6421F009ACEF3 /* Study */,
 				BA133AC224BB28680047E265 /* Test */,
 			);
@@ -527,7 +560,7 @@
 				BA00E88D255E4A4D001C4E06 /* UserNameSettingViewController.storyboard in Resources */,
 				BA27FB35248CECDA002840B8 /* Colors.xcassets in Resources */,
 				BA1E5B3B2487AC250055A5F4 /* LaunchScreen.storyboard in Resources */,
-				BA4628BA2560E2CE00D5AE8A /* SignupViewController.storyboard in Resources */,
+				BA4628BA2560E2CE00D5AE8A /* CreateUserViewController.storyboard in Resources */,
 				BA133AC624BB28B80047E265 /* TestSettings.storyboard in Resources */,
 				BAC5904D249EECCF007D247B /* NotoSansCJKjpSub-Regular.otf in Resources */,
 				BA1E5B382487AC250055A5F4 /* Assets.xcassets in Resources */,
@@ -624,6 +657,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA66D67924A6E91500BE7273 /* AppBootstrap.swift in Sources */,
+				BA02F95E256A213900D93643 /* CreateUserEntity.swift in Sources */,
 				BA27BDC2255FB06B002C46AB /* Constants.swift in Sources */,
 				BA27BD4B255FAA61002C46AB /* JapaneseNursingAPI.swift in Sources */,
 				BA2A5DE5255135A50085A3EF /* UnitListCell.swift in Sources */,
@@ -631,21 +665,23 @@
 				BA5EACE324D2AF8F0008E2D0 /* UnitListViewController.swift in Sources */,
 				BA4628C12560E91300D5AE8A /* UnderlineTextField.swift in Sources */,
 				BA00E891255E4A8C001C4E06 /* UserNameSettingViewController.swift in Sources */,
-				BA4628AD2560DE4600D5AE8A /* Signup.swift in Sources */,
+				BA4628AD2560DE4600D5AE8A /* CreateUser.swift in Sources */,
+				BA02F963256A2C9D00D93643 /* CreateUserDomainModel.swift in Sources */,
 				BA4628C52560EC0200D5AE8A /* UITextField+IBInspectable.swift in Sources */,
 				BA27BDCA255FB29E002C46AB /* APIEvent.swift in Sources */,
 				BA2A5DE9255139DB0085A3EF /* LearningUnitViewController.swift in Sources */,
 				BA133ACA24C04D850047E265 /* CustomTabBar.swift in Sources */,
 				BA06D2012557AB26000216CC /* TestViewController.swift in Sources */,
 				BA2A5DF4255166600085A3EF /* UIViewController+Extended.swift in Sources */,
+				BA02F968256A2E7A00D93643 /* CreateUserViewModel.swift in Sources */,
 				BAE31B7A2555A87900A3FC6D /* Array+Extended.swift in Sources */,
 				BA1E5B2F2487AC210055A5F4 /* AppDelegate.swift in Sources */,
 				BA2DF386255859E400064DA8 /* MyPageViewController.swift in Sources */,
 				BA00E855255DA29C001C4E06 /* SettingListViewController.swift in Sources */,
 				BA66D67D24A6ECF000BE7273 /* TabBarController.swift in Sources */,
-				BA4628BD2560E2E000D5AE8A /* SignupViewController.swift in Sources */,
+				BA4628BD2560E2E000D5AE8A /* CreateUserViewController.swift in Sources */,
 				BA4628C82560ECBB00D5AE8A /* BaseTextField.swift in Sources */,
-				BA4628B32560E16700D5AE8A /* SignupModel.swift in Sources */,
+				BA4628B32560E16700D5AE8A /* CreateUserModel.swift in Sources */,
 				BA1E5B312487AC210055A5F4 /* SceneDelegate.swift in Sources */,
 				BA85A3FE24AB7F51003E6E85 /* R.generated.swift in Sources */,
 				BA27BDC6255FB1D9002C46AB /* Session+RxSwift.swift in Sources */,

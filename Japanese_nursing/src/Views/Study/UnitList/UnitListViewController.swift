@@ -18,7 +18,7 @@ class UnitListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // 仮
-        let vc = SignupViewController.makeInstance()
+        let vc = CreateUserViewController.makeInstance()
         present(vc, animated: true)
     }
 

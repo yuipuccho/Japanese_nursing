@@ -13,7 +13,7 @@ import RxSwift
 /**
  * ユーザ作成
  */
-public struct PostSignupModel {
+public struct PostCreateUserModel {
 
     public init() {
     }
@@ -21,14 +21,15 @@ public struct PostSignupModel {
     /**
      * ユーザ作成
      * - Parameters:
+     *   - isAnonymous: 匿名ユーザかどうか
      *   - userName: ユーザ名
      * - Returns: ユーザ作成Entity Observable
      */
-    public func postSignup(userName: String) -> Observable<PostSignupResponse.Entity> {
+    public func postCreateUser(isAnonymous: Bool, userName: String) -> Observable<PostCreateUserResponse.Entity> {
 
         return Observable.create({ observer in
 
-            let req = PostSignupRequest(userName: userName)
+            let req = PostCreateUserRequest(isAnonymous: isAnonymous, userName: userName)
 
             let task = Session.send(req) {
                 switch $0 {

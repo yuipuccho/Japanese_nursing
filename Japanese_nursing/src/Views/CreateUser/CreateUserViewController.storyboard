@@ -21,10 +21,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Signup View Controller-->
+        <!--Create User View Controller-->
         <scene sceneID="0Hc-Yf-hdx">
             <objects>
-                <viewController storyboardIdentifier="SignupViewController" id="ME2-8k-B4Z" customClass="SignupViewController" customModule="d_介護の日本語" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateUserViewController" id="ME2-8k-B4Z" customClass="CreateUserViewController" customModule="d_介護の日本語" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2f3-VI-zP4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,7 +41,7 @@
                                         <color key="textColor" name="TextBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ユーザー名(12文字以内)" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="NTe-lo-HXc" userLabel="Name Underline Text Field" customClass="UnderlineTextField" customModule="paters" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ユーザー名(12文字以内)" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="NTe-lo-HXc" userLabel="Name Underline Text Field" customClass="UnderlineTextField" customModule="d_介護の日本語" customModuleProvider="target">
                                         <rect key="frame" x="60" y="40" width="302" height="40"/>
                                         <color key="tintColor" name="MainBlue"/>
                                         <constraints>
