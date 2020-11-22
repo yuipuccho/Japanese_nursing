@@ -18,11 +18,11 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Test-->
         <scene sceneID="aHw-fZ-R9m">
             <objects>
                 <navigationController id="SbY-jC-dqh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="test_icon_inactive" selectedImage="test_icon_active" id="eZT-Yt-pfk"/>
+                    <tabBarItem key="tabBarItem" title="Test" image="test_bar_icon" id="eZT-Yt-pfk"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pNB-7r-gVm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -272,7 +272,6 @@
                                         <rect key="frame" x="250" y="105.5" width="48" height="48"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstItem="jCd-4b-0ye" firstAttribute="trailing" secondItem="rHk-P2-6DZ" secondAttribute="trailing" id="0rc-rX-u6p"/>
                                     <constraint firstAttribute="height" constant="250" id="2hM-vo-nPw"/>
@@ -310,7 +309,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="T7j-cc-9BE"/>
-                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <color key="backgroundColor" red="1" green="0.80784313730000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="zhx-RK-DJ5" firstAttribute="centerY" secondItem="Tlp-AG-jYh" secondAttribute="centerY" id="16x-sD-xXB"/>
                             <constraint firstItem="AGL-bK-YVI" firstAttribute="leading" secondItem="T7j-cc-9BE" secondAttribute="leading" id="31k-dh-bZx"/>
@@ -358,8 +357,7 @@
     <resources>
         <image name="minus_icon" width="56" height="56"/>
         <image name="plus_icon" width="56" height="56"/>
-        <image name="test_icon_active" width="30" height="30"/>
-        <image name="test_icon_inactive" width="30" height="30"/>
+        <image name="test_bar_icon" width="24" height="24"/>
         <namedColor name="MainBlue">
             <color red="0.027450980392156862" green="0.72941176470588232" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
