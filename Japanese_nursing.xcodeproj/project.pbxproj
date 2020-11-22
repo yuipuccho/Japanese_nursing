@@ -12,6 +12,7 @@
 		BA00E855255DA29C001C4E06 /* SettingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00E854255DA29C001C4E06 /* SettingListViewController.swift */; };
 		BA00E88D255E4A4D001C4E06 /* UserNameSettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA00E88C255E4A4C001C4E06 /* UserNameSettingViewController.storyboard */; };
 		BA00E891255E4A8C001C4E06 /* UserNameSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00E890255E4A8C001C4E06 /* UserNameSettingViewController.swift */; };
+		BA02F941256A19ED00D93643 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA02F940256A19ED00D93643 /* TabBar.swift */; };
 		BA06D2012557AB26000216CC /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA06D2002557AB26000216CC /* TestViewController.swift */; };
 		BA06D2052557AB4C000216CC /* TestViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA06D2042557AB4C000216CC /* TestViewController.storyboard */; };
 		BA133AC624BB28B80047E265 /* TestSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA133AC524BB28B80047E265 /* TestSettings.storyboard */; };
@@ -58,6 +59,7 @@
 		BA00E854255DA29C001C4E06 /* SettingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingListViewController.swift; sourceTree = "<group>"; };
 		BA00E88C255E4A4C001C4E06 /* UserNameSettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserNameSettingViewController.storyboard; sourceTree = "<group>"; };
 		BA00E890255E4A8C001C4E06 /* UserNameSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameSettingViewController.swift; sourceTree = "<group>"; };
+		BA02F940256A19ED00D93643 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		BA06D2002557AB26000216CC /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		BA06D2042557AB4C000216CC /* TestViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestViewController.storyboard; sourceTree = "<group>"; };
 		BA133AC524BB28B80047E265 /* TestSettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestSettings.storyboard; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				BA133AC924C04D850047E265 /* CustomTabBar.swift */,
 				BA66D67C24A6ECF000BE7273 /* TabBarController.swift */,
 				BA66D67E24A6EE6C00BE7273 /* Tabbar.storyboard */,
+				BA02F940256A19ED00D93643 /* TabBar.swift */,
 			);
 			path = TabViews;
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 			files = (
 				BA66D67924A6E91500BE7273 /* AppBootstrap.swift in Sources */,
 				BAB9C2762568057E004D653F /* WebViewController.swift in Sources */,
+				BA02F941256A19ED00D93643 /* TabBar.swift in Sources */,
 				BA2A5DE5255135A50085A3EF /* UnitListCell.swift in Sources */,
 				BA5EACE324D2AF8F0008E2D0 /* UnitListViewController.swift in Sources */,
 				BA00E891255E4A8C001C4E06 /* UserNameSettingViewController.swift in Sources */,
