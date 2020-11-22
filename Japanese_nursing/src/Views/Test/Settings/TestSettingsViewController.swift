@@ -87,6 +87,8 @@ class TestSettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationController?.setNavigationBarHidden(true, animated: true)
+
         setupChartView()
         subscribe()
         setupUI()

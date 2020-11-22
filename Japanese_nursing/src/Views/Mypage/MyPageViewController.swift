@@ -49,6 +49,8 @@ class MyPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationController?.setNavigationBarHidden(true, animated: true)
+
         setupBarChartView()
         setupPieChartView(pieChartView: studyPieChartView)
         setupPieChartView(pieChartView: testPieChartView)
