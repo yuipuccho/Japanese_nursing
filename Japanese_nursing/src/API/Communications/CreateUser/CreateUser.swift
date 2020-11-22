@@ -33,7 +33,7 @@ public struct PostCreateUserRequest: JapaneseNursingRequest {
     }
 
     public var path: String {
-        return makePath(path: "/api/v1/users/")
+        return makePath(path: "/users/")
     }
 
     /// The actual parameters.
