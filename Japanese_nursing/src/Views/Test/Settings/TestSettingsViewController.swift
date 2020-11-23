@@ -228,13 +228,13 @@ extension TestSettingsViewController {
         }
 
         if shouldActivate {
-            view?.backgroundColor = R.color.mainBlue()
+            view?.backgroundColor = UIColor.white
+            label?.textColor = R.color.test()
+            countLabel?.textColor = R.color.test()
+        } else {
+            view?.backgroundColor = R.color.test()
             label?.textColor = UIColor.white
             countLabel?.textColor = UIColor.white
-        } else {
-            view?.backgroundColor = UIColor.white
-            label?.textColor = R.color.mainBlue()
-            countLabel?.textColor = R.color.mainBlue()
         }
     }
 
@@ -308,7 +308,7 @@ extension TestSettingsViewController {
 
         // データをセットする
         let dataSet = PieChartDataSet(entries: dataEntries)
-        dataSet.setColors(R.color.mainBlue()!, R.color.mistakePink()!, R.color.untested()!)  // グラフの色
+        dataSet.setColors(UIColor.white, R.color.untested()!, R.color.testDark()!)  // グラフの色
         dataSet.drawValuesEnabled = false  // グラフ上のデータ値を非表示にする
         self.chartView.data = PieChartData(dataSet: dataSet)
 
