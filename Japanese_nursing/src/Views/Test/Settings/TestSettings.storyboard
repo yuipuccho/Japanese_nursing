@@ -44,24 +44,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhx-RK-DJ5">
-                                <rect key="frame" x="113.5" y="131" width="93" height="51.5"/>
-                                <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Medium" family="NotoSansCJKjpSub-Medium" pointSize="44"/>
-                                <color key="textColor" name="MainBlue"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tdo-T0-Ocb">
-                                <rect key="frame" x="0.0" y="44" width="320" height="225"/>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tlp-AG-jYh" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="60.5" y="57" width="199" height="199"/>
+                                <rect key="frame" x="60.5" y="47" width="199" height="199"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Tlp-AG-jYh" secondAttribute="height" multiplier="1:1" id="Tym-PF-OTU"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tdo-T0-Ocb">
+                                <rect key="frame" x="0.0" y="44" width="320" height="205"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhx-RK-DJ5">
+                                <rect key="frame" x="113.5" y="121" width="93" height="51.5"/>
+                                <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Medium" family="NotoSansCJKjpSub-Medium" pointSize="44"/>
+                                <color key="textColor" name="TestCorrect"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AGL-bK-YVI">
-                                <rect key="frame" x="0.0" y="269" width="320" height="250"/>
+                                <rect key="frame" x="0.0" y="249" width="320" height="250"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="j7i-hp-XFK">
                                         <rect key="frame" x="30" y="20" width="260" height="62"/>
@@ -82,7 +82,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" name="MainBlue"/>
+                                                <color key="backgroundColor" name="TestCorrect"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="VNB-Vy-uFc" secondAttribute="bottom" constant="8" id="Asl-G9-D7g"/>
                                                     <constraint firstItem="OTF-h8-SnE" firstAttribute="top" secondItem="gp6-5i-pwv" secondAttribute="top" constant="8" id="JU2-0i-tbv"/>
@@ -111,13 +111,13 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(30)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8i-1b-51Y">
                                                         <rect key="frame" x="30" y="40" width="20" height="14"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Medium" family="NotoSansCJKjpSub-Medium" pointSize="12"/>
-                                                        <color key="textColor" name="MainBlue"/>
+                                                        <color key="textColor" name="TestCorrect"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="苦手" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndg-6R-wP6">
                                                         <rect key="frame" x="22" y="8" width="36" height="21"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="18"/>
-                                                        <color key="textColor" name="MainBlue"/>
+                                                        <color key="textColor" name="TestCorrect"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -150,13 +150,13 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(30)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbT-Vr-VWQ">
                                                         <rect key="frame" x="30" y="40" width="20" height="14"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Medium" family="NotoSansCJKjpSub-Medium" pointSize="12"/>
-                                                        <color key="textColor" name="MainBlue"/>
+                                                        <color key="textColor" name="TestCorrect"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未出題" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5I-5M-CMf">
                                                         <rect key="frame" x="13" y="8" width="54" height="21"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="18"/>
-                                                        <color key="textColor" name="MainBlue"/>
+                                                        <color key="textColor" name="TestCorrect"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -192,7 +192,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TLL-w7-RnR">
                                         <rect key="frame" x="15" y="102" width="290" height="47"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="minus_icon" translatesAutoresizingMaskIntoConstraints="NO" id="IuZ-sC-nxb">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test_minus_icon" translatesAutoresizingMaskIntoConstraints="NO" id="IuZ-sC-nxb">
                                                 <rect key="frame" x="7" y="3.5" width="48" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="48" id="85p-Sn-KDs"/>
@@ -200,7 +200,7 @@
                                                     <constraint firstAttribute="width" secondItem="IuZ-sC-nxb" secondAttribute="height" multiplier="1:1" id="KSL-YP-zKf"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus_icon" translatesAutoresizingMaskIntoConstraints="NO" id="nD1-PY-gft">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test_plus_icon" translatesAutoresizingMaskIntoConstraints="NO" id="nD1-PY-gft">
                                                 <rect key="frame" x="235" y="3.5" width="48" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="nD1-PY-gft" secondAttribute="height" multiplier="1:1" id="FRF-fm-CHH"/>
@@ -213,7 +213,7 @@
                                                     <constraint firstAttribute="width" constant="100" id="nWC-UE-g5a"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Medium" family="NotoSansCJKjpSub-Medium" pointSize="40"/>
-                                                <color key="textColor" name="MainBlue"/>
+                                                <color key="textColor" name="TestCorrect"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -231,7 +231,7 @@
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekH-4z-FBz">
                                         <rect key="frame" x="30" y="169" width="260" height="56"/>
-                                        <color key="backgroundColor" name="MainBlue"/>
+                                        <color key="backgroundColor" name="TestCorrect"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="350" id="cdq-Sm-GtW"/>
                                             <constraint firstAttribute="height" constant="56" id="xKQ-Ja-B7E"/>
@@ -315,7 +315,7 @@
                             <constraint firstItem="AGL-bK-YVI" firstAttribute="leading" secondItem="T7j-cc-9BE" secondAttribute="leading" id="31k-dh-bZx"/>
                             <constraint firstItem="zhx-RK-DJ5" firstAttribute="centerX" secondItem="Tlp-AG-jYh" secondAttribute="centerX" id="7wE-L4-G8d"/>
                             <constraint firstItem="Tlp-AG-jYh" firstAttribute="width" secondItem="YLZ-qb-IWb" secondAttribute="width" multiplier="0.85" priority="750" id="8UB-lz-VJC"/>
-                            <constraint firstItem="T7j-cc-9BE" firstAttribute="bottom" secondItem="AGL-bK-YVI" secondAttribute="bottom" id="U65-4i-1NY"/>
+                            <constraint firstItem="T7j-cc-9BE" firstAttribute="bottom" secondItem="AGL-bK-YVI" secondAttribute="bottom" constant="20" id="U65-4i-1NY"/>
                             <constraint firstItem="AGL-bK-YVI" firstAttribute="trailing" secondItem="T7j-cc-9BE" secondAttribute="trailing" id="XlP-JR-eYp"/>
                             <constraint firstItem="Tdo-T0-Ocb" firstAttribute="top" secondItem="T7j-cc-9BE" secondAttribute="top" id="aLR-lQ-ui3"/>
                             <constraint firstItem="Tdo-T0-Ocb" firstAttribute="leading" secondItem="T7j-cc-9BE" secondAttribute="leading" id="fwb-z8-kkB"/>
@@ -355,11 +355,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="minus_icon" width="56" height="56"/>
-        <image name="plus_icon" width="56" height="56"/>
         <image name="test_bar_icon" width="24" height="24"/>
-        <namedColor name="MainBlue">
-            <color red="0.027450980392156862" green="0.72941176470588232" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="test_minus_icon" width="56" height="56"/>
+        <image name="test_plus_icon" width="56" height="56"/>
+        <namedColor name="TestCorrect">
+            <color red="0.20000000000000001" green="0.38823529411764707" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
