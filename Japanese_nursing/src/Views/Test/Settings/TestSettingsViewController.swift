@@ -229,11 +229,11 @@ extension TestSettingsViewController {
 
         if shouldActivate {
             view?.backgroundColor = R.color.testCorrect()
-            label?.textColor = UIColor.white
-            countLabel?.textColor = UIColor.white
+            label?.textColor = R.color.testYellowDark()
+            countLabel?.textColor = R.color.testYellowDark()
         } else {
-            view?.backgroundColor = UIColor.white
-            label?.textColor = R.color.testCorrect()
+            view?.backgroundColor = R.color.testYellowDark()
+            label?.textColor = R.color.textBlue()
             countLabel?.textColor = R.color.testCorrect()
         }
     }
