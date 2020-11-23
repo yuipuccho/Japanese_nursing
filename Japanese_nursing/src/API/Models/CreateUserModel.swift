@@ -38,8 +38,6 @@ public struct PostCreateUserModel {
                         observer.on(.error(APIError.entityNotExist))
                         return
                     }
-//                    print(entity)
-//                    print("popopo")
                     observer.on(.next(entity))
                     observer.on(.completed)
                 case .failure(let error):

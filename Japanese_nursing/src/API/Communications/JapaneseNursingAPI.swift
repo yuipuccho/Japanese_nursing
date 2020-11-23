@@ -259,9 +259,13 @@ extension Request where Response: JapaneseNursingResponse {
 
     /// Build `Response` instance from raw response object.
     public func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Response {
+        print(object)
+        print("obujekuto")
         guard let data = object as? Data else {
             throw ResponseError.unexpectedObject(object)
         }
+        print(data)
+        
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .formatted({
             let f = DateFormatter()
@@ -332,7 +336,7 @@ final class JapaneseNursingDataParser: DataParser {
     /// Return `Any` that expresses structure of response such as JSON and XML.
     /// - Throws: `Error` when parser encountered invalid format data.
     func parse(data: Data) throws -> Any {
-        let json = JSON(data)
+        var json = JSON(data)
 
         var dict = [String: Any]()
 
@@ -341,7 +345,7 @@ final class JapaneseNursingDataParser: DataParser {
             if result {
                 // resultキーが真値を示したので、
                 // result + mesasge以外のキー値をobjectと見なす
-                dict["object"]  = json.dictionaryValue.filter { ($0.key != "result" && $0.key != "message") }
+                dict["object"] = json.dictionaryValue.filter { ($0.key != "result" && $0.key != "message") }
             } else {
                 // resultキーが偽値なのでerror_codeを取得する
                 dict["error_code"] = json["error_code"].intValue

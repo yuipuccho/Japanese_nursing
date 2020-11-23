@@ -52,8 +52,8 @@ class CreateUserViewController: UIViewController {
             if let text = self?.nameUnderLineTextField.text, !text.isEmpty, text.count <= 12 {
                 HUD.show(.progress)
                 // TODO: 遷移処理を追加
-                self?.viewModel.fetch()
-                    .subscribe(onNext: { _ in
+                self?.viewModel.fetch(isAnonymous: true, userName: text)
+                    .subscribe(onNext: { domain in
                         print("popo")
                     })
 

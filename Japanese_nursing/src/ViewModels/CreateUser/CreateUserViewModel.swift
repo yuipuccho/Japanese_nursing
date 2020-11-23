@@ -15,10 +15,10 @@ import RxSwift
  */
 class CreateUserViewModel {
 
-    func fetch() -> Observable<CreateUserDomainModel> {
+    func fetch(isAnonymous: Bool, userName: String) -> Observable<CreateUserDomainModel> {
 
-        return PostCreateUserModel().postCreateUser(isAnonymous: true, userName: "popo")
-            .map { CreateUserDomainModel(entity: $0) }
+        return PostCreateUserModel().postCreateUser(isAnonymous: isAnonymous, userName: userName)
+            .map { CreateUserDomainModel(entity: $0.body) }
     }
     
 }
