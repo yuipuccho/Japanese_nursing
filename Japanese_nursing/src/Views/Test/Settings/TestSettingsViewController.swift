@@ -308,7 +308,7 @@ extension TestSettingsViewController {
 
         // データをセットする
         let dataSet = PieChartDataSet(entries: dataEntries)
-        dataSet.setColors(R.color.testCorrect()!, R.color.untested()!, R.color.testDark()!)  // グラフの色
+        dataSet.setColors(UIColor.white, R.color.untested()!, R.color.testDark()!)  // グラフの色
         dataSet.drawValuesEnabled = false  // グラフ上のデータ値を非表示にする
         self.chartView.data = PieChartData(dataSet: dataSet)
 
