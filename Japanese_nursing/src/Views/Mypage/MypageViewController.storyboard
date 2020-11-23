@@ -145,7 +145,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BWE-z8-TPh"/>
-                        <color key="backgroundColor" name="MypageBlue"/>
+                        <color key="backgroundColor" name="Mypage"/>
                         <constraints>
                             <constraint firstItem="G9E-Me-9CF" firstAttribute="centerX" secondItem="ulG-hZ-hgv" secondAttribute="centerX" id="1J3-s2-PUn"/>
                             <constraint firstItem="e7a-cz-VOe" firstAttribute="width" secondItem="ulG-hZ-hgv" secondAttribute="width" multiplier="0.24" id="1hz-Xi-adx"/>
@@ -219,8 +219,8 @@
         <image name="setting_icon_mini" width="24" height="24"/>
         <image name="study_icon_mypage" width="58" height="58"/>
         <image name="test_icon_mypage" width="136" height="136"/>
-        <namedColor name="MypageBlue">
-            <color red="0.070588235294117646" green="0.78823529411764703" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Mypage">
+            <color red="0.98431372549019602" green="0.69411764705882351" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="TextBlue">
             <color red="0.050999999046325684" green="0.14100000262260437" blue="0.50199997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
