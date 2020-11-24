@@ -33,16 +33,16 @@ class CustomOverlayView: OverlayView {
                 checkLabel.isHidden = true
                 batuImageView.isHidden = false
                 batuLabel.isHidden = false
-                let color = R.color.mistakePink()
-                self.backgroundColor = color?.withAlphaComponent(0.5)
+                let color = R.color.badPink()
+                self.backgroundColor = color?.withAlphaComponent(0.8)
 
             case .right:
                 checkImageView.isHidden = false
                 checkLabel.isHidden = false
                 batuImageView.isHidden = true
                 batuLabel.isHidden = true
-                let color = R.color.mainBlue()
-                self.backgroundColor = color?.withAlphaComponent(0.5)
+                let color = R.color.goodBlue()
+                self.backgroundColor = color?.withAlphaComponent(0.8)
 
             default:
                 break

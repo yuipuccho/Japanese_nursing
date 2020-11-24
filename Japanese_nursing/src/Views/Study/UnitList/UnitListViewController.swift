@@ -31,7 +31,7 @@ extension UnitListViewController: UITableViewDataSource, UITableViewDelegate {
     // TODO: API取得次第変更
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 20
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
