@@ -132,7 +132,7 @@ extension LearningUnitViewController: KolodaViewDelegate {
             let appearance = SCLAlertView.SCLAppearance(
                 kTitleFont: R.font.notoSansCJKjpSubBold(size: 16)!,
                 kTextFont: R.font.notoSansCJKjpSubMedium(size: 12)!,
-                showCloseButton: false, titleColor: R.color.textBlue()!
+                showCloseButton: false, titleColor: R.color.textDarkGray()!
             )
             let alertView = SCLAlertView(appearance: appearance)
             alertView.addButton("もう一度学習する") { [weak self] in
@@ -150,7 +150,7 @@ extension LearningUnitViewController: KolodaViewDelegate {
                                 timeout: nil,
                                 completeText: "",
                                 style: .success,
-                                colorStyle: 0x07BAFE,
+                                colorStyle: 0x88DCB9,
                                 colorTextButton: nil,
                                 circleIconImage: nil,
                                 animationStyle: .bottomToTop)
