@@ -108,7 +108,7 @@ extension MyPageViewController {
         // X軸のラベルの位置を下に設定
         barChartView.xAxis.labelPosition = .bottom
         // X軸のラベルの色を設定
-        barChartView.xAxis.labelTextColor = R.color.weakTextBlue()!
+        barChartView.xAxis.labelTextColor = R.color.graphTextBrown()!
         // X軸の線、グリッドを非表示にする
         barChartView.xAxis.drawGridLinesEnabled = false
         barChartView.xAxis.drawAxisLineEnabled = false
@@ -119,13 +119,13 @@ extension MyPageViewController {
         // Y座標の値が0始まりになるように設定
         barChartView.leftAxis.axisMinimum = 0.0
         barChartView.leftAxis.drawZeroLineEnabled = true
-        barChartView.leftAxis.zeroLineColor = R.color.weakTextBlue()
+        barChartView.leftAxis.zeroLineColor = R.color.graphTextBrown()
         // ラベルの数を設定
         barChartView.leftAxis.labelCount = 5
         // ラベルの色を設定
-        barChartView.leftAxis.labelTextColor = R.color.weakTextBlue()!
+        barChartView.leftAxis.labelTextColor = R.color.graphTextBrown()!
         // グリッドの色を設定
-        barChartView.leftAxis.gridColor = R.color.weakTextBlue()!
+        barChartView.leftAxis.gridColor = R.color.graphTextBrown()!
         // 軸線は非表示にする
         barChartView.leftAxis.drawAxisLineEnabled = false
 
@@ -137,7 +137,14 @@ extension MyPageViewController {
 
         // グラフの上に値を表示しない
         dataSet.drawValuesEnabled = false
-        dataSet.colors = [R.color.mainBlue()!]
+        dataSet.colors = [R.color.graphBlue()!,
+                          R.color.graphYellow()!,
+                          R.color.mypage()!,
+                          R.color.graphGreen()!,
+                          R.color.graphYellow()!,
+                          R.color.mypage()!,
+                          R.color.graphGreen()!
+        ]
 
         barChartView.animate(yAxisDuration: 0.8)
     }
@@ -152,12 +159,12 @@ extension MyPageViewController {
 
         // データをセットする
         let dataSet = PieChartDataSet(entries: dataEntries)
-        dataSet.setColors(R.color.mainBlue()!, R.color.untested()!)  // グラフの色
+        dataSet.setColors(UIColor.white, R.color.mypageWeakDark()!)  // グラフの色
         dataSet.drawValuesEnabled = false  // グラフ上のデータ値を非表示にする
         pieChartView.data = PieChartData(dataSet: dataSet)
 
         pieChartView.holeRadiusPercent = 0.88  // 中心の穴の大きさ
-        pieChartView.holeColor = UIColor.white  // 中心の穴の色
+        pieChartView.holeColor = UIColor.clear  // 中心の穴の色
 
         pieChartView.highlightPerTapEnabled = false  // グラフがタップされたときのハイライトを無効化
         pieChartView.chartDescription?.enabled = false  // グラフの説明を非表示
