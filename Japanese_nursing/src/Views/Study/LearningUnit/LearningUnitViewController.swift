@@ -132,7 +132,7 @@ extension LearningUnitViewController: KolodaViewDelegate {
             let appearance = SCLAlertView.SCLAppearance(
                 kTitleFont: R.font.notoSansCJKjpSubBold(size: 16)!,
                 kTextFont: R.font.notoSansCJKjpSubMedium(size: 12)!,
-                showCloseButton: false, titleColor: R.color.textBlue()!
+                showCloseButton: false, titleColor: R.color.textDarkGray()!
             )
             let alertView = SCLAlertView(appearance: appearance)
             alertView.addButton("もう一度学習する") { [weak self] in
@@ -150,7 +150,7 @@ extension LearningUnitViewController: KolodaViewDelegate {
                                 timeout: nil,
                                 completeText: "",
                                 style: .success,
-                                colorStyle: 0x07BAFE,
+                                colorStyle: 0x88DCB9,
                                 colorTextButton: nil,
                                 circleIconImage: nil,
                                 animationStyle: .bottomToTop)
@@ -188,7 +188,7 @@ extension LearningUnitViewController: KolodaViewDataSource {
         let mainLabel = UILabel()
         mainLabel.text = items[index]
         mainLabel.font = R.font.notoSansCJKjpSubBold(size: 40)
-        mainLabel.textColor = R.color.mainBlue()
+        mainLabel.textColor = R.color.textGray()
         mainLabel.sizeToFit()
         mainLabel.center = CGPoint(x: view.bounds.size.width / 2, y: (view.bounds.size.height / 2) - 35)
         view.addSubview(mainLabel)
@@ -197,7 +197,7 @@ extension LearningUnitViewController: KolodaViewDataSource {
         let subLabel = UILabel()
         subLabel.text = items[index]
         subLabel.font = R.font.notoSansCJKjpSubMedium(size: 24)
-        subLabel.textColor = R.color.mainBlue()
+        subLabel.textColor = R.color.textGray()
         subLabel.sizeToFit()
         subLabel.center = CGPoint(x: view.bounds.size.width / 2, y: (view.bounds.size.height / 2) + 35)
         view.addSubview(subLabel)

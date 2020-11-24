@@ -11,7 +11,7 @@ import UIKit
 /**
  * 単元一覧画面VC
  */
-class UnitListViewController: UITableViewController {
+class UnitListViewController: UIViewController {
 
     // MARK: - LifeCycles
 
@@ -19,21 +19,22 @@ class UnitListViewController: UITableViewController {
         super.viewDidLoad()
 
         navigationController?.setNavigationBarHidden(true, animated: true)
+
     }
 
 }
 
 // MARK: - TableViewDataSource
 
-extension UnitListViewController {
+extension UnitListViewController: UITableViewDataSource, UITableViewDelegate {
 
     // TODO: API取得次第変更
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 20
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.unitListCell.identifier, for: indexPath) as? UnitListCell else{
             return UITableViewCell()
@@ -47,7 +48,7 @@ extension UnitListViewController {
         return UITableViewCell()
     }
 
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 82
     }
 
