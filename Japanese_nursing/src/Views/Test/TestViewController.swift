@@ -18,7 +18,7 @@ class TestViewController: UIViewController {
     // MARK: - Outlets
 
     /// トップView
-    @IBOutlet private weak var topView: UIView!
+    //@IBOutlet private weak var topView: UIView!
     /// 閉じるボタン
     @IBOutlet private weak var closeButton: UIButton!
     /// 進捗ラベル
@@ -130,8 +130,8 @@ extension TestViewController {
         // TODO: 問題ラベル、選択肢ラベルのテキストを更新する処理を追加
 
         // トップViewの色をMainBlueに変更
-        topView.backgroundColor = R.color.mainBlue()
-        progressLabel.textColor = R.color.mainBlue()
+//        topView.backgroundColor = R.color.mainBlue()
+        progressLabel.textColor = R.color.goodBlue()
 
         // フィードバックを非表示
         bigFeedbackImageView.isHidden = true
@@ -177,7 +177,7 @@ extension TestViewController {
         feedbackView.isHidden = false
         feedbackImageView.image = R.image.bad_icon()
         feedbackLabel.text = "Bad..."
-        topView.backgroundColor = R.color.mistakePink()
+//        topView.backgroundColor = R.color.mistakePink()
         progressLabel.textColor = R.color.mistakePink()
 
         // 仮
@@ -224,10 +224,10 @@ extension TestViewController {
         switch status {
         case .notSelected:
             view?.backgroundColor = UIColor.white
-            label?.textColor = R.color.mainBlue()
+            label?.textColor = R.color.goodBlue()
             imageView?.isHidden = true
         case .selectedCorrect:
-            view?.backgroundColor = R.color.mainBlue()
+            view?.backgroundColor = R.color.goodBlue()
             label?.textColor = UIColor.white
             imageView?.isHidden = true
         case .selectedMistake:
@@ -237,7 +237,7 @@ extension TestViewController {
             imageView?.image = R.image.mistake_cross()
         case .answer:
             view?.backgroundColor = UIColor.white
-            label?.textColor = R.color.mainBlue()
+            label?.textColor = R.color.goodBlue()
             imageView?.isHidden = false
             imageView?.image = R.image.correct_circle()
         }
