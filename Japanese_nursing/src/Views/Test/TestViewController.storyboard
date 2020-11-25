@@ -30,12 +30,12 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="409"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zy1-20-zsF">
-                                        <rect key="frame" x="345.33333333333331" y="14" width="58.666666666666686" height="28"/>
+                                        <rect key="frame" x="346.33333333333331" y="14" width="57.666666666666686" height="28"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 / 60" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJJ-Ef-vWr">
-                                                <rect key="frame" x="10" y="0.0" width="38.666666666666664" height="28"/>
+                                                <rect key="frame" x="10" y="0.0" width="37.666666666666664" height="28"/>
                                                 <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="12"/>
-                                                <color key="textColor" name="MainBlue"/>
+                                                <color key="textColor" name="GoodBlue"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -67,13 +67,13 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKb-LF-Vn9">
-                                        <rect key="frame" x="153" y="175" width="108.33333333333331" height="59.333333333333343"/>
+                                        <rect key="frame" x="158" y="181.33333333333334" width="98" height="46.666666666666657"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="40"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IwH-x9-D9U">
-                                        <rect key="frame" x="146.33333333333334" y="359" width="121.33333333333334" height="30"/>
+                                        <rect key="frame" x="149.66666666666666" y="359" width="114.66666666666666" height="30"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="good_icon" translatesAutoresizingMaskIntoConstraints="NO" id="4jQ-TZ-Grh">
                                                 <rect key="frame" x="0.0" y="1" width="27.666666666666668" height="28"/>
@@ -83,7 +83,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJq-uM-nJ0">
-                                                <rect key="frame" x="31.666666666666664" y="-7.3333333333333144" width="89.666666666666686" height="44.666666666666664"/>
+                                                <rect key="frame" x="31.666666666666686" y="-2.3333333333333144" width="83" height="35"/>
                                                 <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -125,14 +125,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1N4-f4-EJV">
                                         <rect key="frame" x="32" y="40.999999999999993" width="350" height="70.333333333333314"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="correct_circle" translatesAutoresizingMaskIntoConstraints="NO" id="LvH-VT-OYD">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle_blue" translatesAutoresizingMaskIntoConstraints="NO" id="LvH-VT-OYD">
                                                 <rect key="frame" x="13.999999999999996" y="15.666666666666686" width="38.666666666666657" height="39"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="LvH-VT-OYD" secondAttribute="height" multiplier="1:1" id="wVd-hm-r5w"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uwY-aV-iU2">
-                                                <rect key="frame" x="62.666666666666671" y="20.333333333333371" width="224.66666666666663" height="29.666666666666671"/>
+                                                <rect key="frame" x="62.666666666666671" y="23.666666666666629" width="224.66666666666663" height="23.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="20"/>
                                                 <color key="textColor" name="GoodBlue"/>
                                                 <nil key="highlightedColor"/>
@@ -169,14 +169,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VHX-OV-MU4">
                                         <rect key="frame" x="32" y="126.33333333333337" width="350" height="70.666666666666686"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="correct_circle" translatesAutoresizingMaskIntoConstraints="NO" id="DKG-01-j1R">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle_blue" translatesAutoresizingMaskIntoConstraints="NO" id="DKG-01-j1R">
                                                 <rect key="frame" x="13.999999999999996" y="15.999999999999996" width="38.666666666666657" height="38.666666666666657"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="DKG-01-j1R" secondAttribute="height" multiplier="1:1" id="LMa-zW-KiA"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WVM-NC-mzW">
-                                                <rect key="frame" x="62.666666666666671" y="20.666666666666629" width="224.66666666666663" height="29.666666666666671"/>
+                                                <rect key="frame" x="62.666666666666671" y="23.666666666666629" width="224.66666666666663" height="23.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="20"/>
                                                 <color key="textColor" name="GoodBlue"/>
                                                 <nil key="highlightedColor"/>
@@ -213,14 +213,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yVC-Ld-JAY">
                                         <rect key="frame" x="32" y="212" width="350" height="70.666666666666686"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="correct_circle" translatesAutoresizingMaskIntoConstraints="NO" id="sbZ-wY-xrQ">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle_blue" translatesAutoresizingMaskIntoConstraints="NO" id="sbZ-wY-xrQ">
                                                 <rect key="frame" x="13.999999999999996" y="15.999999999999996" width="38.666666666666657" height="38.666666666666657"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="sbZ-wY-xrQ" secondAttribute="height" multiplier="1:1" id="PyP-6r-cKg"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ACD-CI-IaU">
-                                                <rect key="frame" x="62.666666666666671" y="20.333333333333371" width="224.66666666666663" height="29.666666666666671"/>
+                                                <rect key="frame" x="62.666666666666671" y="23.666666666666629" width="224.66666666666663" height="23.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="20"/>
                                                 <color key="textColor" name="GoodBlue"/>
                                                 <nil key="highlightedColor"/>
@@ -257,14 +257,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yfi-04-4dQ">
                                         <rect key="frame" x="32" y="297.66666666666663" width="350" height="70.333333333333314"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="correct_circle" translatesAutoresizingMaskIntoConstraints="NO" id="HiM-HN-hnI">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle_blue" translatesAutoresizingMaskIntoConstraints="NO" id="HiM-HN-hnI">
                                                 <rect key="frame" x="13.999999999999996" y="15.666666666666742" width="38.666666666666657" height="39"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="HiM-HN-hnI" secondAttribute="height" multiplier="1:1" id="MKz-h0-uCt"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QPI-EH-jmj">
-                                                <rect key="frame" x="62.666666666666671" y="20.333333333333371" width="224.66666666666663" height="29.666666666666671"/>
+                                                <rect key="frame" x="62.666666666666671" y="23.333333333333371" width="224.66666666666663" height="23.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="20"/>
                                                 <color key="textColor" name="GoodBlue"/>
                                                 <nil key="highlightedColor"/>
@@ -418,6 +418,7 @@
                         <outlet property="thirdOptionImageView" destination="sbZ-wY-xrQ" id="oIA-My-kqc"/>
                         <outlet property="thirdOptionLabel" destination="ACD-CI-IaU" id="7lO-QD-SIj"/>
                         <outlet property="thirdOptionView" destination="yVC-Ld-JAY" id="Shv-cV-D9N"/>
+                        <outlet property="topImageView" destination="3po-ko-slY" id="F6V-SS-u5f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gdx-f1-b1m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -427,8 +428,8 @@
     </scenes>
     <resources>
         <image name="big_circle" width="300" height="300"/>
+        <image name="circle_blue" width="37" height="37"/>
         <image name="close_icon" width="50" height="50"/>
-        <image name="correct_circle" width="37" height="37"/>
         <image name="good_icon" width="255" height="256"/>
         <image name="round_blue" width="375" height="500"/>
         <namedColor name="GoodBlue">
