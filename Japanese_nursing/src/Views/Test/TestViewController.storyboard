@@ -23,38 +23,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="round_blue" translatesAutoresizingMaskIntoConstraints="NO" id="3po-ko-slY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="453"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Brt-nJ-d7d">
                                 <rect key="frame" x="0.0" y="44" width="414" height="409"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Qk-8u-fSP">
-                                        <rect key="frame" x="-793" y="-100" width="2000" height="509"/>
-                                        <color key="backgroundColor" name="MainBlue"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="2000" id="FGz-DC-Rv4"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <integer key="value" value="1000"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowIBColor">
-                                                <color key="value" systemColor="systemGray2Color"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
-                                                <real key="value" value="0.20000000000000001"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                                <size key="value" width="1" height="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zy1-20-zsF">
                                         <rect key="frame" x="346.33333333333331" y="14" width="57.666666666666686" height="28"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 / 60" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJJ-Ef-vWr">
                                                 <rect key="frame" x="10" y="0.0" width="37.666666666666664" height="28"/>
                                                 <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="12"/>
-                                                <color key="textColor" name="MainBlue"/>
+                                                <color key="textColor" name="GoodBlue"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -128,15 +109,12 @@
                                     <constraint firstItem="kxk-6L-CMB" firstAttribute="bottom" secondItem="6y5-hC-xze" secondAttribute="bottom" id="D7U-a7-qYp"/>
                                     <constraint firstItem="kxk-6L-CMB" firstAttribute="top" secondItem="6y5-hC-xze" secondAttribute="top" id="QEN-kp-fao"/>
                                     <constraint firstItem="JKb-LF-Vn9" firstAttribute="centerX" secondItem="Brt-nJ-d7d" secondAttribute="centerX" id="ZRG-a6-4V8"/>
-                                    <constraint firstAttribute="bottom" secondItem="4Qk-8u-fSP" secondAttribute="bottom" id="ajc-CG-wzp"/>
                                     <constraint firstItem="nfm-6h-g48" firstAttribute="centerY" secondItem="Brt-nJ-d7d" secondAttribute="centerY" id="cIO-nx-UIk"/>
                                     <constraint firstItem="6y5-hC-xze" firstAttribute="leading" secondItem="Brt-nJ-d7d" secondAttribute="leading" constant="10" id="dX8-ch-iHl"/>
                                     <constraint firstItem="kxk-6L-CMB" firstAttribute="leading" secondItem="6y5-hC-xze" secondAttribute="leading" id="drv-QJ-N6a"/>
                                     <constraint firstItem="nfm-6h-g48" firstAttribute="width" secondItem="Brt-nJ-d7d" secondAttribute="width" multiplier="0.55" id="dzl-ZO-xWz"/>
                                     <constraint firstItem="kxk-6L-CMB" firstAttribute="trailing" secondItem="6y5-hC-xze" secondAttribute="trailing" id="fej-BX-xQr"/>
-                                    <constraint firstItem="4Qk-8u-fSP" firstAttribute="centerX" secondItem="Brt-nJ-d7d" secondAttribute="centerX" id="pd8-gx-yFs"/>
                                     <constraint firstItem="JKb-LF-Vn9" firstAttribute="centerY" secondItem="Brt-nJ-d7d" secondAttribute="centerY" id="qEO-z2-U3g"/>
-                                    <constraint firstItem="4Qk-8u-fSP" firstAttribute="top" secondItem="Brt-nJ-d7d" secondAttribute="top" constant="-100" id="rUH-b9-GIt"/>
                                     <constraint firstItem="IwH-x9-D9U" firstAttribute="centerX" secondItem="Brt-nJ-d7d" secondAttribute="centerX" id="sh7-8b-ZX8"/>
                                     <constraint firstItem="Zy1-20-zsF" firstAttribute="centerY" secondItem="6y5-hC-xze" secondAttribute="centerY" id="xNX-AZ-hB4"/>
                                 </constraints>
@@ -147,7 +125,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1N4-f4-EJV">
                                         <rect key="frame" x="32" y="40.999999999999993" width="350" height="70.333333333333314"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="correct_circle" translatesAutoresizingMaskIntoConstraints="NO" id="LvH-VT-OYD">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle_blue" translatesAutoresizingMaskIntoConstraints="NO" id="LvH-VT-OYD">
                                                 <rect key="frame" x="13.999999999999996" y="15.666666666666686" width="38.666666666666657" height="39"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="LvH-VT-OYD" secondAttribute="height" multiplier="1:1" id="wVd-hm-r5w"/>
@@ -156,7 +134,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uwY-aV-iU2">
                                                 <rect key="frame" x="62.666666666666671" y="23.666666666666629" width="224.66666666666663" height="23.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="20"/>
-                                                <color key="textColor" name="MainBlue"/>
+                                                <color key="textColor" name="GoodBlue"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -175,17 +153,23 @@
                                                 <color key="value" systemColor="systemGray2Color"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
-                                                <real key="value" value="0.20000000000000001"/>
+                                                <integer key="value" value="0"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
                                                 <size key="value" width="1" height="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="LightGray"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VHX-OV-MU4">
                                         <rect key="frame" x="32" y="126.33333333333337" width="350" height="70.666666666666686"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="correct_circle" translatesAutoresizingMaskIntoConstraints="NO" id="DKG-01-j1R">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle_blue" translatesAutoresizingMaskIntoConstraints="NO" id="DKG-01-j1R">
                                                 <rect key="frame" x="13.999999999999996" y="15.999999999999996" width="38.666666666666657" height="38.666666666666657"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="DKG-01-j1R" secondAttribute="height" multiplier="1:1" id="LMa-zW-KiA"/>
@@ -194,7 +178,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WVM-NC-mzW">
                                                 <rect key="frame" x="62.666666666666671" y="23.666666666666629" width="224.66666666666663" height="23.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="20"/>
-                                                <color key="textColor" name="MainBlue"/>
+                                                <color key="textColor" name="GoodBlue"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -213,17 +197,23 @@
                                                 <color key="value" systemColor="systemGray2Color"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
-                                                <real key="value" value="0.20000000000000001"/>
+                                                <integer key="value" value="0"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
                                                 <size key="value" width="1" height="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="LightGray"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yVC-Ld-JAY">
                                         <rect key="frame" x="32" y="212" width="350" height="70.666666666666686"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="correct_circle" translatesAutoresizingMaskIntoConstraints="NO" id="sbZ-wY-xrQ">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle_blue" translatesAutoresizingMaskIntoConstraints="NO" id="sbZ-wY-xrQ">
                                                 <rect key="frame" x="13.999999999999996" y="15.999999999999996" width="38.666666666666657" height="38.666666666666657"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="sbZ-wY-xrQ" secondAttribute="height" multiplier="1:1" id="PyP-6r-cKg"/>
@@ -232,7 +222,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ACD-CI-IaU">
                                                 <rect key="frame" x="62.666666666666671" y="23.666666666666629" width="224.66666666666663" height="23.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="20"/>
-                                                <color key="textColor" name="MainBlue"/>
+                                                <color key="textColor" name="GoodBlue"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -251,17 +241,23 @@
                                                 <color key="value" systemColor="systemGray2Color"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
-                                                <real key="value" value="0.20000000000000001"/>
+                                                <integer key="value" value="0"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
                                                 <size key="value" width="1" height="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="LightGray"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yfi-04-4dQ">
                                         <rect key="frame" x="32" y="297.66666666666663" width="350" height="70.333333333333314"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="correct_circle" translatesAutoresizingMaskIntoConstraints="NO" id="HiM-HN-hnI">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle_blue" translatesAutoresizingMaskIntoConstraints="NO" id="HiM-HN-hnI">
                                                 <rect key="frame" x="13.999999999999996" y="15.666666666666742" width="38.666666666666657" height="39"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="HiM-HN-hnI" secondAttribute="height" multiplier="1:1" id="MKz-h0-uCt"/>
@@ -270,7 +266,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QPI-EH-jmj">
                                                 <rect key="frame" x="62.666666666666671" y="23.333333333333371" width="224.66666666666663" height="23.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="20"/>
-                                                <color key="textColor" name="MainBlue"/>
+                                                <color key="textColor" name="GoodBlue"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -289,10 +285,16 @@
                                                 <color key="value" systemColor="systemGray2Color"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
-                                                <real key="value" value="0.20000000000000001"/>
+                                                <integer key="value" value="0"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
                                                 <size key="value" width="1" height="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="LightGray"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
@@ -375,10 +377,12 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ghg-lo-qM8"/>
-                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ghg-lo-qM8" firstAttribute="trailing" secondItem="Zy1-20-zsF" secondAttribute="trailing" constant="10" id="9Qc-W7-azr"/>
                             <constraint firstItem="F4D-tl-QsW" firstAttribute="height" secondItem="ghg-lo-qM8" secondAttribute="height" multiplier="0.5" id="LAT-wR-upP"/>
+                            <constraint firstItem="3po-ko-slY" firstAttribute="top" secondItem="mBY-qR-OTw" secondAttribute="top" id="Q08-T3-gew"/>
+                            <constraint firstItem="3po-ko-slY" firstAttribute="trailing" secondItem="Brt-nJ-d7d" secondAttribute="trailing" id="S7Z-Xy-7Ln"/>
                             <constraint firstItem="F4D-tl-QsW" firstAttribute="leading" secondItem="ghg-lo-qM8" secondAttribute="leading" id="Xj0-s4-W73"/>
                             <constraint firstItem="Brt-nJ-d7d" firstAttribute="height" secondItem="ghg-lo-qM8" secondAttribute="height" multiplier="0.5" id="YNz-xX-aUP"/>
                             <constraint firstItem="ghg-lo-qM8" firstAttribute="trailing" secondItem="F4D-tl-QsW" secondAttribute="trailing" id="aQU-2B-y4D"/>
@@ -386,6 +390,8 @@
                             <constraint firstItem="ghg-lo-qM8" firstAttribute="bottom" secondItem="F4D-tl-QsW" secondAttribute="bottom" id="iAB-Sf-o6w"/>
                             <constraint firstItem="Brt-nJ-d7d" firstAttribute="leading" secondItem="ghg-lo-qM8" secondAttribute="leading" id="lpd-CX-xza"/>
                             <constraint firstItem="Brt-nJ-d7d" firstAttribute="top" secondItem="ghg-lo-qM8" secondAttribute="top" id="slw-fG-KQt"/>
+                            <constraint firstItem="3po-ko-slY" firstAttribute="leading" secondItem="Brt-nJ-d7d" secondAttribute="leading" id="uRk-n2-C4Q"/>
+                            <constraint firstItem="3po-ko-slY" firstAttribute="bottom" secondItem="Brt-nJ-d7d" secondAttribute="bottom" id="uWJ-fc-gS9"/>
                         </constraints>
                     </view>
                     <connections>
@@ -412,7 +418,7 @@
                         <outlet property="thirdOptionImageView" destination="sbZ-wY-xrQ" id="oIA-My-kqc"/>
                         <outlet property="thirdOptionLabel" destination="ACD-CI-IaU" id="7lO-QD-SIj"/>
                         <outlet property="thirdOptionView" destination="yVC-Ld-JAY" id="Shv-cV-D9N"/>
-                        <outlet property="topView" destination="4Qk-8u-fSP" id="l3K-hk-s2T"/>
+                        <outlet property="topImageView" destination="3po-ko-slY" id="F6V-SS-u5f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gdx-f1-b1m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -422,9 +428,16 @@
     </scenes>
     <resources>
         <image name="big_circle" width="300" height="300"/>
+        <image name="circle_blue" width="37" height="37"/>
         <image name="close_icon" width="50" height="50"/>
-        <image name="correct_circle" width="37" height="37"/>
         <image name="good_icon" width="255" height="256"/>
+        <image name="round_blue" width="375" height="500"/>
+        <namedColor name="GoodBlue">
+            <color red="0.55299997329711914" green="0.76499998569488525" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LightGray">
+            <color red="0.92156862745098034" green="0.94901960784313721" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="MainBlue">
             <color red="0.027450980392156862" green="0.72941176470588232" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -433,9 +446,6 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

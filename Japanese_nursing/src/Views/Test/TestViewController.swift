@@ -18,7 +18,7 @@ class TestViewController: UIViewController {
     // MARK: - Outlets
 
     /// トップView
-    @IBOutlet private weak var topView: UIView!
+    @IBOutlet private weak var topImageView: UIImageView!
     /// 閉じるボタン
     @IBOutlet private weak var closeButton: UIButton!
     /// 進捗ラベル
@@ -129,9 +129,9 @@ extension TestViewController {
     private func updateQuestion() {
         // TODO: 問題ラベル、選択肢ラベルのテキストを更新する処理を追加
 
-        // トップViewの色をMainBlueに変更
-        topView.backgroundColor = R.color.mainBlue()
-        progressLabel.textColor = R.color.mainBlue()
+        // トップViewの色を青に変更
+        topImageView.image = R.image.round_blue()
+        progressLabel.textColor = R.color.goodBlue()
 
         // フィードバックを非表示
         bigFeedbackImageView.isHidden = true
@@ -163,8 +163,8 @@ extension TestViewController {
         // ボタンタップを無効化する
         buttonTapSetting(isEnabled: false)
 
-        // 0.8秒後に問題を更新し、ボタンタップを有効化する
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) { [weak self] in
+        // 0.5秒後に問題を更新し、ボタンタップを有効化する
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
             self?.buttonTapSetting(isEnabled: true)
             self?.updateQuestion()
         }
@@ -174,11 +174,8 @@ extension TestViewController {
     private func mistake() {
         bigFeedbackImageView.isHidden = false
         bigFeedbackImageView.image = R.image.big_cross()
-        feedbackView.isHidden = false
-        feedbackImageView.image = R.image.bad_icon()
-        feedbackLabel.text = "Bad..."
-        topView.backgroundColor = R.color.mistakePink()
-        progressLabel.textColor = R.color.mistakePink()
+        topImageView.image = R.image.round_pink()
+        progressLabel.textColor = R.color.badPink()
 
         // 仮
         // 不正解ボタンの表示
@@ -189,8 +186,8 @@ extension TestViewController {
         // ボタンタップを無効化する
         buttonTapSetting(isEnabled: false)
 
-        // 1.5秒後に問題を更新し、ボタンタップを有効化する
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak self] in
+        // 1.0秒後に問題を更新し、ボタンタップを有効化する
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
             self?.buttonTapSetting(isEnabled: true)
             self?.updateQuestion()
         }
@@ -224,22 +221,26 @@ extension TestViewController {
         switch status {
         case .notSelected:
             view?.backgroundColor = UIColor.white
-            label?.textColor = R.color.mainBlue()
+            view?.borderColor = R.color.lightGray()!
+            label?.textColor = R.color.goodBlue()
             imageView?.isHidden = true
         case .selectedCorrect:
-            view?.backgroundColor = R.color.mainBlue()
+            view?.backgroundColor = R.color.goodBlue()
+            view?.borderColor = UIColor.clear
             label?.textColor = UIColor.white
             imageView?.isHidden = true
         case .selectedMistake:
-            view?.backgroundColor = R.color.mistakeGrey()
+            view?.backgroundColor = R.color.weakText()
+            view?.borderColor = UIColor.clear
             label?.textColor = UIColor.white
             imageView?.isHidden = false
-            imageView?.image = R.image.mistake_cross()
+            imageView?.image = R.image.batu_pink()
         case .answer:
             view?.backgroundColor = UIColor.white
-            label?.textColor = R.color.mainBlue()
+            view?.borderColor = R.color.lightGray()!
+            label?.textColor = R.color.goodBlue()
             imageView?.isHidden = false
-            imageView?.image = R.image.correct_circle()
+            imageView?.image = R.image.circle_blue()
         }
     }
 
