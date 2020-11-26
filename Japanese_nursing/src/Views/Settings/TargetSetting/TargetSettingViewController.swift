@@ -21,6 +21,8 @@ class TargetSettingViewController: UIViewController, UIPickerViewDelegate, UIPic
 
     // MARK: - Outlets
 
+    /// トップ背景画像
+    @IBOutlet weak var topImageView: UIImageView!
     /// タイトルラベル
     @IBOutlet private weak var titleLabel: UILabel!
     /// 円形進捗バー
@@ -95,9 +97,45 @@ class TargetSettingViewController: UIViewController, UIPickerViewDelegate, UIPic
             get {
                 switch self {
                 case .study:
-                    return R.image.study_icon_white()!
+                    return R.image.mypage_study()!
                 case .test:
-                    return R.image.test_icon_white()!
+                    return R.image.mypage_test()!
+                }
+            }
+        }
+
+        /// トップ画像
+        var topImage: UIImage {
+            get {
+                switch self {
+                case .study:
+                    return R.image.round_green()!
+                case .test :
+                    return R.image.round_blue()!
+                }
+            }
+        }
+
+        /// 円形進捗バーの色
+        var pieChartColor: UIColor {
+            get {
+                switch self {
+                case .study:
+                    return R.color.studyWeakDark()!
+                case .test:
+                    return R.color.testWeakDark()!
+                }
+            }
+        }
+
+        /// ボタンの色
+        var buttonColor: UIColor {
+            get {
+                switch self {
+                case .study:
+                    return R.color.study()!
+                case .test:
+                    return R.color.test()!
                 }
             }
         }
@@ -110,7 +148,7 @@ class TargetSettingViewController: UIViewController, UIPickerViewDelegate, UIPic
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupPieChartView(pieChartView: pieChartView)
+        setupPieChartView(pieChartView: pieChartView, type: targetType)
         subscribe()
 
         // Delegate設定
@@ -157,10 +195,13 @@ extension TargetSettingViewController {
 
     /// 目標タイプによってUIを設定する
     private func setupUI(type: TargetTypeEnum) {
+        topImageView.image = type.topImage
         titleLabel.text = type.title
         targetTypeLabel.text = type.targetString
         targetTypePickerLabel.text = type.targetString
         targetIconImageView.image = type.icon
+        cancelButton.setTitleColor(type.buttonColor, for: .normal)
+        saveButton.backgroundColor = type.buttonColor
     }
 
 }
@@ -185,7 +226,7 @@ extension TargetSettingViewController {
             label.textAlignment = .center
             label.text = String(pickerDataList[row])
             label.font = R.font.notoSansCJKjpSubBold(size: 20)!
-            label.textColor = R.color.textBlue()
+            label.textColor = R.color.planeTextDark()
             return label
         }
 
@@ -203,8 +244,8 @@ extension TargetSettingViewController {
 
 extension TargetSettingViewController {
 
-    /// 円形進捗バーの表示設定 (アニメーションはつけない)
-    private func setupPieChartView(pieChartView: PieChartView) {
+    /// 円形進捗バーの表示設定 
+    private func setupPieChartView(pieChartView: PieChartView, type: TargetTypeEnum) {
         // グラフに表示するデータ
         let dataEntries = [
             PieChartDataEntry(value: Double(100))
@@ -212,7 +253,7 @@ extension TargetSettingViewController {
 
         // データをセットする
         let dataSet = PieChartDataSet(entries: dataEntries)
-        dataSet.setColors(R.color.mainBlueDark()!)  // グラフの色
+        dataSet.setColors(type.pieChartColor)  // グラフの色
         dataSet.drawValuesEnabled = false  // グラフ上のデータ値を非表示にする
         pieChartView.data = PieChartData(dataSet: dataSet)
 
