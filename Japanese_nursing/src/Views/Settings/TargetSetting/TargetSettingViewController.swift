@@ -97,9 +97,9 @@ class TargetSettingViewController: UIViewController, UIPickerViewDelegate, UIPic
             get {
                 switch self {
                 case .study:
-                    return R.image.study_icon_white()!
+                    return R.image.mypage_study()!
                 case .test:
-                    return R.image.test_icon_white()!
+                    return R.image.mypage_test()!
                 }
             }
         }
