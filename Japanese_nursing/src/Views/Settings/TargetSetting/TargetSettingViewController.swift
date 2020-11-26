@@ -244,7 +244,7 @@ extension TargetSettingViewController {
 
 extension TargetSettingViewController {
 
-    /// 円形進捗バーの表示設定 (アニメーションはつけない)
+    /// 円形進捗バーの表示設定 
     private func setupPieChartView(pieChartView: PieChartView, type: TargetTypeEnum) {
         // グラフに表示するデータ
         let dataEntries = [
