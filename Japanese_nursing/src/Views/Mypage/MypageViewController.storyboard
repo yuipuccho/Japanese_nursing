@@ -152,9 +152,19 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYt-bT-66U">
+                                        <rect key="frame" x="370" y="10.5" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="1cg-W9-Kin"/>
+                                            <constraint firstAttribute="width" secondItem="qYt-bT-66U" secondAttribute="height" multiplier="1:1" id="Blh-XM-35d"/>
+                                        </constraints>
+                                        <state key="normal" image="seting_icon_white"/>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="GKO-Yb-xpY" firstAttribute="centerX" secondItem="bS6-Pc-b6z" secondAttribute="centerX" id="3If-aE-M9L"/>
+                                    <constraint firstAttribute="trailing" secondItem="qYt-bT-66U" secondAttribute="trailing" constant="20" id="Ah0-3g-im8"/>
+                                    <constraint firstItem="qYt-bT-66U" firstAttribute="centerY" secondItem="bS6-Pc-b6z" secondAttribute="centerY" id="IB7-pP-eMu"/>
                                     <constraint firstAttribute="height" constant="45" id="SW3-aK-cqj"/>
                                     <constraint firstItem="GKO-Yb-xpY" firstAttribute="centerY" secondItem="bS6-Pc-b6z" secondAttribute="centerY" id="aFU-iO-ImR"/>
                                 </constraints>
@@ -218,7 +228,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="barChartView" destination="igM-YB-Sul" id="Il5-qk-Sg9"/>
-                        <outlet property="settingButton" destination="GmN-f1-K0F" id="T30-07-BYq"/>
+                        <outlet property="settingButton" destination="qYt-bT-66U" id="PzO-do-r2l"/>
                         <outlet property="studyCurrentCountLabel" destination="Tnd-Il-mJw" id="LUb-md-fXP"/>
                         <outlet property="studyImageView" destination="yIT-zB-TQM" id="bYn-7X-VXt"/>
                         <outlet property="studyPieChartButton" destination="u6K-0R-o1h" id="K5P-Pw-SLs"/>
@@ -240,6 +250,7 @@
         <image name="mypage_bar_icon" width="24" height="24"/>
         <image name="mypage_study" width="58" height="58"/>
         <image name="mypage_test" width="136" height="136"/>
+        <image name="seting_icon_white" width="513" height="513"/>
         <image name="setting_icon_mini" width="24" height="24"/>
         <namedColor name="Mypage">
             <color red="1" green="0.70599997043609619" blue="0.60000002384185791" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

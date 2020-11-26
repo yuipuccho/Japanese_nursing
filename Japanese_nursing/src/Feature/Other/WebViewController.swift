@@ -46,7 +46,7 @@ class WebViewController: UIViewController {
         // プログレスバー
         progressView = UIProgressView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 10))
         progressView.progressViewStyle = .bar
-        progressView.progressTintColor = R.color.textBlue()
+        progressView.progressTintColor = R.color.textDarkGray()
         view.addSubview(progressView)
 
         subscribe()

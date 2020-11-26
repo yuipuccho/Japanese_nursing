@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6957F40151887726FC69D034 /* Pods_Japanese_nursing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B94643ECC484CCF846EA499 /* Pods_Japanese_nursing.framework */; };
-		BA00E852255DA288001C4E06 /* SetteingListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA00E851255DA288001C4E06 /* SetteingListViewController.storyboard */; };
+		BA00E852255DA288001C4E06 /* SettingListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA00E851255DA288001C4E06 /* SettingListViewController.storyboard */; };
 		BA00E855255DA29C001C4E06 /* SettingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00E854255DA29C001C4E06 /* SettingListViewController.swift */; };
 		BA00E88D255E4A4D001C4E06 /* UserNameSettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA00E88C255E4A4C001C4E06 /* UserNameSettingViewController.storyboard */; };
 		BA00E891255E4A8C001C4E06 /* UserNameSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00E890255E4A8C001C4E06 /* UserNameSettingViewController.swift */; };
@@ -56,7 +56,7 @@
 		0B94643ECC484CCF846EA499 /* Pods_Japanese_nursing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Japanese_nursing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		649DB55D88B2F4BF768BCA11 /* Pods-Japanese_nursing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Japanese_nursing.release.xcconfig"; path = "Target Support Files/Pods-Japanese_nursing/Pods-Japanese_nursing.release.xcconfig"; sourceTree = "<group>"; };
 		6BF915CCD17BCD856D68A990 /* Pods-Japanese_nursing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Japanese_nursing.debug.xcconfig"; path = "Target Support Files/Pods-Japanese_nursing/Pods-Japanese_nursing.debug.xcconfig"; sourceTree = "<group>"; };
-		BA00E851255DA288001C4E06 /* SetteingListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetteingListViewController.storyboard; sourceTree = "<group>"; };
+		BA00E851255DA288001C4E06 /* SettingListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingListViewController.storyboard; sourceTree = "<group>"; };
 		BA00E854255DA29C001C4E06 /* SettingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingListViewController.swift; sourceTree = "<group>"; };
 		BA00E88C255E4A4C001C4E06 /* UserNameSettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserNameSettingViewController.storyboard; sourceTree = "<group>"; };
 		BA00E890255E4A8C001C4E06 /* UserNameSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameSettingViewController.swift; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 			children = (
 				BA462909256576A600D5AE8A /* TargetSetting */,
 				BA00E88F255E4A63001C4E06 /* UserNameSetting */,
-				BA00E851255DA288001C4E06 /* SetteingListViewController.storyboard */,
+				BA00E851255DA288001C4E06 /* SettingListViewController.storyboard */,
 				BA00E854255DA29C001C4E06 /* SettingListViewController.swift */,
 			);
 			path = Settings;
@@ -453,7 +453,7 @@
 				BA5EAD4C24D453520008E2D0 /* GoogleService-Info.plist in Resources */,
 				BA46290025640DE200D5AE8A /* OverlayView.xib in Resources */,
 				BA582A3924E170670089DA0B /* LearningUnit.storyboard in Resources */,
-				BA00E852255DA288001C4E06 /* SetteingListViewController.storyboard in Resources */,
+				BA00E852255DA288001C4E06 /* SettingListViewController.storyboard in Resources */,
 				BAC5904F249EECCF007D247B /* NotoSansCJKjpSub-Thin.otf in Resources */,
 				BAC5904E249EECCF007D247B /* NotoSansCJKjpSub-Bold.otf in Resources */,
 				BA00E88D255E4A4D001C4E06 /* UserNameSettingViewController.storyboard in Resources */,

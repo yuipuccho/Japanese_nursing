@@ -89,7 +89,7 @@ class SettingListViewController: UIViewController {
 extension SettingListViewController {
 
     static func makeInstance() -> UIViewController {
-        guard let vc = R.storyboard.setteingListViewController.settingListViewController() else {
+        guard let vc = R.storyboard.settingListViewController.settingListViewController() else {
             assertionFailure("Can't make instance 'SettingListViewController'.")
             return UIViewController()
         }
