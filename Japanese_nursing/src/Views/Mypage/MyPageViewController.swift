@@ -38,7 +38,7 @@ class MyPageViewController: UIViewController {
     /// テスト円形進捗バーボタン
     @IBOutlet private weak var testPieChartButton: UIButton!
     /// 設定ボタン
-    @IBOutlet private weak var settingButton: UIBarButtonItem!
+    @IBOutlet private weak var settingButton: UIButton!
 
     // MARK: - Properties
 

@@ -17,42 +17,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UWr-58-raT">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="document_header" translatesAutoresizingMaskIntoConstraints="NO" id="irv-YG-VdU">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="127"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="irv-YG-VdU" secondAttribute="height" multiplier="375:115" id="fEF-fn-2tC"/>
-                                        </constraints>
-                                    </imageView>
-                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rss-H9-c8s">
-                                        <rect key="frame" x="0.0" y="127" width="414" height="691"/>
-                                        <wkWebViewConfiguration key="configuration">
-                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                            <wkPreferences key="preferences"/>
-                                        </wkWebViewConfiguration>
-                                    </wkWebView>
-                                </subviews>
-                            </stackView>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rss-H9-c8s">
+                                <rect key="frame" x="0.0" y="139" width="414" height="723"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="document_header" translatesAutoresizingMaskIntoConstraints="NO" id="irv-YG-VdU">
+                                <rect key="frame" x="0.0" y="44" width="414" height="127"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="irv-YG-VdU" secondAttribute="height" multiplier="375:115" id="fEF-fn-2tC"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcv-PL-ekf">
                                 <rect key="frame" x="177" y="794" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gcv-PL-ekf" secondAttribute="height" multiplier="1:1" id="FA7-5V-RVs"/>
                                     <constraint firstAttribute="width" constant="60" id="qDS-hq-ZoS"/>
                                 </constraints>
-                                <state key="normal" image="back_button_icon"/>
+                                <state key="normal" image="back_button"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PFH-Zz-705"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="UWr-58-raT" firstAttribute="top" secondItem="PFH-Zz-705" secondAttribute="top" id="7pR-Dx-9dO"/>
-                            <constraint firstItem="UWr-58-raT" firstAttribute="leading" secondItem="PFH-Zz-705" secondAttribute="leading" id="Yhf-gH-ofI"/>
-                            <constraint firstItem="UWr-58-raT" firstAttribute="trailing" secondItem="PFH-Zz-705" secondAttribute="trailing" id="ao2-xZ-7Gp"/>
+                            <constraint firstItem="irv-YG-VdU" firstAttribute="trailing" secondItem="PFH-Zz-705" secondAttribute="trailing" id="5X6-5i-faf"/>
+                            <constraint firstItem="irv-YG-VdU" firstAttribute="top" secondItem="PFH-Zz-705" secondAttribute="top" id="AHd-FQ-qyP"/>
+                            <constraint firstItem="rss-H9-c8s" firstAttribute="top" secondItem="irv-YG-VdU" secondAttribute="bottom" constant="-32" id="L93-DU-gWb"/>
+                            <constraint firstItem="rss-H9-c8s" firstAttribute="trailing" secondItem="PFH-Zz-705" secondAttribute="trailing" id="Rkh-P4-DGm"/>
+                            <constraint firstItem="PFH-Zz-705" firstAttribute="bottom" secondItem="rss-H9-c8s" secondAttribute="bottom" id="V7P-pB-5ae"/>
                             <constraint firstItem="PFH-Zz-705" firstAttribute="bottom" secondItem="gcv-PL-ekf" secondAttribute="bottom" constant="8" id="cqW-X9-Sw4"/>
                             <constraint firstItem="gcv-PL-ekf" firstAttribute="centerX" secondItem="gu2-sf-WFu" secondAttribute="centerX" id="ljM-ex-Kgr"/>
-                            <constraint firstItem="UWr-58-raT" firstAttribute="bottom" secondItem="PFH-Zz-705" secondAttribute="bottom" id="vqP-n4-7px"/>
+                            <constraint firstItem="irv-YG-VdU" firstAttribute="leading" secondItem="PFH-Zz-705" secondAttribute="leading" id="qj1-5D-Rcs"/>
+                            <constraint firstItem="rss-H9-c8s" firstAttribute="leading" secondItem="PFH-Zz-705" secondAttribute="leading" id="xo3-Uy-mpe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="agU-BZ-oxP">
@@ -66,12 +64,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u5z-eB-eE2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="25" y="109"/>
+            <point key="canvasLocation" x="24.637681159420293" y="108.48214285714285"/>
         </scene>
     </scenes>
     <color key="tintColor" name="TextBlue"/>
     <resources>
-        <image name="back_button_icon" width="88" height="88"/>
+        <image name="back_button" width="80" height="80"/>
         <image name="document_header" width="375" height="115"/>
         <namedColor name="TextBlue">
             <color red="0.050999999046325684" green="0.14100000262260437" blue="0.50199997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
