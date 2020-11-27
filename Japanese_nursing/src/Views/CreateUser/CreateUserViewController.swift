@@ -77,8 +77,11 @@ class CreateUserViewController: UIViewController {
                     HUD.flash(.label("登録しました！"), delay: 1.0)
                     // TODO: 遷移処理を追加
                 },
+
                 onError: { [weak self] in
+
                     HUD.hide()
+
                     // エラーアラートを表示
                     let appearance = SCLAlertView.SCLAppearance(
                         kTitleFont: R.font.notoSansCJKjpSubBold(size: 16)!,
@@ -99,7 +102,7 @@ class CreateUserViewController: UIViewController {
                                         circleIconImage: nil,
                                         animationStyle: .bottomToTop)
                 }
-            )
+            ).disposed(by: disposeBag)
     }
 
 }
