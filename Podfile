@@ -43,4 +43,6 @@ target 'Japanese_nursing' do
 
   pod 'NVActivityIndicatorView'
 
+  pod 'ObjectMapper'
+
 end

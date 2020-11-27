@@ -48,6 +48,11 @@
 		BA66D67D24A6ECF000BE7273 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA66D67C24A6ECF000BE7273 /* TabBarController.swift */; };
 		BA66D67F24A6EE6C00BE7273 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA66D67E24A6EE6C00BE7273 /* Tabbar.storyboard */; };
 		BA66D68124A6EFFD00BE7273 /* MypageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA66D68024A6EFFD00BE7273 /* MypageViewController.storyboard */; };
+		BA7615C32570AB1600A2CD6E /* Error+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7615C22570AB1600A2CD6E /* Error+Extended.swift */; };
+		BA7615C82570AC1600A2CD6E /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7615C72570AC1600A2CD6E /* APIError.swift */; };
+		BA7615CD2570AD3400A2CD6E /* SimpleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7615CC2570AD3400A2CD6E /* SimpleResponse.swift */; };
+		BA76161C2570AE7100A2CD6E /* JsonMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA76161B2570AE7100A2CD6E /* JsonMappable.swift */; };
+		BA7616202570AEBD00A2CD6E /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA76161F2570AEBC00A2CD6E /* Typealias.swift */; };
 		BA85A3FE24AB7F51003E6E85 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85A3FD24AB7F51003E6E85 /* R.generated.swift */; };
 		BAC4F7FD24A6E4C5009ACEF3 /* UnitList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC4F7FC24A6E4C5009ACEF3 /* UnitList.storyboard */; };
 		BAC5904C249EECCF007D247B /* NotoSansCJKjpSub-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAC59045249EECCF007D247B /* NotoSansCJKjpSub-Black.otf */; };
@@ -106,6 +111,11 @@
 		BA66D67C24A6ECF000BE7273 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		BA66D67E24A6EE6C00BE7273 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
 		BA66D68024A6EFFD00BE7273 /* MypageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MypageViewController.storyboard; sourceTree = "<group>"; };
+		BA7615C22570AB1600A2CD6E /* Error+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Extended.swift"; sourceTree = "<group>"; };
+		BA7615C72570AC1600A2CD6E /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		BA7615CC2570AD3400A2CD6E /* SimpleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleResponse.swift; sourceTree = "<group>"; };
+		BA76161B2570AE7100A2CD6E /* JsonMappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonMappable.swift; sourceTree = "<group>"; };
+		BA76161F2570AEBC00A2CD6E /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		BA85A3FD24AB7F51003E6E85 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		BAA3D89424C47F5300157FF2 /* .Tabman.version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .Tabman.version; sourceTree = "<group>"; };
 		BAA3D89824C47F5300157FF2 /* Tabman.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = Tabman.framework.dSYM; sourceTree = "<group>"; };
@@ -291,6 +301,7 @@
 				BA4628C72560ECBB00D5AE8A /* BaseTextField.swift */,
 				BA4628C42560EC0200D5AE8A /* UITextField+IBInspectable.swift */,
 				BA2A5DF3255166600085A3EF /* UIViewController+Extended.swift */,
+				BA7615C22570AB1600A2CD6E /* Error+Extended.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -382,6 +393,31 @@
 			path = TabViews;
 			sourceTree = "<group>";
 		};
+		BA7615C52570ABD900A2CD6E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BA7615C72570AC1600A2CD6E /* APIError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		BA7615CB2570AD1A00A2CD6E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BA7615CC2570AD3400A2CD6E /* SimpleResponse.swift */,
+				BA76161B2570AE7100A2CD6E /* JsonMappable.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BA76161E2570AE9E00A2CD6E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BA76161F2570AEBC00A2CD6E /* Typealias.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		BAA3D89324C47F5300157FF2 /* Build */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,8 +446,11 @@
 				BA27BD46255FA39D002C46AB /* API */,
 				BA2A5DF22551663E0085A3EF /* Extensions */,
 				BA4628BF2560E8BB00D5AE8A /* InheritedView */,
+				BA7615CB2570AD1A00A2CD6E /* Models */,
+				BA7615C52570ABD900A2CD6E /* Network */,
 				BA02F960256A2C6800D93643 /* ViewModels */,
 				BAC4F7EE24A64211009ACEF3 /* Views */,
+				BA76161E2570AE9E00A2CD6E /* Utils */,
 				BA66D67A24A6EC9C00BE7273 /* Feature */,
 				BA66D67824A6E91500BE7273 /* AppBootstrap.swift */,
 				BA1E5B2E2487AC210055A5F4 /* AppDelegate.swift */,
@@ -657,6 +696,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA66D67924A6E91500BE7273 /* AppBootstrap.swift in Sources */,
+				BA7615C32570AB1600A2CD6E /* Error+Extended.swift in Sources */,
 				BA02F95E256A213900D93643 /* CreateUserEntity.swift in Sources */,
 				BA27BDC2255FB06B002C46AB /* Constants.swift in Sources */,
 				BA27BD4B255FAA61002C46AB /* JapaneseNursingAPI.swift in Sources */,
@@ -668,12 +708,15 @@
 				BA4628AD2560DE4600D5AE8A /* CreateUser.swift in Sources */,
 				BA02F963256A2C9D00D93643 /* CreateUserDomainModel.swift in Sources */,
 				BA4628C52560EC0200D5AE8A /* UITextField+IBInspectable.swift in Sources */,
+				BA7615C82570AC1600A2CD6E /* APIError.swift in Sources */,
 				BA27BDCA255FB29E002C46AB /* APIEvent.swift in Sources */,
+				BA7615CD2570AD3400A2CD6E /* SimpleResponse.swift in Sources */,
 				BA2A5DE9255139DB0085A3EF /* LearningUnitViewController.swift in Sources */,
 				BA133ACA24C04D850047E265 /* CustomTabBar.swift in Sources */,
 				BA06D2012557AB26000216CC /* TestViewController.swift in Sources */,
 				BA2A5DF4255166600085A3EF /* UIViewController+Extended.swift in Sources */,
 				BA02F968256A2E7A00D93643 /* CreateUserViewModel.swift in Sources */,
+				BA76161C2570AE7100A2CD6E /* JsonMappable.swift in Sources */,
 				BAE31B7A2555A87900A3FC6D /* Array+Extended.swift in Sources */,
 				BA1E5B2F2487AC210055A5F4 /* AppDelegate.swift in Sources */,
 				BA2DF386255859E400064DA8 /* MyPageViewController.swift in Sources */,
@@ -686,6 +729,7 @@
 				BA85A3FE24AB7F51003E6E85 /* R.generated.swift in Sources */,
 				BA27BDC6255FB1D9002C46AB /* Session+RxSwift.swift in Sources */,
 				BA40295D255436B800421276 /* TestSettingsViewController.swift in Sources */,
+				BA7616202570AEBD00A2CD6E /* Typealias.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

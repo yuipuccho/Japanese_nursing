@@ -25,8 +25,6 @@ class CreateUserViewController: UIViewController {
     /// スタートButton
     @IBOutlet weak var startButton: UIButton!
 
-    //@IBOutlet weak var activityIndicatorView: NVActivityIndicatorView!
-
     // MARK: - Properties
 
     private var disposeBag = DisposeBag()
@@ -50,13 +48,7 @@ class CreateUserViewController: UIViewController {
         /// スタートButton
         startButton.rx.tap.subscribe(onNext: { [weak self] in
             if let text = self?.nameUnderLineTextField.text, !text.isEmpty, text.count <= 12 {
-                HUD.show(.progress)
-                // TODO: 遷移処理を追加
-                self?.viewModel.fetch(isAnonymous: true, userName: text)
-                    .subscribe(onNext: { domain in
-                        print("popo")
-                    })
-
+                self?.fetch(userName: text)
             } else if let text = self?.nameUnderLineTextField.text, text.isEmpty {
                 self?.nameAlertLabel.text = "ユーザー名を入力してください"
             } else {
@@ -73,6 +65,40 @@ class CreateUserViewController: UIViewController {
         } else {
             startButton.backgroundColor = R.color.weakText()
         }
+    }
+
+    private func fetch(isAnonymous: Bool = true, userName: String) {
+        HUD.show(.progress)
+        // TODO: 遷移処理を追加
+        viewModel.fetch(isAnonymous: isAnonymous, userName: userName)
+            .subscribe(
+                onNext: { domain in
+                    
+                    print("popo")
+                },
+                onError: { [weak self] in
+                    HUD.hide()
+                    // エラーアラートを表示
+                    let appearance = SCLAlertView.SCLAppearance(
+                        kTitleFont: R.font.notoSansCJKjpSubBold(size: 16)!,
+                        kTextFont: R.font.notoSansCJKjpSubMedium(size: 12)!
+                    )
+                    let alertView = SCLAlertView(appearance: appearance)
+                    alertView.addButton("リトライ") { [weak self] in
+                        self?.fetch(isAnonymous: isAnonymous, userName: userName)
+                    }
+
+                    alertView.showTitle("Error",
+                                        subTitle: $0.descriptionOfType,
+                                        timeout: nil,
+                                        completeText: "閉じる",
+                                        style: .error,
+                                        colorStyle: 0x07BAFE,
+                                        colorTextButton: nil,
+                                        circleIconImage: nil,
+                                        animationStyle: .bottomToTop)
+                }
+            )
     }
 
 }

@@ -16,9 +16,6 @@ public struct APIEvent {
 
     /// イベント
     public enum Event: Int {
-        /// ポイント不足時またはいいね不足時のエラーコード(error_code=8)
-        /// ポイントまたはいいね不足時のエラーコード(error_code=8)
-        case lackOfPointsOrLikes = 8
         /// 正常
         case normal = 200
         /// メンテナンス中

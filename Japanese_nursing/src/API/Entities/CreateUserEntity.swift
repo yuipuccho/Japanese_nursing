@@ -35,5 +35,3 @@ public struct CreateUserBodyEntity: Codable {
     public let role_enum: Role?
 
 }
-
-
