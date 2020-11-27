@@ -19,6 +19,14 @@ class CreateUserViewModel {
 
         return PostCreateUserModel().postCreateUser(isAnonymous: isAnonymous, userName: userName)
             .map { CreateUserDomainModel(entity: $0.body) }
+            .do {
+                // UserDefaultsに保存する
+                ApplicationConfigData.userID = $0.id
+                ApplicationConfigData.authToken = $0.authToken
+                ApplicationConfigData.role = $0.role
+                ApplicationConfigData.userName = $0.userName
+                ApplicationConfigData.email = $0.email
+            }
     }
     
 }

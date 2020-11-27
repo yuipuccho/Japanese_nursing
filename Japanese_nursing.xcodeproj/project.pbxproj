@@ -53,6 +53,7 @@
 		BA7615CD2570AD3400A2CD6E /* SimpleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7615CC2570AD3400A2CD6E /* SimpleResponse.swift */; };
 		BA76161C2570AE7100A2CD6E /* JsonMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA76161B2570AE7100A2CD6E /* JsonMappable.swift */; };
 		BA7616202570AEBD00A2CD6E /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA76161F2570AEBC00A2CD6E /* Typealias.swift */; };
+		BA7616232570B5A900A2CD6E /* ApplicationConfigData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7616222570B5A900A2CD6E /* ApplicationConfigData.swift */; };
 		BA85A3FE24AB7F51003E6E85 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85A3FD24AB7F51003E6E85 /* R.generated.swift */; };
 		BAC4F7FD24A6E4C5009ACEF3 /* UnitList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC4F7FC24A6E4C5009ACEF3 /* UnitList.storyboard */; };
 		BAC5904C249EECCF007D247B /* NotoSansCJKjpSub-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAC59045249EECCF007D247B /* NotoSansCJKjpSub-Black.otf */; };
@@ -116,6 +117,7 @@
 		BA7615CC2570AD3400A2CD6E /* SimpleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleResponse.swift; sourceTree = "<group>"; };
 		BA76161B2570AE7100A2CD6E /* JsonMappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonMappable.swift; sourceTree = "<group>"; };
 		BA76161F2570AEBC00A2CD6E /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
+		BA7616222570B5A900A2CD6E /* ApplicationConfigData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationConfigData.swift; sourceTree = "<group>"; };
 		BA85A3FD24AB7F51003E6E85 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		BAA3D89424C47F5300157FF2 /* .Tabman.version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .Tabman.version; sourceTree = "<group>"; };
 		BAA3D89824C47F5300157FF2 /* Tabman.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = Tabman.framework.dSYM; sourceTree = "<group>"; };
@@ -406,6 +408,7 @@
 			children = (
 				BA7615CC2570AD3400A2CD6E /* SimpleResponse.swift */,
 				BA76161B2570AE7100A2CD6E /* JsonMappable.swift */,
+				BA7616222570B5A900A2CD6E /* ApplicationConfigData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -697,6 +700,7 @@
 			files = (
 				BA66D67924A6E91500BE7273 /* AppBootstrap.swift in Sources */,
 				BA7615C32570AB1600A2CD6E /* Error+Extended.swift in Sources */,
+				BA7616232570B5A900A2CD6E /* ApplicationConfigData.swift in Sources */,
 				BA02F95E256A213900D93643 /* CreateUserEntity.swift in Sources */,
 				BA27BDC2255FB06B002C46AB /* Constants.swift in Sources */,
 				BA27BD4B255FAA61002C46AB /* JapaneseNursingAPI.swift in Sources */,

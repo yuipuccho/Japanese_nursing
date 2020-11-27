@@ -58,6 +58,7 @@ class CreateUserViewController: UIViewController {
         }).disposed(by: disposeBag)
     }
 
+    /// バリデーション処理
     private func validate() {
         if let text = nameUnderLineTextField.text, !text.isEmpty, text.count <= 12 {
             startButton.backgroundColor = R.color.mainBlue()
@@ -69,12 +70,12 @@ class CreateUserViewController: UIViewController {
 
     private func fetch(isAnonymous: Bool = true, userName: String) {
         HUD.show(.progress)
-        // TODO: 遷移処理を追加
+
         viewModel.fetch(isAnonymous: isAnonymous, userName: userName)
             .subscribe(
                 onNext: { domain in
-                    
-                    print("popo")
+                    HUD.flash(.label("登録しました！"), delay: 1.0)
+                    // TODO: 遷移処理を追加
                 },
                 onError: { [weak self] in
                     HUD.hide()

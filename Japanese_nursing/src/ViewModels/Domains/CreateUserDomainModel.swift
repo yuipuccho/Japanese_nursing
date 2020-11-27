@@ -14,13 +14,13 @@ import Foundation
 struct CreateUserDomainModel {
 
     /// ユーザID
-    var id: Int?
-    var email: String?
-    var createdAt: Date?
-    var updatedAt: Date?
-    var authToken: String?
-    var userName: String?
-    var role: String?
+    var id: Int
+    var email: String
+    var createdAt: Date
+    var updatedAt: Date
+    var authToken: String
+    var userName: String
+    var role: String
     var roleEnum: CreateUserBodyEntity.Role?
 
     init(entity: CreateUserBodyEntity) {
