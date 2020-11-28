@@ -48,6 +48,27 @@
 		BAC59050249EECCF007D247B /* NotoSansCJKjpSub-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAC59049249EECCF007D247B /* NotoSansCJKjpSub-Medium.otf */; };
 		BAC59051249EECCF007D247B /* NotoSansCJKjpSub-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAC5904A249EECCF007D247B /* NotoSansCJKjpSub-Light.otf */; };
 		BAC59052249EECCF007D247B /* NotoSansCJKjpSub-DemiLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAC5904B249EECCF007D247B /* NotoSansCJKjpSub-DemiLight.otf */; };
+		BAD1CFE92571F67200F9A74A /* CreateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1CFE82571F67200F9A74A /* CreateUser.swift */; };
+		BAD1CFED2571F6A500F9A74A /* JapaneseNursingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1CFEC2571F6A500F9A74A /* JapaneseNursingAPI.swift */; };
+		BAD1CFF02571F6DE00F9A74A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1CFEF2571F6DE00F9A74A /* Constants.swift */; };
+		BAD1CFF42571F72000F9A74A /* CreateUserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1CFF32571F72000F9A74A /* CreateUserEntity.swift */; };
+		BAD1CFF82571F74900F9A74A /* APIEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1CFF72571F74900F9A74A /* APIEvent.swift */; };
+		BAD1CFFB2571F77300F9A74A /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1CFFA2571F77300F9A74A /* ResponseError.swift */; };
+		BAD1CFFF2571F7F500F9A74A /* Session+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1CFFE2571F7F500F9A74A /* Session+RxSwift.swift */; };
+		BAD1D0032571F83F00F9A74A /* CreateUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1D0022571F83F00F9A74A /* CreateUserModel.swift */; };
+		BAD1D0062571F87E00F9A74A /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1D0052571F87E00F9A74A /* BaseTextField.swift */; };
+		BAD1D00A2571F8AF00F9A74A /* Error+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1D0092571F8AF00F9A74A /* Error+Extended.swift */; };
+		BAD1D00D2571F8E400F9A74A /* UITextField+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1D00C2571F8E400F9A74A /* UITextField+IBInspectable.swift */; };
+		BAD1D0112571F92600F9A74A /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1D0102571F92600F9A74A /* UnderlineTextField.swift */; };
+		BAD1D0152571F96D00F9A74A /* ApplicationConfigData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1D0142571F96D00F9A74A /* ApplicationConfigData.swift */; };
+		BAD1D0182571F98D00F9A74A /* JsonMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1D0172571F98D00F9A74A /* JsonMappable.swift */; };
+		BAD1D01B2571F9AE00F9A74A /* SimpleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1D01A2571F9AE00F9A74A /* SimpleResponse.swift */; };
+		BAD1D01F2571F9D300F9A74A /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1D01E2571F9D300F9A74A /* APIError.swift */; };
+		BAD1D0242571F9FE00F9A74A /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1D0232571F9FE00F9A74A /* Typealias.swift */; };
+		BAD1D0282571FA2B00F9A74A /* CreateUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1D0272571FA2B00F9A74A /* CreateUserViewModel.swift */; };
+		BAD1D02C2571FA5400F9A74A /* CreateUserDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1D02B2571FA5400F9A74A /* CreateUserDomainModel.swift */; };
+		BAD1D0302571FA9000F9A74A /* CreateUserViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAD1D02F2571FA9000F9A74A /* CreateUserViewController.storyboard */; };
+		BAD1D0332571FAA300F9A74A /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1D0322571FAA300F9A74A /* CreateUserViewController.swift */; };
 		BADB237F256B523300BF5E2D /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADB237E256B523300BF5E2D /* UIView+IBInspectable.swift */; };
 		BAE31B7A2555A87900A3FC6D /* Array+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE31B792555A87800A3FC6D /* Array+Extended.swift */; };
 /* End PBXBuildFile section */
@@ -104,6 +125,27 @@
 		BAC59049249EECCF007D247B /* NotoSansCJKjpSub-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKjpSub-Medium.otf"; sourceTree = "<group>"; };
 		BAC5904A249EECCF007D247B /* NotoSansCJKjpSub-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKjpSub-Light.otf"; sourceTree = "<group>"; };
 		BAC5904B249EECCF007D247B /* NotoSansCJKjpSub-DemiLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKjpSub-DemiLight.otf"; sourceTree = "<group>"; };
+		BAD1CFE82571F67200F9A74A /* CreateUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUser.swift; sourceTree = "<group>"; };
+		BAD1CFEC2571F6A500F9A74A /* JapaneseNursingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapaneseNursingAPI.swift; sourceTree = "<group>"; };
+		BAD1CFEF2571F6DE00F9A74A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BAD1CFF32571F72000F9A74A /* CreateUserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserEntity.swift; sourceTree = "<group>"; };
+		BAD1CFF72571F74900F9A74A /* APIEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEvent.swift; sourceTree = "<group>"; };
+		BAD1CFFA2571F77300F9A74A /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
+		BAD1CFFE2571F7F500F9A74A /* Session+RxSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Session+RxSwift.swift"; sourceTree = "<group>"; };
+		BAD1D0022571F83F00F9A74A /* CreateUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserModel.swift; sourceTree = "<group>"; };
+		BAD1D0052571F87E00F9A74A /* BaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
+		BAD1D0092571F8AF00F9A74A /* Error+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Extended.swift"; sourceTree = "<group>"; };
+		BAD1D00C2571F8E400F9A74A /* UITextField+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+IBInspectable.swift"; sourceTree = "<group>"; };
+		BAD1D0102571F92600F9A74A /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
+		BAD1D0142571F96D00F9A74A /* ApplicationConfigData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationConfigData.swift; sourceTree = "<group>"; };
+		BAD1D0172571F98D00F9A74A /* JsonMappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonMappable.swift; sourceTree = "<group>"; };
+		BAD1D01A2571F9AE00F9A74A /* SimpleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleResponse.swift; sourceTree = "<group>"; };
+		BAD1D01E2571F9D300F9A74A /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		BAD1D0232571F9FE00F9A74A /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
+		BAD1D0272571FA2B00F9A74A /* CreateUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewModel.swift; sourceTree = "<group>"; };
+		BAD1D02B2571FA5400F9A74A /* CreateUserDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserDomainModel.swift; sourceTree = "<group>"; };
+		BAD1D02F2571FA9000F9A74A /* CreateUserViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateUserViewController.storyboard; sourceTree = "<group>"; };
+		BAD1D0322571FAA300F9A74A /* CreateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
 		BADB237E256B523300BF5E2D /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
 		BAE31B792555A87800A3FC6D /* Array+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extended.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -209,7 +251,10 @@
 			isa = PBXGroup;
 			children = (
 				BAE31B792555A87800A3FC6D /* Array+Extended.swift */,
+				BAD1D0052571F87E00F9A74A /* BaseTextField.swift */,
+				BAD1D0092571F8AF00F9A74A /* Error+Extended.swift */,
 				BADB237E256B523300BF5E2D /* UIView+IBInspectable.swift */,
+				BAD1D00C2571F8E400F9A74A /* UITextField+IBInspectable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -307,7 +352,13 @@
 		BAC4F7ED24A641FF009ACEF3 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				BAD1CFE52571F64300F9A74A /* API */,
 				BA2A5DF22551663E0085A3EF /* Extensions */,
+				BAD1D00F2571F8FA00F9A74A /* InheritedView */,
+				BAD1D0132571F94800F9A74A /* Models */,
+				BAD1D01D2571F9BF00F9A74A /* Network */,
+				BAD1D0212571F9E400F9A74A /* Utils */,
+				BAD1D0262571FA1400F9A74A /* ViewModels */,
 				BAC4F7EE24A64211009ACEF3 /* Views */,
 				BA66D67A24A6EC9C00BE7273 /* Feature */,
 				BA66D67824A6E91500BE7273 /* AppBootstrap.swift */,
@@ -321,6 +372,7 @@
 		BAC4F7EE24A64211009ACEF3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BAD1D02E2571FA7F00F9A74A /* CreateUser */,
 				BA66D67524A6E70A00BE7273 /* Mypage */,
 				BA00E850255DA1D7001C4E06 /* Settings */,
 				BAC4F7F024A6421F009ACEF3 /* Study */,
@@ -360,6 +412,129 @@
 				BAC5904B249EECCF007D247B /* NotoSansCJKjpSub-DemiLight.otf */,
 			);
 			path = NotoSans;
+			sourceTree = "<group>";
+		};
+		BAD1CFE52571F64300F9A74A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1CFE62571F65400F9A74A /* Communications */,
+				BAD1CFF22571F6F800F9A74A /* Entities */,
+				BAD1CFF62571F73300F9A74A /* Errors */,
+				BAD1CFFD2571F7AC00F9A74A /* Extensions */,
+				BAD1D0012571F82600F9A74A /* Models */,
+				BAD1CFEF2571F6DE00F9A74A /* Constants.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		BAD1CFE62571F65400F9A74A /* Communications */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1CFE72571F66100F9A74A /* CreateUser */,
+				BAD1CFEC2571F6A500F9A74A /* JapaneseNursingAPI.swift */,
+			);
+			path = Communications;
+			sourceTree = "<group>";
+		};
+		BAD1CFE72571F66100F9A74A /* CreateUser */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1CFE82571F67200F9A74A /* CreateUser.swift */,
+			);
+			path = CreateUser;
+			sourceTree = "<group>";
+		};
+		BAD1CFF22571F6F800F9A74A /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1CFF32571F72000F9A74A /* CreateUserEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		BAD1CFF62571F73300F9A74A /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1CFF72571F74900F9A74A /* APIEvent.swift */,
+				BAD1CFFA2571F77300F9A74A /* ResponseError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		BAD1CFFD2571F7AC00F9A74A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1CFFE2571F7F500F9A74A /* Session+RxSwift.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BAD1D0012571F82600F9A74A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1D0022571F83F00F9A74A /* CreateUserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BAD1D00F2571F8FA00F9A74A /* InheritedView */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1D0102571F92600F9A74A /* UnderlineTextField.swift */,
+			);
+			path = InheritedView;
+			sourceTree = "<group>";
+		};
+		BAD1D0132571F94800F9A74A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1D0142571F96D00F9A74A /* ApplicationConfigData.swift */,
+				BAD1D0172571F98D00F9A74A /* JsonMappable.swift */,
+				BAD1D01A2571F9AE00F9A74A /* SimpleResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BAD1D01D2571F9BF00F9A74A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1D01E2571F9D300F9A74A /* APIError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		BAD1D0212571F9E400F9A74A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1D0232571F9FE00F9A74A /* Typealias.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BAD1D0262571FA1400F9A74A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1D02A2571FA4000F9A74A /* Domains */,
+				BAD1D0272571FA2B00F9A74A /* CreateUserViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		BAD1D02A2571FA4000F9A74A /* Domains */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1D02B2571FA5400F9A74A /* CreateUserDomainModel.swift */,
+			);
+			path = Domains;
+			sourceTree = "<group>";
+		};
+		BAD1D02E2571FA7F00F9A74A /* CreateUser */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1D02F2571FA9000F9A74A /* CreateUserViewController.storyboard */,
+				BAD1D0322571FAA300F9A74A /* CreateUserViewController.swift */,
+			);
+			path = CreateUser;
 			sourceTree = "<group>";
 		};
 		C07CEA2183146A04CA3CFB85 /* Pods */ = {
@@ -462,6 +637,7 @@
 				BA133AC624BB28B80047E265 /* TestSettings.storyboard in Resources */,
 				BAC5904D249EECCF007D247B /* NotoSansCJKjpSub-Regular.otf in Resources */,
 				BA1E5B382487AC250055A5F4 /* Assets.xcassets in Resources */,
+				BAD1D0302571FA9000F9A74A /* CreateUserViewController.storyboard in Resources */,
 				BAC59051249EECCF007D247B /* NotoSansCJKjpSub-Light.otf in Resources */,
 				BAC59050249EECCF007D247B /* NotoSansCJKjpSub-Medium.otf in Resources */,
 				BAC59052249EECCF007D247B /* NotoSansCJKjpSub-DemiLight.otf in Resources */,
@@ -556,24 +732,44 @@
 			files = (
 				BA66D67924A6E91500BE7273 /* AppBootstrap.swift in Sources */,
 				BAB9C2762568057E004D653F /* WebViewController.swift in Sources */,
+				BAD1D0112571F92600F9A74A /* UnderlineTextField.swift in Sources */,
 				BADB237F256B523300BF5E2D /* UIView+IBInspectable.swift in Sources */,
+				BAD1D02C2571FA5400F9A74A /* CreateUserDomainModel.swift in Sources */,
 				BA02F941256A19ED00D93643 /* TabBar.swift in Sources */,
 				BA2A5DE5255135A50085A3EF /* UnitListCell.swift in Sources */,
 				BA5EACE324D2AF8F0008E2D0 /* UnitListViewController.swift in Sources */,
+				BAD1CFF02571F6DE00F9A74A /* Constants.swift in Sources */,
+				BAD1D00A2571F8AF00F9A74A /* Error+Extended.swift in Sources */,
+				BAD1CFFB2571F77300F9A74A /* ResponseError.swift in Sources */,
+				BAD1D0332571FAA300F9A74A /* CreateUserViewController.swift in Sources */,
 				BA00E891255E4A8C001C4E06 /* UserNameSettingViewController.swift in Sources */,
+				BAD1D01B2571F9AE00F9A74A /* SimpleResponse.swift in Sources */,
+				BAD1D0152571F96D00F9A74A /* ApplicationConfigData.swift in Sources */,
 				BA46290E2565782400D5AE8A /* TargetSettingViewController.swift in Sources */,
+				BAD1D0242571F9FE00F9A74A /* Typealias.swift in Sources */,
 				BA2A5DE9255139DB0085A3EF /* LearningUnitViewController.swift in Sources */,
 				BA133ACA24C04D850047E265 /* CustomTabBar.swift in Sources */,
 				BA06D2012557AB26000216CC /* TestViewController.swift in Sources */,
+				BAD1D01F2571F9D300F9A74A /* APIError.swift in Sources */,
+				BAD1D0282571FA2B00F9A74A /* CreateUserViewModel.swift in Sources */,
 				BA46290325640E6300D5AE8A /* OverlayView.swift in Sources */,
+				BAD1CFFF2571F7F500F9A74A /* Session+RxSwift.swift in Sources */,
 				BAE31B7A2555A87900A3FC6D /* Array+Extended.swift in Sources */,
+				BAD1CFE92571F67200F9A74A /* CreateUser.swift in Sources */,
+				BAD1D0062571F87E00F9A74A /* BaseTextField.swift in Sources */,
+				BAD1D0182571F98D00F9A74A /* JsonMappable.swift in Sources */,
 				BA1E5B2F2487AC210055A5F4 /* AppDelegate.swift in Sources */,
 				BA2DF386255859E400064DA8 /* MyPageViewController.swift in Sources */,
+				BAD1CFF42571F72000F9A74A /* CreateUserEntity.swift in Sources */,
+				BAD1D00D2571F8E400F9A74A /* UITextField+IBInspectable.swift in Sources */,
 				BA00E855255DA29C001C4E06 /* SettingListViewController.swift in Sources */,
 				BA66D67D24A6ECF000BE7273 /* TabBarController.swift in Sources */,
+				BAD1CFED2571F6A500F9A74A /* JapaneseNursingAPI.swift in Sources */,
 				BA1E5B312487AC210055A5F4 /* SceneDelegate.swift in Sources */,
+				BAD1D0032571F83F00F9A74A /* CreateUserModel.swift in Sources */,
 				BA85A3FE24AB7F51003E6E85 /* R.generated.swift in Sources */,
 				BA40295D255436B800421276 /* TestSettingsViewController.swift in Sources */,
+				BAD1CFF82571F74900F9A74A /* APIEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
