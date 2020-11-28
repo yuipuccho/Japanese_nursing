@@ -21,8 +21,10 @@ class UnitListViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: true)
 
         // 仮
-        let vc = CreateUserViewController.makeInstance()
-        present(vc, animated: true)
+        if ApplicationConfigData.authToken == "" {
+            let vc = CreateUserViewController.makeInstance()
+            present(vc, animated: false)
+        }
 
     }
 

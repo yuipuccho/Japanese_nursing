@@ -37,7 +37,7 @@ class CreateUserViewController: UIViewController {
     private func subscribe() {
         /// ユーザ名入力TextField
         nameUnderLineTextField.rx.text.orEmpty.asDriver().drive(onNext: { [unowned self] _ in
-            self.nameUnderLineTextField.setUnderline(R.color.weakTextBlue()!)
+            self.nameUnderLineTextField.setUnderline(R.color.apptop()!)
             self.validate()
         }).disposed(by: self.disposeBag)
 
@@ -57,10 +57,14 @@ class CreateUserViewController: UIViewController {
     /// バリデーション処理
     private func validate() {
         if let text = nameUnderLineTextField.text, !text.isEmpty, text.count <= 12 {
-            startButton.backgroundColor = R.color.mainBlue()
+            startButton.backgroundColor = R.color.apptop()
+            startButton.borderColor = UIColor.clear
+            startButton.setTitleColor(UIColor.white, for: .normal)
             nameAlertLabel.text = ""
         } else {
-            startButton.backgroundColor = R.color.weakText()
+            startButton.backgroundColor = UIColor.clear
+            startButton.borderColor = R.color.lightGray()!
+            startButton.setTitleColor(R.color.apptop(), for: .normal)
         }
     }
 
@@ -70,8 +74,9 @@ class CreateUserViewController: UIViewController {
         viewModel.fetch(isAnonymous: isAnonymous, userName: userName)
             .subscribe(
                 onNext: { domain in
-                    HUD.flash(.label("登録しました！"), delay: 1.0)
-                    // TODO: 遷移処理を追加
+                    HUD.flash(.label("登録しました！"), delay: 1.0) { [weak self] _ in
+                        self?.dismiss(animated: true)
+                    }
                 },
 
                 onError: { [weak self] in
@@ -93,7 +98,7 @@ class CreateUserViewController: UIViewController {
                                         timeout: nil,
                                         completeText: "閉じる",
                                         style: .error,
-                                        colorStyle: 0x07BAFE,
+                                        colorStyle: 0x8EB2F5,
                                         colorTextButton: nil,
                                         circleIconImage: nil,
                                         animationStyle: .bottomToTop)
