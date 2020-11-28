@@ -514,8 +514,8 @@
 		BAD1D0262571FA1400F9A74A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				BAD1D0652571FC5500F9A74A /* CreateUser */,
 				BAD1D02A2571FA4000F9A74A /* Domains */,
-				BAD1D0272571FA2B00F9A74A /* CreateUserViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -533,6 +533,14 @@
 			children = (
 				BAD1D02F2571FA9000F9A74A /* CreateUserViewController.storyboard */,
 				BAD1D0322571FAA300F9A74A /* CreateUserViewController.swift */,
+			);
+			path = CreateUser;
+			sourceTree = "<group>";
+		};
+		BAD1D0652571FC5500F9A74A /* CreateUser */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1D0272571FA2B00F9A74A /* CreateUserViewModel.swift */,
 			);
 			path = CreateUser;
 			sourceTree = "<group>";
