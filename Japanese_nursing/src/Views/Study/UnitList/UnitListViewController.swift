@@ -20,7 +20,7 @@ class UnitListViewController: UIViewController {
 
         navigationController?.setNavigationBarHidden(true, animated: true)
 
-        // 仮
+        // ユーザ未作成の場合はユーザ作成画面に遷移
         if ApplicationConfigData.authToken == "" {
             let vc = CreateUserViewController.makeInstance()
             present(vc, animated: false)

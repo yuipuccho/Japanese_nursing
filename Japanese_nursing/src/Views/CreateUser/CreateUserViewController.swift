@@ -12,11 +12,15 @@ import RxCocoa
 import PKHUD
 import SCLAlertView
 
+/**
+ * ユーザ作成VC
+ */
 class CreateUserViewController: UIViewController {
 
     private lazy var viewModel: CreateUserViewModel = CreateUserViewModel()
 
     // MARK: - Outlets
+
     /// ユーザ名入力TextField
     @IBOutlet private weak var nameUnderLineTextField: UnderlineTextField!
     /// アラートLabel
@@ -25,15 +29,18 @@ class CreateUserViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
 
     // MARK: - Properties
+
     private var disposeBag = DisposeBag()
 
     // MARK: - LifeCycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         subscribe()
     }
 
     // MARK: - Functions
+
     private func subscribe() {
         /// ユーザ名入力TextField
         nameUnderLineTextField.rx.text.orEmpty.asDriver().drive(onNext: { [unowned self] _ in
@@ -109,6 +116,7 @@ class CreateUserViewController: UIViewController {
 }
 
 // MARK: - MakeInstance
+
 extension CreateUserViewController {
 
     static func makeInstance() -> UIViewController {

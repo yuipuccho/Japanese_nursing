@@ -66,7 +66,7 @@ public struct API {
     /// - note: 後で何かしらのガードは入れるかも
     static var scheme: String = {
         if Constants.DEBUG {
-            return "http"
+            return "https"
         } else {
             // TODO: 後で追記
             return ""
@@ -78,7 +78,7 @@ public struct API {
     /// - note: 後で何かしらのガードは入れるかも
     public static var host: String = {
         if Constants.DEBUG {
-            return "localhost:3000"
+            return "damp-dusk-43056.herokuapp.com"
         } else {
             // TODO: 後で追記
             return ""
@@ -128,12 +128,9 @@ extension JapaneseNursingRequest {
         var compo = URLComponents()
         compo.scheme = API.scheme
         compo.host = API.host
-//        if let url = compo.url {
-//            print(url)
-//            return url
-//        }
-        return URL(string: "https://damp-dusk-43056.herokuapp.com")!
-//        return URL(strin: "")
+        if let url = compo.url {
+            return url
+        }
         assertionFailure()
         return URL(string: "")!
     }
