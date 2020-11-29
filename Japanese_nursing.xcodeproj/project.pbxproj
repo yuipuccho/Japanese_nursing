@@ -36,6 +36,11 @@
 		BA5097FF2573D9ED00FB88AE /* TestStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5097FE2573D9ED00FB88AE /* TestStatusModel.swift */; };
 		BA5098052573DA9F00FB88AE /* TestStatusDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5098042573DA9F00FB88AE /* TestStatusDomainModel.swift */; };
 		BA50980A2573DB4E00FB88AE /* TestSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5098092573DB4E00FB88AE /* TestSettingsViewModel.swift */; };
+		BA50981C2574057200FB88AE /* TargetStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50981B2574057200FB88AE /* TargetStatus.swift */; };
+		BA509821257405FC00FB88AE /* TargetStatusEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA509820257405FC00FB88AE /* TargetStatusEntity.swift */; };
+		BA5098252574068B00FB88AE /* TargetStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5098242574068B00FB88AE /* TargetStatusModel.swift */; };
+		BA50982A257406EB00FB88AE /* TargetStatusDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA509829257406EB00FB88AE /* TargetStatusDomainModel.swift */; };
+		BA50982F2574079500FB88AE /* MypageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50982E2574079500FB88AE /* MypageViewModel.swift */; };
 		BA582A3924E170670089DA0B /* LearningUnit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA582A3824E170670089DA0B /* LearningUnit.storyboard */; };
 		BA5EACE324D2AF8F0008E2D0 /* UnitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5EACE224D2AF8F0008E2D0 /* UnitListViewController.swift */; };
 		BA5EAD4C24D453520008E2D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA5EAD4B24D453520008E2D0 /* GoogleService-Info.plist */; };
@@ -120,6 +125,11 @@
 		BA5097FE2573D9ED00FB88AE /* TestStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStatusModel.swift; sourceTree = "<group>"; };
 		BA5098042573DA9F00FB88AE /* TestStatusDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStatusDomainModel.swift; sourceTree = "<group>"; };
 		BA5098092573DB4E00FB88AE /* TestSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSettingsViewModel.swift; sourceTree = "<group>"; };
+		BA50981B2574057200FB88AE /* TargetStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetStatus.swift; sourceTree = "<group>"; };
+		BA509820257405FC00FB88AE /* TargetStatusEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetStatusEntity.swift; sourceTree = "<group>"; };
+		BA5098242574068B00FB88AE /* TargetStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetStatusModel.swift; sourceTree = "<group>"; };
+		BA509829257406EB00FB88AE /* TargetStatusDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetStatusDomainModel.swift; sourceTree = "<group>"; };
+		BA50982E2574079500FB88AE /* MypageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewModel.swift; sourceTree = "<group>"; };
 		BA582A3824E170670089DA0B /* LearningUnit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LearningUnit.storyboard; sourceTree = "<group>"; };
 		BA5EACE224D2AF8F0008E2D0 /* UnitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListViewController.swift; sourceTree = "<group>"; };
 		BA5EAD4B24D453520008E2D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../FetiLip-develop/fetilip/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -337,6 +347,46 @@
 			path = Test;
 			sourceTree = "<group>";
 		};
+		BA50981A2574056100FB88AE /* TargetStatus */ = {
+			isa = PBXGroup;
+			children = (
+				BA50981B2574057200FB88AE /* TargetStatus.swift */,
+			);
+			path = TargetStatus;
+			sourceTree = "<group>";
+		};
+		BA50981F257405ED00FB88AE /* TargetStatus */ = {
+			isa = PBXGroup;
+			children = (
+				BA509820257405FC00FB88AE /* TargetStatusEntity.swift */,
+			);
+			path = TargetStatus;
+			sourceTree = "<group>";
+		};
+		BA5098232574066F00FB88AE /* TargetStatus */ = {
+			isa = PBXGroup;
+			children = (
+				BA5098242574068B00FB88AE /* TargetStatusModel.swift */,
+			);
+			path = TargetStatus;
+			sourceTree = "<group>";
+		};
+		BA509828257406CD00FB88AE /* TargetStatus */ = {
+			isa = PBXGroup;
+			children = (
+				BA509829257406EB00FB88AE /* TargetStatusDomainModel.swift */,
+			);
+			path = TargetStatus;
+			sourceTree = "<group>";
+		};
+		BA50982D2574077C00FB88AE /* Mypage */ = {
+			isa = PBXGroup;
+			children = (
+				BA50982E2574079500FB88AE /* MypageViewModel.swift */,
+			);
+			path = Mypage;
+			sourceTree = "<group>";
+		};
 		BA582A3724E170190089DA0B /* LearningUnit */ = {
 			isa = PBXGroup;
 			children = (
@@ -500,6 +550,7 @@
 			isa = PBXGroup;
 			children = (
 				BAD1CFE72571F66100F9A74A /* CreateUser */,
+				BA50981A2574056100FB88AE /* TargetStatus */,
 				BA5097F42573D6D400FB88AE /* TestStatus */,
 				BAF1EABD25733AC200E19657 /* UnitMasters */,
 				BAD1CFEC2571F6A500F9A74A /* JapaneseNursingAPI.swift */,
@@ -519,6 +570,7 @@
 			isa = PBXGroup;
 			children = (
 				BAF1EAC125733BC900E19657 /* CreateUser */,
+				BA50981F257405ED00FB88AE /* TargetStatus */,
 				BA5097F82573D92600FB88AE /* TestStatus */,
 				BAF1EAC225733BD200E19657 /* UnitMasters */,
 			);
@@ -546,6 +598,7 @@
 			isa = PBXGroup;
 			children = (
 				BAF1EAC725733D1D00E19657 /* CreateUser */,
+				BA5098232574066F00FB88AE /* TargetStatus */,
 				BA5097FD2573D9DE00FB88AE /* TestStatus */,
 				BAF1EAC825733D2500E19657 /* UnitMasters */,
 			);
@@ -593,6 +646,7 @@
 			children = (
 				BAD1D0652571FC5500F9A74A /* CreateUser */,
 				BAD1D02A2571FA4000F9A74A /* Domains */,
+				BA50982D2574077C00FB88AE /* Mypage */,
 				BAF1EACD25733DFB00E19657 /* Study */,
 				BA5098082573DB3D00FB88AE /* Test */,
 			);
@@ -604,6 +658,7 @@
 			children = (
 				BAF1EAD325733E8C00E19657 /* CreateUser */,
 				BAF1EAD225733E8400E19657 /* Study */,
+				BA509828257406CD00FB88AE /* TargetStatus */,
 				BA5098032573DA8E00FB88AE /* Test */,
 			);
 			path = Domains;
@@ -886,6 +941,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA66D67924A6E91500BE7273 /* AppBootstrap.swift in Sources */,
+				BA509821257405FC00FB88AE /* TargetStatusEntity.swift in Sources */,
 				BAF1EACA25733D3F00E19657 /* UnitMastersModel.swift in Sources */,
 				BAB9C2762568057E004D653F /* WebViewController.swift in Sources */,
 				BAD1D0112571F92600F9A74A /* UnderlineTextField.swift in Sources */,
@@ -898,6 +954,7 @@
 				BAF1EAD525733EB800E19657 /* UnitListDomainModel.swift in Sources */,
 				BA5097FF2573D9ED00FB88AE /* TestStatusModel.swift in Sources */,
 				BAD1D00A2571F8AF00F9A74A /* Error+Extended.swift in Sources */,
+				BA5098252574068B00FB88AE /* TargetStatusModel.swift in Sources */,
 				BAD1CFFB2571F77300F9A74A /* ResponseError.swift in Sources */,
 				BA5097AB25739CBA00FB88AE /* UIView+AutoLayout.swift in Sources */,
 				BA5098052573DA9F00FB88AE /* TestStatusDomainModel.swift in Sources */,
@@ -906,9 +963,11 @@
 				BAD1D01B2571F9AE00F9A74A /* SimpleResponse.swift in Sources */,
 				BAD1D0152571F96D00F9A74A /* ApplicationConfigData.swift in Sources */,
 				BA46290E2565782400D5AE8A /* TargetSettingViewController.swift in Sources */,
+				BA50982F2574079500FB88AE /* MypageViewModel.swift in Sources */,
 				BAD1D0242571F9FE00F9A74A /* Typealias.swift in Sources */,
 				BA2A5DE9255139DB0085A3EF /* LearningUnitViewController.swift in Sources */,
 				BA133ACA24C04D850047E265 /* CustomTabBar.swift in Sources */,
+				BA50981C2574057200FB88AE /* TargetStatus.swift in Sources */,
 				BAF1EAD825734F8600E19657 /* UnitListSectionModel.swift in Sources */,
 				BA06D2012557AB26000216CC /* TestViewController.swift in Sources */,
 				BAF1EAC425733BEB00E19657 /* UnitMastersEntity.swift in Sources */,
@@ -917,6 +976,7 @@
 				BA46290325640E6300D5AE8A /* OverlayView.swift in Sources */,
 				BAD1CFFF2571F7F500F9A74A /* Session+RxSwift.swift in Sources */,
 				BAE31B7A2555A87900A3FC6D /* Array+Extended.swift in Sources */,
+				BA50982A257406EB00FB88AE /* TargetStatusDomainModel.swift in Sources */,
 				BA5097F62573D6ED00FB88AE /* GetTestStatus.swift in Sources */,
 				BAD1CFE92571F67200F9A74A /* CreateUser.swift in Sources */,
 				BA50980A2573DB4E00FB88AE /* TestSettingsViewModel.swift in Sources */,
