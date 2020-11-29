@@ -75,9 +75,16 @@ extension UnitListCell {
     func configure(_ item: UnitListDomainModel) {
         unitTitleLabel.text = item.vietnamese
         unitSubTitleLabel.text = item.japanese
-        wordsCountLabel.text = String(item.wordCount)
-        
+        wordsCountLabel.text = String(item.wordCount) + "words"
 
+        let percentage = item.memorizedWordCount * 100 / item.wordCount
+        checkMarkPercentageLabel.text = String(percentage) + "%"
+
+        if item.memorizedWordCount == item.wordCount {
+            completeBadge.isHidden = false
+        } else {
+            completeBadge.isHidden = true
+        }
     }
 
 }
