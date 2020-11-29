@@ -26,5 +26,6 @@ public struct UnitMastersBodyEntity: Codable {
     public let created_at: Date
     public let updated_at: Date
     public let word_count: Int
+    public let memorized_word_count: Int
 
 }

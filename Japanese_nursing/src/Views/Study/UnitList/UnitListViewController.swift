@@ -49,7 +49,7 @@ class UnitListViewController: UIViewController, UIScrollViewDelegate {
 
         self.tableView.dataSource = nil
         self.tableView.delegate = nil
-        self.tableView.rowHeight = 90
+        self.tableView.rowHeight = 98
 
         // ユーザ未作成の場合はユーザ作成画面に遷移
         if ApplicationConfigData.authToken == "" {
@@ -119,8 +119,6 @@ extension UnitListViewController {
             }
 
             cell.configure(item)
-            print(item)
-            print("あいてむ")
 
             return cell
         })

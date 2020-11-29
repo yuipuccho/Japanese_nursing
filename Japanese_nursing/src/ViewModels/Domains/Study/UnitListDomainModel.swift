@@ -19,7 +19,7 @@ struct UnitListDomainModel {
     var createdAt: Date
     var updatedAt: Date
     var wordCount: Int
-    //var totalCount: Int
+    var memorizedWordCount: Int
 
     init(entity: UnitMastersBodyEntity) {
         id = entity.id
@@ -28,6 +28,7 @@ struct UnitListDomainModel {
         createdAt = entity.created_at
         updatedAt = entity.updated_at
         wordCount = entity.word_count
+        memorizedWordCount = entity.memorized_word_count
     }
 
 }

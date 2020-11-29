@@ -16,10 +16,14 @@ class UnitListCell: UITableViewCell {
 
     /// 単元のタイトル
     @IBOutlet weak var unitTitleLabel: UILabel!
+    /// 単元のサブタイトル
+    @IBOutlet weak var unitSubTitleLabel: UILabel!
     /// 単語数
     @IBOutlet weak var wordsCountLabel: UILabel!
     /// チェックマーク率
     @IBOutlet weak var checkMarkPercentageLabel: UILabel!
+    /// バッジ
+    @IBOutlet weak var completeBadge: UIImageView!
     /// セルボタン（セルのタップだとセルが白くなる不具合がなぜか発生するため、応急処置）
     @IBOutlet weak var cellButton: UIButton!
 
@@ -35,12 +39,12 @@ class UnitListCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         subscribe()
-        //clearConfigure()
+        clearConfigure()
     }
 
     override func prepareForReuse() {
         super.prepareForReuse()
-        //clearConfigure()
+        clearConfigure()
     }
 
     // MARK: - Functions
@@ -49,6 +53,7 @@ class UnitListCell: UITableViewCell {
         unitTitleLabel.text = nil
         wordsCountLabel.text = nil
         checkMarkPercentageLabel.text = nil
+        completeBadge.isHidden = true
     }
 
     func subscribe() {
@@ -68,11 +73,10 @@ extension UnitListCell {
      *   - item: 設定に使うDomainModel
      */
     func configure(_ item: UnitListDomainModel) {
-        print(item.vietnamese)
-        print(item.japanese)
         unitTitleLabel.text = item.vietnamese
+        unitSubTitleLabel.text = item.japanese
         wordsCountLabel.text = String(item.wordCount)
-
+        
 
     }
 
