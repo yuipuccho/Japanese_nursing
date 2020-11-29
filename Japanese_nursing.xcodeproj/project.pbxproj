@@ -75,7 +75,8 @@
 		BAF1EAC425733BEB00E19657 /* UnitMastersEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1EAC325733BEB00E19657 /* UnitMastersEntity.swift */; };
 		BAF1EACA25733D3F00E19657 /* UnitMastersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1EAC925733D3F00E19657 /* UnitMastersModel.swift */; };
 		BAF1EACF25733E0E00E19657 /* UnitListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1EACE25733E0E00E19657 /* UnitListViewModel.swift */; };
-		BAF1EAD525733EB800E19657 /* UnitMastersDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1EAD425733EB800E19657 /* UnitMastersDomainModel.swift */; };
+		BAF1EAD525733EB800E19657 /* UnitListDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1EAD425733EB800E19657 /* UnitListDomainModel.swift */; };
+		BAF1EAD825734F8600E19657 /* UnitListSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1EAD725734F8600E19657 /* UnitListSectionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -157,7 +158,8 @@
 		BAF1EAC325733BEB00E19657 /* UnitMastersEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitMastersEntity.swift; sourceTree = "<group>"; };
 		BAF1EAC925733D3F00E19657 /* UnitMastersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitMastersModel.swift; sourceTree = "<group>"; };
 		BAF1EACE25733E0E00E19657 /* UnitListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListViewModel.swift; sourceTree = "<group>"; };
-		BAF1EAD425733EB800E19657 /* UnitMastersDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitMastersDomainModel.swift; sourceTree = "<group>"; };
+		BAF1EAD425733EB800E19657 /* UnitListDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListDomainModel.swift; sourceTree = "<group>"; };
+		BAF1EAD725734F8600E19657 /* UnitListSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListSectionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -611,7 +613,8 @@
 		BAF1EAD225733E8400E19657 /* Study */ = {
 			isa = PBXGroup;
 			children = (
-				BAF1EAD425733EB800E19657 /* UnitMastersDomainModel.swift */,
+				BAF1EAD425733EB800E19657 /* UnitListDomainModel.swift */,
+				BAF1EAD725734F8600E19657 /* UnitListSectionModel.swift */,
 			);
 			path = Study;
 			sourceTree = "<group>";
@@ -827,7 +830,7 @@
 				BA2A5DE5255135A50085A3EF /* UnitListCell.swift in Sources */,
 				BA5EACE324D2AF8F0008E2D0 /* UnitListViewController.swift in Sources */,
 				BAD1CFF02571F6DE00F9A74A /* Constants.swift in Sources */,
-				BAF1EAD525733EB800E19657 /* UnitMastersDomainModel.swift in Sources */,
+				BAF1EAD525733EB800E19657 /* UnitListDomainModel.swift in Sources */,
 				BAD1D00A2571F8AF00F9A74A /* Error+Extended.swift in Sources */,
 				BAD1CFFB2571F77300F9A74A /* ResponseError.swift in Sources */,
 				BAD1D0332571FAA300F9A74A /* CreateUserViewController.swift in Sources */,
@@ -838,6 +841,7 @@
 				BAD1D0242571F9FE00F9A74A /* Typealias.swift in Sources */,
 				BA2A5DE9255139DB0085A3EF /* LearningUnitViewController.swift in Sources */,
 				BA133ACA24C04D850047E265 /* CustomTabBar.swift in Sources */,
+				BAF1EAD825734F8600E19657 /* UnitListSectionModel.swift in Sources */,
 				BA06D2012557AB26000216CC /* TestViewController.swift in Sources */,
 				BAF1EAC425733BEB00E19657 /* UnitMastersEntity.swift in Sources */,
 				BAD1D01F2571F9D300F9A74A /* APIError.swift in Sources */,

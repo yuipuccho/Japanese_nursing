@@ -11,7 +11,7 @@ import Foundation
 /**
  * 単元のDomainModel
  */
-struct UnitMastersDomainModel {
+struct UnitListDomainModel {
 
     var id: Int
     var japanese: String

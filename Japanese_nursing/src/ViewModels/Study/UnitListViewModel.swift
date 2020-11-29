@@ -15,13 +15,31 @@ import RxSwift
  */
 class UnitListViewModel {
 
-    func fetch(authToken: String) -> Observable<[UnitMastersDomainModel]> {
+    // MARK: - Properties
+
+    private let loadingRelay: BehaviorRelay<Bool> = BehaviorRelay(value: false)
+
+    var loadingDriver: Driver<Bool> {
+        return loadingRelay.asDriver()
+    }
+
+    var isLoading: Bool {
+        loadingRelay.value
+    }
+
+    var units: [UnitListDomainModel] = []
+
+    // MARK: - Functions
+
+    func fetch(authToken: String) -> Observable<[UnitListDomainModel]> {
 
         return GetUnitMastersModel().getUnitMasters(authToken: authToken)
-//            .map { UnitMastersDomainModel(entity: $0.unit_masters) }
             .map { units in
-                return units.unit_masters.map(UnitMastersDomainModel.init)
+                return units.unit_masters.map(UnitListDomainModel.init)
             }
+            .do(onNext: { [weak self] in
+                self?.units.append(contentsOf: $0)
+            })
     }
 
 }
