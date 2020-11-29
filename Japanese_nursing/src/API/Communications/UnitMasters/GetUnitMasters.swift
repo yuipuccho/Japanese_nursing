@@ -17,7 +17,6 @@ public struct GetUnitMastersRequest: JapaneseNursingRequest {
     /// 認証トークン
     private var authToken: String
 
-
     /// init and set query parameters.
     public init(authToken: String) {
         self.authToken = authToken
