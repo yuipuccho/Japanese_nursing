@@ -68,6 +68,8 @@ extension UnitListCell {
      *   - item: 設定に使うDomainModel
      */
     func configure(_ item: UnitListDomainModel) {
+        print(item.vietnamese)
+        print(item.japanese)
         unitTitleLabel.text = item.vietnamese
         wordsCountLabel.text = String(item.wordCount)
 

@@ -15,9 +15,13 @@ import RxDataSources
 /**
  * 単元一覧画面VC
  */
-class UnitListViewController: UIViewController {
+class UnitListViewController: UIViewController, UIScrollViewDelegate {
 
     private lazy var viewModel: UnitListViewModel = UnitListViewModel()
+
+    private lazy var dataSource: RxTableViewSectionedReloadDataSource<UnitListSectionDomainModel> = setupDataSource()
+
+    @IBOutlet weak var tableView: UITableView!
 
     // MARK: - Properties
 
@@ -32,7 +36,8 @@ class UnitListViewController: UIViewController {
         v.status = .none
         view.addSubview(v)
         //view.all
-    }
+        return v
+    }()
 
     // MARK: - LifeCycles
 
@@ -47,7 +52,11 @@ class UnitListViewController: UIViewController {
             present(vc, animated: false)
         }
 
+        subscribe()
         fetch(authToken: ApplicationConfigData.authToken)
+
+//        self.tableView.dataSource = nil
+//        self.tableView.delegate = nil
 
     }
 
@@ -63,9 +72,9 @@ extension UnitListViewController {
         // loading
         viewModel.loadingDriver
             .map { [weak self] isLoading in
-                guard let _self = self else {
-                    return .none
-                }
+//                guard let _self = self else {
+//                    return .none
+//                }
                 if isLoading {
                     return .loading
                 } else if !isLoading {
@@ -77,7 +86,12 @@ extension UnitListViewController {
                 self?.emptyView.status = $0
             }).disposed(by: disposeBag)
 
+        // データソースと紐付ける
+        viewModel.unitsObservable
+            .bind(to: tableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
     }
+
 
     private func fetch(authToken: String) {
         viewModel.fetch(authToken: authToken)
