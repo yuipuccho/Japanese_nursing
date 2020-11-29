@@ -257,7 +257,6 @@ extension Request where Response: JapaneseNursingResponse {
     /// Build `Response` instance from raw response object.
     public func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Response {
         print(object)
-        print("obujekuto")
         guard let data = object as? Data else {
             throw ResponseError.unexpectedObject(object)
         }

@@ -19,6 +19,8 @@ target 'Japanese_nursing' do
 
   pod 'RxCocoa'
 
+  pod 'RxDataSources'
+
   pod 'Koloda'
 
   pod 'Charts'
