@@ -16,7 +16,6 @@ import RxDataSources
  * 単元一覧画面VC
  */
 class UnitListViewController: UIViewController, UIScrollViewDelegate {
-//class UnitListViewController: UITableViewController {
 
     private lazy var viewModel: UnitListViewModel = UnitListViewModel()
 
@@ -75,9 +74,6 @@ extension UnitListViewController {
         // loading
         viewModel.loadingDriver
             .map { [weak self] isLoading in
-//                guard let _self = self else {
-//                    return .none
-//                }
                 if isLoading {
                     return .loading
                 } else {
