@@ -19,8 +19,14 @@ class UnitListViewModel {
 
     private let loadingRelay: BehaviorRelay<Bool> = BehaviorRelay(value: false)
 
+    private let unitsRelay: BehaviorRelay<[UnitListSectionDomainModel]> = BehaviorRelay(value: [])
+
     var loadingDriver: Driver<Bool> {
         return loadingRelay.asDriver()
+    }
+
+    var unitsObservable: Observable<[UnitListSectionDomainModel]> {
+        unitsRelay.asObservable()
     }
 
     var isLoading: Bool {
@@ -38,7 +44,12 @@ class UnitListViewModel {
                 return units.unit_masters.map(UnitListDomainModel.init)
             }
             .do(onNext: { [weak self] in
-                self?.units.append(contentsOf: $0)
+                guard let _self = self else {
+                    return
+                }
+                _self.units.append(contentsOf: $0)
+                let sections = UnitListSectionDomainModel(items: _self.units)
+                _self.unitsRelay.accept([sections])
             })
     }
 
