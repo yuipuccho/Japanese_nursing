@@ -13,6 +13,8 @@ import RxSwift
 
 class MyPageViewController: UIViewController {
 
+    private lazy var viewModel: MypageViewModel = MypageViewModel()
+
     // MARK: - Outlets
 
     /// 棒グラフ
@@ -44,6 +46,24 @@ class MyPageViewController: UIViewController {
 
     private var disposeBag = DisposeBag()
 
+    private lazy var emptyView: EmptyView = {
+        let v = R.nib.emptyView.firstView(owner: nil)!
+        v.backgroundColor = R.color.test()
+        v.retryAction = { [weak self] in
+            self?.fetch()
+        }
+        v.page = .learn
+        v.status = .none
+        view.addSubview(v)
+        view.allSafePin(subView: v)
+        return v
+    }()
+
+    private var targetTestingCount = 0
+    private var todayTestedCount = 0
+    private var targetLearningCount = 0
+    private var todayLearnedCount = 0
+
     // MARK: - LifeCycles
 
     override func viewDidLoad() {
@@ -52,9 +72,7 @@ class MyPageViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: true)
 
         setupBarChartView()
-        setupPieChartView(pieChartView: studyPieChartView)
-        setupPieChartView(pieChartView: testPieChartView)
-        bringIconToFront()
+        fetch()
 
         subscribe()
     }
@@ -63,9 +81,7 @@ class MyPageViewController: UIViewController {
         super.viewWillAppear(animated)
 
         setupBarChartView()
-        setupPieChartView(pieChartView: studyPieChartView)
-        setupPieChartView(pieChartView: testPieChartView)
-        bringIconToFront()
+        pieChartAnimation()
     }
 
 }
@@ -92,6 +108,46 @@ extension MyPageViewController {
             let vc = SettingListViewController.makeInstanceInNavigationController()
             self?.present(vc, animated: true)
         }).disposed(by: disposeBag)
+
+        // loading
+        viewModel.loadingDriver
+            .map { isLoading in
+                if isLoading {
+                    return .loading
+                } else {
+                    return .none
+                }
+            }
+            .drive(onNext: {[weak self] in
+                self?.emptyView.status = $0
+            }).disposed(by: disposeBag)
+    }
+
+    private func fetch() {
+        viewModel.fetch(authToken: ApplicationConfigData.authToken)
+            .subscribe(
+                onNext: { [unowned self] status in
+                    targetLearningCount = status.targetLearningCount
+                    todayLearnedCount = status.todayLearnedCount
+                    targetTestingCount = status.targetTestingCount
+                    todayTestedCount = status.todayTestedCount
+                    setupPieChartView(pieChartView: studyPieChartView)
+                    setupPieChartView(pieChartView: testPieChartView)
+                    bringIconToFront()
+                    pieChartAnimation()
+                    setupUI()
+                },
+                onError: { [unowned self] in
+                    log.error($0.descriptionOfType)
+                    self.emptyView.status = .errorAndRetry($0.descriptionOfType)
+                }).disposed(by: disposeBag)
+    }
+
+    private func setupUI() {
+        studyTargetLabel.text = "LEARN " + String(targetLearningCount) + " WORDS"
+        testTargetLabel.text = "TEST " + String(targetTestingCount) + " WORDS"
+        studyCurrentCountLabel.text = String(todayLearnedCount)
+        testCurrentCountLabel.text = String(todayTestedCount)
     }
 
 }
@@ -151,11 +207,28 @@ extension MyPageViewController {
 
     /// 円形進捗バーの表示設定
     private func setupPieChartView(pieChartView: PieChartView) {
-        // グラフに表示するデータ(仮)
-        let dataEntries = [
-            PieChartDataEntry(value: Double(20)),
-            PieChartDataEntry(value: Double(80))
+
+        // グラフに表示するデータ
+        var dataEntries = [
+            PieChartDataEntry(value: Double(0)),
+            PieChartDataEntry(value: Double(0))
         ]
+
+        if pieChartView == studyPieChartView {
+            let achivementRate = Double(todayLearnedCount * 100 / targetLearningCount)
+            let notAchivementRate = 100 - achivementRate
+            dataEntries = [
+                PieChartDataEntry(value: Double(achivementRate)),
+                PieChartDataEntry(value: Double(notAchivementRate))
+            ]
+        } else {
+            let achivementRate = Double(todayTestedCount * 100 / targetTestingCount)
+            let notAchivementRate = 100 - achivementRate
+            dataEntries = [
+                PieChartDataEntry(value: Double(achivementRate)),
+                PieChartDataEntry(value: Double(notAchivementRate))
+            ]
+        }
 
         // データをセットする
         let dataSet = PieChartDataSet(entries: dataEntries)
@@ -173,7 +246,7 @@ extension MyPageViewController {
         pieChartView.rotationEnabled = false // グラフが動くのを無効化
 
         view.addSubview(pieChartView)
-        pieChartView.animate(xAxisDuration: 1.2, yAxisDuration: 0.8) // アニメーション
+        //pieChartView.animate(xAxisDuration: 1.2, yAxisDuration: 0.8) // アニメーション
     }
 
     /// 円形プロフレスバーの中心のアイコンとラベルを前面に持ってくる
@@ -184,6 +257,11 @@ extension MyPageViewController {
         view.bringSubviewToFront(testImageView)
         view.bringSubviewToFront(studyPieChartButton)
         view.bringSubviewToFront(testPieChartButton)
+    }
+
+    private func pieChartAnimation() {
+        studyPieChartView.animate(xAxisDuration: 1.2, yAxisDuration: 0.8) // アニメーション
+        testPieChartView.animate(xAxisDuration: 1.2, yAxisDuration: 0.8)
     }
 
 }

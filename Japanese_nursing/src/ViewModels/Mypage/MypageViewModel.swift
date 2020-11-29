@@ -1,8 +1,8 @@
 //
-//  TestSettingsViewModel.swift
+//  MypageViewModel.swift
 //  Japanese_nursing
 //
-//  Created by 吉澤優衣 on 2020/11/29.
+//  Created by 吉澤優衣 on 2020/11/30.
 //  Copyright © 2020 吉澤優衣. All rights reserved.
 //
 
@@ -11,9 +11,9 @@ import RxCocoa
 import RxSwift
 
 /**
- * テスト設定画面のViewModel
+ * マイページのViewModel
  */
-class TestSettingsViewModel {
+class MypageViewModel {
 
     // MARK: - Properties
 
@@ -28,16 +28,16 @@ class TestSettingsViewModel {
     }
 
     // MARK: - Functions
+    
+    func fetch(authToken: String) -> Observable<TargetStatusDomainModel> {
 
-    func fetch(authToken: String) -> Observable<TestStatusDomainModel> {
-
-        return TestStatusModel().getTestStatus(authToken: authToken)
+        return TargetStatusModel().getTargetStatus(authToken: authToken)
             .do(onCompleted: {[weak self] in
                 self?.loadingRelay.accept(false)
             }, onSubscribed: { [weak self] in
                 self?.loadingRelay.accept(true)
             })
-            .map { TestStatusDomainModel(entity: $0) }
+            .map { TargetStatusDomainModel(entity: $0) }
     }
 
 }
