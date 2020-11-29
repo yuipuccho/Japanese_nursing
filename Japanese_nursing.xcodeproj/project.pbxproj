@@ -71,6 +71,11 @@
 		BAD1D0332571FAA300F9A74A /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1D0322571FAA300F9A74A /* CreateUserViewController.swift */; };
 		BADB237F256B523300BF5E2D /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADB237E256B523300BF5E2D /* UIView+IBInspectable.swift */; };
 		BAE31B7A2555A87900A3FC6D /* Array+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE31B792555A87800A3FC6D /* Array+Extended.swift */; };
+		BAF1EABF25733ADF00E19657 /* GetUnitMasters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1EABE25733ADF00E19657 /* GetUnitMasters.swift */; };
+		BAF1EAC425733BEB00E19657 /* UnitMastersEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1EAC325733BEB00E19657 /* UnitMastersEntity.swift */; };
+		BAF1EACA25733D3F00E19657 /* UnitMastersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1EAC925733D3F00E19657 /* UnitMastersModel.swift */; };
+		BAF1EACF25733E0E00E19657 /* UnitListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1EACE25733E0E00E19657 /* UnitListViewModel.swift */; };
+		BAF1EAD525733EB800E19657 /* UnitMastersDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1EAD425733EB800E19657 /* UnitMastersDomainModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -148,6 +153,11 @@
 		BAD1D0322571FAA300F9A74A /* CreateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
 		BADB237E256B523300BF5E2D /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
 		BAE31B792555A87800A3FC6D /* Array+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extended.swift"; sourceTree = "<group>"; };
+		BAF1EABE25733ADF00E19657 /* GetUnitMasters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUnitMasters.swift; sourceTree = "<group>"; };
+		BAF1EAC325733BEB00E19657 /* UnitMastersEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitMastersEntity.swift; sourceTree = "<group>"; };
+		BAF1EAC925733D3F00E19657 /* UnitMastersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitMastersModel.swift; sourceTree = "<group>"; };
+		BAF1EACE25733E0E00E19657 /* UnitListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListViewModel.swift; sourceTree = "<group>"; };
+		BAF1EAD425733EB800E19657 /* UnitMastersDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitMastersDomainModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -431,6 +441,7 @@
 			isa = PBXGroup;
 			children = (
 				BAD1CFE72571F66100F9A74A /* CreateUser */,
+				BAF1EABD25733AC200E19657 /* UnitMasters */,
 				BAD1CFEC2571F6A500F9A74A /* JapaneseNursingAPI.swift */,
 			);
 			path = Communications;
@@ -447,7 +458,8 @@
 		BAD1CFF22571F6F800F9A74A /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				BAD1CFF32571F72000F9A74A /* CreateUserEntity.swift */,
+				BAF1EAC125733BC900E19657 /* CreateUser */,
+				BAF1EAC225733BD200E19657 /* UnitMasters */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -472,7 +484,8 @@
 		BAD1D0012571F82600F9A74A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BAD1D0022571F83F00F9A74A /* CreateUserModel.swift */,
+				BAF1EAC725733D1D00E19657 /* CreateUser */,
+				BAF1EAC825733D2500E19657 /* UnitMasters */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -516,6 +529,7 @@
 			children = (
 				BAD1D0652571FC5500F9A74A /* CreateUser */,
 				BAD1D02A2571FA4000F9A74A /* Domains */,
+				BAF1EACD25733DFB00E19657 /* Study */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -523,7 +537,8 @@
 		BAD1D02A2571FA4000F9A74A /* Domains */ = {
 			isa = PBXGroup;
 			children = (
-				BAD1D02B2571FA5400F9A74A /* CreateUserDomainModel.swift */,
+				BAF1EAD325733E8C00E19657 /* CreateUser */,
+				BAF1EAD225733E8400E19657 /* Study */,
 			);
 			path = Domains;
 			sourceTree = "<group>";
@@ -541,6 +556,70 @@
 			isa = PBXGroup;
 			children = (
 				BAD1D0272571FA2B00F9A74A /* CreateUserViewModel.swift */,
+			);
+			path = CreateUser;
+			sourceTree = "<group>";
+		};
+		BAF1EABD25733AC200E19657 /* UnitMasters */ = {
+			isa = PBXGroup;
+			children = (
+				BAF1EABE25733ADF00E19657 /* GetUnitMasters.swift */,
+			);
+			path = UnitMasters;
+			sourceTree = "<group>";
+		};
+		BAF1EAC125733BC900E19657 /* CreateUser */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1CFF32571F72000F9A74A /* CreateUserEntity.swift */,
+			);
+			path = CreateUser;
+			sourceTree = "<group>";
+		};
+		BAF1EAC225733BD200E19657 /* UnitMasters */ = {
+			isa = PBXGroup;
+			children = (
+				BAF1EAC325733BEB00E19657 /* UnitMastersEntity.swift */,
+			);
+			path = UnitMasters;
+			sourceTree = "<group>";
+		};
+		BAF1EAC725733D1D00E19657 /* CreateUser */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1D0022571F83F00F9A74A /* CreateUserModel.swift */,
+			);
+			path = CreateUser;
+			sourceTree = "<group>";
+		};
+		BAF1EAC825733D2500E19657 /* UnitMasters */ = {
+			isa = PBXGroup;
+			children = (
+				BAF1EAC925733D3F00E19657 /* UnitMastersModel.swift */,
+			);
+			path = UnitMasters;
+			sourceTree = "<group>";
+		};
+		BAF1EACD25733DFB00E19657 /* Study */ = {
+			isa = PBXGroup;
+			children = (
+				BAF1EACE25733E0E00E19657 /* UnitListViewModel.swift */,
+			);
+			path = Study;
+			sourceTree = "<group>";
+		};
+		BAF1EAD225733E8400E19657 /* Study */ = {
+			isa = PBXGroup;
+			children = (
+				BAF1EAD425733EB800E19657 /* UnitMastersDomainModel.swift */,
+			);
+			path = Study;
+			sourceTree = "<group>";
+		};
+		BAF1EAD325733E8C00E19657 /* CreateUser */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1D02B2571FA5400F9A74A /* CreateUserDomainModel.swift */,
 			);
 			path = CreateUser;
 			sourceTree = "<group>";
@@ -739,6 +818,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA66D67924A6E91500BE7273 /* AppBootstrap.swift in Sources */,
+				BAF1EACA25733D3F00E19657 /* UnitMastersModel.swift in Sources */,
 				BAB9C2762568057E004D653F /* WebViewController.swift in Sources */,
 				BAD1D0112571F92600F9A74A /* UnderlineTextField.swift in Sources */,
 				BADB237F256B523300BF5E2D /* UIView+IBInspectable.swift in Sources */,
@@ -747,6 +827,7 @@
 				BA2A5DE5255135A50085A3EF /* UnitListCell.swift in Sources */,
 				BA5EACE324D2AF8F0008E2D0 /* UnitListViewController.swift in Sources */,
 				BAD1CFF02571F6DE00F9A74A /* Constants.swift in Sources */,
+				BAF1EAD525733EB800E19657 /* UnitMastersDomainModel.swift in Sources */,
 				BAD1D00A2571F8AF00F9A74A /* Error+Extended.swift in Sources */,
 				BAD1CFFB2571F77300F9A74A /* ResponseError.swift in Sources */,
 				BAD1D0332571FAA300F9A74A /* CreateUserViewController.swift in Sources */,
@@ -758,6 +839,7 @@
 				BA2A5DE9255139DB0085A3EF /* LearningUnitViewController.swift in Sources */,
 				BA133ACA24C04D850047E265 /* CustomTabBar.swift in Sources */,
 				BA06D2012557AB26000216CC /* TestViewController.swift in Sources */,
+				BAF1EAC425733BEB00E19657 /* UnitMastersEntity.swift in Sources */,
 				BAD1D01F2571F9D300F9A74A /* APIError.swift in Sources */,
 				BAD1D0282571FA2B00F9A74A /* CreateUserViewModel.swift in Sources */,
 				BA46290325640E6300D5AE8A /* OverlayView.swift in Sources */,
@@ -774,7 +856,9 @@
 				BA66D67D24A6ECF000BE7273 /* TabBarController.swift in Sources */,
 				BAD1CFED2571F6A500F9A74A /* JapaneseNursingAPI.swift in Sources */,
 				BA1E5B312487AC210055A5F4 /* SceneDelegate.swift in Sources */,
+				BAF1EACF25733E0E00E19657 /* UnitListViewModel.swift in Sources */,
 				BAD1D0032571F83F00F9A74A /* CreateUserModel.swift in Sources */,
+				BAF1EABF25733ADF00E19657 /* GetUnitMasters.swift in Sources */,
 				BA85A3FE24AB7F51003E6E85 /* R.generated.swift in Sources */,
 				BA40295D255436B800421276 /* TestSettingsViewController.swift in Sources */,
 				BAD1CFF82571F74900F9A74A /* APIEvent.swift in Sources */,

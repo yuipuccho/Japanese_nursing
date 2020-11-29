@@ -7,11 +7,20 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
+import PKHUD
 
 /**
  * 単元一覧画面VC
  */
 class UnitListViewController: UIViewController {
+
+    private lazy var viewModel: UnitListViewModel = UnitListViewModel()
+
+    // MARK: - Properties
+
+    private var disposeBag = DisposeBag()
 
     // MARK: - LifeCycles
 
@@ -26,6 +35,20 @@ class UnitListViewController: UIViewController {
             present(vc, animated: false)
         }
 
+        fetch(authToken: ApplicationConfigData.authToken)
+
+    }
+
+    // MARK: - Functions
+
+    private func fetch(authToken: String) {
+        viewModel.fetch(authToken: authToken)
+            .subscribe(
+                onNext: { domain in
+                    HUD.flash(.label("登録しました！"), delay: 1.0) { [weak self] _ in
+                        self?.dismiss(animated: true)
+                    }
+                }).disposed(by: disposeBag)
     }
 
 }
