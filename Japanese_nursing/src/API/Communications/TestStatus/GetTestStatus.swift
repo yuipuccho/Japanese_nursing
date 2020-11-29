@@ -43,7 +43,7 @@ public struct GetTestStatusRequest: JapaneseNursingRequest {
 }
 
 /**
- * 単元一覧取得API Response
+ * テスト状況取得API Response
  */
 public struct GetTestStatusResponse: JapaneseNursingResponse {    
 

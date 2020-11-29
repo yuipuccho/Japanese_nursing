@@ -345,10 +345,12 @@ extension TestSettingsViewController {
     /// 円形進捗バーの表示設定
     private func setupChartView() {
 
+        // TODO: - 仮で入れているので、単元と単語テーブルができ次第削除する
         perfectCount = 10
         allCount = 100
         mistakeCount = 80
         untestedCount = 10
+
         // グラフに表示するデータ
         let dataEntries = [
             PieChartDataEntry(value: Double(perfectCount * 100 / allCount)),
@@ -372,15 +374,7 @@ extension TestSettingsViewController {
         chartView.rotationEnabled = false // グラフが動くのを無効化
 
         view.addSubview(self.chartView)
-//        chartView.animate(xAxisDuration: 1.2, yAxisDuration: 0.8) // アニメーション
-//
-//        /// 進捗ラベルの表示にもアニメーションをつける
-//        percentageLabel.alpha = 0
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-//            UIView.animate(withDuration: 0.6) { [weak self] in
-//                self?.percentageLabel.alpha = 1
-//            }
-//        }
+
         if allCount == 0 {
             // 念の為
             percentageLabel.text = "0%"

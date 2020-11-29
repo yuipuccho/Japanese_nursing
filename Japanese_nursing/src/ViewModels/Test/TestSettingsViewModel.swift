@@ -19,15 +19,9 @@ class TestSettingsViewModel {
 
     private let loadingRelay: BehaviorRelay<Bool> = BehaviorRelay(value: false)
 
-//    private let testStatusRelay: BehaviorRelay<[TestStatusDomainModel]> = BehaviorRelay(value: [])
-
     var loadingDriver: Driver<Bool> {
         return loadingRelay.asDriver()
     }
-
-//    var unitsObservable: Observable<[UnitListSectionDomainModel]> {
-//        unitsRelay.asObservable()
-//    }
 
     var isLoading: Bool {
         loadingRelay.value
@@ -36,6 +30,7 @@ class TestSettingsViewModel {
     var units: [UnitListDomainModel] = []
 
     // MARK: - Functions
+
     func fetch(authToken: String) -> Observable<TestStatusDomainModel> {
 
         return TestStatusModel().getTestStatus(authToken: authToken)
@@ -45,7 +40,6 @@ class TestSettingsViewModel {
                 self?.loadingRelay.accept(true)
             })
             .map { TestStatusDomainModel(entity: $0) }
-
     }
 
 }
