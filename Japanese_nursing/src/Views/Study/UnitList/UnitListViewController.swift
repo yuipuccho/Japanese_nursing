@@ -30,13 +30,14 @@ class UnitListViewController: UIViewController, UIScrollViewDelegate {
 
     private lazy var emptyView: EmptyView = {
         let v = R.nib.emptyView.firstView(owner: nil)!
-        v.backgroundColor = .white
+        v.backgroundColor = .clear
         v.retryAction = { [weak self] in
             self?.fetch(authToken: ApplicationConfigData.authToken)
         }
+        v.page = .learn
         v.status = .none
         view.addSubview(v)
-        //view.all
+        view.allSafePin(subView: v)
         return v
     }()
 
@@ -72,21 +73,20 @@ extension UnitListViewController {
     private func subscribe() {
 
         // loading
-//        viewModel.loadingDriver
-//            .map { [weak self] isLoading in
-////                guard let _self = self else {
-////                    return .none
-////                }
-//                if isLoading {
-//                    return .loading
-//                } else if !isLoading {
-//                    return .showPage
+        viewModel.loadingDriver
+            .map { [weak self] isLoading in
+//                guard let _self = self else {
+//                    return .none
 //                }
-//                return .none
-//            }
-//            .drive(onNext: {[weak self] in
-//                self?.emptyView.status = $0
-//            }).disposed(by: disposeBag)
+                if isLoading {
+                    return .loading
+                } else {
+                    return .none
+                }
+            }
+            .drive(onNext: {[weak self] in
+                self?.emptyView.status = $0
+            }).disposed(by: disposeBag)
 
         // データソースと紐付ける
         viewModel.unitsObservable
@@ -125,38 +125,7 @@ extension UnitListViewController {
         return dataSource
     }
 
-
 }
-
-// MARK: - TableViewDataSource
-
-//extension UnitListViewController: UITableViewDataSource, UITableViewDelegate {
-//
-//    // TODO: API取得次第変更
-//
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 20
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//
-//        guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.unitListCell.identifier, for: indexPath) as? UnitListCell else{
-//            return UITableViewCell()
-//        }
-//
-//        cell.cellTappedSubject.subscribe(onNext: { [weak self] in
-//            let vc = LearningUnitViewController.makeInstance()
-//            self?.present(vc, animated: true)
-//        }).disposed(by: cell.disposeBag)
-//
-//        return UITableViewCell()
-//    }
-//
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 82
-//    }
-//
-//}
 
 // MARK: - MakeInstance
 

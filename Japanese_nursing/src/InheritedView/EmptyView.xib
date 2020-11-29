@@ -23,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="e29-Uc-y1F">
-                    <rect key="frame" x="0.0" y="295.5" width="414" height="241.5"/>
+                    <rect key="frame" x="0.0" y="290" width="414" height="252.5"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bbp-tN-luv">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="157.5"/>
@@ -62,10 +62,10 @@
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqR-cu-VVl">
-                            <rect key="frame" x="132" y="197.5" width="150" height="44"/>
+                            <rect key="frame" x="122" y="197.5" width="170" height="55"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="44" id="LYm-Zx-h4U"/>
-                                <constraint firstAttribute="width" constant="150" id="yts-WJ-LA2"/>
+                                <constraint firstAttribute="height" constant="55" id="LYm-Zx-h4U"/>
+                                <constraint firstAttribute="width" constant="170" id="yts-WJ-LA2"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="17"/>
                             <state key="normal" title="リトライ">
@@ -86,7 +86,11 @@
                     </subviews>
                 </stackView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="35x-cW-QVl">
-                    <rect key="frame" x="197" y="406" width="20" height="20"/>
+                    <rect key="frame" x="177" y="386" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="GV3-mH-p34"/>
+                        <constraint firstAttribute="width" secondItem="35x-cW-QVl" secondAttribute="height" multiplier="1:1" id="e0U-TH-0j5"/>
+                    </constraints>
                     <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </activityIndicatorView>
             </subviews>

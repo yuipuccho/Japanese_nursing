@@ -29,9 +29,7 @@ enum EmptyStatus {
     case none
     case loading
     case success
-    case noData(String)
     case errorAndRetry(String?)
-    case showPage
 }
 
 final class EmptyView: UIView {
@@ -48,7 +46,9 @@ final class EmptyView: UIView {
 
     var page: EmptyPage = .none
 
-    var status: EmptyStatus = .none
+    var status: EmptyStatus = .none {
+        didSet { self.updateState() }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -60,12 +60,51 @@ final class EmptyView: UIView {
     }
 
     private func userEmptyViewErrorAndRetry() {
-        iconImage.image = page.icon
         headLabel.text = "通信エラー"
         subTextLabel.text = "ネットワーク環境が不安定です。\nしばらくたってからリトライをお試しください。"
         retryButton.isHidden = false
 
         indicator.stopAnimating()
+        indicator.isHidden = true
+    }
+
+    private func updateState() {
+        switch status {
+        case .none:
+            self.isHidden = true
+
+        case .loading:
+            self.isHidden = false
+            retryButton.isHidden = true
+            indicator.startAnimating()
+            indicator.isHidden = false
+            iconImage = nil
+            headLabel.text = nil
+            subTextLabel.text = nil
+
+        case .success:
+            self.isHidden = true
+            retryButton.isHidden = true
+            indicator.stopAnimating()
+            indicator.isHidden = true
+            iconImage = nil
+            headLabel.text = nil
+            subTextLabel.text = nil
+
+        case .errorAndRetry(let text):
+            switch self.page {
+            case .learn:
+                userEmptyViewErrorAndRetry()
+            default:
+                self.isHidden = text == nil
+                retryButton.isHidden = false
+                indicator.stopAnimating()
+                indicator.isHidden = true
+                iconImage = nil
+                headLabel.text = nil
+                subTextLabel.text = text
+            }
+        }
     }
 
 }

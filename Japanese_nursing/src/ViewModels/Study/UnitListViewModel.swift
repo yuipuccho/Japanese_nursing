@@ -40,6 +40,11 @@ class UnitListViewModel {
     func fetch(authToken: String) -> Observable<[UnitListDomainModel]> {
 
         return GetUnitMastersModel().getUnitMasters(authToken: authToken)
+            .do(onCompleted: {[weak self] in
+                self?.loadingRelay.accept(false)
+            }, onSubscribed: { [weak self] in
+                self?.loadingRelay.accept(true)
+            })
             .map { units in
                 return units.unit_masters.map(UnitListDomainModel.init)
             }
