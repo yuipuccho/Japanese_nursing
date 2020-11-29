@@ -59,3 +59,19 @@ class UnitListCell: UITableViewCell {
     }
 
 }
+
+extension UnitListCell {
+
+    /**
+     * セルの表示内容を設定
+     * - parameters:
+     *   - item: 設定に使うDomainModel
+     */
+    func configure(_ item: UnitListDomainModel) {
+        unitTitleLabel.text = item.vietnamese
+        wordsCountLabel.text = String(item.wordCount)
+
+
+    }
+
+}

@@ -10,6 +10,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 import PKHUD
+import RxDataSources
 
 /**
  * 単元一覧画面VC
@@ -21,6 +22,17 @@ class UnitListViewController: UIViewController {
     // MARK: - Properties
 
     private var disposeBag = DisposeBag()
+
+    private lazy var emptyView: EmptyView = {
+        let v = R.nib.emptyView.firstView(owner: nil)!
+        v.backgroundColor = .white
+        v.retryAction = { [weak self] in
+            self?.fetch(authToken: ApplicationConfigData.authToken)
+        }
+        v.status = .none
+        view.addSubview(v)
+        //view.all
+    }
 
     // MARK: - LifeCycles
 
@@ -39,7 +51,33 @@ class UnitListViewController: UIViewController {
 
     }
 
-    // MARK: - Functions
+}
+
+
+// MARK: - Functions
+
+extension UnitListViewController {
+
+    private func subscribe() {
+
+        // loading
+        viewModel.loadingDriver
+            .map { [weak self] isLoading in
+                guard let _self = self else {
+                    return .none
+                }
+                if isLoading {
+                    return .loading
+                } else if !isLoading {
+                    return .showPage
+                }
+                return .none
+            }
+            .drive(onNext: {[weak self] in
+                self?.emptyView.status = $0
+            }).disposed(by: disposeBag)
+
+    }
 
     private func fetch(authToken: String) {
         viewModel.fetch(authToken: authToken)
@@ -55,33 +93,55 @@ class UnitListViewController: UIViewController {
 
 // MARK: - TableViewDataSource
 
-extension UnitListViewController: UITableViewDataSource, UITableViewDelegate {
+extension UnitListViewController {
 
-    // TODO: API取得次第変更
+    private func setupDataSource() -> RxTableViewSectionedReloadDataSource<UnitListSectionDomainModel> {
+        let dataSource = RxTableViewSectionedReloadDataSource<UnitListSectionDomainModel>(configureCell: { (_, tableView, indexPath, item) in
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.unitListCell.identifier, for: indexPath) as?
+                    UnitListCell else {
+                log.error("Can't cast R.reuseIdentifier.unitListCell to UnitLIstCell")
+                return UITableViewCell()
+            }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+            cell.configure(item)
+
+            return cell
+        })
+        return dataSource
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.unitListCell.identifier, for: indexPath) as? UnitListCell else{
-            return UITableViewCell()
-        }
-
-        cell.cellTappedSubject.subscribe(onNext: { [weak self] in
-            let vc = LearningUnitViewController.makeInstance()
-            self?.present(vc, animated: true)
-        }).disposed(by: cell.disposeBag)
-
-        return UITableViewCell()
-    }
-
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 82
-    }
 
 }
+
+//// MARK: - TableViewDataSource
+//
+//extension UnitListViewController: UITableViewDataSource, UITableViewDelegate {
+//
+//    // TODO: API取得次第変更
+//
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 20
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+//        guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.unitListCell.identifier, for: indexPath) as? UnitListCell else{
+//            return UITableViewCell()
+//        }
+//
+//        cell.cellTappedSubject.subscribe(onNext: { [weak self] in
+//            let vc = LearningUnitViewController.makeInstance()
+//            self?.present(vc, animated: true)
+//        }).disposed(by: cell.disposeBag)
+//
+//        return UITableViewCell()
+//    }
+//
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 82
+//    }
+//
+//}
 
 // MARK: - MakeInstance
 

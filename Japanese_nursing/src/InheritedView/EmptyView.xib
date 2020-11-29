@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansCJKjpSub-Bold.otf">
+            <string>NotoSansCJKjpSub-Bold</string>
+        </array>
+        <array key="NotoSansCJKjpSub-Medium.otf">
+            <string>NotoSansCJKjpSub-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="EmptyView" customModule="d_介護の日本語" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="832"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="e29-Uc-y1F">
+                    <rect key="frame" x="0.0" y="295.5" width="414" height="241.5"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bbp-tN-luv">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="157.5"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NGU-CB-TiJ">
+                                    <rect key="frame" x="163" y="0.0" width="88" height="88"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="NGU-CB-TiJ" secondAttribute="height" multiplier="1:1" id="Lkr-dK-ocz"/>
+                                        <constraint firstAttribute="height" constant="88" id="epB-wn-yCp"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1x-Q7-Qj6">
+                                    <rect key="frame" x="8" y="104" width="398" height="28.5"/>
+                                    <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="19"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6W-jv-9pc">
+                                    <rect key="frame" x="8" y="136.5" width="398" height="21"/>
+                                    <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Medium" family="NotoSansCJKjpSub-Medium" pointSize="14"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="U1x-Q7-Qj6" firstAttribute="top" secondItem="NGU-CB-TiJ" secondAttribute="bottom" constant="16" id="06A-or-E5z"/>
+                                <constraint firstItem="NGU-CB-TiJ" firstAttribute="top" secondItem="bbp-tN-luv" secondAttribute="top" id="9m4-Us-f82"/>
+                                <constraint firstAttribute="trailing" secondItem="g6W-jv-9pc" secondAttribute="trailing" constant="8" id="BgE-SZ-foB"/>
+                                <constraint firstAttribute="bottom" secondItem="g6W-jv-9pc" secondAttribute="bottom" id="NJT-W3-JTJ"/>
+                                <constraint firstItem="NGU-CB-TiJ" firstAttribute="centerX" secondItem="bbp-tN-luv" secondAttribute="centerX" id="Ods-LZ-45h"/>
+                                <constraint firstItem="U1x-Q7-Qj6" firstAttribute="leading" secondItem="bbp-tN-luv" secondAttribute="leading" constant="8" id="Orw-7s-Yem"/>
+                                <constraint firstItem="U1x-Q7-Qj6" firstAttribute="centerX" secondItem="bbp-tN-luv" secondAttribute="centerX" id="Q4G-j7-eVT"/>
+                                <constraint firstAttribute="trailing" secondItem="U1x-Q7-Qj6" secondAttribute="trailing" constant="8" id="aGy-xh-djd"/>
+                                <constraint firstItem="g6W-jv-9pc" firstAttribute="leading" secondItem="bbp-tN-luv" secondAttribute="leading" constant="8" id="ccC-FD-U3A"/>
+                                <constraint firstItem="g6W-jv-9pc" firstAttribute="top" secondItem="U1x-Q7-Qj6" secondAttribute="bottom" constant="4" id="ogw-jK-Jn0"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqR-cu-VVl">
+                            <rect key="frame" x="132" y="197.5" width="150" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="LYm-Zx-h4U"/>
+                                <constraint firstAttribute="width" constant="150" id="yts-WJ-LA2"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="17"/>
+                            <state key="normal" title="リトライ">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="14"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                </stackView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="35x-cW-QVl">
+                    <rect key="frame" x="197" y="406" width="20" height="20"/>
+                    <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="e29-Uc-y1F" secondAttribute="trailing" id="0Yj-oA-AeZ"/>
+                <constraint firstItem="e29-Uc-y1F" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="4ks-S3-CPM"/>
+                <constraint firstItem="e29-Uc-y1F" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="SjL-30-n7h"/>
+                <constraint firstItem="35x-cW-QVl" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="iny-pW-yNu"/>
+                <constraint firstItem="e29-Uc-y1F" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="puw-Gj-qkj"/>
+                <constraint firstItem="35x-cW-QVl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="rW3-Ef-9by"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="headLabel" destination="U1x-Q7-Qj6" id="wAG-aC-SI6"/>
+                <outlet property="iconImage" destination="NGU-CB-TiJ" id="Z8B-3T-l1Z"/>
+                <outlet property="indicator" destination="35x-cW-QVl" id="1LD-nH-hiP"/>
+                <outlet property="retryButton" destination="vqR-cu-VVl" id="Uug-Ew-xfA"/>
+                <outlet property="subTextLabel" destination="g6W-jv-9pc" id="NxY-3y-hJ2"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="66.294642857142861"/>
+        </view>
+    </objects>
+</document>

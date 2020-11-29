@@ -15,7 +15,7 @@ struct UnitListDomainModel {
 
     var id: Int
     var japanese: String
-    var viewnamese: String
+    var vietnamese: String
     var createdAt: Date
     var updatedAt: Date
     var wordCount: Int
@@ -24,7 +24,7 @@ struct UnitListDomainModel {
     init(entity: UnitMastersBodyEntity) {
         id = entity.id
         japanese = entity.japanese
-        viewnamese = entity.vietnamese
+        vietnamese = entity.vietnamese
         createdAt = entity.created_at
         updatedAt = entity.updated_at
         wordCount = entity.word_count

@@ -77,6 +77,8 @@
 		BAF1EACF25733E0E00E19657 /* UnitListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1EACE25733E0E00E19657 /* UnitListViewModel.swift */; };
 		BAF1EAD525733EB800E19657 /* UnitListDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1EAD425733EB800E19657 /* UnitListDomainModel.swift */; };
 		BAF1EAD825734F8600E19657 /* UnitListSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1EAD725734F8600E19657 /* UnitListSectionModel.swift */; };
+		BAF1EAF42573576900E19657 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1EAF32573576900E19657 /* EmptyView.swift */; };
+		BAF1EAF82573601600E19657 /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAF1EAF72573601600E19657 /* EmptyView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -160,6 +162,8 @@
 		BAF1EACE25733E0E00E19657 /* UnitListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListViewModel.swift; sourceTree = "<group>"; };
 		BAF1EAD425733EB800E19657 /* UnitListDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListDomainModel.swift; sourceTree = "<group>"; };
 		BAF1EAD725734F8600E19657 /* UnitListSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListSectionModel.swift; sourceTree = "<group>"; };
+		BAF1EAF32573576900E19657 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		BAF1EAF72573601600E19657 /* EmptyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -495,7 +499,9 @@
 		BAD1D00F2571F8FA00F9A74A /* InheritedView */ = {
 			isa = PBXGroup;
 			children = (
+				BAF1EAF32573576900E19657 /* EmptyView.swift */,
 				BAD1D0102571F92600F9A74A /* UnderlineTextField.swift */,
+				BAF1EAF72573601600E19657 /* EmptyView.xib */,
 			);
 			path = InheritedView;
 			sourceTree = "<group>";
@@ -721,6 +727,7 @@
 				BA00E852255DA288001C4E06 /* SettingListViewController.storyboard in Resources */,
 				BAC5904F249EECCF007D247B /* NotoSansCJKjpSub-Thin.otf in Resources */,
 				BAC5904E249EECCF007D247B /* NotoSansCJKjpSub-Bold.otf in Resources */,
+				BAF1EAF82573601600E19657 /* EmptyView.xib in Resources */,
 				BA00E88D255E4A4D001C4E06 /* UserNameSettingViewController.storyboard in Resources */,
 				BA27FB35248CECDA002840B8 /* Colors.xcassets in Resources */,
 				BA1E5B3B2487AC250055A5F4 /* LaunchScreen.storyboard in Resources */,
@@ -866,6 +873,7 @@
 				BA85A3FE24AB7F51003E6E85 /* R.generated.swift in Sources */,
 				BA40295D255436B800421276 /* TestSettingsViewController.swift in Sources */,
 				BAD1CFF82571F74900F9A74A /* APIEvent.swift in Sources */,
+				BAF1EAF42573576900E19657 /* EmptyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
