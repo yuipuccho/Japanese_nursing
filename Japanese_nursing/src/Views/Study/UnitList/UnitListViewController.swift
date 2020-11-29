@@ -16,6 +16,7 @@ import RxDataSources
  * 単元一覧画面VC
  */
 class UnitListViewController: UIViewController, UIScrollViewDelegate {
+//class UnitListViewController: UITableViewController {
 
     private lazy var viewModel: UnitListViewModel = UnitListViewModel()
 
@@ -46,6 +47,10 @@ class UnitListViewController: UIViewController, UIScrollViewDelegate {
 
         navigationController?.setNavigationBarHidden(true, animated: true)
 
+        self.tableView.dataSource = nil
+        self.tableView.delegate = nil
+        self.tableView.rowHeight = 90
+
         // ユーザ未作成の場合はユーザ作成画面に遷移
         if ApplicationConfigData.authToken == "" {
             let vc = CreateUserViewController.makeInstance()
@@ -54,9 +59,6 @@ class UnitListViewController: UIViewController, UIScrollViewDelegate {
 
         subscribe()
         fetch(authToken: ApplicationConfigData.authToken)
-
-//        self.tableView.dataSource = nil
-//        self.tableView.delegate = nil
 
     }
 
@@ -70,21 +72,21 @@ extension UnitListViewController {
     private func subscribe() {
 
         // loading
-        viewModel.loadingDriver
-            .map { [weak self] isLoading in
-//                guard let _self = self else {
-//                    return .none
+//        viewModel.loadingDriver
+//            .map { [weak self] isLoading in
+////                guard let _self = self else {
+////                    return .none
+////                }
+//                if isLoading {
+//                    return .loading
+//                } else if !isLoading {
+//                    return .showPage
 //                }
-                if isLoading {
-                    return .loading
-                } else if !isLoading {
-                    return .showPage
-                }
-                return .none
-            }
-            .drive(onNext: {[weak self] in
-                self?.emptyView.status = $0
-            }).disposed(by: disposeBag)
+//                return .none
+//            }
+//            .drive(onNext: {[weak self] in
+//                self?.emptyView.status = $0
+//            }).disposed(by: disposeBag)
 
         // データソースと紐付ける
         viewModel.unitsObservable
@@ -96,10 +98,9 @@ extension UnitListViewController {
     private func fetch(authToken: String) {
         viewModel.fetch(authToken: authToken)
             .subscribe(
-                onNext: { domain in
-                    HUD.flash(.label("登録しました！"), delay: 1.0) { [weak self] _ in
-                        self?.dismiss(animated: true)
-                    }
+                onError: { [unowned self] in
+                    log.error($0.descriptionOfType)
+                    self.emptyView.status = .errorAndRetry($0.descriptionOfType)
                 }).disposed(by: disposeBag)
     }
 
@@ -118,6 +119,8 @@ extension UnitListViewController {
             }
 
             cell.configure(item)
+            print(item)
+            print("あいてむ")
 
             return cell
         })
@@ -127,8 +130,8 @@ extension UnitListViewController {
 
 }
 
-//// MARK: - TableViewDataSource
-//
+// MARK: - TableViewDataSource
+
 //extension UnitListViewController: UITableViewDataSource, UITableViewDelegate {
 //
 //    // TODO: API取得次第変更
