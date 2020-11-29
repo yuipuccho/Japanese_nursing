@@ -3,6 +3,7 @@ PODS:
   - Charts (3.6.0):
     - Charts/Core (= 3.6.0)
   - Charts/Core (3.6.0)
+  - Differentiator (4.0.1)
   - IBAnimatable (6.1.0)
   - Koloda (5.0.1):
     - pop (~> 1.0)
@@ -22,6 +23,10 @@ PODS:
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
@@ -44,6 +49,7 @@ DEPENDENCIES:
   - R.swift
   - RAMAnimatedTabBarController
   - RxCocoa
+  - RxDataSources
   - RxSwift
   - SCLAlertView
   - SwiftDate
@@ -54,6 +60,7 @@ SPEC REPOS:
   trunk:
     - APIKit
     - Charts
+    - Differentiator
     - IBAnimatable
     - Koloda
     - NVActivityIndicatorView
@@ -65,6 +72,7 @@ SPEC REPOS:
     - R.swift.Library
     - RAMAnimatedTabBarController
     - RxCocoa
+    - RxDataSources
     - RxRelay
     - RxSwift
     - SCLAlertView
@@ -75,6 +83,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   APIKit: 9e1a4069608bf0ae5238811e6cfc26928ad4d01e
   Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   IBAnimatable: 99dddd4c0625884a301ba3ecbc1615f8a390368e
   Koloda: d07b9199a383abc5898b62aa945a599f5e7c0c4b
   NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
@@ -86,6 +95,7 @@ SPEC CHECKSUMS:
   R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
   RAMAnimatedTabBarController: 6863a386e7ae2ab227cd60aa73ab8ff56cdacfdd
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
@@ -93,6 +103,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   XCGLogger: 1943831ef907df55108b0b18657953f868de973b
 
-PODFILE CHECKSUM: 268b4552e39e7cc06aa14010eb3abc7b796b70bb
+PODFILE CHECKSUM: 2dc233d278edf08a771e327d397a642e2742d2ba
 
 COCOAPODS: 1.10.0
