@@ -17,6 +17,8 @@ import PKHUD
  */
 class TestSettingsViewController: UIViewController {
 
+    private lazy var viewModel: TestSettingsViewModel = TestSettingsViewModel()
+
     // MARK: - Outlets
 
     /// 円形進捗バーのView
@@ -72,15 +74,28 @@ class TestSettingsViewController: UIViewController {
     private var selectingQuestionsCount: Int = 10
 
     /// すべての単語数
-    private let allCount = 125 // 仮
+    private var allCount = 0
     /// 苦手の単語数
-    private let mistakeCount = 8 // 仮
+    private var mistakeCount = 0
     /// 未出題の単語数
-    private let untestedCount = 60 // 仮
+    private var untestedCount = 0
     /// 正解数
-    private let perfectCount = 57 // 仮
+    private var perfectCount = 0
 
     private var disposeBag = DisposeBag()
+
+    private lazy var emptyView: EmptyView = {
+        let v = R.nib.emptyView.firstView(owner: nil)!
+        v.backgroundColor = R.color.test()
+        v.retryAction = { [weak self] in
+            self?.fetch()
+        }
+        v.page = .learn
+        v.status = .none
+        view.addSubview(v)
+        view.allSafePin(subView: v)
+        return v
+    }()
 
     // MARK: - LifeCycles
 
@@ -89,15 +104,14 @@ class TestSettingsViewController: UIViewController {
 
         navigationController?.setNavigationBarHidden(true, animated: true)
 
-        setupChartView()
         subscribe()
-        setupUI()
+        fetch()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        setupChartView()
+        chartAnimation()
     }
 
 }
@@ -156,6 +170,37 @@ extension TestSettingsViewController {
             self?.present(vc, animated: true)
         }).disposed(by: disposeBag)
 
+        // loading
+        viewModel.loadingDriver
+            .map { isLoading in
+                if isLoading {
+                    return .loading
+                } else {
+                    return .none
+                }
+            }
+            .drive(onNext: {[weak self] in
+                self?.emptyView.status = $0
+            }).disposed(by: disposeBag)
+
+    }
+
+    private func fetch() {
+        viewModel.fetch(authToken: ApplicationConfigData.authToken)
+            .subscribe(
+                onNext: { [unowned self] status in
+                    allCount = status.allWordCount
+                    mistakeCount = status.mistakeWordCount
+                    untestedCount = status.unquestionedWordCount
+                    perfectCount = status.correctWordCount
+                    setupUI()
+                    setupChartView()
+                    chartAnimation()
+                },
+                onError: { [unowned self] in
+                    log.error($0.descriptionOfType)
+                    self.emptyView.status = .errorAndRetry($0.descriptionOfType)
+                }).disposed(by: disposeBag)
     }
 
     /// 出題範囲ボタンがタップされたときの処理
@@ -299,11 +344,16 @@ extension TestSettingsViewController {
 
     /// 円形進捗バーの表示設定
     private func setupChartView() {
-        // グラフに表示するデータ(仮)
+
+        perfectCount = 10
+        allCount = 100
+        mistakeCount = 80
+        untestedCount = 10
+        // グラフに表示するデータ
         let dataEntries = [
-            PieChartDataEntry(value: Double(perfectCount)),
-            PieChartDataEntry(value: Double(mistakeCount)),
-            PieChartDataEntry(value: Double(untestedCount))
+            PieChartDataEntry(value: Double(perfectCount * 100 / allCount)),
+            PieChartDataEntry(value: Double(mistakeCount * 100 / allCount)),
+            PieChartDataEntry(value: Double(untestedCount * 100 / allCount))
         ]
 
         // データをセットする
@@ -322,6 +372,24 @@ extension TestSettingsViewController {
         chartView.rotationEnabled = false // グラフが動くのを無効化
 
         view.addSubview(self.chartView)
+//        chartView.animate(xAxisDuration: 1.2, yAxisDuration: 0.8) // アニメーション
+//
+//        /// 進捗ラベルの表示にもアニメーションをつける
+//        percentageLabel.alpha = 0
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+//            UIView.animate(withDuration: 0.6) { [weak self] in
+//                self?.percentageLabel.alpha = 1
+//            }
+//        }
+        if allCount == 0 {
+            // 念の為
+            percentageLabel.text = "0%"
+        } else {
+            percentageLabel.text = String(perfectCount * 100 / allCount) + "%"
+        }
+    }
+
+    private func chartAnimation() {
         chartView.animate(xAxisDuration: 1.2, yAxisDuration: 0.8) // アニメーション
 
         /// 進捗ラベルの表示にもアニメーションをつける
@@ -331,7 +399,6 @@ extension TestSettingsViewController {
                 self?.percentageLabel.alpha = 1
             }
         }
-        percentageLabel.text = String(perfectCount * 100 / allCount) + "%" // 仮
     }
 
 }
