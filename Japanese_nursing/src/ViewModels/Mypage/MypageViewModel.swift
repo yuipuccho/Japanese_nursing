@@ -49,6 +49,7 @@ class MypageViewModel {
 
     /// アクティビティ取得
     func fetchActivities(authToken: String) -> Observable<[ActivitiesDomainModel]> {
+
         return GetActivitiesModel().getActivities(authToken: authToken)
             .do(onCompleted: {[weak self] in
                 self?.loadingRelay.accept(false)
@@ -76,6 +77,5 @@ class MypageViewModel {
             dateArray.insert(d, at: 0)
         }
     }
-
 
 }

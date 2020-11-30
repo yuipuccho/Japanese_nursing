@@ -51,6 +51,9 @@
 		BA50985C2574B8D100FB88AE /* GetActivitiesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50985B2574B8D100FB88AE /* GetActivitiesModel.swift */; };
 		BA5098602574B95700FB88AE /* ActivitiesDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50985F2574B95700FB88AE /* ActivitiesDomainModel.swift */; };
 		BA5098642574C1E800FB88AE /* Date+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5098632574C1E800FB88AE /* Date+Extended.swift */; };
+		BA50986B2574DFDF00FB88AE /* UpdateTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50986A2574DFDF00FB88AE /* UpdateTarget.swift */; };
+		BA5098702574E15B00FB88AE /* UpdateTargetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50986F2574E15B00FB88AE /* UpdateTargetModel.swift */; };
+		BA5098762574E2EE00FB88AE /* TargetSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5098752574E2EE00FB88AE /* TargetSettingViewModel.swift */; };
 		BA582A3924E170670089DA0B /* LearningUnit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA582A3824E170670089DA0B /* LearningUnit.storyboard */; };
 		BA5EACE324D2AF8F0008E2D0 /* UnitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5EACE224D2AF8F0008E2D0 /* UnitListViewController.swift */; };
 		BA5EAD4C24D453520008E2D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA5EAD4B24D453520008E2D0 /* GoogleService-Info.plist */; };
@@ -150,6 +153,9 @@
 		BA50985B2574B8D100FB88AE /* GetActivitiesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetActivitiesModel.swift; sourceTree = "<group>"; };
 		BA50985F2574B95700FB88AE /* ActivitiesDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesDomainModel.swift; sourceTree = "<group>"; };
 		BA5098632574C1E800FB88AE /* Date+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extended.swift"; sourceTree = "<group>"; };
+		BA50986A2574DFDF00FB88AE /* UpdateTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTarget.swift; sourceTree = "<group>"; };
+		BA50986F2574E15B00FB88AE /* UpdateTargetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTargetModel.swift; sourceTree = "<group>"; };
+		BA5098752574E2EE00FB88AE /* TargetSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetSettingViewModel.swift; sourceTree = "<group>"; };
 		BA582A3824E170670089DA0B /* LearningUnit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LearningUnit.storyboard; sourceTree = "<group>"; };
 		BA5EACE224D2AF8F0008E2D0 /* UnitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListViewController.swift; sourceTree = "<group>"; };
 		BA5EAD4B24D453520008E2D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../FetiLip-develop/fetilip/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -464,6 +470,38 @@
 			path = Mypage;
 			sourceTree = "<group>";
 		};
+		BA5098692574DFB800FB88AE /* UpdateTarget */ = {
+			isa = PBXGroup;
+			children = (
+				BA50986A2574DFDF00FB88AE /* UpdateTarget.swift */,
+			);
+			path = UpdateTarget;
+			sourceTree = "<group>";
+		};
+		BA50986E2574E14300FB88AE /* UpdateTarget */ = {
+			isa = PBXGroup;
+			children = (
+				BA50986F2574E15B00FB88AE /* UpdateTargetModel.swift */,
+			);
+			path = UpdateTarget;
+			sourceTree = "<group>";
+		};
+		BA5098732574E29200FB88AE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				BA5098742574E2DE00FB88AE /* TargetSetting */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		BA5098742574E2DE00FB88AE /* TargetSetting */ = {
+			isa = PBXGroup;
+			children = (
+				BA5098752574E2EE00FB88AE /* TargetSettingViewModel.swift */,
+			);
+			path = TargetSetting;
+			sourceTree = "<group>";
+		};
 		BA582A3724E170190089DA0B /* LearningUnit */ = {
 			isa = PBXGroup;
 			children = (
@@ -631,6 +669,7 @@
 				BA50981A2574056100FB88AE /* TargetStatus */,
 				BA5097F42573D6D400FB88AE /* TestStatus */,
 				BAF1EABD25733AC200E19657 /* UnitMasters */,
+				BA5098692574DFB800FB88AE /* UpdateTarget */,
 				BAD1CFEC2571F6A500F9A74A /* JapaneseNursingAPI.swift */,
 				BA509837257497BC00FB88AE /* WordMasters */,
 			);
@@ -683,6 +722,7 @@
 				BA5098232574066F00FB88AE /* TargetStatus */,
 				BA5097FD2573D9DE00FB88AE /* TestStatus */,
 				BAF1EAC825733D2500E19657 /* UnitMasters */,
+				BA50986E2574E14300FB88AE /* UpdateTarget */,
 				BA5098412574982000FB88AE /* WordMasters */,
 			);
 			path = Models;
@@ -730,6 +770,7 @@
 				BAD1D0652571FC5500F9A74A /* CreateUser */,
 				BAD1D02A2571FA4000F9A74A /* Domains */,
 				BA50982D2574077C00FB88AE /* Mypage */,
+				BA5098732574E29200FB88AE /* Settings */,
 				BAF1EACD25733DFB00E19657 /* Study */,
 				BA5098082573DB3D00FB88AE /* Test */,
 			);
@@ -1058,6 +1099,7 @@
 				BAD1D0242571F9FE00F9A74A /* Typealias.swift in Sources */,
 				BA2A5DE9255139DB0085A3EF /* LearningUnitViewController.swift in Sources */,
 				BA5098442574984700FB88AE /* GetWordMastersModel.swift in Sources */,
+				BA5098762574E2EE00FB88AE /* TargetSettingViewModel.swift in Sources */,
 				BA133ACA24C04D850047E265 /* CustomTabBar.swift in Sources */,
 				BA50981C2574057200FB88AE /* TargetStatus.swift in Sources */,
 				BAF1EAD825734F8600E19657 /* UnitListSectionModel.swift in Sources */,
@@ -1071,6 +1113,7 @@
 				BA50985C2574B8D100FB88AE /* GetActivitiesModel.swift in Sources */,
 				BAE31B7A2555A87900A3FC6D /* Array+Extended.swift in Sources */,
 				BA50982A257406EB00FB88AE /* TargetStatusDomainModel.swift in Sources */,
+				BA5098702574E15B00FB88AE /* UpdateTargetModel.swift in Sources */,
 				BA5097F62573D6ED00FB88AE /* GetTestStatus.swift in Sources */,
 				BAD1CFE92571F67200F9A74A /* CreateUser.swift in Sources */,
 				BA50980A2573DB4E00FB88AE /* TestSettingsViewModel.swift in Sources */,
@@ -1093,6 +1136,7 @@
 				BA40295D255436B800421276 /* TestSettingsViewController.swift in Sources */,
 				BAD1CFF82571F74900F9A74A /* APIEvent.swift in Sources */,
 				BA509839257497DF00FB88AE /* GetWordMasters.swift in Sources */,
+				BA50986B2574DFDF00FB88AE /* UpdateTarget.swift in Sources */,
 				BAF1EAF42573576900E19657 /* EmptyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
