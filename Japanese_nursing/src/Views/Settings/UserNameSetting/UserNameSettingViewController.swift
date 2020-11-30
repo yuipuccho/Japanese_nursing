@@ -7,20 +7,17 @@
 //
 
 import UIKit
-
-import UIKit
 import RxSwift
 import RxCocoa
 import PKHUD
 import SCLAlertView
-
 
 /**
  * ユーザ名変更VC
  */
 class UserNameSettingViewController: UIViewController {
 
-    private lazy var viewModel: CreateUserViewModel = CreateUserViewModel()
+    private lazy var viewModel: UserNameSettingViewModel = UserNameSettingViewModel()
 
     // MARK: - Outlets
 
@@ -82,11 +79,12 @@ class UserNameSettingViewController: UIViewController {
     private func fetch(isAnonymous: Bool = true, userName: String) {
         HUD.show(.progress)
 
-        viewModel.fetch(isAnonymous: isAnonymous, userName: userName)
+        viewModel.fetch(authToken: ApplicationConfigData.authToken, userName: userName)
             .subscribe(
                 onNext: { domain in
                     HUD.flash(.label("変更しました！"), delay: 1.0) { [weak self] _ in
                         if let nc = self?.navigationController {
+                            ApplicationConfigData.userName = userName
                             nc.popViewController(animated: true)
                         } else {
                             self?.dismiss(animated: true)

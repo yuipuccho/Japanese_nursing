@@ -54,6 +54,9 @@
 		BA50986B2574DFDF00FB88AE /* UpdateTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50986A2574DFDF00FB88AE /* UpdateTarget.swift */; };
 		BA5098702574E15B00FB88AE /* UpdateTargetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50986F2574E15B00FB88AE /* UpdateTargetModel.swift */; };
 		BA5098762574E2EE00FB88AE /* TargetSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5098752574E2EE00FB88AE /* TargetSettingViewModel.swift */; };
+		BA50987B257517FF00FB88AE /* UpdateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50987A257517FE00FB88AE /* UpdateUser.swift */; };
+		BA5098812575193F00FB88AE /* UpdateUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5098802575193F00FB88AE /* UpdateUserModel.swift */; };
+		BA509886257519E900FB88AE /* UserNameSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA509885257519E900FB88AE /* UserNameSettingViewModel.swift */; };
 		BA582A3924E170670089DA0B /* LearningUnit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA582A3824E170670089DA0B /* LearningUnit.storyboard */; };
 		BA5EACE324D2AF8F0008E2D0 /* UnitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5EACE224D2AF8F0008E2D0 /* UnitListViewController.swift */; };
 		BA5EAD4C24D453520008E2D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA5EAD4B24D453520008E2D0 /* GoogleService-Info.plist */; };
@@ -156,6 +159,9 @@
 		BA50986A2574DFDF00FB88AE /* UpdateTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTarget.swift; sourceTree = "<group>"; };
 		BA50986F2574E15B00FB88AE /* UpdateTargetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTargetModel.swift; sourceTree = "<group>"; };
 		BA5098752574E2EE00FB88AE /* TargetSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetSettingViewModel.swift; sourceTree = "<group>"; };
+		BA50987A257517FE00FB88AE /* UpdateUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUser.swift; sourceTree = "<group>"; };
+		BA5098802575193F00FB88AE /* UpdateUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserModel.swift; sourceTree = "<group>"; };
+		BA509885257519E900FB88AE /* UserNameSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameSettingViewModel.swift; sourceTree = "<group>"; };
 		BA582A3824E170670089DA0B /* LearningUnit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LearningUnit.storyboard; sourceTree = "<group>"; };
 		BA5EACE224D2AF8F0008E2D0 /* UnitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListViewController.swift; sourceTree = "<group>"; };
 		BA5EAD4B24D453520008E2D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../FetiLip-develop/fetilip/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -490,6 +496,7 @@
 			isa = PBXGroup;
 			children = (
 				BA5098742574E2DE00FB88AE /* TargetSetting */,
+				BA509884257519D300FB88AE /* UserNameSetting */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -500,6 +507,30 @@
 				BA5098752574E2EE00FB88AE /* TargetSettingViewModel.swift */,
 			);
 			path = TargetSetting;
+			sourceTree = "<group>";
+		};
+		BA509879257517DF00FB88AE /* UpdateUser */ = {
+			isa = PBXGroup;
+			children = (
+				BA50987A257517FE00FB88AE /* UpdateUser.swift */,
+			);
+			path = UpdateUser;
+			sourceTree = "<group>";
+		};
+		BA50987F2575192C00FB88AE /* UpdateUser */ = {
+			isa = PBXGroup;
+			children = (
+				BA5098802575193F00FB88AE /* UpdateUserModel.swift */,
+			);
+			path = UpdateUser;
+			sourceTree = "<group>";
+		};
+		BA509884257519D300FB88AE /* UserNameSetting */ = {
+			isa = PBXGroup;
+			children = (
+				BA509885257519E900FB88AE /* UserNameSettingViewModel.swift */,
+			);
+			path = UserNameSetting;
 			sourceTree = "<group>";
 		};
 		BA582A3724E170190089DA0B /* LearningUnit */ = {
@@ -671,6 +702,7 @@
 				BAF1EABD25733AC200E19657 /* UnitMasters */,
 				BA5098692574DFB800FB88AE /* UpdateTarget */,
 				BAD1CFEC2571F6A500F9A74A /* JapaneseNursingAPI.swift */,
+				BA509879257517DF00FB88AE /* UpdateUser */,
 				BA509837257497BC00FB88AE /* WordMasters */,
 			);
 			path = Communications;
@@ -723,6 +755,7 @@
 				BA5097FD2573D9DE00FB88AE /* TestStatus */,
 				BAF1EAC825733D2500E19657 /* UnitMasters */,
 				BA50986E2574E14300FB88AE /* UpdateTarget */,
+				BA50987F2575192C00FB88AE /* UpdateUser */,
 				BA5098412574982000FB88AE /* WordMasters */,
 			);
 			path = Models;
@@ -1077,6 +1110,7 @@
 				BA5098602574B95700FB88AE /* ActivitiesDomainModel.swift in Sources */,
 				BAD1D02C2571FA5400F9A74A /* CreateUserDomainModel.swift in Sources */,
 				BA02F941256A19ED00D93643 /* TabBar.swift in Sources */,
+				BA50987B257517FF00FB88AE /* UpdateUser.swift in Sources */,
 				BA2A5DE5255135A50085A3EF /* UnitListCell.swift in Sources */,
 				BA5EACE324D2AF8F0008E2D0 /* UnitListViewController.swift in Sources */,
 				BA50983E2574980B00FB88AE /* WordMastersEntity.swift in Sources */,
@@ -1103,6 +1137,7 @@
 				BA133ACA24C04D850047E265 /* CustomTabBar.swift in Sources */,
 				BA50981C2574057200FB88AE /* TargetStatus.swift in Sources */,
 				BAF1EAD825734F8600E19657 /* UnitListSectionModel.swift in Sources */,
+				BA509886257519E900FB88AE /* UserNameSettingViewModel.swift in Sources */,
 				BA06D2012557AB26000216CC /* TestViewController.swift in Sources */,
 				BAF1EAC425733BEB00E19657 /* UnitMastersEntity.swift in Sources */,
 				BA5098522574B7E200FB88AE /* GetActivities.swift in Sources */,
@@ -1119,6 +1154,7 @@
 				BA50980A2573DB4E00FB88AE /* TestSettingsViewModel.swift in Sources */,
 				BA5097FA2573D93A00FB88AE /* TestStatusEntity.swift in Sources */,
 				BAD1D0062571F87E00F9A74A /* BaseTextField.swift in Sources */,
+				BA5098812575193F00FB88AE /* UpdateUserModel.swift in Sources */,
 				BAD1D0182571F98D00F9A74A /* JsonMappable.swift in Sources */,
 				BA1E5B2F2487AC210055A5F4 /* AppDelegate.swift in Sources */,
 				BA2DF386255859E400064DA8 /* MyPageViewController.swift in Sources */,
