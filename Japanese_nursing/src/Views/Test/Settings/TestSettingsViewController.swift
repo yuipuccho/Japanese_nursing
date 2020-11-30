@@ -345,12 +345,6 @@ extension TestSettingsViewController {
     /// 円形進捗バーの表示設定
     private func setupChartView() {
 
-        // TODO: - 仮で入れているので、単元と単語テーブルができ次第削除する
-        perfectCount = 10
-        allCount = 100
-        mistakeCount = 80
-        untestedCount = 10
-
         // グラフに表示するデータ
         let dataEntries = [
             PieChartDataEntry(value: Double(perfectCount * 100 / allCount)),
