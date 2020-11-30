@@ -11,13 +11,16 @@ import Charts
 import RxCocoa
 import RxSwift
 import PKHUD
+import SCLAlertView
 
 /**
  * 目標の設定画面VC
  */
 class TargetSettingViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    public static let shared: TargetSettingViewController = TargetSettingViewController()
+    private lazy var viewModel: TargetSettingViewModel = TargetSettingViewModel()
+
+//    public static let shared: TargetSettingViewController = TargetSettingViewController()
 
     // MARK: - Outlets
 
@@ -176,13 +179,10 @@ extension TargetSettingViewController {
 
         // 保存ボタンタップ
         saveButton.rx.tap.subscribe(onNext: { [unowned self] in
-            // TODO: 保存処理を追加する
-            HUD.flash(.label("保存しました！"), delay: 0.5) {_ in
-                if let nc = self.navigationController {
-                    nc.popViewController(animated: true)
-                } else {
-                    self.dismiss(animated: true)
-                }
+            if targetType == .study {
+                fetch(targetLearningCount: selectedTargetNumber, targetTestingCount: nil)
+            } else {
+                fetch(targetLearningCount: nil, targetTestingCount: selectedTargetNumber)
             }
         }).disposed(by: disposeBag)
     }
@@ -202,6 +202,45 @@ extension TargetSettingViewController {
         targetIconImageView.image = type.icon
         cancelButton.setTitleColor(type.buttonColor, for: .normal)
         saveButton.backgroundColor = type.buttonColor
+    }
+
+    private func fetch(targetLearningCount: Int?, targetTestingCount: Int?) {
+        HUD.show(.progress)
+        viewModel.fetch(authToken: ApplicationConfigData.authToken, targetLearningCount: targetLearningCount, targetTestingCount: targetTestingCount)
+            .subscribe(
+                onNext: { [unowned self] in
+                    HUD.flash(.label("保存しました！"), delay: 0.5) {_ in
+                        if let nc = self.navigationController {
+                            nc.popViewController(animated: true)
+                        } else {
+                            self.dismiss(animated: true)
+                        }
+                    }
+                },
+                onError: { [weak self] in
+                    HUD.hide()
+
+                    // エラーアラートを表示
+                    let appearance = SCLAlertView.SCLAppearance(
+                        kTitleFont: R.font.notoSansCJKjpSubBold(size: 16)!,
+                        kTextFont: R.font.notoSansCJKjpSubMedium(size: 12)!
+                    )
+                    let alertView = SCLAlertView(appearance: appearance)
+                    alertView.addButton("リトライ") { [weak self] in
+                        self?.fetch(targetLearningCount: targetLearningCount, targetTestingCount: targetTestingCount)
+                    }
+
+                    alertView.showTitle("Error",
+                                        subTitle: $0.descriptionOfType,
+                                        timeout: nil,
+                                        completeText: "閉じる",
+                                        style: .error,
+                                        colorStyle: 0x8EB2F5,
+                                        colorTextButton: nil,
+                                        circleIconImage: nil,
+                                        animationStyle: .bottomToTop)
+
+                }).disposed(by: disposeBag)
     }
 
 }
