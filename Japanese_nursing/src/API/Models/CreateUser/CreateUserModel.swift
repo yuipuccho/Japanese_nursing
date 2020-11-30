@@ -22,7 +22,7 @@ public struct PostCreateUserModel {
      * ユーザ作成
      * - Parameters:
      *   - isAnonymous: 匿名ユーザかどうか
-     *   - userName: ユーザ名
+     *   - userName: ニックネーム
      * - Returns: ユーザ作成Entity Observable
      */
     public func postCreateUser(isAnonymous: Bool, userName: String) -> Observable<PostCreateUserResponse.Entity> {

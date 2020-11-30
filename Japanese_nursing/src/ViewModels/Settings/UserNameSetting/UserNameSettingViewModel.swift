@@ -11,7 +11,7 @@ import RxCocoa
 import RxSwift
 
 /**
- * ユーザ名設定画面のViewModel
+ * ニックネーム変更画面のViewModel
  */
 class UserNameSettingViewModel {
 

@@ -21,7 +21,7 @@ class CreateUserViewController: UIViewController {
 
     // MARK: - Outlets
 
-    /// ユーザ名入力TextField
+    /// ニックネーム入力TextField
     @IBOutlet private weak var nameUnderLineTextField: UnderlineTextField!
     /// アラートLabel
     @IBOutlet private weak var nameAlertLabel: UILabel!
@@ -42,7 +42,7 @@ class CreateUserViewController: UIViewController {
     // MARK: - Functions
 
     private func subscribe() {
-        /// ユーザ名入力TextField
+        /// ニックネーム入力TextField
         nameUnderLineTextField.rx.text.orEmpty.asDriver().drive(onNext: { [unowned self] _ in
             self.nameUnderLineTextField.setUnderline(R.color.apptop()!)
             self.validate()

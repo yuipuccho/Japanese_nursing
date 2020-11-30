@@ -32,7 +32,7 @@ class ApplicationConfigData {
         set { self.ud.set(newValue, forKey: "role")}
     }
 
-    // ユーザ名
+    // ニックネーム
     static var userName: String {
         get { return self.ud.string(forKey: "userName") ?? "" }
         set { self.ud.set(newValue, forKey: "userName")}

@@ -16,7 +16,7 @@ public struct PostCreateUserRequest: JapaneseNursingRequest {
 
     /// 匿名ユーザかどうか
     private var isAnonymous: Bool
-    /// ユーザ名
+    /// ニックネーム
     private var userName: String
 
     /// init and set query parameters.

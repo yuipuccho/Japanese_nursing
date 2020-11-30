@@ -16,7 +16,7 @@ public struct PutUserRequest: JapaneseNursingRequest {
 
     /// 認証トークン
     private var authToken: String
-    /// ユーザ名
+    /// ニックネーム
     private var userName: String
     /// ユーザID
     private var id: Int

@@ -22,7 +22,7 @@ public struct UpdateUserModel {
      * ユーザ情報更新
      * - Parameters:
      *   - authToken: 認証トークン
-     *   - userName: ユーザ名
+     *   - userName: ニックネーム
      * - Returns: ユーザ情報更新Entity Observable
      */
     public func putUser(authToken: String, userName: String) -> Observable<PutUserResponse.Entity> {
