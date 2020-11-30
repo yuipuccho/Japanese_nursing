@@ -1,33 +1,203 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansCJKjpSub-Bold.otf">
+            <string>NotoSansCJKjpSub-Bold</string>
+        </array>
+        <array key="NotoSansCJKjpSub-Medium.otf">
+            <string>NotoSansCJKjpSub-Medium</string>
+        </array>
+        <array key="NotoSansCJKjpSub-Regular.otf">
+            <string>NotoSansCJKjpSub-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--User Name Setting View Controller-->
-        <scene sceneID="FSs-XK-2AB">
+        <scene sceneID="kcV-Uf-ndO">
             <objects>
-                <viewController storyboardIdentifier="UserNameSettingViewController" id="Iey-1c-m4A" customClass="UserNameSettingViewController" customModule="d_介護の日本語" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gck-Qg-S4w">
+                <viewController storyboardIdentifier="UserNameSettingViewController" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="ILk-q3-dNg" customClass="UserNameSettingViewController" customModule="d_介護の日本語" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u3U-nG-XuN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="3GI-O8-080"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ニックネームの変更" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36F-lX-M6K">
+                                <rect key="frame" x="20" y="147" width="135" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="6BU-9D-3W5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Medium" family="NotoSansCJKjpSub-Medium" pointSize="15"/>
+                                <color key="textColor" name="TextDarkGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ニックネーム(12文字以内)" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="g2x-ge-TlE" userLabel="Name Underline Text Field" customClass="UnderlineTextField" customModule="d_介護の日本語" customModuleProvider="target">
+                                <rect key="frame" x="70" y="179" width="304" height="40"/>
+                                <color key="tintColor" name="Apptop"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="YEy-2C-OiX"/>
+                                </constraints>
+                                <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Regular" family="NotoSansCJKjpSub-Regular" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="underlineHeight">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="underlineColor">
+                                        <color key="value" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_icon_gray" translatesAutoresizingMaskIntoConstraints="NO" id="f0F-N5-qX0" userLabel="Name Image View">
+                                <rect key="frame" x="30" y="187" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="0V1-sU-Omg"/>
+                                    <constraint firstAttribute="width" constant="24" id="yzf-fr-U66"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaI-WX-OgB" userLabel="Name Alert Label">
+                                <rect key="frame" x="70" y="221" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="11"/>
+                                <color key="textColor" red="0.96078431369999995" green="0.47843137250000001" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_settings_header" translatesAutoresizingMaskIntoConstraints="NO" id="G2o-8T-M5R">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="127"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="G2o-8T-M5R" secondAttribute="height" multiplier="375:115" id="jSW-Ur-HQY"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="0t1-Bp-O43">
+                                <rect key="frame" x="30" y="299" width="354" height="55"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jva-dQ-Pu9">
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="B3Y-Tn-ndP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="17"/>
+                                        <state key="normal" title="キャンセル">
+                                            <color key="titleColor" name="SettingGray"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="14"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowIBColor">
+                                                <color key="value" systemColor="systemGray2Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                                <size key="value" width="1" height="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="LightGray"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kR2-0f-y5D">
+                                        <rect key="frame" x="184" y="0.0" width="170" height="55"/>
+                                        <color key="backgroundColor" name="SettingGray"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="Wuw-0q-MCe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="18"/>
+                                        <state key="normal" title="変更">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="14"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowIBColor">
+                                                <color key="value" systemColor="systemGray2Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                                <size key="value" width="1" height="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lOb-f1-Iqb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0t1-Bp-O43" firstAttribute="leading" secondItem="lOb-f1-Iqb" secondAttribute="leading" constant="30" id="01f-HW-2WG"/>
+                            <constraint firstItem="g2x-ge-TlE" firstAttribute="leading" secondItem="f0F-N5-qX0" secondAttribute="trailing" constant="16" id="8bW-ZY-GjJ"/>
+                            <constraint firstItem="GaI-WX-OgB" firstAttribute="leading" secondItem="g2x-ge-TlE" secondAttribute="leading" id="98j-ff-nt9"/>
+                            <constraint firstItem="lOb-f1-Iqb" firstAttribute="trailing" secondItem="g2x-ge-TlE" secondAttribute="trailing" constant="40" id="CW6-Jy-4Xl"/>
+                            <constraint firstItem="f0F-N5-qX0" firstAttribute="centerY" secondItem="g2x-ge-TlE" secondAttribute="centerY" id="GtO-Dc-59A"/>
+                            <constraint firstItem="GaI-WX-OgB" firstAttribute="top" secondItem="g2x-ge-TlE" secondAttribute="bottom" constant="2" id="IIh-4K-gEL"/>
+                            <constraint firstItem="G2o-8T-M5R" firstAttribute="top" secondItem="u3U-nG-XuN" secondAttribute="top" id="Ovn-hk-olj"/>
+                            <constraint firstItem="lOb-f1-Iqb" firstAttribute="trailing" secondItem="G2o-8T-M5R" secondAttribute="trailing" id="PoL-ar-tat"/>
+                            <constraint firstItem="G2o-8T-M5R" firstAttribute="leading" secondItem="lOb-f1-Iqb" secondAttribute="leading" id="cAP-V1-xV8"/>
+                            <constraint firstItem="0t1-Bp-O43" firstAttribute="top" secondItem="g2x-ge-TlE" secondAttribute="bottom" constant="80" id="cOK-Bq-iMc"/>
+                            <constraint firstItem="lOb-f1-Iqb" firstAttribute="trailing" secondItem="0t1-Bp-O43" secondAttribute="trailing" constant="30" id="dHm-Nl-p7Z"/>
+                            <constraint firstItem="36F-lX-M6K" firstAttribute="top" secondItem="G2o-8T-M5R" secondAttribute="bottom" constant="20" id="gOl-eI-qsQ"/>
+                            <constraint firstItem="g2x-ge-TlE" firstAttribute="top" secondItem="36F-lX-M6K" secondAttribute="bottom" constant="12" id="gbm-mS-tMl"/>
+                            <constraint firstItem="f0F-N5-qX0" firstAttribute="leading" secondItem="36F-lX-M6K" secondAttribute="leading" constant="10" id="nj7-3D-qaW"/>
+                            <constraint firstItem="36F-lX-M6K" firstAttribute="leading" secondItem="lOb-f1-Iqb" secondAttribute="leading" constant="20" id="xp5-sk-7Kg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chancelButton" destination="jva-dQ-Pu9" id="6Cy-Ks-4tf"/>
+                        <outlet property="changeButton" destination="kR2-0f-y5D" id="KNN-3Q-Kvc"/>
+                        <outlet property="nameAlertLabel" destination="GaI-WX-OgB" id="xHc-u3-zT7"/>
+                        <outlet property="nameUnderLineTextField" destination="g2x-ge-TlE" id="Nnh-c3-qJj"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GVf-6P-xMK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0wX-bd-f3V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-89" y="126"/>
+            <point key="canvasLocation" x="-588" y="187"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="g2x-ge-TlE">
+            <size key="intrinsicContentSize" width="177" height="24"/>
+        </designable>
+    </designables>
     <resources>
+        <image name="user_icon_gray" width="70" height="70"/>
+        <image name="user_settings_header" width="375" height="115"/>
+        <namedColor name="Apptop">
+            <color red="0.55686274509803924" green="0.69803921568627447" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LightGray">
+            <color red="0.92156862745098034" green="0.94901960784313721" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SettingGray">
+            <color red="0.76470588235294112" green="0.80392156862745101" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextDarkGray">
+            <color red="0.41960784313725491" green="0.42745098039215684" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

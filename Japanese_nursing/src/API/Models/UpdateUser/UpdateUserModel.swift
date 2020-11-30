@@ -1,8 +1,8 @@
 //
-//  CreateUserModel.swift
+//  UpdateUserModel.swift
 //  Japanese_nursing
 //
-//  Created by 吉澤優衣 on 2020/11/28.
+//  Created by 吉澤優衣 on 2020/11/30.
 //  Copyright © 2020 吉澤優衣. All rights reserved.
 //
 
@@ -11,25 +11,25 @@ import Foundation
 import RxSwift
 
 /**
- * ユーザ作成
+ * ユーザ情報更新
  */
-public struct PostCreateUserModel {
+public struct UpdateUserModel {
 
     public init() {
     }
 
     /**
-     * ユーザ作成
+     * ユーザ情報更新
      * - Parameters:
-     *   - isAnonymous: 匿名ユーザかどうか
+     *   - authToken: 認証トークン
      *   - userName: ニックネーム
-     * - Returns: ユーザ作成Entity Observable
+     * - Returns: ユーザ情報更新Entity Observable
      */
-    public func postCreateUser(isAnonymous: Bool, userName: String) -> Observable<PostCreateUserResponse.Entity> {
+    public func putUser(authToken: String, userName: String) -> Observable<PutUserResponse.Entity> {
 
         return Observable.create({ observer in
 
-            let req = PostCreateUserRequest(isAnonymous: isAnonymous, userName: userName)
+            let req = PutUserRequest(authToken: authToken, userName: userName)
 
             let task = Session.send(req) {
                 switch $0 {

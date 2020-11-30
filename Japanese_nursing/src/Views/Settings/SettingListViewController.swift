@@ -20,7 +20,7 @@ class SettingListViewController: UIViewController {
     /// 閉じるボタン
     @IBOutlet private weak var closeButton: UIButton!
 
-    /// ユーザ名の変更
+    /// ニックネームの変更
     @IBOutlet private weak var userNameSettingButton: UIButton!
     /// 目標学習数の変更
     @IBOutlet private weak var studyTargetSettingButton: UIButton!
@@ -50,9 +50,10 @@ class SettingListViewController: UIViewController {
             self?.dismiss(animated: true)
         }).disposed(by: disposeBag)
 
-        // ユーザー名の変更タップ
+        // ニックネームの変更タップ
         userNameSettingButton.rx.tap.subscribe(onNext: { [weak self] in
-            self?.dismiss(animated: true)
+            let vc = UserNameSettingViewController.makeInstance()
+            self?.navigationController?.pushViewController(vc, animated: true)
         }).disposed(by: disposeBag)
 
         // 目標学習数タップ
