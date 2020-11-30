@@ -85,7 +85,7 @@
                         </button>
                     </subviews>
                 </stackView>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="35x-cW-QVl">
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="35x-cW-QVl">
                     <rect key="frame" x="177" y="386" width="60" height="60"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="60" id="GV3-mH-p34"/>
