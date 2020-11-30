@@ -24,9 +24,6 @@ class LearningUnitViewModel {
         return loadingRelay.asDriver()
     }
 
-//    var unitsObservable: Observable<[UnitListSectionDomainModel]> {
-//        unitsRelay.asObservable()
-//    }
     var isLoading: Bool {
         loadingRelay.value
     }

@@ -210,7 +210,6 @@ extension LearningUnitViewController: KolodaViewDataSource {
 
     /// カードの枚数を返す
     func kolodaNumberOfCards(_ koloda: KolodaView) -> Int {
-//        return items.count
         return viewModel.words.count
     }
 

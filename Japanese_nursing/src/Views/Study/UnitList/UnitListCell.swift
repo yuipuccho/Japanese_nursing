@@ -24,9 +24,6 @@ class UnitListCell: UITableViewCell {
     @IBOutlet weak var checkMarkPercentageLabel: UILabel!
     /// バッジ
     @IBOutlet weak var completeBadge: UIImageView!
-    /// セルボタン（セルのタップだとセルが白くなる不具合がなぜか発生するため、応急処置）
-    // TODO: - 削除する
-    @IBOutlet weak var cellButton: UIButton!
 
     // MARK: - Properties
 
@@ -39,7 +36,6 @@ class UnitListCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        subscribe()
         clearConfigure()
     }
 
@@ -55,13 +51,6 @@ class UnitListCell: UITableViewCell {
         wordsCountLabel.text = nil
         checkMarkPercentageLabel.text = nil
         completeBadge.isHidden = true
-    }
-
-    func subscribe() {
-        // セルタップ
-        cellButton.rx.tap.subscribe(onNext: { [weak self] in
-            self?.cellTappedSubject.onNext(())
-        }).disposed(by: disposeBag)
     }
 
 }
