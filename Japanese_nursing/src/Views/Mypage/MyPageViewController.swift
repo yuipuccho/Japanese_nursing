@@ -48,7 +48,7 @@ class MyPageViewController: UIViewController {
 
     private lazy var emptyView: EmptyView = {
         let v = R.nib.emptyView.firstView(owner: nil)!
-        v.backgroundColor = R.color.test()
+        v.backgroundColor = R.color.mypage()
         v.retryAction = { [weak self] in
             self?.fetch()
         }
