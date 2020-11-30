@@ -24,7 +24,7 @@ public struct UpdateTargetModel {
      *   - authToken: 認証トークン
      *   - targetLearningCount: 目標学習数
      *   - targetTestingCount: 目標テスト数
-     * - Returns: ユーザ作成Entity Observable
+     * - Returns: 目標更新Entity Observable
      */
     public func putTargets(authToken: String, targetLearningCount: Int?, targetTestingCount: Int?) -> Observable<PutTargetsResponse.Entity> {
 
