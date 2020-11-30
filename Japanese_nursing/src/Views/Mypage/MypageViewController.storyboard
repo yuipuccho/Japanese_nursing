@@ -49,15 +49,15 @@
                                 <rect key="frame" x="20" y="370" width="374" height="251"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="igM-YB-Sul" customClass="BarChartView" customModule="Charts">
-                                        <rect key="frame" x="24" y="14" width="326" height="215"/>
+                                        <rect key="frame" x="24" y="24" width="326" height="203"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="igM-YB-Sul" secondAttribute="bottom" constant="22" id="hkO-Sr-vnC"/>
+                                    <constraint firstAttribute="bottom" secondItem="igM-YB-Sul" secondAttribute="bottom" constant="24" id="hkO-Sr-vnC"/>
                                     <constraint firstAttribute="trailing" secondItem="igM-YB-Sul" secondAttribute="trailing" constant="24" id="i3T-mv-lcq"/>
                                     <constraint firstItem="igM-YB-Sul" firstAttribute="leading" secondItem="Ho2-HA-nOm" secondAttribute="leading" constant="24" id="nrG-bR-XE5"/>
-                                    <constraint firstItem="igM-YB-Sul" firstAttribute="top" secondItem="Ho2-HA-nOm" secondAttribute="top" constant="14" id="sRZ-2d-Bzj"/>
+                                    <constraint firstItem="igM-YB-Sul" firstAttribute="top" secondItem="Ho2-HA-nOm" secondAttribute="top" constant="24" id="sRZ-2d-Bzj"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

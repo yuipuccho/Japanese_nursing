@@ -46,6 +46,11 @@
 		BA5098442574984700FB88AE /* GetWordMastersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5098432574984700FB88AE /* GetWordMastersModel.swift */; };
 		BA5098482574987E00FB88AE /* WordMastersDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5098472574987E00FB88AE /* WordMastersDomainModel.swift */; };
 		BA50984B257498A400FB88AE /* LearningUnitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50984A257498A400FB88AE /* LearningUnitViewModel.swift */; };
+		BA5098522574B7E200FB88AE /* GetActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5098512574B7E200FB88AE /* GetActivities.swift */; };
+		BA5098572574B85800FB88AE /* ActivityEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5098562574B85800FB88AE /* ActivityEntity.swift */; };
+		BA50985C2574B8D100FB88AE /* GetActivitiesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50985B2574B8D100FB88AE /* GetActivitiesModel.swift */; };
+		BA5098602574B95700FB88AE /* ActivitiesDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50985F2574B95700FB88AE /* ActivitiesDomainModel.swift */; };
+		BA5098642574C1E800FB88AE /* Date+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5098632574C1E800FB88AE /* Date+Extended.swift */; };
 		BA582A3924E170670089DA0B /* LearningUnit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA582A3824E170670089DA0B /* LearningUnit.storyboard */; };
 		BA5EACE324D2AF8F0008E2D0 /* UnitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5EACE224D2AF8F0008E2D0 /* UnitListViewController.swift */; };
 		BA5EAD4C24D453520008E2D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA5EAD4B24D453520008E2D0 /* GoogleService-Info.plist */; };
@@ -140,6 +145,11 @@
 		BA5098432574984700FB88AE /* GetWordMastersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWordMastersModel.swift; sourceTree = "<group>"; };
 		BA5098472574987E00FB88AE /* WordMastersDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordMastersDomainModel.swift; sourceTree = "<group>"; };
 		BA50984A257498A400FB88AE /* LearningUnitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningUnitViewModel.swift; sourceTree = "<group>"; };
+		BA5098512574B7E200FB88AE /* GetActivities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetActivities.swift; sourceTree = "<group>"; };
+		BA5098562574B85800FB88AE /* ActivityEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityEntity.swift; sourceTree = "<group>"; };
+		BA50985B2574B8D100FB88AE /* GetActivitiesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetActivitiesModel.swift; sourceTree = "<group>"; };
+		BA50985F2574B95700FB88AE /* ActivitiesDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesDomainModel.swift; sourceTree = "<group>"; };
+		BA5098632574C1E800FB88AE /* Date+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extended.swift"; sourceTree = "<group>"; };
 		BA582A3824E170670089DA0B /* LearningUnit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LearningUnit.storyboard; sourceTree = "<group>"; };
 		BA5EACE224D2AF8F0008E2D0 /* UnitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListViewController.swift; sourceTree = "<group>"; };
 		BA5EAD4B24D453520008E2D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../FetiLip-develop/fetilip/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -299,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				BAE31B792555A87800A3FC6D /* Array+Extended.swift */,
+				BA5098632574C1E800FB88AE /* Date+Extended.swift */,
 				BAD1D0052571F87E00F9A74A /* BaseTextField.swift */,
 				BAD1D0092571F8AF00F9A74A /* Error+Extended.swift */,
 				BADB237E256B523300BF5E2D /* UIView+IBInspectable.swift */,
@@ -419,6 +430,38 @@
 				BA5098432574984700FB88AE /* GetWordMastersModel.swift */,
 			);
 			path = WordMasters;
+			sourceTree = "<group>";
+		};
+		BA5098502574B7C100FB88AE /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				BA5098512574B7E200FB88AE /* GetActivities.swift */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		BA5098552574B84300FB88AE /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				BA5098562574B85800FB88AE /* ActivityEntity.swift */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		BA50985A2574B8BD00FB88AE /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				BA50985B2574B8D100FB88AE /* GetActivitiesModel.swift */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		BA50985E2574B93E00FB88AE /* Mypage */ = {
+			isa = PBXGroup;
+			children = (
+				BA50985F2574B95700FB88AE /* ActivitiesDomainModel.swift */,
+			);
+			path = Mypage;
 			sourceTree = "<group>";
 		};
 		BA582A3724E170190089DA0B /* LearningUnit */ = {
@@ -583,6 +626,7 @@
 		BAD1CFE62571F65400F9A74A /* Communications */ = {
 			isa = PBXGroup;
 			children = (
+				BA5098502574B7C100FB88AE /* Activity */,
 				BAD1CFE72571F66100F9A74A /* CreateUser */,
 				BA50981A2574056100FB88AE /* TargetStatus */,
 				BA5097F42573D6D400FB88AE /* TestStatus */,
@@ -604,6 +648,7 @@
 		BAD1CFF22571F6F800F9A74A /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				BA5098552574B84300FB88AE /* Activity */,
 				BAF1EAC125733BC900E19657 /* CreateUser */,
 				BA50981F257405ED00FB88AE /* TargetStatus */,
 				BA5097F82573D92600FB88AE /* TestStatus */,
@@ -633,6 +678,7 @@
 		BAD1D0012571F82600F9A74A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BA50985A2574B8BD00FB88AE /* Activity */,
 				BAF1EAC725733D1D00E19657 /* CreateUser */,
 				BA5098232574066F00FB88AE /* TargetStatus */,
 				BA5097FD2573D9DE00FB88AE /* TestStatus */,
@@ -694,6 +740,7 @@
 			isa = PBXGroup;
 			children = (
 				BAF1EAD325733E8C00E19657 /* CreateUser */,
+				BA50985E2574B93E00FB88AE /* Mypage */,
 				BAF1EAD225733E8400E19657 /* Study */,
 				BA509828257406CD00FB88AE /* TargetStatus */,
 				BA5098032573DA8E00FB88AE /* Test */,
@@ -980,11 +1027,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA66D67924A6E91500BE7273 /* AppBootstrap.swift in Sources */,
+				BA5098572574B85800FB88AE /* ActivityEntity.swift in Sources */,
 				BA509821257405FC00FB88AE /* TargetStatusEntity.swift in Sources */,
 				BAF1EACA25733D3F00E19657 /* UnitMastersModel.swift in Sources */,
 				BAB9C2762568057E004D653F /* WebViewController.swift in Sources */,
 				BAD1D0112571F92600F9A74A /* UnderlineTextField.swift in Sources */,
 				BADB237F256B523300BF5E2D /* UIView+IBInspectable.swift in Sources */,
+				BA5098602574B95700FB88AE /* ActivitiesDomainModel.swift in Sources */,
 				BAD1D02C2571FA5400F9A74A /* CreateUserDomainModel.swift in Sources */,
 				BA02F941256A19ED00D93643 /* TabBar.swift in Sources */,
 				BA2A5DE5255135A50085A3EF /* UnitListCell.swift in Sources */,
@@ -1014,10 +1063,12 @@
 				BAF1EAD825734F8600E19657 /* UnitListSectionModel.swift in Sources */,
 				BA06D2012557AB26000216CC /* TestViewController.swift in Sources */,
 				BAF1EAC425733BEB00E19657 /* UnitMastersEntity.swift in Sources */,
+				BA5098522574B7E200FB88AE /* GetActivities.swift in Sources */,
 				BAD1D01F2571F9D300F9A74A /* APIError.swift in Sources */,
 				BAD1D0282571FA2B00F9A74A /* CreateUserViewModel.swift in Sources */,
 				BA46290325640E6300D5AE8A /* OverlayView.swift in Sources */,
 				BAD1CFFF2571F7F500F9A74A /* Session+RxSwift.swift in Sources */,
+				BA50985C2574B8D100FB88AE /* GetActivitiesModel.swift in Sources */,
 				BAE31B7A2555A87900A3FC6D /* Array+Extended.swift in Sources */,
 				BA50982A257406EB00FB88AE /* TargetStatusDomainModel.swift in Sources */,
 				BA5097F62573D6ED00FB88AE /* GetTestStatus.swift in Sources */,
@@ -1035,6 +1086,7 @@
 				BAD1CFED2571F6A500F9A74A /* JapaneseNursingAPI.swift in Sources */,
 				BA1E5B312487AC210055A5F4 /* SceneDelegate.swift in Sources */,
 				BAF1EACF25733E0E00E19657 /* UnitListViewModel.swift in Sources */,
+				BA5098642574C1E800FB88AE /* Date+Extended.swift in Sources */,
 				BAD1D0032571F83F00F9A74A /* CreateUserModel.swift in Sources */,
 				BAF1EABF25733ADF00E19657 /* GetUnitMasters.swift in Sources */,
 				BA85A3FE24AB7F51003E6E85 /* R.generated.swift in Sources */,
