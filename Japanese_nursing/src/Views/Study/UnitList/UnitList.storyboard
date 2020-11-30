@@ -49,7 +49,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="45"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEARN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8A-YL-pi1">
-                                        <rect key="frame" x="171.5" y="9.5" width="71" height="26"/>
+                                        <rect key="frame" x="171" y="6" width="72" height="33"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -90,7 +90,7 @@
                                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="24.5"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5D-wA-Zka">
-                                                                                    <rect key="frame" x="8" y="7" width="22.5" height="10.5"/>
+                                                                                    <rect key="frame" x="8" y="5.5" width="24" height="13.5"/>
                                                                                     <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Medium" family="NotoSansCJKjpSub-Medium" pointSize="9"/>
                                                                                     <color key="textColor" name="WeakText"/>
                                                                                     <nil key="highlightedColor"/>
@@ -106,7 +106,7 @@
                                                                             <rect key="frame" x="0.0" y="24.5" width="374" height="25"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pi6-Xv-FDX">
-                                                                                    <rect key="frame" x="8" y="2" width="33" height="21"/>
+                                                                                    <rect key="frame" x="8" y="-1" width="38" height="27"/>
                                                                                     <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Medium" family="NotoSansCJKjpSub-Medium" pointSize="18"/>
                                                                                     <color key="textColor" name="TextDarkGray"/>
                                                                                     <nil key="highlightedColor"/>
@@ -178,9 +178,6 @@
                                                                 <constraint firstItem="RAV-xT-QaQ" firstAttribute="top" secondItem="51D-DH-Y6B" secondAttribute="top" id="ipc-Uv-qvn"/>
                                                             </constraints>
                                                         </stackView>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xH7-IS-fHc">
-                                                            <rect key="frame" x="0.0" y="0.0" width="394" height="94"/>
-                                                        </button>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="complete_badge" translatesAutoresizingMaskIntoConstraints="NO" id="WQz-Ud-FNL">
                                                             <rect key="frame" x="350" y="34" width="26" height="26"/>
                                                             <constraints>
@@ -192,12 +189,8 @@
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="WQz-Ud-FNL" secondAttribute="trailing" constant="18" id="NDs-gE-xhF"/>
-                                                        <constraint firstAttribute="bottom" secondItem="xH7-IS-fHc" secondAttribute="bottom" id="P1B-7P-UYl"/>
-                                                        <constraint firstItem="xH7-IS-fHc" firstAttribute="leading" secondItem="CUP-8P-ajf" secondAttribute="leading" id="S8c-aW-1fC"/>
-                                                        <constraint firstAttribute="trailing" secondItem="xH7-IS-fHc" secondAttribute="trailing" id="T6H-YI-g9h"/>
                                                         <constraint firstAttribute="bottom" secondItem="51D-DH-Y6B" secondAttribute="bottom" constant="10" id="UaR-LB-MSe"/>
                                                         <constraint firstAttribute="trailing" secondItem="51D-DH-Y6B" secondAttribute="trailing" constant="10" id="lVJ-m2-FjR"/>
-                                                        <constraint firstItem="xH7-IS-fHc" firstAttribute="top" secondItem="CUP-8P-ajf" secondAttribute="top" id="mhW-ZI-cc9"/>
                                                         <constraint firstItem="51D-DH-Y6B" firstAttribute="leading" secondItem="CUP-8P-ajf" secondAttribute="leading" constant="10" id="vfd-0x-BD7"/>
                                                         <constraint firstItem="51D-DH-Y6B" firstAttribute="top" secondItem="CUP-8P-ajf" secondAttribute="top" constant="10" id="y7J-df-5gg"/>
                                                         <constraint firstItem="WQz-Ud-FNL" firstAttribute="centerY" secondItem="CUP-8P-ajf" secondAttribute="centerY" id="z5Q-nY-DrG"/>
@@ -229,7 +222,6 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="Study"/>
                                         <connections>
-                                            <outlet property="cellButton" destination="xH7-IS-fHc" id="Edr-fn-Jde"/>
                                             <outlet property="checkMarkPercentageLabel" destination="khQ-zf-Y3y" id="vqb-yj-7Qu"/>
                                             <outlet property="completeBadge" destination="WQz-Ud-FNL" id="9ys-ab-2Dc"/>
                                             <outlet property="unitSubTitleLabel" destination="X5D-wA-Zka" id="LgZ-vp-rRN"/>

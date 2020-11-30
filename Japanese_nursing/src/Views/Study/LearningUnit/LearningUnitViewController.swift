@@ -15,8 +15,9 @@ import SCLAlertView
 /**
  * 学習画面VC
  */
-// TODO: 設定作成後にUIの調整をする
 class LearningUnitViewController: UIViewController {
+
+    private lazy var viewModel: LearningUnitViewModel = LearningUnitViewModel()
 
     // MARK: - Outlets
 
@@ -40,8 +41,6 @@ class LearningUnitViewController: UIViewController {
         return CGRect(x: 0, y: 0, width: width, height: height)
     }
 
-    private var items: [String] = ["りんご", "ごりら", "ラッパ", "パンダ", "だるま"]
-
     /// カードタップ
     private var cardTappedSubject: PublishSubject<Void> = PublishSubject<Void>()
 
@@ -50,12 +49,28 @@ class LearningUnitViewController: UIViewController {
 
     private var disposeBag = DisposeBag()
 
+    private var unitMasterId: Int = 1
+
+        private lazy var emptyView: EmptyView = {
+            let v = R.nib.emptyView.firstView(owner: nil)!
+            v.backgroundColor = .clear
+            v.retryAction = { [weak self] in
+                self?.fetch()
+            }
+            v.page = .learn
+            v.status = .none
+            view.addSubview(v)
+            view.allSafePin(subView: v)
+            return v
+        }()
+
     // MARK: - LifeCycles
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         subscribe()
+        fetch()
 
         kolodaView.dataSource = self
         kolodaView.delegate = self
@@ -85,12 +100,38 @@ class LearningUnitViewController: UIViewController {
             self?.kolodaView.swipe(.left)
             self?.cardSwipingSubject.onNext(())
         }).disposed(by: disposeBag)
+
+        // loading
+        viewModel.loadingDriver
+            .map { isLoading in
+                if isLoading {
+                    return .loading
+                } else {
+                    return .none
+                }
+            }
+            .drive(onNext: {[weak self] in
+                self?.emptyView.status = $0
+            }).disposed(by: disposeBag)
+    }
+
+    private func fetch() {
+        viewModel.fetch(authToken: ApplicationConfigData.authToken, unitMasterId: unitMasterId)
+            .subscribe(
+                onNext: { [unowned self] _ in
+                    kolodaView.reloadData()
+                    progressView.setProgress(0, animated: true)
+                },
+                onError: { [unowned self] in
+                    log.error($0.descriptionOfType)
+                    self.emptyView.status = .errorAndRetry($0.descriptionOfType)
+                }).disposed(by: disposeBag)
     }
 
     /// 進捗バーを更新する
     private func updateProgressView(swipedCardIndex: Int) {
         /// カードの最大枚数
-        let maxCardCount = Float(items.count)
+        let maxCardCount = Float(viewModel.words.count)
         /// スワイプされたカードの枚数
         let swipedCardCount = Float(swipedCardIndex + 1)
         /// 進捗
@@ -128,7 +169,7 @@ extension LearningUnitViewController: KolodaViewDelegate {
         updateProgressView(swipedCardIndex: index)
 
         // 最後のカードがスワイプされたらモーダルを表示する
-        if index + 1 >= items.count {
+        if index + 1 >= viewModel.words.count {
             let appearance = SCLAlertView.SCLAppearance(
                 kTitleFont: R.font.notoSansCJKjpSubBold(size: 16)!,
                 kTextFont: R.font.notoSansCJKjpSubMedium(size: 12)!,
@@ -169,7 +210,7 @@ extension LearningUnitViewController: KolodaViewDataSource {
 
     /// カードの枚数を返す
     func kolodaNumberOfCards(_ koloda: KolodaView) -> Int {
-        return items.count
+        return viewModel.words.count
     }
 
     /// カードのViewを返す
@@ -184,22 +225,47 @@ extension LearningUnitViewController: KolodaViewDataSource {
         view.layer.shadowOffset = CGSize(width: 0, height: 1.5)
         view.layer.cornerRadius = 10
 
+        // ラベルのwidth
+        let width = view.bounds.size.width - 20
+
+        // ふりがなラベルを表示する
+        let furiganaLabel = UILabel()
+        furiganaLabel.text = viewModel.words[index].furigana
+        furiganaLabel.font = R.font.notoSansCJKjpSubBold(size: 14)
+        furiganaLabel.textColor = R.color.textGray()
+        furiganaLabel.bounds.size = CGSize(width: width, height: 20)  // サイズ指定
+        furiganaLabel.center = CGPoint(x: view.bounds.size.width / 2, y: (view.bounds.size.height / 2) - 73)  // 位置調整
+        furiganaLabel.textAlignment = NSTextAlignment.center  // 中央寄せ
+        // minimumFontScale を指定
+        furiganaLabel.adjustsFontSizeToFitWidth = true
+        furiganaLabel.minimumScaleFactor = 0.3
+        view.addSubview(furiganaLabel)
+
         // メインラベルを表示する
         let mainLabel = UILabel()
-        mainLabel.text = items[index]
+        mainLabel.text = viewModel.words[index].japanese
         mainLabel.font = R.font.notoSansCJKjpSubBold(size: 40)
         mainLabel.textColor = R.color.textGray()
-        mainLabel.sizeToFit()
-        mainLabel.center = CGPoint(x: view.bounds.size.width / 2, y: (view.bounds.size.height / 2) - 35)
+        mainLabel.bounds.size = CGSize(width: width, height: 46)  // サイズ指定
+        mainLabel.center = CGPoint(x: view.bounds.size.width / 2, y: (view.bounds.size.height / 2) - 35)  // 位置調整
+        mainLabel.textAlignment = NSTextAlignment.center  // 中央寄せ
+        // minimumFontScale を指定
+        mainLabel.adjustsFontSizeToFitWidth = true
+        mainLabel.minimumScaleFactor = 0.3
         view.addSubview(mainLabel)
 
         // サブラベルを表示する
         let subLabel = UILabel()
-        subLabel.text = items[index]
+        subLabel.text = viewModel.words[index].vietnamese
         subLabel.font = R.font.notoSansCJKjpSubMedium(size: 24)
         subLabel.textColor = R.color.textGray()
-        subLabel.sizeToFit()
-        subLabel.center = CGPoint(x: view.bounds.size.width / 2, y: (view.bounds.size.height / 2) + 35)
+
+        subLabel.bounds.size = CGSize(width: width, height: 30)  // サイズ指定
+        subLabel.center = CGPoint(x: view.bounds.size.width / 2, y: (view.bounds.size.height / 2) + 35)  // 位置調整
+        subLabel.textAlignment = NSTextAlignment.center  // 中央寄せ
+        // minimumFontScale を指定
+        subLabel.adjustsFontSizeToFitWidth = true
+        subLabel.minimumScaleFactor = 0.3
         view.addSubview(subLabel)
 
         // サブラベルは最初は非表示
@@ -224,16 +290,17 @@ extension LearningUnitViewController: KolodaViewDataSource {
 
 extension LearningUnitViewController {
 
-    static func makeInstance() -> UIViewController {
+    static func makeInstance(unitMasterId: Int) -> UIViewController {
         guard let vc = R.storyboard.learningUnit.learningUnitViewController() else {
             assertionFailure("Can't make instance 'LearningUnitViewController'.")
             return UIViewController()
         }
+        vc.unitMasterId = unitMasterId
         return vc
     }
 
-    static func makeInstanceInNavigationController() -> UIViewController {
-        return UINavigationController(rootViewController: makeInstance())
+    static func makeInstanceInNavigationController(unitMasterId: Int) -> UIViewController {
+        return UINavigationController(rootViewController: makeInstance(unitMasterId: unitMasterId))
     }
 
 }
