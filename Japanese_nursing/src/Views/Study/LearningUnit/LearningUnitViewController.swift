@@ -120,9 +120,10 @@ class LearningUnitViewController: UIViewController {
     private func fetch() {
         viewModel.fetch(authToken: ApplicationConfigData.authToken, unitMasterId: unitMasterId)
             .subscribe(
-//                onNext: { [unowned self] _ in
-//                    kolodaView.reloadData()
-//                },
+                onNext: { [unowned self] _ in
+                    kolodaView.reloadData()
+                    progressView.setProgress(0, animated: true)
+                },
                 onError: { [unowned self] in
                     log.error($0.descriptionOfType)
                     self.emptyView.status = .errorAndRetry($0.descriptionOfType)
@@ -132,7 +133,7 @@ class LearningUnitViewController: UIViewController {
     /// 進捗バーを更新する
     private func updateProgressView(swipedCardIndex: Int) {
         /// カードの最大枚数
-        let maxCardCount = Float(items.count)
+        let maxCardCount = Float(viewModel.words.count)
         /// スワイプされたカードの枚数
         let swipedCardCount = Float(swipedCardIndex + 1)
         /// 進捗
@@ -170,7 +171,7 @@ extension LearningUnitViewController: KolodaViewDelegate {
         updateProgressView(swipedCardIndex: index)
 
         // 最後のカードがスワイプされたらモーダルを表示する
-        if index + 1 >= items.count {
+        if index + 1 >= viewModel.words.count {
             let appearance = SCLAlertView.SCLAppearance(
                 kTitleFont: R.font.notoSansCJKjpSubBold(size: 16)!,
                 kTextFont: R.font.notoSansCJKjpSubMedium(size: 12)!,
