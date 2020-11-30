@@ -25,6 +25,8 @@ class UserNameSettingViewController: UIViewController {
     @IBOutlet private weak var nameUnderLineTextField: UnderlineTextField!
     /// アラートLabel
     @IBOutlet private weak var nameAlertLabel: UILabel!
+    /// キャンセルボタン
+    @IBOutlet weak var chancelButton: UIButton!
     /// 変更Button
     @IBOutlet weak var changeButton: UIButton!
 
@@ -48,6 +50,15 @@ class UserNameSettingViewController: UIViewController {
             self.nameUnderLineTextField.setUnderline(R.color.apptop()!)
             self.validate()
         }).disposed(by: self.disposeBag)
+
+        /// キャンセルボタン
+        chancelButton.rx.tap.subscribe(onNext: { [weak self] in
+            if let nc = self?.navigationController {
+                nc.popViewController(animated: true)
+            } else {
+                self?.dismiss(animated: true)
+            }
+        }).disposed(by: disposeBag)
 
         /// 変更Button
         changeButton.rx.tap.subscribe(onNext: { [weak self] in
