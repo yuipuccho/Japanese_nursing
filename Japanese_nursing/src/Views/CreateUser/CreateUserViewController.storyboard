@@ -38,7 +38,7 @@
                                 <color key="textColor" name="TextDarkGray"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ニックネーム(12文字以内)" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="VbM-wo-NCs" userLabel="Name Underline Text Field" customClass="UnderlineTextField" customModule="paters" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ニックネーム(12文字以内)" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="VbM-wo-NCs" userLabel="Name Underline Text Field" customClass="UnderlineTextField" customModule="d_介護の日本語" customModuleProvider="target">
                                 <rect key="frame" x="70" y="225" width="304" height="40"/>
                                 <color key="tintColor" name="Apptop"/>
                                 <constraints>
@@ -64,7 +64,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あとで変更できます" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Xh-VC-kz6">
-                                <rect key="frame" x="30" y="275" width="81" height="10.5"/>
+                                <rect key="frame" x="30" y="275" width="81" height="13.5"/>
                                 <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Regular" family="NotoSansCJKjpSub-Regular" pointSize="9"/>
                                 <color key="textColor" name="PlaneText"/>
                                 <nil key="highlightedColor"/>
@@ -82,7 +82,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcm-eJ-wHh">
-                                <rect key="frame" x="154.5" y="127" width="105.5" height="36"/>
+                                <rect key="frame" x="148.5" y="127" width="117.5" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="uIg-KB-hKc"/>
                                 </constraints>
@@ -91,7 +91,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlk-ta-d88">
-                                <rect key="frame" x="122" y="345.5" width="170" height="55"/>
+                                <rect key="frame" x="122" y="348.5" width="170" height="55"/>
                                 <color key="backgroundColor" name="Apptop"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="D0S-gI-zIr"/>
@@ -157,7 +157,7 @@
     </scenes>
     <designables>
         <designable name="VbM-wo-NCs">
-            <size key="intrinsicContentSize" width="174.5" height="19"/>
+            <size key="intrinsicContentSize" width="177" height="24"/>
         </designable>
     </designables>
     <resources>

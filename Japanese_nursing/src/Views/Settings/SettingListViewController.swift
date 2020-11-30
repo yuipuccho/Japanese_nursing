@@ -52,7 +52,8 @@ class SettingListViewController: UIViewController {
 
         // ユーザー名の変更タップ
         userNameSettingButton.rx.tap.subscribe(onNext: { [weak self] in
-            self?.dismiss(animated: true)
+            let vc = UserNameSettingViewController.makeInstance()
+            self?.navigationController?.pushViewController(vc, animated: true)
         }).disposed(by: disposeBag)
 
         // 目標学習数タップ
