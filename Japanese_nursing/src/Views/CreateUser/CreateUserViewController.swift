@@ -53,7 +53,7 @@ class CreateUserViewController: UIViewController {
             if let text = self?.nameUnderLineTextField.text, !text.isEmpty, text.count <= 12 {
                 self?.fetch(userName: text)
             } else if let text = self?.nameUnderLineTextField.text, text.isEmpty {
-                self?.nameAlertLabel.text = "ユーザー名を入力してください"
+                self?.nameAlertLabel.text = "ニックネームを入力してください"
             } else {
                 self?.nameAlertLabel.text = "12文字以内で入力してください"
             }

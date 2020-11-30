@@ -128,6 +128,11 @@
                             <constraint firstItem="36F-lX-M6K" firstAttribute="leading" secondItem="lOb-f1-Iqb" secondAttribute="leading" constant="20" id="xp5-sk-7Kg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="changeButton" destination="o8g-27-WWp" id="a3o-BH-PSG"/>
+                        <outlet property="nameAlertLabel" destination="GaI-WX-OgB" id="xHc-u3-zT7"/>
+                        <outlet property="nameUnderLineTextField" destination="g2x-ge-TlE" id="Nnh-c3-qJj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0wX-bd-f3V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -136,7 +141,7 @@
     </scenes>
     <designables>
         <designable name="g2x-ge-TlE">
-            <size key="intrinsicContentSize" width="177" height="24"/>
+            <size key="intrinsicContentSize" width="174.5" height="19"/>
         </designable>
     </designables>
     <resources>
