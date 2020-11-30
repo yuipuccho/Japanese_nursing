@@ -41,8 +41,6 @@ class LearningUnitViewController: UIViewController {
         return CGRect(x: 0, y: 0, width: width, height: height)
     }
 
-    private var items: [String] = ["りんご", "ごりら", "ラッパ", "パンダ", "だるま"]
-
     /// カードタップ
     private var cardTappedSubject: PublishSubject<Void> = PublishSubject<Void>()
 
@@ -227,6 +225,15 @@ extension LearningUnitViewController: KolodaViewDataSource {
         view.layer.shadowOpacity = 0.2
         view.layer.shadowOffset = CGSize(width: 0, height: 1.5)
         view.layer.cornerRadius = 10
+
+        // ふりがなラベルを表示する
+        let furiganaLabel = UILabel()
+        furiganaLabel.text = viewModel.words[index].furigana
+        furiganaLabel.font = R.font.notoSansCJKjpSubBold(size: 14)
+        furiganaLabel.textColor = R.color.textGray()
+        furiganaLabel.sizeToFit()
+        furiganaLabel.center = CGPoint(x: view.bounds.size.width / 2, y: (view.bounds.size.height / 2) - 73)
+        view.addSubview(furiganaLabel)
 
         // メインラベルを表示する
         let mainLabel = UILabel()
