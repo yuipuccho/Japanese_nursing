@@ -226,13 +226,20 @@ extension LearningUnitViewController: KolodaViewDataSource {
         view.layer.shadowOffset = CGSize(width: 0, height: 1.5)
         view.layer.cornerRadius = 10
 
+        // ラベルのwidth
+        let width = view.bounds.size.width - 20
+
         // ふりがなラベルを表示する
         let furiganaLabel = UILabel()
         furiganaLabel.text = viewModel.words[index].furigana
         furiganaLabel.font = R.font.notoSansCJKjpSubBold(size: 14)
         furiganaLabel.textColor = R.color.textGray()
-        furiganaLabel.sizeToFit()
-        furiganaLabel.center = CGPoint(x: view.bounds.size.width / 2, y: (view.bounds.size.height / 2) - 73)
+        furiganaLabel.bounds.size = CGSize(width: width, height: 20)  // サイズ指定
+        furiganaLabel.center = CGPoint(x: view.bounds.size.width / 2, y: (view.bounds.size.height / 2) - 73)  // 位置調整
+        furiganaLabel.textAlignment = NSTextAlignment.center  // 中央寄せ
+        // minimumFontScale を指定
+        furiganaLabel.adjustsFontSizeToFitWidth = true
+        furiganaLabel.minimumScaleFactor = 0.3
         view.addSubview(furiganaLabel)
 
         // メインラベルを表示する
@@ -240,8 +247,12 @@ extension LearningUnitViewController: KolodaViewDataSource {
         mainLabel.text = viewModel.words[index].japanese
         mainLabel.font = R.font.notoSansCJKjpSubBold(size: 40)
         mainLabel.textColor = R.color.textGray()
-        mainLabel.sizeToFit()
-        mainLabel.center = CGPoint(x: view.bounds.size.width / 2, y: (view.bounds.size.height / 2) - 35)
+        mainLabel.bounds.size = CGSize(width: width, height: 46)  // サイズ指定
+        mainLabel.center = CGPoint(x: view.bounds.size.width / 2, y: (view.bounds.size.height / 2) - 35)  // 位置調整
+        mainLabel.textAlignment = NSTextAlignment.center  // 中央寄せ
+        // minimumFontScale を指定
+        mainLabel.adjustsFontSizeToFitWidth = true
+        mainLabel.minimumScaleFactor = 0.3
         view.addSubview(mainLabel)
 
         // サブラベルを表示する
@@ -249,8 +260,13 @@ extension LearningUnitViewController: KolodaViewDataSource {
         subLabel.text = viewModel.words[index].vietnamese
         subLabel.font = R.font.notoSansCJKjpSubMedium(size: 24)
         subLabel.textColor = R.color.textGray()
-        subLabel.sizeToFit()
-        subLabel.center = CGPoint(x: view.bounds.size.width / 2, y: (view.bounds.size.height / 2) + 35)
+
+        subLabel.bounds.size = CGSize(width: width, height: 30)  // サイズ指定
+        subLabel.center = CGPoint(x: view.bounds.size.width / 2, y: (view.bounds.size.height / 2) + 35)  // 位置調整
+        subLabel.textAlignment = NSTextAlignment.center  // 中央寄せ
+        // minimumFontScale を指定
+        subLabel.adjustsFontSizeToFitWidth = true
+        subLabel.minimumScaleFactor = 0.3
         view.addSubview(subLabel)
 
         // サブラベルは最初は非表示
