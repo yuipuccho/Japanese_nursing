@@ -143,7 +143,7 @@ extension TestSettingsViewController {
         mistakeButton.rx.tap.subscribe(onNext: { [weak self] in
             // 苦手数が0の場合はアラートを表示してreturn
             if self?.mistakeCount == 0 {
-                HUD.flash(.label("苦手な単語はありません"), delay: 1.0)
+                HUD.flash(.label("苦手な単語はありません"), delay: 0.5)
                 return
             }
             self?.updateSelectingQuestionRange(tappedType: .mistake)

@@ -20,8 +20,6 @@ class TargetSettingViewController: UIViewController, UIPickerViewDelegate, UIPic
 
     private lazy var viewModel: TargetSettingViewModel = TargetSettingViewModel()
 
-//    public static let shared: TargetSettingViewController = TargetSettingViewController()
-
     // MARK: - Outlets
 
     /// トップ背景画像
@@ -209,6 +207,7 @@ extension TargetSettingViewController {
         viewModel.fetch(authToken: ApplicationConfigData.authToken, targetLearningCount: targetLearningCount, targetTestingCount: targetTestingCount)
             .subscribe(
                 onNext: { [unowned self] in
+
                     HUD.flash(.label("保存しました！"), delay: 0.5) {_ in
                         if let nc = self.navigationController {
                             nc.popViewController(animated: true)
