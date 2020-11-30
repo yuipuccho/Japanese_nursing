@@ -48,9 +48,10 @@ class MyPageViewController: UIViewController {
 
     private lazy var emptyView: EmptyView = {
         let v = R.nib.emptyView.firstView(owner: nil)!
-        v.backgroundColor = R.color.test()
+        v.backgroundColor = R.color.mypage()
         v.retryAction = { [weak self] in
-            self?.fetch()
+            self?.fetchTargetStatus()
+            self?.fetchActivities()
         }
         v.page = .learn
         v.status = .none
@@ -59,10 +60,14 @@ class MyPageViewController: UIViewController {
         return v
     }()
 
+    // 目標達成状況
     private var targetTestingCount = 0
     private var todayTestedCount = 0
     private var targetLearningCount = 0
     private var todayLearnedCount = 0
+
+    // アクティビティ
+    private var activityCountArray:[Int] = []
 
     // MARK: - LifeCycles
 
@@ -71,8 +76,8 @@ class MyPageViewController: UIViewController {
 
         navigationController?.setNavigationBarHidden(true, animated: true)
 
-        setupBarChartView()
-        fetch()
+        fetchTargetStatus()
+        fetchActivities()
 
         subscribe()
     }
@@ -80,8 +85,8 @@ class MyPageViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        setupBarChartView()
         pieChartAnimation()
+        barChartAnimation()
     }
 
 }
@@ -123,8 +128,8 @@ extension MyPageViewController {
             }).disposed(by: disposeBag)
     }
 
-    private func fetch() {
-        viewModel.fetch(authToken: ApplicationConfigData.authToken)
+    private func fetchTargetStatus() {
+        viewModel.fetchTargetStatus(authToken: ApplicationConfigData.authToken)
             .subscribe(
                 onNext: { [unowned self] status in
                     targetLearningCount = status.targetLearningCount
@@ -136,6 +141,19 @@ extension MyPageViewController {
                     bringIconToFront()
                     pieChartAnimation()
                     setupUI()
+                },
+                onError: { [unowned self] in
+                    log.error($0.descriptionOfType)
+                    self.emptyView.status = .errorAndRetry($0.descriptionOfType)
+                }).disposed(by: disposeBag)
+    }
+
+    private func fetchActivities() {
+        viewModel.fetchActivities(authToken: ApplicationConfigData.authToken)
+            .subscribe(
+                onNext: { [unowned self] status in
+                    setupBarChartView()
+                    barChartAnimation()
                 },
                 onError: { [unowned self] in
                     log.error($0.descriptionOfType)
@@ -155,12 +173,14 @@ extension MyPageViewController {
 extension MyPageViewController {
 
     private func setupBarChartView() {
-        let rawData: [Int] = [20, 50, 70, 30, 60, 90, 40]
+        let rawData: [Int] = viewModel.activityCountArray
         let entries = rawData.enumerated().map { BarChartDataEntry(x: Double($0.offset), y: Double($0.element)) }
         let dataSet = BarChartDataSet(entries: entries)
         let data = BarChartData(dataSet: dataSet)
         barChartView.data = data
 
+        let date = viewModel.dateArray
+        barChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values:date)
         // X軸のラベルの位置を下に設定
         barChartView.xAxis.labelPosition = .bottom
         // X軸のラベルの色を設定
@@ -201,7 +221,10 @@ extension MyPageViewController {
                           R.color.mypage()!,
                           R.color.graphGreen()!
         ]
+    }
 
+    /// バーチャートアニメーション
+    private func barChartAnimation() {
         barChartView.animate(yAxisDuration: 0.8)
     }
 

@@ -260,7 +260,7 @@ extension LearningUnitViewController: KolodaViewDataSource {
         subLabel.font = R.font.notoSansCJKjpSubMedium(size: 24)
         subLabel.textColor = R.color.textGray()
 
-        subLabel.bounds.size = CGSize(width: width, height: 30)  // サイズ指定
+        subLabel.bounds.size = CGSize(width: width, height: 36)  // サイズ指定(「g」などあるため、heightは多めにとる)
         subLabel.center = CGPoint(x: view.bounds.size.width / 2, y: (view.bounds.size.height / 2) + 35)  // 位置調整
         subLabel.textAlignment = NSTextAlignment.center  // 中央寄せ
         // minimumFontScale を指定

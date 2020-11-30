@@ -27,9 +27,16 @@ class MypageViewModel {
         loadingRelay.value
     }
 
+    var activities: [ActivitiesDomainModel] = []
+
+    var activityCountArray: [Int] = []
+
+    var dateArray: [String] = []
+
     // MARK: - Functions
-    
-    func fetch(authToken: String) -> Observable<TargetStatusDomainModel> {
+
+    /// 目標達成状況取得
+    func fetchTargetStatus(authToken: String) -> Observable<TargetStatusDomainModel> {
 
         return TargetStatusModel().getTargetStatus(authToken: authToken)
             .do(onCompleted: {[weak self] in
@@ -39,5 +46,36 @@ class MypageViewModel {
             })
             .map { TargetStatusDomainModel(entity: $0) }
     }
+
+    /// アクティビティ取得
+    func fetchActivities(authToken: String) -> Observable<[ActivitiesDomainModel]> {
+        return GetActivitiesModel().getActivities(authToken: authToken)
+            .do(onCompleted: {[weak self] in
+                self?.loadingRelay.accept(false)
+            }, onSubscribed: { [weak self] in
+                self?.loadingRelay.accept(true)
+            })
+            .map { activity in
+                return activity.activities.map(ActivitiesDomainModel.init)
+            }
+            .do(onNext: { [unowned self] in
+                activities.append(contentsOf: $0)
+                addActivity(activities: activities)
+            })
+    }
+
+    /// アクティビティを配列に追加
+    private func addActivity(activities: [ActivitiesDomainModel]) {
+        for i in activities {
+            // アクティビティ数
+            let count = i.learnedCount + i.testedCount
+            activityCountArray.insert(count, at: 0)
+
+            // 日付
+            let d = i.date.toString("MM/dd")
+            dateArray.insert(d, at: 0)
+        }
+    }
+
 
 }

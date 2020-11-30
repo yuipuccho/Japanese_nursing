@@ -18,8 +18,6 @@ class LearningUnitViewModel {
     // MARK: - Properties
     private let loadingRelay: BehaviorRelay<Bool> = BehaviorRelay(value: false)
 
-    private let wordsRelay: BehaviorRelay<[WordMastersDomainModel]> = BehaviorRelay(value: [])
-
     var loadingDriver: Driver<Bool> {
         return loadingRelay.asDriver()
     }
@@ -47,7 +45,6 @@ class LearningUnitViewModel {
                     return
                 }
                 _self.words.append(contentsOf: $0)
-                _self.wordsRelay.accept(_self.words)
             })
     }
 
