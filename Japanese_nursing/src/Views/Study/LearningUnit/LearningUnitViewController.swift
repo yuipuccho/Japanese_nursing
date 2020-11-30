@@ -291,16 +291,17 @@ extension LearningUnitViewController: KolodaViewDataSource {
 
 extension LearningUnitViewController {
 
-    static func makeInstance() -> UIViewController {
+    static func makeInstance(unitMasterId: Int) -> UIViewController {
         guard let vc = R.storyboard.learningUnit.learningUnitViewController() else {
             assertionFailure("Can't make instance 'LearningUnitViewController'.")
             return UIViewController()
         }
+        vc.unitMasterId = unitMasterId
         return vc
     }
 
-    static func makeInstanceInNavigationController() -> UIViewController {
-        return UINavigationController(rootViewController: makeInstance())
+    static func makeInstanceInNavigationController(unitMasterId: Int) -> UIViewController {
+        return UINavigationController(rootViewController: makeInstance(unitMasterId: unitMasterId))
     }
 
 }
