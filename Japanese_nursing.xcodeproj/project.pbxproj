@@ -41,6 +41,11 @@
 		BA5098252574068B00FB88AE /* TargetStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5098242574068B00FB88AE /* TargetStatusModel.swift */; };
 		BA50982A257406EB00FB88AE /* TargetStatusDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA509829257406EB00FB88AE /* TargetStatusDomainModel.swift */; };
 		BA50982F2574079500FB88AE /* MypageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50982E2574079500FB88AE /* MypageViewModel.swift */; };
+		BA509839257497DF00FB88AE /* GetWordMasters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA509838257497DF00FB88AE /* GetWordMasters.swift */; };
+		BA50983E2574980B00FB88AE /* WordMastersEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50983D2574980B00FB88AE /* WordMastersEntity.swift */; };
+		BA5098442574984700FB88AE /* GetWordMastersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5098432574984700FB88AE /* GetWordMastersModel.swift */; };
+		BA5098482574987E00FB88AE /* WordMastersDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5098472574987E00FB88AE /* WordMastersDomainModel.swift */; };
+		BA50984B257498A400FB88AE /* LearningUnitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50984A257498A400FB88AE /* LearningUnitViewModel.swift */; };
 		BA582A3924E170670089DA0B /* LearningUnit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA582A3824E170670089DA0B /* LearningUnit.storyboard */; };
 		BA5EACE324D2AF8F0008E2D0 /* UnitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5EACE224D2AF8F0008E2D0 /* UnitListViewController.swift */; };
 		BA5EAD4C24D453520008E2D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA5EAD4B24D453520008E2D0 /* GoogleService-Info.plist */; };
@@ -130,6 +135,11 @@
 		BA5098242574068B00FB88AE /* TargetStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetStatusModel.swift; sourceTree = "<group>"; };
 		BA509829257406EB00FB88AE /* TargetStatusDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetStatusDomainModel.swift; sourceTree = "<group>"; };
 		BA50982E2574079500FB88AE /* MypageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewModel.swift; sourceTree = "<group>"; };
+		BA509838257497DF00FB88AE /* GetWordMasters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWordMasters.swift; sourceTree = "<group>"; };
+		BA50983D2574980B00FB88AE /* WordMastersEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordMastersEntity.swift; sourceTree = "<group>"; };
+		BA5098432574984700FB88AE /* GetWordMastersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWordMastersModel.swift; sourceTree = "<group>"; };
+		BA5098472574987E00FB88AE /* WordMastersDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordMastersDomainModel.swift; sourceTree = "<group>"; };
+		BA50984A257498A400FB88AE /* LearningUnitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningUnitViewModel.swift; sourceTree = "<group>"; };
 		BA582A3824E170670089DA0B /* LearningUnit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LearningUnit.storyboard; sourceTree = "<group>"; };
 		BA5EACE224D2AF8F0008E2D0 /* UnitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListViewController.swift; sourceTree = "<group>"; };
 		BA5EAD4B24D453520008E2D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../FetiLip-develop/fetilip/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -387,6 +397,30 @@
 			path = Mypage;
 			sourceTree = "<group>";
 		};
+		BA509837257497BC00FB88AE /* WordMasters */ = {
+			isa = PBXGroup;
+			children = (
+				BA509838257497DF00FB88AE /* GetWordMasters.swift */,
+			);
+			path = WordMasters;
+			sourceTree = "<group>";
+		};
+		BA50983C257497F300FB88AE /* WordMasters */ = {
+			isa = PBXGroup;
+			children = (
+				BA50983D2574980B00FB88AE /* WordMastersEntity.swift */,
+			);
+			path = WordMasters;
+			sourceTree = "<group>";
+		};
+		BA5098412574982000FB88AE /* WordMasters */ = {
+			isa = PBXGroup;
+			children = (
+				BA5098432574984700FB88AE /* GetWordMastersModel.swift */,
+			);
+			path = WordMasters;
+			sourceTree = "<group>";
+		};
 		BA582A3724E170190089DA0B /* LearningUnit */ = {
 			isa = PBXGroup;
 			children = (
@@ -554,6 +588,7 @@
 				BA5097F42573D6D400FB88AE /* TestStatus */,
 				BAF1EABD25733AC200E19657 /* UnitMasters */,
 				BAD1CFEC2571F6A500F9A74A /* JapaneseNursingAPI.swift */,
+				BA509837257497BC00FB88AE /* WordMasters */,
 			);
 			path = Communications;
 			sourceTree = "<group>";
@@ -573,6 +608,7 @@
 				BA50981F257405ED00FB88AE /* TargetStatus */,
 				BA5097F82573D92600FB88AE /* TestStatus */,
 				BAF1EAC225733BD200E19657 /* UnitMasters */,
+				BA50983C257497F300FB88AE /* WordMasters */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -601,6 +637,7 @@
 				BA5098232574066F00FB88AE /* TargetStatus */,
 				BA5097FD2573D9DE00FB88AE /* TestStatus */,
 				BAF1EAC825733D2500E19657 /* UnitMasters */,
+				BA5098412574982000FB88AE /* WordMasters */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -724,6 +761,7 @@
 		BAF1EACD25733DFB00E19657 /* Study */ = {
 			isa = PBXGroup;
 			children = (
+				BA50984A257498A400FB88AE /* LearningUnitViewModel.swift */,
 				BAF1EACE25733E0E00E19657 /* UnitListViewModel.swift */,
 			);
 			path = Study;
@@ -734,6 +772,7 @@
 			children = (
 				BAF1EAD425733EB800E19657 /* UnitListDomainModel.swift */,
 				BAF1EAD725734F8600E19657 /* UnitListSectionModel.swift */,
+				BA5098472574987E00FB88AE /* WordMastersDomainModel.swift */,
 			);
 			path = Study;
 			sourceTree = "<group>";
@@ -950,10 +989,13 @@
 				BA02F941256A19ED00D93643 /* TabBar.swift in Sources */,
 				BA2A5DE5255135A50085A3EF /* UnitListCell.swift in Sources */,
 				BA5EACE324D2AF8F0008E2D0 /* UnitListViewController.swift in Sources */,
+				BA50983E2574980B00FB88AE /* WordMastersEntity.swift in Sources */,
 				BAD1CFF02571F6DE00F9A74A /* Constants.swift in Sources */,
 				BAF1EAD525733EB800E19657 /* UnitListDomainModel.swift in Sources */,
 				BA5097FF2573D9ED00FB88AE /* TestStatusModel.swift in Sources */,
+				BA50984B257498A400FB88AE /* LearningUnitViewModel.swift in Sources */,
 				BAD1D00A2571F8AF00F9A74A /* Error+Extended.swift in Sources */,
+				BA5098482574987E00FB88AE /* WordMastersDomainModel.swift in Sources */,
 				BA5098252574068B00FB88AE /* TargetStatusModel.swift in Sources */,
 				BAD1CFFB2571F77300F9A74A /* ResponseError.swift in Sources */,
 				BA5097AB25739CBA00FB88AE /* UIView+AutoLayout.swift in Sources */,
@@ -966,6 +1008,7 @@
 				BA50982F2574079500FB88AE /* MypageViewModel.swift in Sources */,
 				BAD1D0242571F9FE00F9A74A /* Typealias.swift in Sources */,
 				BA2A5DE9255139DB0085A3EF /* LearningUnitViewController.swift in Sources */,
+				BA5098442574984700FB88AE /* GetWordMastersModel.swift in Sources */,
 				BA133ACA24C04D850047E265 /* CustomTabBar.swift in Sources */,
 				BA50981C2574057200FB88AE /* TargetStatus.swift in Sources */,
 				BAF1EAD825734F8600E19657 /* UnitListSectionModel.swift in Sources */,
@@ -997,6 +1040,7 @@
 				BA85A3FE24AB7F51003E6E85 /* R.generated.swift in Sources */,
 				BA40295D255436B800421276 /* TestSettingsViewController.swift in Sources */,
 				BAD1CFF82571F74900F9A74A /* APIEvent.swift in Sources */,
+				BA509839257497DF00FB88AE /* GetWordMasters.swift in Sources */,
 				BAF1EAF42573576900E19657 /* EmptyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

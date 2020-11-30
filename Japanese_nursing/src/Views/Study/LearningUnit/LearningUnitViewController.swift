@@ -15,8 +15,9 @@ import SCLAlertView
 /**
  * 学習画面VC
  */
-// TODO: 設定作成後にUIの調整をする
 class LearningUnitViewController: UIViewController {
+
+    private lazy var viewModel: LearningUnitViewModel = LearningUnitViewModel()
 
     // MARK: - Outlets
 
@@ -50,12 +51,28 @@ class LearningUnitViewController: UIViewController {
 
     private var disposeBag = DisposeBag()
 
+    private var unitMasterId: Int = 1
+
+        private lazy var emptyView: EmptyView = {
+            let v = R.nib.emptyView.firstView(owner: nil)!
+            v.backgroundColor = .clear
+            v.retryAction = { [weak self] in
+                self?.fetch()
+            }
+            v.page = .learn
+            v.status = .none
+            view.addSubview(v)
+            view.allSafePin(subView: v)
+            return v
+        }()
+
     // MARK: - LifeCycles
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         subscribe()
+        fetch()
 
         kolodaView.dataSource = self
         kolodaView.delegate = self
@@ -85,6 +102,31 @@ class LearningUnitViewController: UIViewController {
             self?.kolodaView.swipe(.left)
             self?.cardSwipingSubject.onNext(())
         }).disposed(by: disposeBag)
+
+        // loading
+        viewModel.loadingDriver
+            .map { isLoading in
+                if isLoading {
+                    return .loading
+                } else {
+                    return .none
+                }
+            }
+            .drive(onNext: {[weak self] in
+                self?.emptyView.status = $0
+            }).disposed(by: disposeBag)
+    }
+
+    private func fetch() {
+        viewModel.fetch(authToken: ApplicationConfigData.authToken, unitMasterId: unitMasterId)
+            .subscribe(
+//                onNext: { [unowned self] _ in
+//                    kolodaView.reloadData()
+//                },
+                onError: { [unowned self] in
+                    log.error($0.descriptionOfType)
+                    self.emptyView.status = .errorAndRetry($0.descriptionOfType)
+                }).disposed(by: disposeBag)
     }
 
     /// 進捗バーを更新する
@@ -169,7 +211,8 @@ extension LearningUnitViewController: KolodaViewDataSource {
 
     /// カードの枚数を返す
     func kolodaNumberOfCards(_ koloda: KolodaView) -> Int {
-        return items.count
+//        return items.count
+        return viewModel.words.count
     }
 
     /// カードのViewを返す
@@ -186,7 +229,7 @@ extension LearningUnitViewController: KolodaViewDataSource {
 
         // メインラベルを表示する
         let mainLabel = UILabel()
-        mainLabel.text = items[index]
+        mainLabel.text = viewModel.words[index].japanese
         mainLabel.font = R.font.notoSansCJKjpSubBold(size: 40)
         mainLabel.textColor = R.color.textGray()
         mainLabel.sizeToFit()
@@ -195,7 +238,7 @@ extension LearningUnitViewController: KolodaViewDataSource {
 
         // サブラベルを表示する
         let subLabel = UILabel()
-        subLabel.text = items[index]
+        subLabel.text = viewModel.words[index].vietnamese
         subLabel.font = R.font.notoSansCJKjpSubMedium(size: 24)
         subLabel.textColor = R.color.textGray()
         subLabel.sizeToFit()

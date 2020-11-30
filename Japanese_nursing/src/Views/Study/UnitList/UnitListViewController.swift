@@ -73,7 +73,7 @@ extension UnitListViewController {
 
         // loading
         viewModel.loadingDriver
-            .map { [weak self] isLoading in
+            .map { isLoading in
                 if isLoading {
                     return .loading
                 } else {
@@ -88,6 +88,13 @@ extension UnitListViewController {
         viewModel.unitsObservable
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
+
+        // セルタップ
+        tableView.rx.itemSelected
+            .subscribe(onNext: { [unowned self] indexPath in
+                let vc = LearningUnitViewController.makeInstance()
+                self.present(vc, animated: true)
+            }).disposed(by: disposeBag)
     }
 
 
