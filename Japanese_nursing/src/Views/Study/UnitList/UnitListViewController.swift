@@ -21,6 +21,8 @@ class UnitListViewController: UIViewController, UIScrollViewDelegate, UIAdaptive
 
     private lazy var dataSource: RxTableViewSectionedReloadDataSource<UnitListSectionDomainModel> = setupDataSource()
 
+    // MARK: - Outlets
+
     @IBOutlet weak var tableView: UITableView!
 
     // MARK: - Properties
@@ -71,7 +73,6 @@ class UnitListViewController: UIViewController, UIScrollViewDelegate, UIAdaptive
     }
 
 }
-
 
 // MARK: - Functions
 

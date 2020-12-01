@@ -264,14 +264,20 @@ extension MyPageViewController {
         ]
 
         if pieChartView == studyPieChartView {
-            let achivementRate = Double(todayLearnedCount * 100 / targetLearningCount)
+            var achivementRate = Double(todayLearnedCount * 100 / targetLearningCount)
+            if achivementRate >= 100 {
+                achivementRate = 100
+            }
             let notAchivementRate = 100 - achivementRate
             dataEntries = [
                 PieChartDataEntry(value: Double(achivementRate)),
                 PieChartDataEntry(value: Double(notAchivementRate))
             ]
         } else {
-            let achivementRate = Double(todayTestedCount * 100 / targetTestingCount)
+            var achivementRate = Double(todayTestedCount * 100 / targetTestingCount)
+            if achivementRate >= 100 {
+                achivementRate = 100
+            }
             let notAchivementRate = 100 - achivementRate
             dataEntries = [
                 PieChartDataEntry(value: Double(achivementRate)),
