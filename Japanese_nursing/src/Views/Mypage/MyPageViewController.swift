@@ -50,8 +50,8 @@ class MyPageViewController: UIViewController {
         let v = R.nib.emptyView.firstView(owner: nil)!
         v.backgroundColor = R.color.mypage()
         v.retryAction = { [weak self] in
-            self?.fetchTargetStatus()
-            self?.fetchActivities()
+            self?.fetchTargetStatus(animate: true)
+            self?.fetchActivities(animate: true)
         }
         v.page = .learn
         v.status = .none
@@ -69,6 +69,12 @@ class MyPageViewController: UIViewController {
     // アクティビティ
     private var activityCountArray:[Int] = []
 
+    /// 目標達成状況を取得済か
+    private var isGettedTargetStatus: Bool = false
+
+    /// アクティビティを取得済か
+    private var isGettedActivities: Bool = false
+
     // MARK: - LifeCycles
 
     override func viewDidLoad() {
@@ -76,8 +82,8 @@ class MyPageViewController: UIViewController {
 
         navigationController?.setNavigationBarHidden(true, animated: true)
 
-        fetchTargetStatus()
-        fetchActivities()
+        fetchTargetStatus(animate: true)
+        fetchActivities(animate: true)
 
         subscribe()
     }
@@ -89,38 +95,49 @@ class MyPageViewController: UIViewController {
         barChartAnimation()
     }
 
+    // 遷移先の画面が閉じられた時に呼ばれる
+    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+        print("hohoho")
+        fetchTargetStatus(animate: false)
+        fetchActivities(animate: false)
+    }
+
 }
 
 // MARK: - Functions
 
-extension MyPageViewController {
+extension MyPageViewController: UIAdaptivePresentationControllerDelegate {
 
     private func subscribe() {
         // 学習円形進捗バーボタンタップ
-        studyPieChartButton.rx.tap.subscribe(onNext: { [weak self] in
-            let vc = TargetSettingViewController.makeInstance(targetType: .study)
-            self?.present(vc, animated: true)
+        studyPieChartButton.rx.tap.subscribe(onNext: { [unowned self] in
+            let vc = TargetSettingViewController.makeInstance(targetType: .study, initialTargetCount: targetLearningCount)
+            vc.presentationController?.delegate = self
+            present(vc, animated: true)
+
         }).disposed(by: disposeBag)
 
         // テスト円形進捗バーボタンタップ
-        testPieChartButton.rx.tap.subscribe(onNext: { [weak self] in
-            let vc = TargetSettingViewController.makeInstance(targetType: .test)
-            self?.present(vc, animated: true)
+        testPieChartButton.rx.tap.subscribe(onNext: { [unowned self] in
+            let vc = TargetSettingViewController.makeInstance(targetType: .test, initialTargetCount: targetTestingCount)
+            vc.presentationController?.delegate = self
+            present(vc, animated: true)
         }).disposed(by: disposeBag)
 
         // 設定ボタンタップ
-        settingButton.rx.tap.subscribe(onNext: { [weak self] in
-            let vc = SettingListViewController.makeInstanceInNavigationController()
-            self?.present(vc, animated: true)
+        settingButton.rx.tap.subscribe(onNext: { [unowned self] in
+            let vc = SettingListViewController.makeInstanceInNavigationController(targetLearningCount: targetLearningCount, targetTestingCount: targetTestingCount)
+            vc.presentationController?.delegate = self
+            present(vc, animated: true)
         }).disposed(by: disposeBag)
 
         // loading
         viewModel.loadingDriver
-            .map { isLoading in
-                if isLoading {
-                    return .loading
-                } else {
+            .map { [unowned self] isLoading in
+                if isGettedActivities && isGettedTargetStatus {
                     return .none
+                } else {
+                    return .loading
                 }
             }
             .drive(onNext: {[weak self] in
@@ -128,19 +145,20 @@ extension MyPageViewController {
             }).disposed(by: disposeBag)
     }
 
-    private func fetchTargetStatus() {
+    private func fetchTargetStatus(animate: Bool) {
         viewModel.fetchTargetStatus(authToken: ApplicationConfigData.authToken)
             .subscribe(
                 onNext: { [unowned self] status in
+                    isGettedTargetStatus = true
+
                     targetLearningCount = status.targetLearningCount
                     todayLearnedCount = status.todayLearnedCount
                     targetTestingCount = status.targetTestingCount
                     todayTestedCount = status.todayTestedCount
-                    setupPieChartView(pieChartView: studyPieChartView)
-                    setupPieChartView(pieChartView: testPieChartView)
-                    bringIconToFront()
-                    pieChartAnimation()
-                    setupUI()
+
+                    if isGettedTargetStatus && isGettedActivities {
+                        setupCharts(animate: animate)
+                    }
                 },
                 onError: { [unowned self] in
                     log.error($0.descriptionOfType)
@@ -148,12 +166,15 @@ extension MyPageViewController {
                 }).disposed(by: disposeBag)
     }
 
-    private func fetchActivities() {
+    private func fetchActivities(animate: Bool) {
         viewModel.fetchActivities(authToken: ApplicationConfigData.authToken)
             .subscribe(
                 onNext: { [unowned self] status in
-                    setupBarChartView()
-                    barChartAnimation()
+                    isGettedActivities = true
+
+                    if isGettedTargetStatus && isGettedActivities {
+                        setupCharts(animate: animate)
+                    }
                 },
                 onError: { [unowned self] in
                     log.error($0.descriptionOfType)
@@ -166,6 +187,19 @@ extension MyPageViewController {
         testTargetLabel.text = "TEST " + String(targetTestingCount) + " WORDS"
         studyCurrentCountLabel.text = String(todayLearnedCount)
         testCurrentCountLabel.text = String(todayTestedCount)
+    }
+
+    /// API取得終了後に呼ぶ
+    private func setupCharts(animate: Bool) {
+        setupPieChartView(pieChartView: studyPieChartView)
+        setupPieChartView(pieChartView: testPieChartView)
+        bringIconToFront()
+        setupUI()
+        setupBarChartView()
+        if animate {
+            pieChartAnimation()
+            barChartAnimation()
+        }
     }
 
 }
@@ -269,7 +303,6 @@ extension MyPageViewController {
         pieChartView.rotationEnabled = false // グラフが動くのを無効化
 
         view.addSubview(pieChartView)
-        //pieChartView.animate(xAxisDuration: 1.2, yAxisDuration: 0.8) // アニメーション
     }
 
     /// 円形プロフレスバーの中心のアイコンとラベルを前面に持ってくる

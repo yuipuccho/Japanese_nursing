@@ -60,6 +60,10 @@ class MypageViewModel {
                 return activity.activities.map(ActivitiesDomainModel.init)
             }
             .do(onNext: { [unowned self] in
+                // 初期化
+                activities = []
+                activityCountArray = []
+                dateArray = []
                 activities.append(contentsOf: $0)
                 addActivity(activities: activities)
             })
