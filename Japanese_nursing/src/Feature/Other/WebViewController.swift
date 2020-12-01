@@ -24,11 +24,19 @@ class WebViewController: UIViewController {
     var titleText: String = ""
     private var progressView = UIProgressView()
     private var disposeBag = DisposeBag()
+    
 
     // MARK: - LifeCycles
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // ボタンの出し分け
+        if let _ = self.navigationController {
+            backButton.setImage(R.image.back_button(), for: .normal)
+        } else {
+            backButton.setImage(R.image.close_button(), for: .normal)
+        }
 
         navigationController?.navigationBar.tintColor = R.color.textBlue()
         navigationItem.title = titleText

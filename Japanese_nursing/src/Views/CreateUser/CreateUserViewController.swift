@@ -26,7 +26,11 @@ class CreateUserViewController: UIViewController {
     /// アラートLabel
     @IBOutlet private weak var nameAlertLabel: UILabel!
     /// スタートButton
-    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet private weak var startButton: UIButton!
+    /// 利用規約
+    @IBOutlet private weak var tarmsOfServiceButton: UIButton!
+    /// プライバシーポリシー
+    @IBOutlet private weak var privacyPolicyButton: UIButton!
 
     // MARK: - Properties
 
@@ -42,13 +46,13 @@ class CreateUserViewController: UIViewController {
     // MARK: - Functions
 
     private func subscribe() {
-        /// ニックネーム入力TextField
+        // ニックネーム入力TextField
         nameUnderLineTextField.rx.text.orEmpty.asDriver().drive(onNext: { [unowned self] _ in
             self.nameUnderLineTextField.setUnderline(R.color.apptop()!)
             self.validate()
         }).disposed(by: self.disposeBag)
 
-        /// スタートButton
+        // スタートButton
         startButton.rx.tap.subscribe(onNext: { [weak self] in
             if let text = self?.nameUnderLineTextField.text, !text.isEmpty, text.count <= 12 {
                 self?.fetch(userName: text)
@@ -59,6 +63,21 @@ class CreateUserViewController: UIViewController {
             }
 
         }).disposed(by: disposeBag)
+
+        // 利用規約Button
+        tarmsOfServiceButton.rx.tap.subscribe(onNext: { [weak self] in
+            let url = "https://yuipuccho.github.io/Japanese_nursing_terms_of_service/"
+            let vc = WebViewController.makeInstance(url: url, titleText: "利用規約")
+            self?.present(vc, animated: true)
+        }).disposed(by: disposeBag)
+
+        // プライバシーポリシーButton
+        privacyPolicyButton.rx.tap.subscribe(onNext: { [weak self] in
+            let url = "https://yuipuccho.github.io/Japanese_nursing_privacy_policy/"
+            let vc = WebViewController.makeInstance(url: url, titleText: "プライバシーポリシー")
+            self?.present(vc, animated: true)
+        }).disposed(by: disposeBag)
+
     }
 
     /// バリデーション処理
