@@ -57,6 +57,8 @@
 		BA50987B257517FF00FB88AE /* UpdateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50987A257517FE00FB88AE /* UpdateUser.swift */; };
 		BA5098812575193F00FB88AE /* UpdateUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5098802575193F00FB88AE /* UpdateUserModel.swift */; };
 		BA509886257519E900FB88AE /* UserNameSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA509885257519E900FB88AE /* UserNameSettingViewModel.swift */; };
+		BA50988C257542D800FB88AE /* PostLearningHistories.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50988B257542D800FB88AE /* PostLearningHistories.swift */; };
+		BA5098912575447E00FB88AE /* PostLearningHistoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5098902575447E00FB88AE /* PostLearningHistoriesModel.swift */; };
 		BA582A3924E170670089DA0B /* LearningUnit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA582A3824E170670089DA0B /* LearningUnit.storyboard */; };
 		BA5EACE324D2AF8F0008E2D0 /* UnitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5EACE224D2AF8F0008E2D0 /* UnitListViewController.swift */; };
 		BA5EAD4C24D453520008E2D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA5EAD4B24D453520008E2D0 /* GoogleService-Info.plist */; };
@@ -162,6 +164,8 @@
 		BA50987A257517FE00FB88AE /* UpdateUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUser.swift; sourceTree = "<group>"; };
 		BA5098802575193F00FB88AE /* UpdateUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserModel.swift; sourceTree = "<group>"; };
 		BA509885257519E900FB88AE /* UserNameSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameSettingViewModel.swift; sourceTree = "<group>"; };
+		BA50988B257542D800FB88AE /* PostLearningHistories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLearningHistories.swift; sourceTree = "<group>"; };
+		BA5098902575447E00FB88AE /* PostLearningHistoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLearningHistoriesModel.swift; sourceTree = "<group>"; };
 		BA582A3824E170670089DA0B /* LearningUnit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LearningUnit.storyboard; sourceTree = "<group>"; };
 		BA5EACE224D2AF8F0008E2D0 /* UnitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListViewController.swift; sourceTree = "<group>"; };
 		BA5EAD4B24D453520008E2D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../FetiLip-develop/fetilip/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -533,6 +537,22 @@
 			path = UserNameSetting;
 			sourceTree = "<group>";
 		};
+		BA50988A257542A500FB88AE /* LearningHistories */ = {
+			isa = PBXGroup;
+			children = (
+				BA50988B257542D800FB88AE /* PostLearningHistories.swift */,
+			);
+			path = LearningHistories;
+			sourceTree = "<group>";
+		};
+		BA50988F2575445B00FB88AE /* LearningHistories */ = {
+			isa = PBXGroup;
+			children = (
+				BA5098902575447E00FB88AE /* PostLearningHistoriesModel.swift */,
+			);
+			path = LearningHistories;
+			sourceTree = "<group>";
+		};
 		BA582A3724E170190089DA0B /* LearningUnit */ = {
 			isa = PBXGroup;
 			children = (
@@ -695,6 +715,7 @@
 		BAD1CFE62571F65400F9A74A /* Communications */ = {
 			isa = PBXGroup;
 			children = (
+				BA50988A257542A500FB88AE /* LearningHistories */,
 				BA5098502574B7C100FB88AE /* Activity */,
 				BAD1CFE72571F66100F9A74A /* CreateUser */,
 				BA50981A2574056100FB88AE /* TargetStatus */,
@@ -751,6 +772,7 @@
 			children = (
 				BA50985A2574B8BD00FB88AE /* Activity */,
 				BAF1EAC725733D1D00E19657 /* CreateUser */,
+				BA50988F2575445B00FB88AE /* LearningHistories */,
 				BA5098232574066F00FB88AE /* TargetStatus */,
 				BA5097FD2573D9DE00FB88AE /* TestStatus */,
 				BAF1EAC825733D2500E19657 /* UnitMasters */,
@@ -1124,6 +1146,7 @@
 				BAD1CFFB2571F77300F9A74A /* ResponseError.swift in Sources */,
 				BA5097AB25739CBA00FB88AE /* UIView+AutoLayout.swift in Sources */,
 				BA5098052573DA9F00FB88AE /* TestStatusDomainModel.swift in Sources */,
+				BA5098912575447E00FB88AE /* PostLearningHistoriesModel.swift in Sources */,
 				BAD1D0332571FAA300F9A74A /* CreateUserViewController.swift in Sources */,
 				BA00E891255E4A8C001C4E06 /* UserNameSettingViewController.swift in Sources */,
 				BAD1D01B2571F9AE00F9A74A /* SimpleResponse.swift in Sources */,
@@ -1137,6 +1160,7 @@
 				BA133ACA24C04D850047E265 /* CustomTabBar.swift in Sources */,
 				BA50981C2574057200FB88AE /* TargetStatus.swift in Sources */,
 				BAF1EAD825734F8600E19657 /* UnitListSectionModel.swift in Sources */,
+				BA50988C257542D800FB88AE /* PostLearningHistories.swift in Sources */,
 				BA509886257519E900FB88AE /* UserNameSettingViewModel.swift in Sources */,
 				BA06D2012557AB26000216CC /* TestViewController.swift in Sources */,
 				BAF1EAC425733BEB00E19657 /* UnitMastersEntity.swift in Sources */,

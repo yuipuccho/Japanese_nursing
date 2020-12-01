@@ -16,6 +16,7 @@ import RxSwift
 class LearningUnitViewModel {
 
     // MARK: - Properties
+
     private let loadingRelay: BehaviorRelay<Bool> = BehaviorRelay(value: false)
 
     var loadingDriver: Driver<Bool> {
@@ -29,6 +30,7 @@ class LearningUnitViewModel {
     var words: [WordMastersDomainModel] = []
 
     // MARK: - Functions
+
     func fetch(authToken: String, unitMasterId: Int) -> Observable<[WordMastersDomainModel]> {
 
         return GetWordMastersModel().getWordMasters(authToken: authToken, unitMasterId: unitMasterId)
@@ -46,6 +48,15 @@ class LearningUnitViewModel {
                 }
                 _self.words.append(contentsOf: $0)
             })
+    }
+
+    func postLearningHistories(authToken: String, rememberIds: String, notRememberIds: String) -> Observable<Void> {
+
+        return PostLearningHistoriesModel().putUser(authToken: authToken, rememberIds: rememberIds, notRememberIds: notRememberIds)
+            .do(onError: {
+                log.error($0.descriptionOfType)
+            })
+            .map { _ in () }
     }
 
 }
