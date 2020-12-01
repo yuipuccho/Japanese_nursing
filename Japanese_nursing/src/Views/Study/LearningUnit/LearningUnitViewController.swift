@@ -35,10 +35,6 @@ class LearningUnitViewController: UIViewController {
 
     // MARK: - Properties
 
-//    private var rememberIdsArray: [Int] = []
-//
-//    private var notRememberIdsArray: [Int] = []
-
     private let kolodaView = KolodaView()
 
     private var unitTitle = ""
@@ -98,7 +94,6 @@ class LearningUnitViewController: UIViewController {
     private func subscribe() {
         // 閉じるボタンタップ
         closeButton.rx.tap.subscribe(onNext: { [weak self] in
-//            self?.postLearningHistories()
             self?.dismiss(animated: true)
         }).disposed(by: disposeBag)
 
@@ -142,37 +137,6 @@ class LearningUnitViewController: UIViewController {
                 }).disposed(by: disposeBag)
     }
 
-//    /// 配列を文字列に変換する(学習履歴のPostで使用)
-//    private func arrayToString(array: [Int]) -> String {
-//        var str = ""
-//        for i in array {
-//            str = str + "," + String(i)
-//        }
-//        return String(str.dropFirst(1))
-//    }
-
-    /// 学習履歴を更新
-//    private func postLearningHistories() {
-//        let rememberIds = arrayToString(array: rememberIdsArray)
-//        let notRememberIds = arrayToString(array: notRememberIdsArray)
-//
-//        HUD.show(.progress)
-//        viewModel.postLearningHistories(authToken: ApplicationConfigData.authToken, rememberIds: rememberIds, notRememberIds: notRememberIds)
-//            .subscribe(
-//                onNext: { [unowned self] _ in
-//                    HUD.hide()
-//                    dismiss(animated: true)
-//                },
-//                onError: { [unowned self] _ in
-//                    HUD.hide()
-//                    // 次回単元一覧表示時に再送信するため、UserDefaultsに追加
-//                    ApplicationConfigData.rememberIdsArray.append(rememberIdsArray)
-//                    ApplicationConfigData.notRememberIdsArray.append(notRememberIdsArray)
-//                    dismiss(animated: true)
-//                }
-//            ).disposed(by: disposeBag)
-//    }
-
     /// 進捗バーを更新する
     private func updateProgressView(swipedCardIndex: Int) {
         /// カードの最大枚数
@@ -206,10 +170,8 @@ extension LearningUnitViewController: KolodaViewDelegate {
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
         switch direction {
         case .right:
-//            rememberIdsArray.append(viewModel.words[index].id)
             ApplicationConfigData.rememberIdsArray.append(String(viewModel.words[index].id))
         case .left:
-//            notRememberIdsArray.append(viewModel.words[index].id)
             ApplicationConfigData.notRememberIdsArray.append(String(viewModel.words[index].id))
         default:
             break
@@ -231,7 +193,6 @@ extension LearningUnitViewController: KolodaViewDelegate {
                 self?.progressView.setProgress(0, animated: true)
             }
             alertView.addButton("終了する") { [weak self] in
-//                self?.postLearningHistories()
                 self?.dismiss(animated: true)
             }
 

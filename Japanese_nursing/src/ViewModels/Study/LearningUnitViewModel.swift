@@ -50,13 +50,4 @@ class LearningUnitViewModel {
             })
     }
 
-//    func postLearningHistories(authToken: String, rememberIds: String, notRememberIds: String) -> Observable<Void> {
-//
-//        return PostLearningHistoriesModel().putUser(authToken: authToken, rememberIds: rememberIds, notRememberIds: notRememberIds)
-//            .do(onError: {
-//                log.error($0.descriptionOfType)
-//            })
-//            .map { _ in () }
-//    }
-
 }

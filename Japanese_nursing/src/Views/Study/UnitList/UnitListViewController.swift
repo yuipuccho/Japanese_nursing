@@ -77,12 +77,6 @@ class UnitListViewController: UIViewController, UIScrollViewDelegate, UIAdaptive
 
     }
 
-    // 遷移先の画面が閉じられた時に呼ばれる
-    // これも必要なくなるはず
-//    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
-//        fetch()
-//    }
-
 }
 
 // MARK: - Functions
@@ -135,22 +129,10 @@ extension UnitListViewController {
                 }).disposed(by: disposeBag)
     }
 
-    /// 配列を文字列に変換する(学習履歴のPostで使用)
-    // VMでやりたい
-    private func arrayToString(array: [String]) -> String {
-        var str = ""
-        for i in array {
-            str = str + "," + i
-        }
-        return String(str.dropFirst(1))
-    }
-
     /// 学習履歴を更新
     private func postLearningHistories() {
-        let rememberIds = arrayToString(array: ApplicationConfigData.rememberIdsArray)
-        let notRememberIds = arrayToString(array: ApplicationConfigData.notRememberIdsArray)
-
-        viewModel.postLearningHistories(authToken: ApplicationConfigData.authToken, rememberIds: rememberIds, notRememberIds: notRememberIds)
+        
+        viewModel.postLearningHistories()
             .subscribe(
                 onNext: { [unowned self] _ in
                     // 学習履歴の更新に成功した場合、UserDefaultsを初期化する
@@ -173,7 +155,7 @@ extension UnitListViewController {
         let dataSource = RxTableViewSectionedReloadDataSource<UnitListSectionDomainModel>(configureCell: { (_, tableView, indexPath, item) in
             guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.unitListCell.identifier, for: indexPath) as?
                     UnitListCell else {
-                log.error("Can't cast R.reuseIdentifier.unitListCell to UnitLIstCell")
+                log.error("Can't cast R.reuseIdentifier.unitListCell to UnitListCell")
                 return UITableViewCell()
             }
 
