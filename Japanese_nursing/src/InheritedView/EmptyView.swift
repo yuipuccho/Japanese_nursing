@@ -78,7 +78,7 @@ final class EmptyView: UIView {
             retryButton.isHidden = true
             indicator.startAnimating()
             indicator.isHidden = false
-            iconImage = nil
+            iconImage.isHidden = true
             headLabel.text = nil
             subTextLabel.text = nil
 
@@ -87,7 +87,7 @@ final class EmptyView: UIView {
             retryButton.isHidden = true
             indicator.stopAnimating()
             indicator.isHidden = true
-            iconImage = nil
+            iconImage.isHidden = true
             headLabel.text = nil
             subTextLabel.text = nil
 
@@ -100,7 +100,7 @@ final class EmptyView: UIView {
                 retryButton.isHidden = false
                 indicator.stopAnimating()
                 indicator.isHidden = true
-                iconImage = nil
+                iconImage.isHidden = true
                 headLabel.text = nil
                 subTextLabel.text = text
             }
