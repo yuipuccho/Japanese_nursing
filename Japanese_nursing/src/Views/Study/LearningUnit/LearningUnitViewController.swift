@@ -32,6 +32,10 @@ class LearningUnitViewController: UIViewController {
 
     // MARK: - Properties
 
+    private var rememberIdsArray: [Int] = []
+
+    private var notRememberIdsArray: [Int] = []
+
     private let kolodaView = KolodaView()
 
     /// カードのサイズ
@@ -79,6 +83,7 @@ class LearningUnitViewController: UIViewController {
         kolodaView.frame = cardFrame
         kolodaView.center = CGPoint(x: view.bounds.size.width / 2, y: (view.bounds.size.height / 2) - 50)
         self.view.addSubview(kolodaView)
+
     }
 
     // MARK: - Functions
@@ -86,6 +91,7 @@ class LearningUnitViewController: UIViewController {
     private func subscribe() {
         // 閉じるボタンタップ
         closeButton.rx.tap.subscribe(onNext: { [weak self] in
+            self?.postLearningHistories()
             self?.dismiss(animated: true)
         }).disposed(by: disposeBag)
 
@@ -115,6 +121,7 @@ class LearningUnitViewController: UIViewController {
             }).disposed(by: disposeBag)
     }
 
+    /// 表示する単語を取得
     private func fetch() {
         viewModel.fetch(authToken: ApplicationConfigData.authToken, unitMasterId: unitMasterId)
             .subscribe(
@@ -126,6 +133,28 @@ class LearningUnitViewController: UIViewController {
                     log.error($0.descriptionOfType)
                     self.emptyView.status = .errorAndRetry($0.descriptionOfType)
                 }).disposed(by: disposeBag)
+    }
+
+    /// 配列を文字列に変換する(学習履歴のPostで使用)
+    private func arrayToString(array: [Int]) -> String {
+        var str = ""
+        for i in array {
+            str = str + "," + String(i)
+        }
+        return String(str.dropFirst(1))
+    }
+
+    /// 学習履歴を更新
+    private func postLearningHistories() {
+        let rememberIds = arrayToString(array: rememberIdsArray)
+        let notRememberIds = arrayToString(array: notRememberIdsArray)
+
+        viewModel.postLearningHistories(authToken: ApplicationConfigData.authToken, rememberIds: rememberIds, notRememberIds: notRememberIds)
+            .subscribe(
+                onError: { _ in
+                    // TODO: - エラー時の処理を追加する
+                }
+            ).disposed(by: disposeBag)
     }
 
     /// 進捗バーを更新する
@@ -159,13 +188,14 @@ extension LearningUnitViewController: KolodaViewDelegate {
 
     /// カードがスワイプされたら呼ばれるメソッド
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
-        // TODO: APIが追加されたら、スワイプの方向によって処理を変更する
-//        switch direction {
-//        case .right:
-//        case .left:
-//        default:
-//            break
-//        }
+        switch direction {
+        case .right:
+            rememberIdsArray.append(viewModel.words[index].id)
+        case .left:
+            notRememberIdsArray.append(viewModel.words[index].id)
+        default:
+            break
+        }
         updateProgressView(swipedCardIndex: index)
 
         // 最後のカードがスワイプされたらモーダルを表示する
@@ -183,6 +213,7 @@ extension LearningUnitViewController: KolodaViewDelegate {
                 self?.progressView.setProgress(0, animated: true)
             }
             alertView.addButton("終了する") { [weak self] in
+                self?.postLearningHistories()
                 self?.dismiss(animated: true)
             }
 
