@@ -45,9 +45,9 @@ class ApplicationConfigData {
     }
 
     /// 最初の単元一覧を表示したか
-    static var isShowedUnitList: Bool {
-        get { return self.ud.bool(forKey: "isShowedUnitList")}
-        set { self.ud.set(newValue, forKey: "isShowedUnitList")}
+    static var hasShowedUnitList: Bool {
+        get { return self.ud.bool(forKey: "hasShowedUnitList")}
+        set { self.ud.set(newValue, forKey: "hasShowedUnitList")}
     }
 
     // 未送信の学習履歴

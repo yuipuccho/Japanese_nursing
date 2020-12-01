@@ -24,7 +24,6 @@ class WebViewController: UIViewController {
     var titleText: String = ""
     private var progressView = UIProgressView()
     private var disposeBag = DisposeBag()
-    
 
     // MARK: - LifeCycles
 

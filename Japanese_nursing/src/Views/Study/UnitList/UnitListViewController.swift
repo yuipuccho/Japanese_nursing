@@ -75,7 +75,7 @@ class UnitListViewController: UIViewController, UIScrollViewDelegate, UIAdaptive
             postLearningHistories()
         }
 
-        if !ApplicationConfigData.isShowedUnitList {
+        if !ApplicationConfigData.hasShowedUnitList {
             fetch()
         }
 
@@ -123,7 +123,7 @@ extension UnitListViewController {
                 onNext: { [unowned self] _ in
                     // 一度fetchに成功したらEmptyViewは表示しない
                     shouldShowEmptyView = false
-                    ApplicationConfigData.isShowedUnitList = true
+                    ApplicationConfigData.hasShowedUnitList = true
                 },
                 onError: { [unowned self] in
                     log.error($0.descriptionOfType)
