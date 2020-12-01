@@ -24,6 +24,8 @@ class LearningUnitViewController: UIViewController {
 
     /// 単元タイトル
     @IBOutlet weak var unitTitleLabel: UILabel!
+    /// 設定ボタン
+    @IBOutlet weak var settingButton: UIButton!
     /// 閉じるボタン
     @IBOutlet weak var closeButton: UIButton!
     /// 「覚えた」ボタン（チェックマーク）

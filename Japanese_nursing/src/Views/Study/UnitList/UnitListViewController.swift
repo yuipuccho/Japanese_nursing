@@ -24,7 +24,8 @@ class UnitListViewController: UIViewController, UIScrollViewDelegate, UIAdaptive
     // MARK: - Outlets
 
     @IBOutlet weak var tableView: UITableView!
-
+    @IBOutlet weak var settingButton: UIButton!
+    
     // MARK: - Properties
 
     private var disposeBag = DisposeBag()
