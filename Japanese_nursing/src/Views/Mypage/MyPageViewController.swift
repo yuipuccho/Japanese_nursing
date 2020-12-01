@@ -247,14 +247,7 @@ extension MyPageViewController {
 
         // グラフの上に値を表示しない
         dataSet.drawValuesEnabled = false
-        dataSet.colors = [R.color.graphBlue()!,
-                          R.color.graphYellow()!,
-                          R.color.mypage()!,
-                          R.color.graphGreen()!,
-                          R.color.graphYellow()!,
-                          R.color.mypage()!,
-                          R.color.graphGreen()!
-        ]
+        dataSet.colors = [R.color.activity()!]
     }
 
     /// バーチャートアニメーション
