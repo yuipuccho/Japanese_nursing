@@ -43,7 +43,7 @@
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="表示するカード" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXI-oP-xCT">
-                                                        <rect key="frame" x="28" y="11.5" width="126" height="27"/>
+                                                        <rect key="frame" x="28" y="14.5" width="126" height="21"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="18"/>
                                                         <color key="textColor" name="Study"/>
                                                         <nil key="highlightedColor"/>
@@ -62,7 +62,7 @@
                                                 <rect key="frame" x="0.0" y="82" width="414" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="すべて" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vI-2w-JcY">
-                                                        <rect key="frame" x="20" y="14.5" width="42" height="21"/>
+                                                        <rect key="frame" x="20" y="16.5" width="42" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Medium" family="NotoSansCJKjpSub-Medium" pointSize="14"/>
                                                         <color key="textColor" name="TextDarkGray"/>
                                                         <nil key="highlightedColor"/>
@@ -95,7 +95,7 @@
                                                 <rect key="frame" x="0.0" y="132" width="414" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暗記済みのカードのみ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAY-DQ-IDM">
-                                                        <rect key="frame" x="20" y="14.5" width="140" height="21"/>
+                                                        <rect key="frame" x="20" y="16.5" width="140" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Medium" family="NotoSansCJKjpSub-Medium" pointSize="14"/>
                                                         <color key="textColor" name="TextDarkGray"/>
                                                         <nil key="highlightedColor"/>
@@ -128,7 +128,7 @@
                                                 <rect key="frame" x="0.0" y="182" width="414" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未暗記のカードのみ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05m-u2-gNY">
-                                                        <rect key="frame" x="20" y="14.5" width="126" height="21"/>
+                                                        <rect key="frame" x="20" y="16.5" width="126" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Medium" family="NotoSansCJKjpSub-Medium" pointSize="14"/>
                                                         <color key="textColor" name="TextDarkGray"/>
                                                         <nil key="highlightedColor"/>
@@ -168,7 +168,7 @@
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="並び替え" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDz-TE-V1i">
-                                                        <rect key="frame" x="28" y="11.5" width="72" height="27"/>
+                                                        <rect key="frame" x="28" y="14.5" width="72" height="21"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="18"/>
                                                         <color key="textColor" name="Study"/>
                                                         <nil key="highlightedColor"/>
@@ -187,7 +187,7 @@
                                                 <rect key="frame" x="0.0" y="282" width="414" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="デフォルト順" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzw-Z0-JhK">
-                                                        <rect key="frame" x="20" y="14.5" width="84" height="21"/>
+                                                        <rect key="frame" x="20" y="16.5" width="84" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Medium" family="NotoSansCJKjpSub-Medium" pointSize="14"/>
                                                         <color key="textColor" name="TextDarkGray"/>
                                                         <nil key="highlightedColor"/>
@@ -220,7 +220,7 @@
                                                 <rect key="frame" x="0.0" y="332" width="414" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ランダムに並び替え" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7W-hG-B62">
-                                                        <rect key="frame" x="20" y="14.5" width="126" height="21"/>
+                                                        <rect key="frame" x="20" y="16.5" width="126" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Medium" family="NotoSansCJKjpSub-Medium" pointSize="14"/>
                                                         <color key="textColor" name="TextDarkGray"/>
                                                         <nil key="highlightedColor"/>
@@ -381,6 +381,20 @@
                             <constraint firstItem="Q9K-OT-iDA" firstAttribute="trailing" secondItem="3YF-2m-A5h" secondAttribute="trailing" id="vDv-uV-lEl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="allButton" destination="xCc-yX-h02" id="sEV-dh-x0l"/>
+                        <outlet property="allCheckImageView" destination="NtM-GK-11q" id="u44-wo-yi7"/>
+                        <outlet property="applyButton" destination="jIA-Dq-7xu" id="rZR-M3-wap"/>
+                        <outlet property="cancelButton" destination="Fe9-5m-3Ek" id="k5U-CE-K2I"/>
+                        <outlet property="defaultButton" destination="hkQ-OG-v0y" id="L9h-Td-pa5"/>
+                        <outlet property="defaultCheckImageView" destination="Qm1-6q-4RX" id="Myh-Hj-fr3"/>
+                        <outlet property="notRememberButton" destination="vMF-JF-njr" id="1xA-hc-MQp"/>
+                        <outlet property="notRememberCheckImageView" destination="Def-t1-Pat" id="kGG-vK-abE"/>
+                        <outlet property="randomButton" destination="BuF-VB-crt" id="aIm-Kj-Awy"/>
+                        <outlet property="randomCheckImageView" destination="P87-oA-qtQ" id="4cm-Pv-GiM"/>
+                        <outlet property="rememberButton" destination="bPG-hV-8tg" id="TpT-0f-h93"/>
+                        <outlet property="rememberCheckImageView" destination="d1O-vB-H5A" id="pxl-O2-0tJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NkF-NK-eAf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

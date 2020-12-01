@@ -62,4 +62,25 @@ class ApplicationConfigData {
         set { self.ud.set(newValue, forKey: "notRememberIdsArray")}
     }
 
+    // 学習設定
+    /// 表示するカードの設定
+    static var displayCardSetting: Int {
+        get { return self.ud.integer(forKey: "displayCardSetting")}
+        set { self.ud.set(newValue, forKey: "displayCardSetting")}
+    }
+
+    /// 並び替え
+    static var cardSortOrderType: Int {
+        get { return self.ud.integer(forKey: "cardSortOrderType")}
+        set { self.ud.set(newValue, forKey: "cardSortOrderType")}
+    }
+
+    // 初期値設定
+    static func registerDefaults() {
+        ud.register(defaults: [
+            "displayCardSetting": 0,
+            "cardSortOrderType": 0
+        ])
+    }
+
 }
