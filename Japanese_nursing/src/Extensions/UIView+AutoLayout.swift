@@ -20,14 +20,16 @@ extension UIView {
         }
     }
 
-    public func allSafePin(subView: UIView) {
+    public func allSafePin(subView: UIView, top: CGFloat = 0) {
         checkTranslatesAutoresizing(withView: subView, toView: nil)
         NSLayoutConstraint.activate([
-            subView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            subView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: top),
             subView.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor),
             subView.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor),
             subView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
+
+
 
 }
