@@ -75,6 +75,10 @@ class UnitListViewController: UIViewController, UIScrollViewDelegate, UIAdaptive
             postLearningHistories()
         }
 
+        if !ApplicationConfigData.isShowedUnitList {
+            fetch()
+        }
+
     }
 
 }
@@ -119,6 +123,7 @@ extension UnitListViewController {
                 onNext: { [unowned self] _ in
                     // 一度fetchに成功したらEmptyViewは表示しない
                     shouldShowEmptyView = false
+                    ApplicationConfigData.isShowedUnitList = true
                 },
                 onError: { [unowned self] in
                     log.error($0.descriptionOfType)
@@ -172,7 +177,7 @@ extension UnitListViewController {
 
 extension UnitListViewController {
 
-    static func makeInstance() -> UIViewController {
+    static func makeInstance(shouldFetch: Bool = false) -> UIViewController {
         guard let vc = R.storyboard.unitList.unitListViewController() else {
             assertionFailure("Can't make instance 'UnitListViewController'.")
             return UIViewController()

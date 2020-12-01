@@ -41,6 +41,7 @@ class CreateUserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         subscribe()
+        ApplicationConfigData.isShowedUnitList = false
     }
 
     // MARK: - Functions

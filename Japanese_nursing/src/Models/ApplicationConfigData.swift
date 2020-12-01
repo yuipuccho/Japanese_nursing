@@ -44,6 +44,12 @@ class ApplicationConfigData {
         set { self.ud.set(newValue, forKey: "email")}
     }
 
+    /// 最初の単元一覧を表示したか
+    static var isShowedUnitList: Bool {
+        get { return self.ud.bool(forKey: "isShowedUnitList")}
+        set { self.ud.set(newValue, forKey: "isShowedUnitList")}
+    }
+
     // 未送信の学習履歴
     /// 覚えた単語
     static var rememberIdsArray: [String] {
