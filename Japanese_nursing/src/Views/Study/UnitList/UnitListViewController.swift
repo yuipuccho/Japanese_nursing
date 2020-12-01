@@ -177,7 +177,7 @@ extension UnitListViewController {
 
 extension UnitListViewController {
 
-    static func makeInstance(shouldFetch: Bool = false) -> UIViewController {
+    static func makeInstance() -> UIViewController {
         guard let vc = R.storyboard.unitList.unitListViewController() else {
             assertionFailure("Can't make instance 'UnitListViewController'.")
             return UIViewController()
