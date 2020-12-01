@@ -93,6 +93,9 @@ class MyPageViewController: UIViewController {
 
         pieChartAnimation()
         barChartAnimation()
+        fetchTargetStatus(animate: false)
+        fetchActivities(animate: false)
+
     }
 
     // 遷移先の画面が閉じられた時に呼ばれる
