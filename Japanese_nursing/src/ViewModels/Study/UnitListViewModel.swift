@@ -52,6 +52,8 @@ class UnitListViewModel {
                 guard let _self = self else {
                     return
                 }
+                _self.units = []
+                _self.unitsRelay.accept([])
                 _self.units.append(contentsOf: $0)
                 let sections = UnitListSectionDomainModel(items: _self.units)
                 _self.unitsRelay.accept([sections])

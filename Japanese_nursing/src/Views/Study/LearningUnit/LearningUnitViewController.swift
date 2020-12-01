@@ -323,6 +323,18 @@ extension LearningUnitViewController: KolodaViewDataSource {
 
 }
 
+extension LearningUnitViewController {
+
+    override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
+        super.dismiss(animated: flag, completion: completion)
+        guard let presentationController = presentationController else {
+            return
+        }
+        presentationController.delegate?.presentationControllerDidDismiss?(presentationController)
+    }
+
+}
+
 // MARK: - MakeInstance
 
 extension LearningUnitViewController {

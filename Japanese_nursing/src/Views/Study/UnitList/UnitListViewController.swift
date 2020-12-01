@@ -15,7 +15,7 @@ import RxDataSources
 /**
  * 単元一覧画面VC
  */
-class UnitListViewController: UIViewController, UIScrollViewDelegate {
+class UnitListViewController: UIViewController, UIScrollViewDelegate, UIAdaptivePresentationControllerDelegate {
 
     private lazy var viewModel: UnitListViewModel = UnitListViewModel()
 
@@ -31,7 +31,7 @@ class UnitListViewController: UIViewController, UIScrollViewDelegate {
         let v = R.nib.emptyView.firstView(owner: nil)!
         v.backgroundColor = .clear
         v.retryAction = { [weak self] in
-            self?.fetch(authToken: ApplicationConfigData.authToken)
+            self?.fetch()
         }
         v.page = .learn
         v.status = .none
@@ -39,6 +39,8 @@ class UnitListViewController: UIViewController, UIScrollViewDelegate {
         view.allSafePin(subView: v)
         return v
     }()
+
+    private var shouldShowEmptyView = true
 
     // MARK: - LifeCycles
 
@@ -54,12 +56,18 @@ class UnitListViewController: UIViewController, UIScrollViewDelegate {
         // ユーザ未作成の場合はユーザ作成画面に遷移
         if ApplicationConfigData.authToken == "" {
             let vc = CreateUserViewController.makeInstance()
+            vc.presentationController?.delegate = self
             present(vc, animated: false)
         }
 
         subscribe()
-        fetch(authToken: ApplicationConfigData.authToken)
+        fetch()
 
+    }
+
+    // 遷移先の画面が閉じられた時に呼ばれる
+    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+        fetch()
     }
 
 }
@@ -73,8 +81,8 @@ extension UnitListViewController {
 
         // loading
         viewModel.loadingDriver
-            .map { isLoading in
-                if isLoading {
+            .map { [unowned self] isLoading in
+                if isLoading && shouldShowEmptyView {
                     return .loading
                 } else {
                     return .none
@@ -93,17 +101,25 @@ extension UnitListViewController {
         tableView.rx.itemSelected
             .subscribe(onNext: { [unowned self] indexPath in
                 let vc = LearningUnitViewController.makeInstance(unitMasterId: viewModel.units[indexPath.row].id, unitTitle: viewModel.units[indexPath.row].vietnamese)
+                vc.presentationController?.delegate = self
                 self.present(vc, animated: true)
             }).disposed(by: disposeBag)
+
     }
 
-
-    private func fetch(authToken: String) {
-        viewModel.fetch(authToken: authToken)
+    private func fetch() {
+        viewModel.fetch(authToken: ApplicationConfigData.authToken)
             .subscribe(
+                onNext: { [unowned self] _ in
+                    // 一度fetchに成功したらEmptyViewは表示しない
+                    shouldShowEmptyView = false
+                },
                 onError: { [unowned self] in
                     log.error($0.descriptionOfType)
-                    self.emptyView.status = .errorAndRetry($0.descriptionOfType)
+
+                    if shouldShowEmptyView {
+                        self.emptyView.status = .errorAndRetry($0.descriptionOfType)
+                    }
                 }).disposed(by: disposeBag)
     }
 
