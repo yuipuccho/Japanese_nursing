@@ -150,7 +150,6 @@ extension MyPageViewController: UIAdaptivePresentationControllerDelegate {
             .subscribe(
                 onNext: { [unowned self] status in
                     isGettedTargetStatus = true
-                    print("gett")
 
                     targetLearningCount = status.targetLearningCount
                     todayLearnedCount = status.todayLearnedCount
@@ -172,7 +171,6 @@ extension MyPageViewController: UIAdaptivePresentationControllerDelegate {
             .subscribe(
                 onNext: { [unowned self] status in
                     isGettedActivities = true
-                    print("geta")
 
                     if isGettedTargetStatus && isGettedActivities {
                         setupCharts(animate: animate)
