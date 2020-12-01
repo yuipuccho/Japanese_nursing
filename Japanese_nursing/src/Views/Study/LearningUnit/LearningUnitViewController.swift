@@ -21,6 +21,8 @@ class LearningUnitViewController: UIViewController {
 
     // MARK: - Outlets
 
+    /// 単元タイトル
+    @IBOutlet weak var unitTitleLabel: UILabel!
     /// 閉じるボタン
     @IBOutlet weak var closeButton: UIButton!
     /// 「覚えた」ボタン（チェックマーク）
@@ -37,6 +39,8 @@ class LearningUnitViewController: UIViewController {
     private var notRememberIdsArray: [Int] = []
 
     private let kolodaView = KolodaView()
+
+    private var unitTitle = ""
 
     /// カードのサイズ
     private var cardFrame: CGRect {
@@ -83,6 +87,8 @@ class LearningUnitViewController: UIViewController {
         kolodaView.frame = cardFrame
         kolodaView.center = CGPoint(x: view.bounds.size.width / 2, y: (view.bounds.size.height / 2) - 50)
         self.view.addSubview(kolodaView)
+
+        unitTitleLabel.text = unitTitle
 
     }
 
@@ -321,17 +327,18 @@ extension LearningUnitViewController: KolodaViewDataSource {
 
 extension LearningUnitViewController {
 
-    static func makeInstance(unitMasterId: Int) -> UIViewController {
+    static func makeInstance(unitMasterId: Int, unitTitle: String) -> UIViewController {
         guard let vc = R.storyboard.learningUnit.learningUnitViewController() else {
             assertionFailure("Can't make instance 'LearningUnitViewController'.")
             return UIViewController()
         }
         vc.unitMasterId = unitMasterId
+        vc.unitTitle = unitTitle
         return vc
     }
 
-    static func makeInstanceInNavigationController(unitMasterId: Int) -> UIViewController {
-        return UINavigationController(rootViewController: makeInstance(unitMasterId: unitMasterId))
+    static func makeInstanceInNavigationController(unitMasterId: Int, unitTitle: String) -> UIViewController {
+        return UINavigationController(rootViewController: makeInstance(unitMasterId: unitMasterId, unitTitle: unitTitle))
     }
 
 }
