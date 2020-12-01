@@ -94,6 +94,11 @@ class LearningUnitViewController: UIViewController {
     // MARK: - Functions
 
     private func subscribe() {
+        // 設定ボタンタップ
+        settingButton.rx.tap.subscribe(onNext: { [weak self] in
+            let vc = LearningSettingsViewController.makeInstance()
+            self?.present(vc, animated: true)
+        }).disposed(by: disposeBag)
         // 閉じるボタンタップ
         closeButton.rx.tap.subscribe(onNext: { [weak self] in
             self?.dismiss(animated: true)

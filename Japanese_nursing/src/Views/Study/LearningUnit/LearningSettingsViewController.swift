@@ -28,3 +28,17 @@ class LearningSettingsViewController: UIViewController {
     */
 
 }
+
+// MARK: - MakeInstance
+
+extension LearningSettingsViewController {
+
+    static func makeInstance() -> UIViewController {
+        guard let vc = R.storyboard.learningSettingsViewController.learningSettingsViewController() else {
+            assertionFailure("Can't make instance 'LearningSettingsViewController'.")
+            return UIViewController()
+        }
+        return vc
+    }
+
+}

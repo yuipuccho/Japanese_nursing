@@ -381,13 +381,6 @@
                             <constraint firstItem="Q9K-OT-iDA" firstAttribute="trailing" secondItem="3YF-2m-A5h" secondAttribute="trailing" id="vDv-uV-lEl"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="privacyPolicyButton" destination="BuF-VB-crt" id="tQd-pY-eoU"/>
-                        <outlet property="studyTargetSettingButton" destination="bPG-hV-8tg" id="rQs-0l-Asf"/>
-                        <outlet property="termOfServiceButton" destination="hkQ-OG-v0y" id="FWK-RN-2Aw"/>
-                        <outlet property="testTargetSettingButton" destination="vMF-JF-njr" id="tWw-8k-OS8"/>
-                        <outlet property="userNameSettingButton" destination="xCc-yX-h02" id="kxW-YM-2qX"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NkF-NK-eAf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
