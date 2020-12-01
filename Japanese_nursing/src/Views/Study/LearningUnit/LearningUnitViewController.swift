@@ -114,17 +114,17 @@ class LearningUnitViewController: UIViewController {
         }).disposed(by: disposeBag)
 
         // loading
-        viewModel.loadingDriver
-            .map { isLoading in
-                if isLoading {
-                    return .loading
-                } else {
-                    return .none
-                }
-            }
-            .drive(onNext: {[weak self] in
-                self?.emptyView.status = $0
-            }).disposed(by: disposeBag)
+//        viewModel.loadingDriver
+//            .map { isLoading in
+//                if isLoading {
+//                    return .loading
+//                } else {
+//                    return .none
+//                }
+//            }
+//            .drive(onNext: {[weak self] in
+//                self?.emptyView.status = $0
+//            }).disposed(by: disposeBag)
     }
 
     /// 表示する単語を取得
@@ -319,6 +319,18 @@ extension LearningUnitViewController: KolodaViewDataSource {
         }).disposed(by: disposeBag)
 
         return view
+    }
+
+}
+
+extension LearningUnitViewController {
+
+    override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
+        super.dismiss(animated: flag, completion: completion)
+        guard let presentationController = presentationController else {
+            return
+        }
+        presentationController.delegate?.presentationControllerDidDismiss?(presentationController)
     }
 
 }

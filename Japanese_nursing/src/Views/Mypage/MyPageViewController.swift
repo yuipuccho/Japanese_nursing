@@ -97,7 +97,6 @@ class MyPageViewController: UIViewController {
 
     // 遷移先の画面が閉じられた時に呼ばれる
     func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
-        print("hohoho")
         fetchTargetStatus(animate: false)
         fetchActivities(animate: false)
     }
