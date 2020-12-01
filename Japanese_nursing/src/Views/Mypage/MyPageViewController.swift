@@ -56,7 +56,7 @@ class MyPageViewController: UIViewController {
         v.page = .learn
         v.status = .none
         view.addSubview(v)
-        view.allSafePin(subView: v)
+        view.allSafePin(subView: v, top: 45)
         return v
     }()
 
