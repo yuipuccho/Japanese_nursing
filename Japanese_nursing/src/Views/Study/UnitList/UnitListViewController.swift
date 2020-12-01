@@ -92,7 +92,7 @@ extension UnitListViewController {
         // セルタップ
         tableView.rx.itemSelected
             .subscribe(onNext: { [unowned self] indexPath in
-                let vc = LearningUnitViewController.makeInstance(unitMasterId: viewModel.units[indexPath.row].id)
+                let vc = LearningUnitViewController.makeInstance(unitMasterId: viewModel.units[indexPath.row].id, unitTitle: viewModel.units[indexPath.row].vietnamese)
                 self.present(vc, animated: true)
             }).disposed(by: disposeBag)
     }

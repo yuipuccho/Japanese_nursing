@@ -8,6 +8,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansCJKjpSub-Bold.otf">
+            <string>NotoSansCJKjpSub-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Learning Unit View Controller-->
         <scene sceneID="ktY-am-LAB">
@@ -17,6 +22,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="shq-hf-AMR">
+                                <rect key="frame" x="0.0" y="44" width="414" height="45"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="cuh-In-fzX">
+                                        <rect key="frame" x="60" y="6" width="294" height="33"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cuh-In-fzX" firstAttribute="centerY" secondItem="shq-hf-AMR" secondAttribute="centerY" id="HKN-P4-IVN"/>
+                                    <constraint firstAttribute="height" constant="45" id="MUs-3c-jP2"/>
+                                    <constraint firstItem="cuh-In-fzX" firstAttribute="centerX" secondItem="shq-hf-AMR" secondAttribute="centerX" id="RPu-QI-Gzi"/>
+                                    <constraint firstAttribute="trailing" secondItem="cuh-In-fzX" secondAttribute="trailing" constant="60" id="eTX-ya-q8R"/>
+                                    <constraint firstItem="cuh-In-fzX" firstAttribute="leading" secondItem="shq-hf-AMR" secondAttribute="leading" constant="60" id="pg0-8t-OzK"/>
+                                </constraints>
+                            </view>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="r1J-K3-A7t">
                                 <rect key="frame" x="55" y="786" width="304" height="6"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -25,7 +48,7 @@
                                 </constraints>
                             </progressView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close_icon" translatesAutoresizingMaskIntoConstraints="NO" id="8gK-U2-ggP">
-                                <rect key="frame" x="10" y="54" width="36" height="36"/>
+                                <rect key="frame" x="10" y="48.5" width="36" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="36" id="BMK-wC-j9q"/>
                                     <constraint firstAttribute="height" constant="36" id="Bk3-8L-5lo"/>
@@ -65,7 +88,7 @@
                                 <rect key="frame" x="119.5" y="690.5" width="70.5" height="70.5"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ty-tT-hJw">
-                                <rect key="frame" x="10" y="54" width="36" height="36"/>
+                                <rect key="frame" x="10" y="48.5" width="36" height="36"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oSk-gv-an0"/>
@@ -78,18 +101,21 @@
                             <constraint firstItem="r1J-K3-A7t" firstAttribute="leading" secondItem="riQ-i0-sgE" secondAttribute="leadingMargin" constant="35" id="9ff-Z1-2VA"/>
                             <constraint firstItem="7Ty-tT-hJw" firstAttribute="top" secondItem="8gK-U2-ggP" secondAttribute="top" id="CH9-vH-yGE"/>
                             <constraint firstItem="5sM-yE-0ED" firstAttribute="top" secondItem="JdW-pu-RPV" secondAttribute="top" id="D5y-uv-iZn"/>
+                            <constraint firstAttribute="trailing" secondItem="shq-hf-AMR" secondAttribute="trailing" id="DoH-qX-HzD"/>
                             <constraint firstItem="5sM-yE-0ED" firstAttribute="leading" secondItem="JdW-pu-RPV" secondAttribute="leading" id="JOg-EL-Qx3"/>
                             <constraint firstItem="7Ty-tT-hJw" firstAttribute="trailing" secondItem="8gK-U2-ggP" secondAttribute="trailing" id="Jcv-Jm-07c"/>
                             <constraint firstItem="Ciy-ia-uLL" firstAttribute="top" secondItem="k1w-Ql-zYT" secondAttribute="top" id="MMx-KD-VB6"/>
                             <constraint firstItem="Ciy-ia-uLL" firstAttribute="trailing" secondItem="k1w-Ql-zYT" secondAttribute="trailing" id="Mi9-JY-djO"/>
+                            <constraint firstItem="shq-hf-AMR" firstAttribute="top" secondItem="oSk-gv-an0" secondAttribute="top" id="R1g-QL-3Il"/>
                             <constraint firstItem="r1J-K3-A7t" firstAttribute="top" secondItem="KPc-vZ-Ee2" secondAttribute="bottom" constant="25" id="S9h-Nh-hql"/>
                             <constraint firstItem="5sM-yE-0ED" firstAttribute="trailing" secondItem="JdW-pu-RPV" secondAttribute="trailing" id="Wfc-jE-w58"/>
                             <constraint firstItem="KPc-vZ-Ee2" firstAttribute="centerX" secondItem="riQ-i0-sgE" secondAttribute="centerX" id="bpE-0B-15o"/>
                             <constraint firstItem="k1w-Ql-zYT" firstAttribute="width" secondItem="riQ-i0-sgE" secondAttribute="width" multiplier="0.17" id="dg9-Ge-5ql"/>
                             <constraint firstItem="oSk-gv-an0" firstAttribute="bottom" secondItem="r1J-K3-A7t" secondAttribute="bottom" constant="70" id="lrV-US-nB7"/>
                             <constraint firstItem="Ciy-ia-uLL" firstAttribute="leading" secondItem="k1w-Ql-zYT" secondAttribute="leading" id="nnB-Rn-amG"/>
+                            <constraint firstItem="8gK-U2-ggP" firstAttribute="centerY" secondItem="shq-hf-AMR" secondAttribute="centerY" id="o3E-tJ-Fq6"/>
                             <constraint firstItem="7Ty-tT-hJw" firstAttribute="leading" secondItem="8gK-U2-ggP" secondAttribute="leading" id="p96-bH-dy0"/>
-                            <constraint firstItem="8gK-U2-ggP" firstAttribute="top" secondItem="oSk-gv-an0" secondAttribute="top" constant="10" id="pic-1R-uVK"/>
+                            <constraint firstItem="shq-hf-AMR" firstAttribute="leading" secondItem="oSk-gv-an0" secondAttribute="leading" id="uaa-dh-H8f"/>
                             <constraint firstItem="8gK-U2-ggP" firstAttribute="leading" secondItem="oSk-gv-an0" secondAttribute="leading" constant="10" id="w2G-D4-rLx"/>
                             <constraint firstItem="Ciy-ia-uLL" firstAttribute="bottom" secondItem="k1w-Ql-zYT" secondAttribute="bottom" id="yb1-ht-x0f"/>
                         </constraints>
@@ -100,6 +126,7 @@
                         <outlet property="memorizedButton" destination="Ciy-ia-uLL" id="LST-Ko-Xz6"/>
                         <outlet property="notMemorizedButton" destination="5sM-yE-0ED" id="q0x-fr-Gl9"/>
                         <outlet property="progressView" destination="r1J-K3-A7t" id="lKl-vO-giz"/>
+                        <outlet property="unitTitleLabel" destination="cuh-In-fzX" id="yqj-ci-mNq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TQt-TD-ZuP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
