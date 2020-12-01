@@ -11,6 +11,7 @@ import Koloda
 import RxSwift
 import RxCocoa
 import SCLAlertView
+import PKHUD
 
 /**
  * 学習画面VC
@@ -33,10 +34,6 @@ class LearningUnitViewController: UIViewController {
     @IBOutlet weak var progressView: UIProgressView!
 
     // MARK: - Properties
-
-    private var rememberIdsArray: [Int] = []
-
-    private var notRememberIdsArray: [Int] = []
 
     private let kolodaView = KolodaView()
 
@@ -97,7 +94,6 @@ class LearningUnitViewController: UIViewController {
     private func subscribe() {
         // 閉じるボタンタップ
         closeButton.rx.tap.subscribe(onNext: { [weak self] in
-            self?.postLearningHistories()
             self?.dismiss(animated: true)
         }).disposed(by: disposeBag)
 
@@ -141,28 +137,6 @@ class LearningUnitViewController: UIViewController {
                 }).disposed(by: disposeBag)
     }
 
-    /// 配列を文字列に変換する(学習履歴のPostで使用)
-    private func arrayToString(array: [Int]) -> String {
-        var str = ""
-        for i in array {
-            str = str + "," + String(i)
-        }
-        return String(str.dropFirst(1))
-    }
-
-    /// 学習履歴を更新
-    private func postLearningHistories() {
-        let rememberIds = arrayToString(array: rememberIdsArray)
-        let notRememberIds = arrayToString(array: notRememberIdsArray)
-
-        viewModel.postLearningHistories(authToken: ApplicationConfigData.authToken, rememberIds: rememberIds, notRememberIds: notRememberIds)
-            .subscribe(
-                onError: { _ in
-                    // TODO: - エラー時の処理を追加する
-                }
-            ).disposed(by: disposeBag)
-    }
-
     /// 進捗バーを更新する
     private func updateProgressView(swipedCardIndex: Int) {
         /// カードの最大枚数
@@ -196,9 +170,9 @@ extension LearningUnitViewController: KolodaViewDelegate {
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
         switch direction {
         case .right:
-            rememberIdsArray.append(viewModel.words[index].id)
+            ApplicationConfigData.rememberIdsArray.append(String(viewModel.words[index].id))
         case .left:
-            notRememberIdsArray.append(viewModel.words[index].id)
+            ApplicationConfigData.notRememberIdsArray.append(String(viewModel.words[index].id))
         default:
             break
         }
@@ -219,7 +193,6 @@ extension LearningUnitViewController: KolodaViewDelegate {
                 self?.progressView.setProgress(0, animated: true)
             }
             alertView.addButton("終了する") { [weak self] in
-                self?.postLearningHistories()
                 self?.dismiss(animated: true)
             }
 

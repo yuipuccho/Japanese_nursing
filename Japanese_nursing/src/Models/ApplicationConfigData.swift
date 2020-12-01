@@ -14,34 +14,46 @@ class ApplicationConfigData {
 
     private static let ud = UserDefaults.standard
 
-    // ユーザID
+    /// ユーザID
     static var userID: Int {
         get { return self.ud.integer(forKey: "userID")}
         set { self.ud.set(newValue, forKey: "userID")}
     }
 
-    // authToken
+    /// authToken
     static var authToken: String {
         get { return self.ud.string(forKey: "authToken") ?? "" }
         set { self.ud.set(newValue, forKey: "authToken")}
     }
 
-    // role
+    /// role
     static var role: String {
         get { return self.ud.string(forKey: "role") ?? "" }
         set { self.ud.set(newValue, forKey: "role")}
     }
 
-    // ニックネーム
+    /// ニックネーム
     static var userName: String {
         get { return self.ud.string(forKey: "userName") ?? "" }
         set { self.ud.set(newValue, forKey: "userName")}
     }
 
-    // email
+    /// email
     static var email: String {
         get { return self.ud.string(forKey: "email") ?? "" }
         set { self.ud.set(newValue, forKey: "email")}
+    }
+
+    // 未送信の学習履歴
+    /// 覚えた単語
+    static var rememberIdsArray: [String] {
+        get { return self.ud.stringArray(forKey: "rememberIdsArray") ?? [] }
+        set { self.ud.set(newValue, forKey: "rememberIdsArray")}
+    }
+    /// 覚えていない単語
+    static var notRememberIdsArray: [String] {
+        get { return self.ud.stringArray(forKey: "notRememberIdsArray") ?? [] }
+        set { self.ud.set(newValue, forKey: "notRememberIdsArray")}
     }
 
 }

@@ -67,9 +67,14 @@ class UnitListViewController: UIViewController, UIScrollViewDelegate, UIAdaptive
 
     }
 
-    // 遷移先の画面が閉じられた時に呼ばれる
-    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
-        fetch()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        // 更新されていない学習履歴がある場合は更新する
+        if !ApplicationConfigData.rememberIdsArray.isEmpty || !ApplicationConfigData.notRememberIdsArray.isEmpty {
+            postLearningHistories()
+        }
+
     }
 
 }
@@ -124,6 +129,22 @@ extension UnitListViewController {
                 }).disposed(by: disposeBag)
     }
 
+    /// 学習履歴を更新
+    private func postLearningHistories() {
+        
+        viewModel.postLearningHistories()
+            .subscribe(
+                onNext: { [unowned self] _ in
+                    // 学習履歴の更新に成功した場合、UserDefaultsを初期化する
+                    ApplicationConfigData.rememberIdsArray = []
+                    ApplicationConfigData.notRememberIdsArray = []
+
+                    // 単元一覧を更新
+                    fetch()
+                }
+            ).disposed(by: disposeBag)
+    }
+
 }
 
 // MARK: - TableViewDataSource
@@ -134,7 +155,7 @@ extension UnitListViewController {
         let dataSource = RxTableViewSectionedReloadDataSource<UnitListSectionDomainModel>(configureCell: { (_, tableView, indexPath, item) in
             guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.unitListCell.identifier, for: indexPath) as?
                     UnitListCell else {
-                log.error("Can't cast R.reuseIdentifier.unitListCell to UnitLIstCell")
+                log.error("Can't cast R.reuseIdentifier.unitListCell to UnitListCell")
                 return UITableViewCell()
             }
 

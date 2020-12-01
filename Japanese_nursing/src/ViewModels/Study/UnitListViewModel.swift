@@ -60,4 +60,26 @@ class UnitListViewModel {
             })
     }
 
+    /// 学習履歴を更新する
+    func postLearningHistories() -> Observable<Void> {
+
+        let rememberIds = arrayToString(array: ApplicationConfigData.rememberIdsArray)
+        let notRememberIds = arrayToString(array: ApplicationConfigData.notRememberIdsArray)
+
+        return PostLearningHistoriesModel().putUser(authToken: ApplicationConfigData.authToken, rememberIds: rememberIds, notRememberIds: notRememberIds)
+            .do(onError: {
+                log.error($0.descriptionOfType)
+            })
+            .map { _ in () }
+    }
+
+    /// 配列を文字列に変換する(学習履歴のPostで使用)
+    private func arrayToString(array: [String]) -> String {
+        var str = ""
+        for i in array {
+            str = str + "," + i
+        }
+        return String(str.dropFirst(1))
+    }
+
 }
