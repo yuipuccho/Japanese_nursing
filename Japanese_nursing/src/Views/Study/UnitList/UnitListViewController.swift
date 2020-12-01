@@ -111,7 +111,7 @@ extension UnitListViewController {
         viewModel.fetch(authToken: ApplicationConfigData.authToken)
             .subscribe(
                 onNext: { [unowned self] _ in
-                    // 一度fetchに成功したらインジケータは表示しない
+                    // 一度fetchに成功したらEmptyViewは表示しない
                     shouldShowEmptyView = false
                 },
                 onError: { [unowned self] in
