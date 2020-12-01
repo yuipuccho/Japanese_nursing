@@ -35,6 +35,9 @@ class SettingListViewController: UIViewController {
 
     private var disposeBag = DisposeBag()
 
+    private var targetLearningCount = 0
+    private var targetTestingCount = 0
+
     // MARK: - LifeCycles
 
     override func viewDidLoad() {
@@ -57,15 +60,15 @@ class SettingListViewController: UIViewController {
         }).disposed(by: disposeBag)
 
         // 目標学習数タップ
-        studyTargetSettingButton.rx.tap.subscribe(onNext: { [weak self] in
-            let vc = TargetSettingViewController.makeInstance(targetType: .study)
-            self?.navigationController?.pushViewController(vc, animated: true)
+        studyTargetSettingButton.rx.tap.subscribe(onNext: { [unowned self] in
+            let vc = TargetSettingViewController.makeInstance(targetType: .study, initialTargetCount: targetLearningCount)
+            navigationController?.pushViewController(vc, animated: true)
         }).disposed(by: disposeBag)
 
         // 目標テストタップ
-        testTargetSettingButton.rx.tap.subscribe(onNext: { [weak self] in
-            let vc = TargetSettingViewController.makeInstance(targetType: .test)
-            self?.navigationController?.pushViewController(vc, animated: true)
+        testTargetSettingButton.rx.tap.subscribe(onNext: { [unowned self] in
+            let vc = TargetSettingViewController.makeInstance(targetType: .test, initialTargetCount: targetTestingCount)
+            navigationController?.pushViewController(vc, animated: true)
         }).disposed(by: disposeBag)
 
         // 利用規約タップ
@@ -89,16 +92,18 @@ class SettingListViewController: UIViewController {
 
 extension SettingListViewController {
 
-    static func makeInstance() -> UIViewController {
+    static func makeInstance(targetLearningCount: Int, targetTestingCount: Int) -> UIViewController {
         guard let vc = R.storyboard.settingListViewController.settingListViewController() else {
             assertionFailure("Can't make instance 'SettingListViewController'.")
             return UIViewController()
         }
+        vc.targetLearningCount = targetLearningCount
+        vc.targetTestingCount = targetTestingCount
         return vc
     }
 
-    static func makeInstanceInNavigationController() -> UIViewController {
-        return UINavigationController(rootViewController: makeInstance())
+    static func makeInstanceInNavigationController(targetLearningCount: Int, targetTestingCount: Int) -> UIViewController {
+        return UINavigationController(rootViewController: makeInstance(targetLearningCount: targetLearningCount, targetTestingCount: targetTestingCount))
     }
 
 }

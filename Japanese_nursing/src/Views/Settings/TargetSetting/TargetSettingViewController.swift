@@ -48,7 +48,7 @@ class TargetSettingViewController: UIViewController, UIPickerViewDelegate, UIPic
     private var disposeBag = DisposeBag()
 
     /// 初期目標値
-    var initialTargetNumber: Int = 30
+    var initialTargetCount: Int = 30
 
     /// ピッカーで選択した目標値
     var selectedTargetNumber: Int = 30
@@ -155,7 +155,7 @@ class TargetSettingViewController: UIViewController, UIPickerViewDelegate, UIPic
         // Delegate設定
         pickerView.delegate = self
         pickerView.dataSource = self
-        setupInitialPickerView()
+
         setupUI(type: targetType)
     }
 
@@ -187,12 +187,14 @@ extension TargetSettingViewController {
 
     /// ピッカーの初期値を設定する
     private func setupInitialPickerView() {
-        let index = pickerDataList.firstIndex(of: initialTargetNumber) ?? 0
+        let index = pickerDataList.firstIndex(of: initialTargetCount) ?? 0
         pickerView.selectRow(index, inComponent: 0, animated: false)
     }
 
     /// 目標タイプによってUIを設定する
     private func setupUI(type: TargetTypeEnum) {
+        setupInitialPickerView()
+        targetNumberLabel.text = String(initialTargetCount)
         topImageView.image = type.topImage
         titleLabel.text = type.title
         targetTypeLabel.text = type.targetString
@@ -207,7 +209,6 @@ extension TargetSettingViewController {
         viewModel.fetch(authToken: ApplicationConfigData.authToken, targetLearningCount: targetLearningCount, targetTestingCount: targetTestingCount)
             .subscribe(
                 onNext: { [unowned self] in
-
                     HUD.flash(.label("保存しました！"), delay: 0.5) {_ in
                         if let nc = self.navigationController {
                             nc.popViewController(animated: true)
@@ -309,22 +310,34 @@ extension TargetSettingViewController {
 
 }
 
+extension TargetSettingViewController {
+
+    override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
+        super.dismiss(animated: flag, completion: completion)
+        guard let presentationController = presentationController else {
+            return
+        }
+        presentationController.delegate?.presentationControllerDidDismiss?(presentationController)
+    }
+    
+}
+
 // MARK: - MakeInstance
 
 extension TargetSettingViewController {
 
-    static func makeInstance(targetType: TargetTypeEnum, initialTargetNumber: Int = 30) -> UIViewController {
+    static func makeInstance(targetType: TargetTypeEnum, initialTargetCount: Int) -> UIViewController {
         guard let vc = R.storyboard.targetSettingViewController.targetSettingViewController() else {
             assertionFailure("Can't make instance 'TargetSettingViewController'.")
             return UIViewController()
         }
         vc.targetType = targetType
-        vc.initialTargetNumber = initialTargetNumber
+        vc.initialTargetCount = initialTargetCount
         return vc
     }
 
-    static func makeInstanceInNavigationController(targetType: TargetTypeEnum, initialTargetNumber: Int = 30) -> UIViewController {
-        let vc = makeInstance(targetType: targetType, initialTargetNumber: initialTargetNumber)
+    static func makeInstanceInNavigationController(targetType: TargetTypeEnum, initialTargetCount: Int) -> UIViewController {
+        let vc = makeInstance(targetType: targetType, initialTargetCount: initialTargetCount)
         return UINavigationController(rootViewController: vc)
     }
 
