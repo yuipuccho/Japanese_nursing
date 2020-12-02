@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansCJKjpSub-Bold.otf">
+            <string>NotoSansCJKjpSub-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Test Result View Controller-->
+        <scene sceneID="6RB-Sk-mV2">
+            <objects>
+                <viewController storyboardIdentifier="TestResultViewController" modalPresentationStyle="fullScreen" id="BWS-Gv-UZA" customClass="TestResultViewController" customModule="d_介護の日本語" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0tR-BP-CSK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ef2-9D-RW1">
+                                <rect key="frame" x="10" y="54" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Y5w-0F-SlF"/>
+                                    <constraint firstAttribute="width" secondItem="Ef2-9D-RW1" secondAttribute="height" multiplier="1:1" id="fpB-Wq-2ko"/>
+                                </constraints>
+                                <state key="normal" image="close_icon"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1aF-6q-7cJ">
+                                <rect key="frame" x="156" y="398" width="102.5" height="100.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="テスト結果" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8du-ET-VWj">
+                                        <rect key="frame" x="1" y="0.0" width="100" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="20"/>
+                                        <color key="textColor" name="TextDarkGray"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40/50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRK-JM-du2">
+                                        <rect key="frame" x="0.0" y="53.5" width="102.5" height="47"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Edz-ex-DrH"/>
+                        <color key="backgroundColor" name="Test"/>
+                        <constraints>
+                            <constraint firstItem="Ef2-9D-RW1" firstAttribute="top" secondItem="Edz-ex-DrH" secondAttribute="top" constant="10" id="3wP-9D-hC3"/>
+                            <constraint firstItem="1aF-6q-7cJ" firstAttribute="centerY" secondItem="0tR-BP-CSK" secondAttribute="centerY" id="FLz-eV-njz"/>
+                            <constraint firstItem="Ef2-9D-RW1" firstAttribute="leading" secondItem="Edz-ex-DrH" secondAttribute="leading" constant="10" id="MgH-c8-XaU"/>
+                            <constraint firstItem="1aF-6q-7cJ" firstAttribute="centerX" secondItem="0tR-BP-CSK" secondAttribute="centerX" id="kFP-of-hWv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="s16-bu-ogw"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="closeButton" destination="Ef2-9D-RW1" id="OZk-bw-XPC"/>
+                        <outlet property="resultLabel" destination="zRK-JM-du2" id="TW8-YE-UVd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BSy-Kf-GBP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-288.40579710144931" y="71.651785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close_icon" width="50" height="50"/>
+        <namedColor name="Test">
+            <color red="0.55299997329711914" green="0.76499998569488525" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextDarkGray">
+            <color red="0.41960784313725491" green="0.42745098039215684" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

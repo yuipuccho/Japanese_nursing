@@ -31,6 +31,7 @@ class TestViewModel {
 
     // MARK: - Functions
 
+    /// テスト状況の取得
     func fetch(questionRange: Int, limit: Int) -> Observable<[TestWordsDomainModel]> {
 
         return GetTestWordsModel().getTestWords(authToken: ApplicationConfigData.authToken, questionRange: questionRange, limit: limit)

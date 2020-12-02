@@ -18,6 +18,10 @@
 		BA0692B4257762CD004A32B4 /* GetTestWordsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0692B3257762CD004A32B4 /* GetTestWordsModel.swift */; };
 		BA0692B82577636A004A32B4 /* TestWordsDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0692B72577636A004A32B4 /* TestWordsDomainModel.swift */; };
 		BA0692BB2577640E004A32B4 /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0692BA2577640E004A32B4 /* TestViewModel.swift */; };
+		BA0692C025778545004A32B4 /* TestResultViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0692BF25778544004A32B4 /* TestResultViewController.storyboard */; };
+		BA0692C325778553004A32B4 /* TestResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0692C225778553004A32B4 /* TestResultViewController.swift */; };
+		BA0692C62577A4FD004A32B4 /* PostTestHistories.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0692C52577A4FC004A32B4 /* PostTestHistories.swift */; };
+		BA0692C92577A5AD004A32B4 /* PostTestHistoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0692C82577A5AD004A32B4 /* PostTestHistoriesModel.swift */; };
 		BA06D2012557AB26000216CC /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA06D2002557AB26000216CC /* TestViewController.swift */; };
 		BA06D2052557AB4C000216CC /* TestViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA06D2042557AB4C000216CC /* TestViewController.storyboard */; };
 		BA133AC624BB28B80047E265 /* TestSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA133AC524BB28B80047E265 /* TestSettings.storyboard */; };
@@ -131,6 +135,10 @@
 		BA0692B3257762CD004A32B4 /* GetTestWordsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTestWordsModel.swift; sourceTree = "<group>"; };
 		BA0692B72577636A004A32B4 /* TestWordsDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWordsDomainModel.swift; sourceTree = "<group>"; };
 		BA0692BA2577640E004A32B4 /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
+		BA0692BF25778544004A32B4 /* TestResultViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestResultViewController.storyboard; sourceTree = "<group>"; };
+		BA0692C225778553004A32B4 /* TestResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultViewController.swift; sourceTree = "<group>"; };
+		BA0692C52577A4FC004A32B4 /* PostTestHistories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTestHistories.swift; sourceTree = "<group>"; };
+		BA0692C82577A5AD004A32B4 /* PostTestHistoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTestHistoriesModel.swift; sourceTree = "<group>"; };
 		BA06D2002557AB26000216CC /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		BA06D2042557AB4C000216CC /* TestViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestViewController.storyboard; sourceTree = "<group>"; };
 		BA133AC524BB28B80047E265 /* TestSettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestSettings.storyboard; sourceTree = "<group>"; };
@@ -274,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				BA0692A9257760E5004A32B4 /* GetTestWords.swift */,
+				BA0692C52577A4FC004A32B4 /* PostTestHistories.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -290,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				BA0692B3257762CD004A32B4 /* GetTestWordsModel.swift */,
+				BA0692C82577A5AD004A32B4 /* PostTestHistoriesModel.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -309,6 +319,8 @@
 				BA06D1FE2557AAE2000216CC /* Settings */,
 				BA06D2042557AB4C000216CC /* TestViewController.storyboard */,
 				BA06D2002557AB26000216CC /* TestViewController.swift */,
+				BA0692BF25778544004A32B4 /* TestResultViewController.storyboard */,
+				BA0692C225778553004A32B4 /* TestResultViewController.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -1063,6 +1075,7 @@
 				BAC5904C249EECCF007D247B /* NotoSansCJKjpSub-Black.otf in Resources */,
 				BA66D67F24A6EE6C00BE7273 /* Tabbar.storyboard in Resources */,
 				BA5EAD4C24D453520008E2D0 /* GoogleService-Info.plist in Resources */,
+				BA0692C025778545004A32B4 /* TestResultViewController.storyboard in Resources */,
 				BA46290025640DE200D5AE8A /* OverlayView.xib in Resources */,
 				BA582A3924E170670089DA0B /* LearningUnit.storyboard in Resources */,
 				BA00E852255DA288001C4E06 /* SettingListViewController.storyboard in Resources */,
@@ -1186,6 +1199,7 @@
 				BA50983E2574980B00FB88AE /* WordMastersEntity.swift in Sources */,
 				BAD1CFF02571F6DE00F9A74A /* Constants.swift in Sources */,
 				BAF1EAD525733EB800E19657 /* UnitListDomainModel.swift in Sources */,
+				BA0692C62577A4FD004A32B4 /* PostTestHistories.swift in Sources */,
 				BA5097FF2573D9ED00FB88AE /* TestStatusModel.swift in Sources */,
 				BA0692B4257762CD004A32B4 /* GetTestWordsModel.swift in Sources */,
 				BA50984B257498A400FB88AE /* LearningUnitViewModel.swift in Sources */,
@@ -1201,6 +1215,7 @@
 				BA00E891255E4A8C001C4E06 /* UserNameSettingViewController.swift in Sources */,
 				BAD1D01B2571F9AE00F9A74A /* SimpleResponse.swift in Sources */,
 				BAD1D0152571F96D00F9A74A /* ApplicationConfigData.swift in Sources */,
+				BA0692C92577A5AD004A32B4 /* PostTestHistoriesModel.swift in Sources */,
 				BA0692AA257760E5004A32B4 /* GetTestWords.swift in Sources */,
 				BA46290E2565782400D5AE8A /* TargetSettingViewController.swift in Sources */,
 				BA50982F2574079500FB88AE /* MypageViewModel.swift in Sources */,
@@ -1242,6 +1257,7 @@
 				BA1E5B312487AC210055A5F4 /* SceneDelegate.swift in Sources */,
 				BAF1EACF25733E0E00E19657 /* UnitListViewModel.swift in Sources */,
 				BA5098642574C1E800FB88AE /* Date+Extended.swift in Sources */,
+				BA0692C325778553004A32B4 /* TestResultViewController.swift in Sources */,
 				BAD1D0032571F83F00F9A74A /* CreateUserModel.swift in Sources */,
 				BAF1EABF25733ADF00E19657 /* GetUnitMasters.swift in Sources */,
 				BA85A3FE24AB7F51003E6E85 /* R.generated.swift in Sources */,

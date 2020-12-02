@@ -62,6 +62,18 @@ class ApplicationConfigData {
         set { self.ud.set(newValue, forKey: "notRememberIdsArray")}
     }
 
+    // 未送信のテスト履歴
+    /// 正解した単語
+    static var correctIdsArray: [String] {
+        get { return self.ud.stringArray(forKey: "correctIdsArray") ?? [] }
+        set { self.ud.set(newValue, forKey: "correctIdsArray")}
+    }
+    /// 間違えた単語
+    static var mistakeIdsArray: [String] {
+        get { return self.ud.stringArray(forKey: "mistakeIdsArray") ?? [] }
+        set { self.ud.set(newValue, forKey: "mistakeIdsArray")}
+    }
+
     // 学習設定
     /// 表示するカードの設定
     static var displayCardSetting: Int {

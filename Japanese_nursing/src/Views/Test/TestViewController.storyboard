@@ -394,6 +394,8 @@
                             <constraint firstItem="3po-ko-slY" firstAttribute="bottom" secondItem="Brt-nJ-d7d" secondAttribute="bottom" id="uWJ-fc-gS9"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="xpY-5c-wcd"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="bigFeedbackImageView" destination="nfm-6h-g48" id="voh-lW-7Lq"/>
                         <outlet property="closeButton" destination="kxk-6L-CMB" id="5Y5-tn-exk"/>
@@ -409,6 +411,7 @@
                         <outlet property="fourthOptionLabel" destination="QPI-EH-jmj" id="UrO-RK-A31"/>
                         <outlet property="fourthOptionView" destination="yfi-04-4dQ" id="kuh-It-L3Z"/>
                         <outlet property="progressLabel" destination="fJJ-Ef-vWr" id="tqc-bR-gCb"/>
+                        <outlet property="progressView" destination="Zy1-20-zsF" id="LdE-DH-DIB"/>
                         <outlet property="questionLabel" destination="JKb-LF-Vn9" id="C4e-tj-KiZ"/>
                         <outlet property="secondOptionButton" destination="Top-nX-1Jl" id="xen-uM-Uau"/>
                         <outlet property="secondOptionImageView" destination="DKG-01-j1R" id="sjs-jK-nqf"/>
@@ -433,7 +436,7 @@
         <image name="good_icon" width="255" height="256"/>
         <image name="round_blue" width="375" height="500"/>
         <namedColor name="GoodBlue">
-            <color red="0.55299997329711914" green="0.76499998569488525" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.55294117647058827" green="0.76470588235294112" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="LightGray">
             <color red="0.92156862745098034" green="0.94901960784313721" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
