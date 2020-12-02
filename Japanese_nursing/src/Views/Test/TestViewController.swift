@@ -100,6 +100,9 @@ class TestViewController: UIViewController {
     /// 出題する単語のindex
     private var index: Int = 0
 
+    /// 出題する単語の最大index
+    private var maxIndex: Int = 0
+
     // MARK: - LifeCycles
 
     override func viewDidLoad() {
@@ -179,6 +182,7 @@ extension TestViewController {
             .subscribe(
                 onNext: { [unowned self] _ in
                     updateQuestion()
+                    maxIndex = viewModel.testWords.count - 1
                 },
                 onError: { [unowned self] in
                     log.error($0.descriptionOfType)
@@ -256,11 +260,17 @@ extension TestViewController {
         buttonTapSetting(isEnabled: false)
 
         // 0.5秒後に問題を更新し、ボタンタップを有効化する
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
-            self?.buttonTapSetting(isEnabled: true)
-            // 問題があるか判定を追加
-            self?.index += 1
-            self?.updateQuestion()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [unowned self] in
+
+            if (index + 1) > maxIndex {
+                // 次に表示する問題がない場合は、テスト結果画面に遷移する
+                // TODO: 遷移処理を追加
+                print("遷移")
+            } else {
+                index += 1
+                buttonTapSetting(isEnabled: true)
+                updateQuestion()
+            }
         }
     }
 
@@ -280,10 +290,16 @@ extension TestViewController {
         buttonTapSetting(isEnabled: false)
 
         // 1.0秒後に問題を更新し、ボタンタップを有効化する
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
-            self?.buttonTapSetting(isEnabled: true)
-            self?.index += 1
-            self?.updateQuestion()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [unowned self] in
+            if (index + 1) > maxIndex {
+                // 次に表示する問題がない場合は、テスト結果画面に遷移する
+                // TODO: 遷移処理を追加
+                print("遷移")
+            } else {
+                index += 1
+                buttonTapSetting(isEnabled: true)
+                updateQuestion()
+            }
         }
     }
 
