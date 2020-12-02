@@ -103,6 +103,7 @@ class LearningSettingsViewController: UIViewController {
         applyButton.rx.tap.subscribe(onNext: { [unowned self] in
             ApplicationConfigData.displayCardSetting = selectedDisplayCardType.rawValue
             ApplicationConfigData.cardSortOrderType = selectedSortOrderType.rawValue
+            ApplicationConfigData.shouldUpdateCards = true
             dismiss(animated: true)
         }).disposed(by: disposeBag)
 
@@ -133,6 +134,18 @@ class LearningSettingsViewController: UIViewController {
         case .random:
             randomCheckImageView.isHidden = false
         }
+    }
+
+}
+
+extension LearningSettingsViewController {
+
+    override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
+        super.dismiss(animated: flag, completion: completion)
+        guard let presentationController = presentationController else {
+            return
+        }
+        presentationController.delegate?.presentationControllerDidDismiss?(presentationController)
     }
 
 }

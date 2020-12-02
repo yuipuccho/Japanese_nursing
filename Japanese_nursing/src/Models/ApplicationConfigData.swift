@@ -75,11 +75,18 @@ class ApplicationConfigData {
         set { self.ud.set(newValue, forKey: "cardSortOrderType")}
     }
 
+    /// 学習画面のカードを更新するか
+    static var shouldUpdateCards: Bool {
+        get { return self.ud.bool(forKey: "shouldUpdateCards")}
+        set { self.ud.set(newValue, forKey: "shouldUpdateCards")}
+    }
+
     // 初期値設定
     static func registerDefaults() {
         ud.register(defaults: [
             "displayCardSetting": 0,
-            "cardSortOrderType": 0
+            "cardSortOrderType": 0,
+            "shouldUpdateCards": false
         ])
     }
 
