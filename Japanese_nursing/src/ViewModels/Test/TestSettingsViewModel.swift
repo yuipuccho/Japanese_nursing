@@ -55,7 +55,7 @@ class TestSettingsViewModel {
             .map { _ in () }
     }
 
-    /// 配列を文字列に変換する(学習履歴のPostで使用)
+    /// 配列を文字列に変換する(テスト履歴のPostで使用)
     private func arrayToString(array: [String]) -> String {
         var str = ""
         for i in array {

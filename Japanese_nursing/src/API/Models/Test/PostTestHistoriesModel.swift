@@ -24,7 +24,7 @@ public struct PostTestHistoriesModel {
      *   - authToken: 認証トークン
      *   - correctIds: 正解した単語のID配列
      *   - mistakeIds: 間違えた単語のID配列
-     * - Returns: 学習履歴Entity Observable
+     * - Returns: テスト履歴Entity Observable
      */
     public func postTestHistories(authToken: String, correctIds: String, mistakeIds: String) -> Observable<PostTestHistoriesResponse.Entity> {
 
