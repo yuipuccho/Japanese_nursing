@@ -178,19 +178,16 @@ extension TestViewController {
     }
 
     private func fetch() {
-        // TODO: 応急処置なので直したい
-        for i in questionRange {
-            viewModel.fetch(questionRange: i.rawValue, limit: limit)
-                .subscribe(
-                    onNext: { [unowned self] _ in
-                        updateQuestion()
-                        maxIndex = viewModel.testWords.count - 1
-                    },
-                    onError: { [unowned self] in
-                        log.error($0.descriptionOfType)
-                        self.emptyView.status = .errorAndRetry($0.descriptionOfType)
-                    }).disposed(by: disposeBag)
-        }
+        viewModel.fetch(questionRange: questionRange[0].rawValue, limit: limit)
+            .subscribe(
+                onNext: { [unowned self] _ in
+                    maxIndex = viewModel.testWords.count - 1
+                    updateQuestion()
+                },
+                onError: { [unowned self] in
+                    log.error($0.descriptionOfType)
+                    self.emptyView.status = .errorAndRetry($0.descriptionOfType)
+                }).disposed(by: disposeBag)
     }
 
     /// 問題を更新する
@@ -229,6 +226,14 @@ extension TestViewController {
             break
         }
 
+        // 進捗ラベル
+        progressLabel.text = String( index + 1 ) + "/" + String( maxIndex + 1 )
+
+        updateView()
+
+    }
+
+    private func updateView() {
         // トップViewの色を青に変更
         topImageView.image = R.image.round_blue()
         progressLabel.textColor = R.color.goodBlue()
@@ -308,11 +313,6 @@ extension TestViewController {
 
     /// 選択肢ボタンの更新
     private func updateOptionButton(type: SelectionType, status: ButtonStatus) {
-
-        print(type)
-        print(status)
-
-
         var view = firstOptionView
         var label = firstOptionLabel
         var imageView = firstOptionImageView

@@ -217,31 +217,55 @@ extension TestSettingsViewController {
             updateActivateButton(type: .mistake, shouldActivate: false)
             updateActivateButton(type: .untested, shouldActivate: false)
 
-        case .mistake, .untested:
+        // TODO: API対応しだい変更
+        case .mistake:
+            // 選択中の出題範囲を全てリセットしてから、.mistakeを追加する
+            selectingQuestionRange.removeAll()
+            selectingQuestionRange.append(.mistake)
 
-            if !selectingQuestionRange.contains(tappedType) {
-                // タップされた項目を活性化する場合
-                // 選択中の出題範囲から.allを削除し、タップされた項目を追加する
-                selectingQuestionRange.remove(value: .all)
-                selectingQuestionRange.append(tappedType)
+            // 苦手を活性化
+            updateActivateButton(type: .mistake, shouldActivate: true)
+            // 苦手以外を非活性化
+            updateActivateButton(type: .all, shouldActivate: false)
+            updateActivateButton(type: .untested, shouldActivate: false)
 
-                // すべてを非活性化
-                updateActivateButton(type: .all, shouldActivate: false)
-                // タップされた項目を活性化
-                updateActivateButton(type: tappedType, shouldActivate: true)
+        case .untested:
+            // 選択中の出題範囲を全てリセットしてから、.untestedを追加する
+            selectingQuestionRange.removeAll()
+            selectingQuestionRange.append(.untested)
 
-            } else {
-                // タップされた項目を非活性にする場合
-                // タップされた項目を選択中の出題範囲から削除する
-                selectingQuestionRange.remove(value: tappedType)
-                // タップされた項目を非活性化
-                updateActivateButton(type: tappedType, shouldActivate: false)
+            // 未出題を活性化
+            updateActivateButton(type: .untested, shouldActivate: true)
+            // 未出題以外を非活性化
+            updateActivateButton(type: .all, shouldActivate: false)
+            updateActivateButton(type: .mistake, shouldActivate: false)
 
-                // 選択中の出題範囲が1つもなくなった場合は、すべてを活性化する
-                if selectingQuestionRange.count <= 0 {
-                    updateSelectingQuestionRange(tappedType: .all)
-                }
-            }
+            // TODO: - いったんコメントアウト
+//        case .mistake, .untested:
+//
+//            if !selectingQuestionRange.contains(tappedType) {
+//                // タップされた項目を活性化する場合
+//                // 選択中の出題範囲から.allを削除し、タップされた項目を追加する
+//                selectingQuestionRange.remove(value: .all)
+//                selectingQuestionRange.append(tappedType)
+//
+//                // すべてを非活性化
+//                updateActivateButton(type: .all, shouldActivate: false)
+//                // タップされた項目を活性化
+//                updateActivateButton(type: tappedType, shouldActivate: true)
+//
+//            } else {
+//                // タップされた項目を非活性にする場合
+//                // タップされた項目を選択中の出題範囲から削除する
+//                selectingQuestionRange.remove(value: tappedType)
+//                // タップされた項目を非活性化
+//                updateActivateButton(type: tappedType, shouldActivate: false)
+//
+//                // 選択中の出題範囲が1つもなくなった場合は、すべてを活性化する
+//                if selectingQuestionRange.count <= 0 {
+//                    updateSelectingQuestionRange(tappedType: .all)
+//                }
+//            }
         }
         // 最大出題範囲数が、設定中の出題数を下回る場合は、出題数ラベルを更新する
         let maxQuestionsCount = calculateMaxQuestionsCount()
