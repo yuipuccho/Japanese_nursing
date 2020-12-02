@@ -66,7 +66,9 @@ class UnitListViewModel {
         let rememberIds = arrayToString(array: ApplicationConfigData.rememberIdsArray)
         let notRememberIds = arrayToString(array: ApplicationConfigData.notRememberIdsArray)
 
-        return PostLearningHistoriesModel().putUser(authToken: ApplicationConfigData.authToken, rememberIds: rememberIds, notRememberIds: notRememberIds)
+        return PostLearningHistoriesModel().postLearningHistories(authToken: ApplicationConfigData.authToken,
+                                                                  rememberIds: rememberIds,
+                                                                  notRememberIds: notRememberIds)
             .do(onError: {
                 log.error($0.descriptionOfType)
             })

@@ -51,7 +51,7 @@ public struct PostLearningHistoriesRequest: JapaneseNursingRequest {
 }
 
 /**
- * ユーザ情報更新API Response
+ * 学習履歴更新API Response
  */
 public struct PostLearningHistoriesResponse: JapaneseNursingResponse {
 

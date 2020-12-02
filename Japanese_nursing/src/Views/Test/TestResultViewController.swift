@@ -23,10 +23,10 @@ class TestResultViewController: UIViewController {
 
     // MARK: - Properties
 
-    /// テスト数
-    private var testCount: Int = 0
-    /// 正解数
-    private var correctCount: Int = 0
+    /// 正解した単語情報の配列
+    private var correctArray: [TestWordsDomainModel] = []
+    /// 間違えた単語情報の配列
+    private var mistakeArray: [TestWordsDomainModel] = []
 
     private var disposeBag = DisposeBag()
 
@@ -36,7 +36,9 @@ class TestResultViewController: UIViewController {
         super.viewDidLoad()
         subscribe()
 
-        resultLabel.text = String(correctCount) + "/" + String(testCount)
+        let allCount = correctArray.count + mistakeArray.count
+
+        resultLabel.text = String(correctArray.count) + "/" + String(allCount)
     }
 
     // MARK: - Functions
@@ -52,13 +54,13 @@ class TestResultViewController: UIViewController {
 
 extension TestResultViewController {
 
-    static func makeInstance(testCount: Int, correctCount: Int) -> UIViewController {
+    static func makeInstance(correctArray: [TestWordsDomainModel], mistakeArray: [TestWordsDomainModel]) -> UIViewController {
         guard let vc = R.storyboard.testResultViewController.testResultViewController() else {
             assertionFailure("Can't make instance 'TestResultViewController'.")
             return UIViewController()
         }
-        vc.testCount = testCount
-        vc.correctCount = correctCount
+        vc.correctArray = correctArray
+        vc.mistakeArray = mistakeArray
         return vc
     }
 

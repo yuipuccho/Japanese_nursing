@@ -411,6 +411,7 @@
                         <outlet property="fourthOptionLabel" destination="QPI-EH-jmj" id="UrO-RK-A31"/>
                         <outlet property="fourthOptionView" destination="yfi-04-4dQ" id="kuh-It-L3Z"/>
                         <outlet property="progressLabel" destination="fJJ-Ef-vWr" id="tqc-bR-gCb"/>
+                        <outlet property="progressView" destination="Zy1-20-zsF" id="LdE-DH-DIB"/>
                         <outlet property="questionLabel" destination="JKb-LF-Vn9" id="C4e-tj-KiZ"/>
                         <outlet property="secondOptionButton" destination="Top-nX-1Jl" id="xen-uM-Uau"/>
                         <outlet property="secondOptionImageView" destination="DKG-01-j1R" id="sjs-jK-nqf"/>

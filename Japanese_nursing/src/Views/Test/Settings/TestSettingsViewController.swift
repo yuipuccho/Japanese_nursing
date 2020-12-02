@@ -88,7 +88,7 @@ class TestSettingsViewController: UIViewController {
         let v = R.nib.emptyView.firstView(owner: nil)!
         v.backgroundColor = R.color.test()
         v.retryAction = { [weak self] in
-            self?.fetch()
+            self?.fetch(animate: true)
         }
         v.page = .tab
         v.status = .none
@@ -96,6 +96,9 @@ class TestSettingsViewController: UIViewController {
         view.allSafePin(subView: v, top: 45)
         return v
     }()
+
+    /// ステータスを取得済か
+    private var isGettedStatus: Bool = false
 
     // MARK: - LifeCycles
 
@@ -105,11 +108,16 @@ class TestSettingsViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: true)
 
         subscribe()
-        fetch()
+        fetch(animate: true)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
+        // 更新されていないテスト履歴がある場合は更新する
+        if !ApplicationConfigData.correctIdsArray.isEmpty || !ApplicationConfigData.mistakeIdsArray.isEmpty {
+            postTestHistories()
+        }
 
         chartAnimation()
     }
@@ -172,11 +180,11 @@ extension TestSettingsViewController {
 
         // loading
         viewModel.loadingDriver
-            .map { isLoading in
-                if isLoading {
-                    return .loading
-                } else {
+            .map { [unowned self] isLoading in
+                if isGettedStatus {
                     return .none
+                } else {
+                    return .loading
                 }
             }
             .drive(onNext: {[weak self] in
@@ -185,22 +193,42 @@ extension TestSettingsViewController {
 
     }
 
-    private func fetch() {
+    private func fetch(animate: Bool) {
         viewModel.fetch(authToken: ApplicationConfigData.authToken)
             .subscribe(
                 onNext: { [unowned self] status in
+                    isGettedStatus = true
+                    
                     allCount = status.allWordCount
                     mistakeCount = status.mistakeWordCount
                     untestedCount = status.unquestionedWordCount
                     perfectCount = status.correctWordCount
                     setupUI()
                     setupChartView()
-                    chartAnimation()
+                    if animate {
+                        chartAnimation()
+                    }
                 },
                 onError: { [unowned self] in
                     log.error($0.descriptionOfType)
                     self.emptyView.status = .errorAndRetry($0.descriptionOfType)
                 }).disposed(by: disposeBag)
+    }
+
+    /// テスト履歴を更新
+    private func postTestHistories() {
+
+        viewModel.postTestHistories()
+            .subscribe(
+                onNext: { [unowned self] _ in
+                    // テスト履歴の更新に成功した場合、UserDefaultsを初期化する
+                    ApplicationConfigData.correctIdsArray = []
+                    ApplicationConfigData.mistakeIdsArray = []
+
+                    // テスト状況を更新
+                    fetch(animate: false)
+                }
+            ).disposed(by: disposeBag)
     }
 
     /// 出題範囲ボタンがタップされたときの処理

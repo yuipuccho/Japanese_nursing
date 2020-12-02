@@ -40,4 +40,28 @@ class TestSettingsViewModel {
             .map { TestStatusDomainModel(entity: $0) }
     }
 
+    /// テスト履歴を更新する
+    func postTestHistories() -> Observable<Void> {
+
+        let correctIds = arrayToString(array: ApplicationConfigData.correctIdsArray)
+        let mistakeIds = arrayToString(array: ApplicationConfigData.mistakeIdsArray)
+
+        return PostTestHistoriesModel().postTestHistories(authToken: ApplicationConfigData.authToken,
+                                                          correctIds: correctIds,
+                                                          mistakeIds: mistakeIds)
+            .do(onError: {
+                log.error($0.descriptionOfType)
+            })
+            .map { _ in () }
+    }
+
+    /// 配列を文字列に変換する(学習履歴のPostで使用)
+    private func arrayToString(array: [String]) -> String {
+        var str = ""
+        for i in array {
+            str = str + "," + i
+        }
+        return String(str.dropFirst(1))
+    }
+
 }

@@ -1,8 +1,8 @@
 //
-//  PostLearningHistoriesModel.swift
+//  PostTestHistoriesModel.swift
 //  Japanese_nursing
 //
-//  Created by 吉澤優衣 on 2020/12/01.
+//  Created by 吉澤優衣 on 2020/12/02.
 //  Copyright © 2020 吉澤優衣. All rights reserved.
 //
 
@@ -11,26 +11,26 @@ import Foundation
 import RxSwift
 
 /**
- * 学習履歴更新
+ * テスト履歴更新
  */
-public struct PostLearningHistoriesModel {
+public struct PostTestHistoriesModel {
 
     public init() {
     }
 
     /**
-     * 学習履歴更新
+     * テスト履歴更新
      * - Parameters:
      *   - authToken: 認証トークン
-     *   - rememberIds: 覚えた単語のID配列
-     *   - notRememberIds: 覚えていない単語のID配列
+     *   - correctIds: 正解した単語のID配列
+     *   - mistakeIds: 間違えた単語のID配列
      * - Returns: 学習履歴Entity Observable
      */
-    public func postLearningHistories(authToken: String, rememberIds: String, notRememberIds: String) -> Observable<PostLearningHistoriesResponse.Entity> {
+    public func postTestHistories(authToken: String, correctIds: String, mistakeIds: String) -> Observable<PostTestHistoriesResponse.Entity> {
 
         return Observable.create({ observer in
 
-            let req = PostLearningHistoriesRequest(authToken: authToken, rememberIds: rememberIds, notRememberIds: notRememberIds)
+            let req = PostTestHistoriesRequest(authToken: authToken, correctIds: correctIds, mistakeIds: mistakeIds)
 
             let task = Session.send(req) {
                 switch $0 {

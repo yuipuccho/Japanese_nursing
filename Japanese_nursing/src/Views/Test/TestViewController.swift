@@ -23,6 +23,8 @@ class TestViewController: UIViewController {
     @IBOutlet private weak var topImageView: UIImageView!
     /// 閉じるボタン
     @IBOutlet private weak var closeButton: UIButton!
+    /// 進捗View
+    @IBOutlet private weak var progressView: UIView!
     /// 進捗ラベル
     @IBOutlet private weak var progressLabel: UILabel!
     /// 問題ラベル
@@ -88,7 +90,7 @@ class TestViewController: UIViewController {
         v.page = .tab
         v.status = .none
         view.addSubview(v)
-        view.allSafePin(subView: v)
+        view.allSafePin(subView: v, top: 45)
         return v
     }()
 
@@ -103,11 +105,16 @@ class TestViewController: UIViewController {
     /// 出題する単語の最大index
     private var maxIndex: Int = 0
 
+    /// 正解した単語情報の配列
+    private var correctArray: [TestWordsDomainModel] = []
+    /// 間違えた単語情報の配列
+    private var mistakeArray: [TestWordsDomainModel] = []
+
     // MARK: - LifeCycles
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        progressView.isHidden = true  // EmptyView表示時に見えるため
         subscribe()
         fetch()
     }
@@ -182,6 +189,7 @@ extension TestViewController {
             .subscribe(
                 onNext: { [unowned self] _ in
                     maxIndex = viewModel.testWords.count - 1
+                    progressView.isHidden = false
                     updateQuestion()
                 },
                 onError: { [unowned self] in
@@ -255,6 +263,11 @@ extension TestViewController {
 
     /// 正解の処理
     private func correct(type: SelectionType) {
+        // UserDefaultsに追加する(テスト履歴更新用)
+        ApplicationConfigData.correctIdsArray.append(String(viewModel.testWords[index].id))
+        // 配列に追加する(テスト結果表示用)
+        correctArray.append(viewModel.testWords[index])
+
         bigFeedbackImageView.isHidden = false
         bigFeedbackImageView.image = R.image.big_circle()
         feedbackView.isHidden = false
@@ -273,7 +286,7 @@ extension TestViewController {
             if (index + 1) > maxIndex {
                 updateView()
                 // 次に表示する問題がない場合は、テスト結果画面に遷移する
-                let vc = TestResultViewController.makeInstance(testCount: 10, correctCount: 20)
+                let vc = TestResultViewController.makeInstance(correctArray: correctArray, mistakeArray: mistakeArray)
                 present(vc, animated: true)
 
             } else {
@@ -286,6 +299,11 @@ extension TestViewController {
 
     /// 不正解の処理
     private func mistake(type: SelectionType) {
+        // UserDefaultsに追加する(テスト履歴更新用)
+        ApplicationConfigData.mistakeIdsArray.append(String(viewModel.testWords[index].id))
+        // 配列に追加する(テスト結果表示用)
+        mistakeArray.append(viewModel.testWords[index])
+
         bigFeedbackImageView.isHidden = false
         bigFeedbackImageView.image = R.image.big_cross()
         topImageView.image = R.image.round_pink()
@@ -304,7 +322,7 @@ extension TestViewController {
             if (index + 1) > maxIndex {
                 updateView()
                 // 次に表示する問題がない場合は、テスト結果画面に遷移する
-                let vc = TestResultViewController.makeInstance(testCount: 10, correctCount: 20)
+                let vc = TestResultViewController.makeInstance(correctArray: correctArray, mistakeArray: mistakeArray)
                 present(vc, animated: true)
             } else {
                 index += 1
