@@ -41,8 +41,6 @@ class LearningUnitViewController: UIViewController, UIAdaptivePresentationContro
 
     private var unitTitle = ""
 
-    private var a = true
-
     /// カードのサイズ
     private var cardFrame: CGRect {
         let width = (view.bounds.size.width) * 0.85
@@ -111,7 +109,6 @@ class LearningUnitViewController: UIViewController, UIAdaptivePresentationContro
 
     // 遷移先の画面が閉じられた時に呼ばれる
     func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
-        print(ApplicationConfigData.shouldUpdateCards)
         if ApplicationConfigData.shouldUpdateCards {
             applySetting()
             ApplicationConfigData.shouldUpdateCards = false
