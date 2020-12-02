@@ -13,6 +13,11 @@
 		BA00E88D255E4A4D001C4E06 /* UserNameSettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA00E88C255E4A4C001C4E06 /* UserNameSettingViewController.storyboard */; };
 		BA00E891255E4A8C001C4E06 /* UserNameSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00E890255E4A8C001C4E06 /* UserNameSettingViewController.swift */; };
 		BA02F941256A19ED00D93643 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA02F940256A19ED00D93643 /* TabBar.swift */; };
+		BA0692AA257760E5004A32B4 /* GetTestWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0692A9257760E5004A32B4 /* GetTestWords.swift */; };
+		BA0692AF257761D7004A32B4 /* TestWordsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0692AE257761D7004A32B4 /* TestWordsEntity.swift */; };
+		BA0692B4257762CD004A32B4 /* GetTestWordsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0692B3257762CD004A32B4 /* GetTestWordsModel.swift */; };
+		BA0692B82577636A004A32B4 /* TestWordsDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0692B72577636A004A32B4 /* TestWordsDomainModel.swift */; };
+		BA0692BB2577640E004A32B4 /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0692BA2577640E004A32B4 /* TestViewModel.swift */; };
 		BA06D2012557AB26000216CC /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA06D2002557AB26000216CC /* TestViewController.swift */; };
 		BA06D2052557AB4C000216CC /* TestViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA06D2042557AB4C000216CC /* TestViewController.storyboard */; };
 		BA133AC624BB28B80047E265 /* TestSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA133AC524BB28B80047E265 /* TestSettings.storyboard */; };
@@ -121,6 +126,11 @@
 		BA00E88C255E4A4C001C4E06 /* UserNameSettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserNameSettingViewController.storyboard; sourceTree = "<group>"; };
 		BA00E890255E4A8C001C4E06 /* UserNameSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameSettingViewController.swift; sourceTree = "<group>"; };
 		BA02F940256A19ED00D93643 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		BA0692A9257760E5004A32B4 /* GetTestWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTestWords.swift; sourceTree = "<group>"; };
+		BA0692AE257761D7004A32B4 /* TestWordsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWordsEntity.swift; sourceTree = "<group>"; };
+		BA0692B3257762CD004A32B4 /* GetTestWordsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTestWordsModel.swift; sourceTree = "<group>"; };
+		BA0692B72577636A004A32B4 /* TestWordsDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWordsDomainModel.swift; sourceTree = "<group>"; };
+		BA0692BA2577640E004A32B4 /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
 		BA06D2002557AB26000216CC /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		BA06D2042557AB4C000216CC /* TestViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestViewController.storyboard; sourceTree = "<group>"; };
 		BA133AC524BB28B80047E265 /* TestSettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestSettings.storyboard; sourceTree = "<group>"; };
@@ -260,6 +270,30 @@
 			path = UserNameSetting;
 			sourceTree = "<group>";
 		};
+		BA0692A8257760C5004A32B4 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				BA0692A9257760E5004A32B4 /* GetTestWords.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		BA0692AD257761BC004A32B4 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				BA0692AE257761D7004A32B4 /* TestWordsEntity.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		BA0692B2257762B9004A32B4 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				BA0692B3257762CD004A32B4 /* GetTestWordsModel.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		BA06D1FE2557AAE2000216CC /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,6 +410,7 @@
 			isa = PBXGroup;
 			children = (
 				BA5098042573DA9F00FB88AE /* TestStatusDomainModel.swift */,
+				BA0692B72577636A004A32B4 /* TestWordsDomainModel.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -384,6 +419,7 @@
 			isa = PBXGroup;
 			children = (
 				BA5098092573DB4E00FB88AE /* TestSettingsViewModel.swift */,
+				BA0692BA2577640E004A32B4 /* TestViewModel.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -721,10 +757,11 @@
 		BAD1CFE62571F65400F9A74A /* Communications */ = {
 			isa = PBXGroup;
 			children = (
-				BA50988A257542A500FB88AE /* LearningHistories */,
 				BA5098502574B7C100FB88AE /* Activity */,
 				BAD1CFE72571F66100F9A74A /* CreateUser */,
+				BA50988A257542A500FB88AE /* LearningHistories */,
 				BA50981A2574056100FB88AE /* TargetStatus */,
+				BA0692A8257760C5004A32B4 /* Test */,
 				BA5097F42573D6D400FB88AE /* TestStatus */,
 				BAF1EABD25733AC200E19657 /* UnitMasters */,
 				BA5098692574DFB800FB88AE /* UpdateTarget */,
@@ -749,6 +786,7 @@
 				BA5098552574B84300FB88AE /* Activity */,
 				BAF1EAC125733BC900E19657 /* CreateUser */,
 				BA50981F257405ED00FB88AE /* TargetStatus */,
+				BA0692AD257761BC004A32B4 /* Test */,
 				BA5097F82573D92600FB88AE /* TestStatus */,
 				BAF1EAC225733BD200E19657 /* UnitMasters */,
 				BA50983C257497F300FB88AE /* WordMasters */,
@@ -780,6 +818,7 @@
 				BAF1EAC725733D1D00E19657 /* CreateUser */,
 				BA50988F2575445B00FB88AE /* LearningHistories */,
 				BA5098232574066F00FB88AE /* TargetStatus */,
+				BA0692B2257762B9004A32B4 /* Test */,
 				BA5097FD2573D9DE00FB88AE /* TestStatus */,
 				BAF1EAC825733D2500E19657 /* UnitMasters */,
 				BA50986E2574E14300FB88AE /* UpdateTarget */,
@@ -1135,6 +1174,7 @@
 				BAF1EACA25733D3F00E19657 /* UnitMastersModel.swift in Sources */,
 				BAB9C2762568057E004D653F /* WebViewController.swift in Sources */,
 				BAD1D0112571F92600F9A74A /* UnderlineTextField.swift in Sources */,
+				BA0692BB2577640E004A32B4 /* TestViewModel.swift in Sources */,
 				BADB237F256B523300BF5E2D /* UIView+IBInspectable.swift in Sources */,
 				BA5098602574B95700FB88AE /* ActivitiesDomainModel.swift in Sources */,
 				BA1F7A9B2576A329007B3B0F /* LearningSettingsViewController.swift in Sources */,
@@ -1147,11 +1187,13 @@
 				BAD1CFF02571F6DE00F9A74A /* Constants.swift in Sources */,
 				BAF1EAD525733EB800E19657 /* UnitListDomainModel.swift in Sources */,
 				BA5097FF2573D9ED00FB88AE /* TestStatusModel.swift in Sources */,
+				BA0692B4257762CD004A32B4 /* GetTestWordsModel.swift in Sources */,
 				BA50984B257498A400FB88AE /* LearningUnitViewModel.swift in Sources */,
 				BAD1D00A2571F8AF00F9A74A /* Error+Extended.swift in Sources */,
 				BA5098482574987E00FB88AE /* WordMastersDomainModel.swift in Sources */,
 				BA5098252574068B00FB88AE /* TargetStatusModel.swift in Sources */,
 				BAD1CFFB2571F77300F9A74A /* ResponseError.swift in Sources */,
+				BA0692B82577636A004A32B4 /* TestWordsDomainModel.swift in Sources */,
 				BA5097AB25739CBA00FB88AE /* UIView+AutoLayout.swift in Sources */,
 				BA5098052573DA9F00FB88AE /* TestStatusDomainModel.swift in Sources */,
 				BA5098912575447E00FB88AE /* PostLearningHistoriesModel.swift in Sources */,
@@ -1159,8 +1201,10 @@
 				BA00E891255E4A8C001C4E06 /* UserNameSettingViewController.swift in Sources */,
 				BAD1D01B2571F9AE00F9A74A /* SimpleResponse.swift in Sources */,
 				BAD1D0152571F96D00F9A74A /* ApplicationConfigData.swift in Sources */,
+				BA0692AA257760E5004A32B4 /* GetTestWords.swift in Sources */,
 				BA46290E2565782400D5AE8A /* TargetSettingViewController.swift in Sources */,
 				BA50982F2574079500FB88AE /* MypageViewModel.swift in Sources */,
+				BA0692AF257761D7004A32B4 /* TestWordsEntity.swift in Sources */,
 				BAD1D0242571F9FE00F9A74A /* Typealias.swift in Sources */,
 				BA2A5DE9255139DB0085A3EF /* LearningUnitViewController.swift in Sources */,
 				BA5098442574984700FB88AE /* GetWordMastersModel.swift in Sources */,
