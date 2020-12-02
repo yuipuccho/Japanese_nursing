@@ -271,9 +271,11 @@ extension TestViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [unowned self] in
 
             if (index + 1) > maxIndex {
+                updateView()
                 // 次に表示する問題がない場合は、テスト結果画面に遷移する
-                // TODO: 遷移処理を追加
-                print("遷移")
+                let vc = TestResultViewController.makeInstance(testCount: 10, correctCount: 20)
+                present(vc, animated: true)
+
             } else {
                 index += 1
                 buttonTapSetting(isEnabled: true)
@@ -300,9 +302,10 @@ extension TestViewController {
         // 1.0秒後に問題を更新し、ボタンタップを有効化する
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [unowned self] in
             if (index + 1) > maxIndex {
+                updateView()
                 // 次に表示する問題がない場合は、テスト結果画面に遷移する
-                // TODO: 遷移処理を追加
-                print("遷移")
+                let vc = TestResultViewController.makeInstance(testCount: 10, correctCount: 20)
+                present(vc, animated: true)
             } else {
                 index += 1
                 buttonTapSetting(isEnabled: true)
