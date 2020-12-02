@@ -202,6 +202,12 @@ class LearningUnitViewController: UIViewController, UIAdaptivePresentationContro
             words = words.shuffled()
         }
 
+        if words.isEmpty {
+            self.emptyView.status = .showPage
+        } else {
+            self.emptyView.status = .none
+        }
+
         kolodaView.reloadData()
         kolodaView.resetCurrentCardIndex()
 

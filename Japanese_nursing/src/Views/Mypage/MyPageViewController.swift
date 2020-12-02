@@ -53,7 +53,7 @@ class MyPageViewController: UIViewController {
             self?.fetchTargetStatus(animate: true)
             self?.fetchActivities(animate: true)
         }
-        v.page = .learn
+        v.page = .tab
         v.status = .none
         view.addSubview(v)
         view.allSafePin(subView: v, top: 45)
