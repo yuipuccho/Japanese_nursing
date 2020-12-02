@@ -15,6 +15,8 @@ import RxSwift
  */
 class TestViewController: UIViewController {
 
+    private lazy var viewModel: TestViewModel = TestViewModel()
+
     // MARK: - Outlets
 
     /// トップView
@@ -74,6 +76,24 @@ class TestViewController: UIViewController {
 
     private var disposeBag = DisposeBag()
 
+    private lazy var emptyView: EmptyView = {
+        let v = R.nib.emptyView.firstView(owner: nil)!
+        v.backgroundColor = .clear
+        v.retryAction = { [weak self] in
+            self?.fetch()
+        }
+        v.page = .tab
+        v.status = .none
+        view.addSubview(v)
+        view.allSafePin(subView: v)
+        return v
+    }()
+
+    /// 出題範囲
+    private var questionRange: Int = 0
+    /// 出題数
+    private var limit: Int = 30
+
     // MARK: - LifeCycles
 
     override func viewDidLoad() {
@@ -81,6 +101,7 @@ class TestViewController: UIViewController {
 
         subscribe()
         updateQuestion()
+        fetch()
     }
 
     override func viewDidLayoutSubviews() {
@@ -123,6 +144,33 @@ extension TestViewController {
         secondOptionButton.rx.tap.subscribe(onNext: { [weak self] in
             self?.mistake() // 仮
         }).disposed(by: disposeBag)
+
+        // loading
+        viewModel.loadingDriver
+            .map { isLoading in
+                if isLoading {
+                    return .loading
+                } else {
+                    return .none
+                }
+            }
+            .drive(onNext: {[weak self] in
+                self?.emptyView.status = $0
+            }).disposed(by: disposeBag)
+    }
+
+    private func fetch() {
+        viewModel.fetch(questionRange: questionRange, limit: limit)
+            .subscribe(
+                onNext: { [unowned self] in
+                    print($0)
+                    print("どるぜろ")
+                    
+                },
+                onError: { [unowned self] in
+                    log.error($0.descriptionOfType)
+                    self.emptyView.status = .errorAndRetry($0.descriptionOfType)
+                }).disposed(by: disposeBag)
     }
 
     /// 問題を更新する

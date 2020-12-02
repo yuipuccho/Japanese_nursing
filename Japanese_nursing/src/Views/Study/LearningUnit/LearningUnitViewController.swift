@@ -58,18 +58,18 @@ class LearningUnitViewController: UIViewController, UIAdaptivePresentationContro
 
     private var unitMasterId: Int = 1
 
-        private lazy var emptyView: EmptyView = {
-            let v = R.nib.emptyView.firstView(owner: nil)!
-            v.backgroundColor = R.color.study()
-            v.retryAction = { [weak self] in
-                self?.fetch()
-            }
-            v.page = .learn
-            v.status = .none
-            view.addSubview(v)
-            view.allSafePin(subView: v, top: 45)
-            return v
-        }()
+    private lazy var emptyView: EmptyView = {
+        let v = R.nib.emptyView.firstView(owner: nil)!
+        v.backgroundColor = R.color.study()
+        v.retryAction = { [weak self] in
+            self?.fetch()
+        }
+        v.page = .learn
+        v.status = .none
+        view.addSubview(v)
+        view.allSafePin(subView: v, top: 45)
+        return v
+    }()
 
     enum DisplayCardType: Int {
         case all
