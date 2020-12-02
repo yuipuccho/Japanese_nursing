@@ -13,7 +13,8 @@ import RxSwift
 
 enum EmptyPage {
     case none
-    case learn
+    case tab  // タブが表示されているページ
+    case learn  // 学習画面
 
     var icon: UIImage? {
         switch self {
@@ -23,6 +24,7 @@ enum EmptyPage {
             return nil
         }
     }
+
 }
 
 enum EmptyStatus {
@@ -30,6 +32,7 @@ enum EmptyStatus {
     case loading
     case success
     case errorAndRetry(String?)
+    case showPage  // ページ表示
 }
 
 final class EmptyView: UIView {
@@ -59,13 +62,20 @@ final class EmptyView: UIView {
             }.disposed(by: disposeBag)
     }
 
-    private func userEmptyViewErrorAndRetry() {
+    private func emptyViewErrorAndRetry() {
         headLabel.text = "通信エラー"
         subTextLabel.text = "ネットワーク環境が不安定です。\nしばらくたってからリトライをお試しください。"
         retryButton.isHidden = false
 
         indicator.stopAnimating()
         indicator.isHidden = true
+    }
+
+    private func emptyViewShowPage(headText: String, subText: String) {
+        headLabel.text = headText
+        subTextLabel.text = subText
+        iconImage.isHidden = true  // TODO: イメージも表示したい
+        iconImage.image = page.icon
     }
 
     private func updateState() {
@@ -93,8 +103,8 @@ final class EmptyView: UIView {
 
         case .errorAndRetry(let text):
             switch self.page {
-            case .learn:
-                userEmptyViewErrorAndRetry()
+            case .tab, .learn:
+                emptyViewErrorAndRetry()
             default:
                 self.isHidden = text == nil
                 retryButton.isHidden = false
@@ -103,6 +113,18 @@ final class EmptyView: UIView {
                 iconImage.isHidden = true
                 headLabel.text = nil
                 subTextLabel.text = text
+            }
+        case .showPage:
+            self.isHidden = false
+            retryButton.isHidden = true
+            indicator.stopAnimating()
+            indicator.isHidden = true
+            switch self.page {
+            case .learn:
+                emptyViewShowPage(headText: "条件を満たすカードが\nありません",
+                                  subText: "右上の設定ボタンを押して\n表示設定を変更しましょう")
+            default:
+                break
             }
         }
     }

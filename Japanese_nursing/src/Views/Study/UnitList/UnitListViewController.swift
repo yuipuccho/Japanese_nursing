@@ -24,7 +24,8 @@ class UnitListViewController: UIViewController, UIScrollViewDelegate, UIAdaptive
     // MARK: - Outlets
 
     @IBOutlet weak var tableView: UITableView!
-
+    @IBOutlet weak var settingButton: UIButton!
+    
     // MARK: - Properties
 
     private var disposeBag = DisposeBag()
@@ -35,7 +36,7 @@ class UnitListViewController: UIViewController, UIScrollViewDelegate, UIAdaptive
         v.retryAction = { [weak self] in
             self?.fetch()
         }
-        v.page = .learn
+        v.page = .tab
         v.status = .none
         view.addSubview(v)
         view.allSafePin(subView: v, top: 45)

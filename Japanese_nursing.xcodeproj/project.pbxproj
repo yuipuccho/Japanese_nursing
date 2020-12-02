@@ -21,6 +21,8 @@
 		BA1E5B312487AC210055A5F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E5B302487AC210055A5F4 /* SceneDelegate.swift */; };
 		BA1E5B382487AC250055A5F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA1E5B372487AC250055A5F4 /* Assets.xcassets */; };
 		BA1E5B3B2487AC250055A5F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1E5B392487AC250055A5F4 /* LaunchScreen.storyboard */; };
+		BA1F7A9825769D41007B3B0F /* LearningSettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1F7A9725769D40007B3B0F /* LearningSettingsViewController.storyboard */; };
+		BA1F7A9B2576A329007B3B0F /* LearningSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1F7A9A2576A329007B3B0F /* LearningSettingsViewController.swift */; };
 		BA27FB35248CECDA002840B8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA27FB34248CECDA002840B8 /* Colors.xcassets */; };
 		BA2A5DE5255135A50085A3EF /* UnitListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A5DE4255135A50085A3EF /* UnitListCell.swift */; };
 		BA2A5DE9255139DB0085A3EF /* LearningUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A5DE8255139DB0085A3EF /* LearningUnitViewController.swift */; };
@@ -128,6 +130,8 @@
 		BA1E5B302487AC210055A5F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BA1E5B372487AC250055A5F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA1E5B3A2487AC250055A5F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BA1F7A9725769D40007B3B0F /* LearningSettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LearningSettingsViewController.storyboard; sourceTree = "<group>"; };
+		BA1F7A9A2576A329007B3B0F /* LearningSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningSettingsViewController.swift; sourceTree = "<group>"; };
 		BA27FB34248CECDA002840B8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		BA2A5DE4255135A50085A3EF /* UnitListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListCell.swift; sourceTree = "<group>"; };
 		BA2A5DE8255139DB0085A3EF /* LearningUnitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningUnitViewController.swift; sourceTree = "<group>"; };
@@ -560,6 +564,8 @@
 				BA2A5DE8255139DB0085A3EF /* LearningUnitViewController.swift */,
 				BA4628FF25640DE200D5AE8A /* OverlayView.xib */,
 				BA46290225640E6300D5AE8A /* OverlayView.swift */,
+				BA1F7A9725769D40007B3B0F /* LearningSettingsViewController.storyboard */,
+				BA1F7A9A2576A329007B3B0F /* LearningSettingsViewController.swift */,
 			);
 			path = LearningUnit;
 			sourceTree = "<group>";
@@ -1012,6 +1018,7 @@
 				BA06D2052557AB4C000216CC /* TestViewController.storyboard in Resources */,
 				BAC4F7FD24A6E4C5009ACEF3 /* UnitList.storyboard in Resources */,
 				BAB9C27325680521004D653F /* WebView.storyboard in Resources */,
+				BA1F7A9825769D41007B3B0F /* LearningSettingsViewController.storyboard in Resources */,
 				BA66D68124A6EFFD00BE7273 /* MypageViewController.storyboard in Resources */,
 				BA66D68124A6EFFD00BE7273 /* MypageViewController.storyboard in Resources */,
 				BAC5904C249EECCF007D247B /* NotoSansCJKjpSub-Black.otf in Resources */,
@@ -1130,6 +1137,7 @@
 				BAD1D0112571F92600F9A74A /* UnderlineTextField.swift in Sources */,
 				BADB237F256B523300BF5E2D /* UIView+IBInspectable.swift in Sources */,
 				BA5098602574B95700FB88AE /* ActivitiesDomainModel.swift in Sources */,
+				BA1F7A9B2576A329007B3B0F /* LearningSettingsViewController.swift in Sources */,
 				BAD1D02C2571FA5400F9A74A /* CreateUserDomainModel.swift in Sources */,
 				BA02F941256A19ED00D93643 /* TabBar.swift in Sources */,
 				BA50987B257517FF00FB88AE /* UpdateUser.swift in Sources */,

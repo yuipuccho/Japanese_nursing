@@ -16,7 +16,7 @@ import PKHUD
 /**
  * 学習画面VC
  */
-class LearningUnitViewController: UIViewController {
+class LearningUnitViewController: UIViewController, UIAdaptivePresentationControllerDelegate {
 
     private lazy var viewModel: LearningUnitViewModel = LearningUnitViewModel()
 
@@ -24,6 +24,8 @@ class LearningUnitViewController: UIViewController {
 
     /// 単元タイトル
     @IBOutlet weak var unitTitleLabel: UILabel!
+    /// 設定ボタン
+    @IBOutlet weak var settingButton: UIButton!
     /// 閉じるボタン
     @IBOutlet weak var closeButton: UIButton!
     /// 「覚えた」ボタン（チェックマーク）
@@ -69,6 +71,22 @@ class LearningUnitViewController: UIViewController {
             return v
         }()
 
+    enum DisplayCardType: Int {
+        case all
+        case remember
+        case notRemember
+    }
+
+    enum SortOrderType: Int {
+        case defaultOrder
+        case random
+    }
+
+    private var displayCardType: DisplayCardType = DisplayCardType(rawValue: ApplicationConfigData.displayCardSetting)!
+    private var sortOrderType: SortOrderType = SortOrderType(rawValue: ApplicationConfigData.cardSortOrderType)!
+
+    private var words: [WordMastersDomainModel] = []
+
     // MARK: - LifeCycles
 
     override func viewDidLoad() {
@@ -89,9 +107,23 @@ class LearningUnitViewController: UIViewController {
 
     }
 
+    // 遷移先の画面が閉じられた時に呼ばれる
+    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+        if ApplicationConfigData.shouldUpdateCards {
+            applySetting()
+            ApplicationConfigData.shouldUpdateCards = false
+        }
+    }
+
     // MARK: - Functions
 
     private func subscribe() {
+        // 設定ボタンタップ
+        settingButton.rx.tap.subscribe(onNext: { [weak self] in
+            let vc = LearningSettingsViewController.makeInstance()
+            vc.presentationController?.delegate = self
+            self?.present(vc, animated: true)
+        }).disposed(by: disposeBag)
         // 閉じるボタンタップ
         closeButton.rx.tap.subscribe(onNext: { [weak self] in
             self?.dismiss(animated: true)
@@ -115,7 +147,12 @@ class LearningUnitViewController: UIViewController {
                 if isLoading {
                     return .loading
                 } else {
-                    return .none
+                    switch self.emptyView.status {
+                    case .showPage:
+                        return .showPage
+                    default:
+                        return .none
+                    }
                 }
             }
             .drive(onNext: {[weak self] in
@@ -125,11 +162,11 @@ class LearningUnitViewController: UIViewController {
 
     /// 表示する単語を取得
     private func fetch() {
+        kolodaView.isHidden = true  // EmptyViewの上にかぶるのを防ぐ
         viewModel.fetch(authToken: ApplicationConfigData.authToken, unitMasterId: unitMasterId)
             .subscribe(
                 onNext: { [unowned self] _ in
-                    kolodaView.reloadData()
-                    progressView.setProgress(0, animated: true)
+                    applySetting()
                 },
                 onError: { [unowned self] in
                     log.error($0.descriptionOfType)
@@ -140,13 +177,47 @@ class LearningUnitViewController: UIViewController {
     /// 進捗バーを更新する
     private func updateProgressView(swipedCardIndex: Int) {
         /// カードの最大枚数
-        let maxCardCount = Float(viewModel.words.count)
+        let maxCardCount = Float(words.count)
         /// スワイプされたカードの枚数
         let swipedCardCount = Float(swipedCardIndex + 1)
         /// 進捗
         let progress = Float(swipedCardCount / maxCardCount)
 
         progressView.setProgress(progress, animated: true)
+    }
+
+    /// 設定によってカードを表示する
+    private func applySetting() {
+        displayCardType = DisplayCardType(rawValue: ApplicationConfigData.displayCardSetting)!
+        sortOrderType = SortOrderType(rawValue: ApplicationConfigData.cardSortOrderType)!
+
+        switch displayCardType {
+        case .all:
+            words = viewModel.allWords
+        case .remember:
+            words = viewModel.rememberWords
+        case .notRemember:
+            words = viewModel.notRememberWords
+        }
+
+        switch sortOrderType {
+        case .defaultOrder:
+            break
+        case .random:
+            words = words.shuffled()
+        }
+
+        if words.isEmpty {
+            self.emptyView.status = .showPage
+        } else {
+            self.emptyView.status = .none
+            kolodaView.isHidden = false
+        }
+
+        kolodaView.reloadData()
+        kolodaView.resetCurrentCardIndex()
+
+        progressView.setProgress(0, animated: true)
     }
 
 }
@@ -170,16 +241,16 @@ extension LearningUnitViewController: KolodaViewDelegate {
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
         switch direction {
         case .right:
-            ApplicationConfigData.rememberIdsArray.append(String(viewModel.words[index].id))
+            ApplicationConfigData.rememberIdsArray.append(String(words[index].id))
         case .left:
-            ApplicationConfigData.notRememberIdsArray.append(String(viewModel.words[index].id))
+            ApplicationConfigData.notRememberIdsArray.append(String(words[index].id))
         default:
             break
         }
         updateProgressView(swipedCardIndex: index)
 
         // 最後のカードがスワイプされたらモーダルを表示する
-        if index + 1 >= viewModel.words.count {
+        if index + 1 >= words.count {
             let appearance = SCLAlertView.SCLAppearance(
                 kTitleFont: R.font.notoSansCJKjpSubBold(size: 16)!,
                 kTextFont: R.font.notoSansCJKjpSubMedium(size: 12)!,
@@ -187,10 +258,7 @@ extension LearningUnitViewController: KolodaViewDelegate {
             )
             let alertView = SCLAlertView(appearance: appearance)
             alertView.addButton("もう一度学習する") { [weak self] in
-                // カードをもう一度表示する
-                self?.kolodaView.resetCurrentCardIndex()
-                // プログレスバーを初期化する
-                self?.progressView.setProgress(0, animated: true)
+                self?.applySetting()
             }
             alertView.addButton("終了する") { [weak self] in
                 self?.dismiss(animated: true)
@@ -220,7 +288,7 @@ extension LearningUnitViewController: KolodaViewDataSource {
 
     /// カードの枚数を返す
     func kolodaNumberOfCards(_ koloda: KolodaView) -> Int {
-        return viewModel.words.count
+        return words.count
     }
 
     /// カードのViewを返す
@@ -240,7 +308,7 @@ extension LearningUnitViewController: KolodaViewDataSource {
 
         // ふりがなラベルを表示する
         let furiganaLabel = UILabel()
-        furiganaLabel.text = viewModel.words[index].furigana
+        furiganaLabel.text = words[index].furigana
         furiganaLabel.font = R.font.notoSansCJKjpSubBold(size: 14)
         furiganaLabel.textColor = R.color.textGray()
         furiganaLabel.bounds.size = CGSize(width: width, height: 20)  // サイズ指定
@@ -253,7 +321,7 @@ extension LearningUnitViewController: KolodaViewDataSource {
 
         // メインラベルを表示する
         let mainLabel = UILabel()
-        mainLabel.text = viewModel.words[index].japanese
+        mainLabel.text = words[index].japanese
         mainLabel.font = R.font.notoSansCJKjpSubBold(size: 40)
         mainLabel.textColor = R.color.textGray()
         mainLabel.bounds.size = CGSize(width: width, height: 46)  // サイズ指定
@@ -266,7 +334,7 @@ extension LearningUnitViewController: KolodaViewDataSource {
 
         // サブラベルを表示する
         let subLabel = UILabel()
-        subLabel.text = viewModel.words[index].vietnamese
+        subLabel.text = words[index].vietnamese
         subLabel.font = R.font.notoSansCJKjpSubMedium(size: 24)
         subLabel.textColor = R.color.textGray()
 

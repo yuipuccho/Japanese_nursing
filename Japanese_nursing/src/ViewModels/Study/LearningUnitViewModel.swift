@@ -27,7 +27,9 @@ class LearningUnitViewModel {
         loadingRelay.value
     }
 
-    var words: [WordMastersDomainModel] = []
+    var allWords: [WordMastersDomainModel] = []
+    var rememberWords: [WordMastersDomainModel] = []
+    var notRememberWords: [WordMastersDomainModel] = []
 
     // MARK: - Functions
 
@@ -46,7 +48,9 @@ class LearningUnitViewModel {
                 guard let _self = self else {
                     return
                 }
-                _self.words.append(contentsOf: $0)
+                _self.allWords.append(contentsOf: $0)
+                _self.rememberWords = _self.allWords.filter{ $0.isLearned }
+                _self.notRememberWords = _self.allWords.filter{ !$0.isLearned }
             })
     }
 
