@@ -74,11 +74,14 @@ class TestViewController: UIViewController {
         case answer // 解答
     }
 
+    /// 正解のボタン
+    private var correctButton: SelectionType = .first
+
     private var disposeBag = DisposeBag()
 
     private lazy var emptyView: EmptyView = {
         let v = R.nib.emptyView.firstView(owner: nil)!
-        v.backgroundColor = .clear
+        v.backgroundColor = R.color.test()
         v.retryAction = { [weak self] in
             self?.fetch()
         }
@@ -94,13 +97,15 @@ class TestViewController: UIViewController {
     /// 出題数
     private var limit: Int = 30
 
+    /// 出題する単語のindex
+    private var index: Int = 0
+
     // MARK: - LifeCycles
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         subscribe()
-        updateQuestion()
         fetch()
     }
 
@@ -136,13 +141,23 @@ extension TestViewController {
         }).disposed(by: disposeBag)
 
         // 1つ目の選択肢タップ
-        firstOptionButton.rx.tap.subscribe(onNext: { [weak self] in
-            self?.correct() //仮
+        firstOptionButton.rx.tap.subscribe(onNext: { [unowned self] in
+            correctButton == .first ? correct(type: .first) : mistake(type: .first)
         }).disposed(by: disposeBag)
 
         // 2つ目の選択肢タップ
-        secondOptionButton.rx.tap.subscribe(onNext: { [weak self] in
-            self?.mistake() // 仮
+        secondOptionButton.rx.tap.subscribe(onNext: { [unowned self] in
+            correctButton == .second ? correct(type: .second) : mistake(type: .second)
+        }).disposed(by: disposeBag)
+
+        // 3つ目の選択肢タップ
+        thirdOptionButton.rx.tap.subscribe(onNext: { [unowned self] in
+            correctButton == .third ? correct(type: .third) : mistake(type: .third)
+        }).disposed(by: disposeBag)
+
+        // 4つ目の選択肢タップ
+        fourthOptionButton.rx.tap.subscribe(onNext: { [unowned self] in
+            correctButton == .fourth ? correct(type: .fourth) : mistake(type: .fourth)
         }).disposed(by: disposeBag)
 
         // loading
@@ -162,10 +177,8 @@ extension TestViewController {
     private func fetch() {
         viewModel.fetch(questionRange: questionRange, limit: limit)
             .subscribe(
-                onNext: { [unowned self] in
-                    print($0)
-                    print("どるぜろ")
-                    
+                onNext: { [unowned self] _ in
+                    updateQuestion()
                 },
                 onError: { [unowned self] in
                     log.error($0.descriptionOfType)
@@ -175,7 +188,39 @@ extension TestViewController {
 
     /// 問題を更新する
     private func updateQuestion() {
-        // TODO: 問題ラベル、選択肢ラベルのテキストを更新する処理を追加
+        // 問題ラベル
+        questionLabel.text = viewModel.testWords[index].japanese
+
+        // 選択肢の設定
+        let correctOption = Int.random(in: 1...4)
+        switch correctOption {
+        case 1:
+            firstOptionLabel.text = viewModel.testWords[index].vietnamese
+            secondOptionLabel.text = viewModel.testWords[index].dummyVietnamese1
+            thirdOptionLabel.text = viewModel.testWords[index].dummyVietnamese2
+            fourthOptionLabel.text = viewModel.testWords[index].dummyVietnamese3
+            correctButton = .first
+        case 2:
+            firstOptionLabel.text = viewModel.testWords[index].dummyVietnamese1
+            secondOptionLabel.text = viewModel.testWords[index].vietnamese
+            thirdOptionLabel.text = viewModel.testWords[index].dummyVietnamese2
+            fourthOptionLabel.text = viewModel.testWords[index].dummyVietnamese3
+            correctButton = .second
+        case 3:
+            firstOptionLabel.text = viewModel.testWords[index].dummyVietnamese1
+            secondOptionLabel.text = viewModel.testWords[index].dummyVietnamese2
+            thirdOptionLabel.text = viewModel.testWords[index].vietnamese
+            fourthOptionLabel.text = viewModel.testWords[index].dummyVietnamese3
+            correctButton = .third
+        case 4:
+            firstOptionLabel.text = viewModel.testWords[index].dummyVietnamese1
+            secondOptionLabel.text = viewModel.testWords[index].dummyVietnamese2
+            thirdOptionLabel.text = viewModel.testWords[index].dummyVietnamese3
+            fourthOptionLabel.text = viewModel.testWords[index].vietnamese
+            correctButton = .fourth
+        default:
+            break
+        }
 
         // トップViewの色を青に変更
         topImageView.image = R.image.round_blue()
@@ -197,16 +242,15 @@ extension TestViewController {
     }
 
     /// 正解の処理
-    private func correct() {
+    private func correct(type: SelectionType) {
         bigFeedbackImageView.isHidden = false
         bigFeedbackImageView.image = R.image.big_circle()
         feedbackView.isHidden = false
         feedbackImageView.image = R.image.good_icon()
         feedbackLabel.text = "Good!"
 
-        // 仮
         // 正解ボタンの表示
-        updateOptionButton(type: .first, status: .selectedCorrect)
+        updateOptionButton(type: type, status: .selectedCorrect)
 
         // ボタンタップを無効化する
         buttonTapSetting(isEnabled: false)
@@ -214,22 +258,23 @@ extension TestViewController {
         // 0.5秒後に問題を更新し、ボタンタップを有効化する
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
             self?.buttonTapSetting(isEnabled: true)
+            // 問題があるか判定を追加
+            self?.index += 1
             self?.updateQuestion()
         }
     }
 
     /// 不正解の処理
-    private func mistake() {
+    private func mistake(type: SelectionType) {
         bigFeedbackImageView.isHidden = false
         bigFeedbackImageView.image = R.image.big_cross()
         topImageView.image = R.image.round_pink()
         progressLabel.textColor = R.color.badPink()
 
-        // 仮
         // 不正解ボタンの表示
-        updateOptionButton(type: .second, status: .selectedMistake)
+        updateOptionButton(type: type, status: .selectedMistake)
         // 解答ボタンの表示
-        updateOptionButton(type: .first, status: .answer)
+        updateOptionButton(type: correctButton, status: .answer)
 
         // ボタンタップを無効化する
         buttonTapSetting(isEnabled: false)
@@ -237,12 +282,18 @@ extension TestViewController {
         // 1.0秒後に問題を更新し、ボタンタップを有効化する
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
             self?.buttonTapSetting(isEnabled: true)
+            self?.index += 1
             self?.updateQuestion()
         }
     }
 
     /// 選択肢ボタンの更新
     private func updateOptionButton(type: SelectionType, status: ButtonStatus) {
+
+        print(type)
+        print(status)
+
+
         var view = firstOptionView
         var label = firstOptionLabel
         var imageView = firstOptionImageView
