@@ -41,6 +41,8 @@ class LearningUnitViewController: UIViewController, UIAdaptivePresentationContro
 
     private var unitTitle = ""
 
+    private var a = true
+
     /// カードのサイズ
     private var cardFrame: CGRect {
         let width = (view.bounds.size.width) * 0.85
@@ -148,7 +150,12 @@ class LearningUnitViewController: UIViewController, UIAdaptivePresentationContro
                 if isLoading {
                     return .loading
                 } else {
-                    return .none
+                    switch self.emptyView.status {
+                    case .showPage:
+                        return .showPage
+                    default:
+                        return .none
+                    }
                 }
             }
             .drive(onNext: {[weak self] in
@@ -158,6 +165,7 @@ class LearningUnitViewController: UIViewController, UIAdaptivePresentationContro
 
     /// 表示する単語を取得
     private func fetch() {
+        kolodaView.isHidden = true  // EmptyViewの上にかぶるのを防ぐ
         viewModel.fetch(authToken: ApplicationConfigData.authToken, unitMasterId: unitMasterId)
             .subscribe(
                 onNext: { [unowned self] _ in
@@ -206,6 +214,7 @@ class LearningUnitViewController: UIViewController, UIAdaptivePresentationContro
             self.emptyView.status = .showPage
         } else {
             self.emptyView.status = .none
+            kolodaView.isHidden = false
         }
 
         kolodaView.reloadData()
