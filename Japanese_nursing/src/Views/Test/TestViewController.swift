@@ -93,9 +93,9 @@ class TestViewController: UIViewController {
     }()
 
     /// 出題範囲
-    private var questionRange: Int = 0
+    private var questionRange: [TestSettingsViewController.QuestionRangeType] = [.all]
     /// 出題数
-    private var limit: Int = 30
+    private var limit: Int = 20
 
     /// 出題する単語のindex
     private var index: Int = 0
@@ -178,16 +178,19 @@ extension TestViewController {
     }
 
     private func fetch() {
-        viewModel.fetch(questionRange: questionRange, limit: limit)
-            .subscribe(
-                onNext: { [unowned self] _ in
-                    updateQuestion()
-                    maxIndex = viewModel.testWords.count - 1
-                },
-                onError: { [unowned self] in
-                    log.error($0.descriptionOfType)
-                    self.emptyView.status = .errorAndRetry($0.descriptionOfType)
-                }).disposed(by: disposeBag)
+        // TODO: 応急処置なので直したい
+        for i in questionRange {
+            viewModel.fetch(questionRange: i.rawValue, limit: limit)
+                .subscribe(
+                    onNext: { [unowned self] _ in
+                        updateQuestion()
+                        maxIndex = viewModel.testWords.count - 1
+                    },
+                    onError: { [unowned self] in
+                        log.error($0.descriptionOfType)
+                        self.emptyView.status = .errorAndRetry($0.descriptionOfType)
+                    }).disposed(by: disposeBag)
+        }
     }
 
     /// 問題を更新する
@@ -373,11 +376,13 @@ extension TestViewController {
 
 extension TestViewController {
 
-    static func makeInstance() -> UIViewController {
+    static func makeInstance(questionRange: [TestSettingsViewController.QuestionRangeType], limit: Int) -> UIViewController {
         guard let vc = R.storyboard.testViewController.testViewController() else {
             assertionFailure("Can't make instance 'TestViewController'.")
             return UIViewController()
         }
+        vc.questionRange = questionRange
+        vc.limit = limit
         return vc
     }
 

@@ -61,7 +61,7 @@ class TestSettingsViewController: UIViewController {
     // MARK: - Properties
 
     /// 出題範囲タイプ
-    private enum QuestionRangeType {
+    enum QuestionRangeType: Int {
         case all
         case mistake
         case untested
@@ -165,9 +165,9 @@ extension TestSettingsViewController {
         }).disposed(by: disposeBag)
 
         // スタートボタンタップ
-        startButton.rx.tap.subscribe(onNext: { [weak self] in
-            let vc = TestViewController.makeInstance()
-            self?.present(vc, animated: true)
+        startButton.rx.tap.subscribe(onNext: { [unowned self] in
+            let vc = TestViewController.makeInstance(questionRange: selectingQuestionRange, limit: selectingQuestionsCount)
+            present(vc, animated: true)
         }).disposed(by: disposeBag)
 
         // loading
