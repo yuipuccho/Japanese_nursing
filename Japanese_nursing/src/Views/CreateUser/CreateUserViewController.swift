@@ -34,6 +34,18 @@ class CreateUserViewController: UIViewController {
 
     // MARK: - Properties
 
+    // 触感フィードバック
+    private let lightFeedBack: UIImpactFeedbackGenerator = {
+        let generator: UIImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: .light)
+        generator.prepare()
+        return generator
+    }()
+    private let notificationFeedBack: UINotificationFeedbackGenerator = {
+        let generator: UINotificationFeedbackGenerator = UINotificationFeedbackGenerator()
+        generator.prepare()
+        return generator
+    }()
+
     private var disposeBag = DisposeBag()
 
     // MARK: - LifeCycle
@@ -58,8 +70,10 @@ class CreateUserViewController: UIViewController {
             if let text = self?.nameUnderLineTextField.text, !text.isEmpty, text.count <= 12 {
                 self?.fetch(userName: text)
             } else if let text = self?.nameUnderLineTextField.text, text.isEmpty {
+                self?.notificationFeedBack.notificationOccurred(.error)
                 self?.nameAlertLabel.text = "ニックネームを入力してください"
             } else {
+                self?.notificationFeedBack.notificationOccurred(.error)
                 self?.nameAlertLabel.text = "12文字以内で入力してください"
             }
 
@@ -67,6 +81,7 @@ class CreateUserViewController: UIViewController {
 
         // 利用規約Button
         tarmsOfServiceButton.rx.tap.subscribe(onNext: { [weak self] in
+            self?.lightFeedBack.impactOccurred()
             let url = "https://yuipuccho.github.io/Japanese_nursing_terms_of_service/"
             let vc = WebViewController.makeInstance(url: url, titleText: "利用規約")
             self?.present(vc, animated: true)
@@ -74,6 +89,7 @@ class CreateUserViewController: UIViewController {
 
         // プライバシーポリシーButton
         privacyPolicyButton.rx.tap.subscribe(onNext: { [weak self] in
+            self?.lightFeedBack.impactOccurred()
             let url = "https://yuipuccho.github.io/Japanese_nursing_privacy_policy/"
             let vc = WebViewController.makeInstance(url: url, titleText: "プライバシーポリシー")
             self?.present(vc, animated: true)
@@ -100,7 +116,8 @@ class CreateUserViewController: UIViewController {
 
         viewModel.fetch(isAnonymous: isAnonymous, userName: userName)
             .subscribe(
-                onNext: { domain in
+                onNext: { [unowned self] domain in
+                    notificationFeedBack.notificationOccurred(.success)
                     HUD.flash(.label("登録しました！"), delay: 1.0) { [weak self] _ in
                         self?.dismiss(animated: true)
                     }

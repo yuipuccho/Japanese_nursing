@@ -44,6 +44,13 @@ class MyPageViewController: UIViewController {
 
     // MARK: - Properties
 
+    // 触感フィードバック
+    private let lightFeedBack: UIImpactFeedbackGenerator = {
+        let generator: UIImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: .light)
+        generator.prepare()
+        return generator
+    }()
+
     private var disposeBag = DisposeBag()
 
     private lazy var emptyView: EmptyView = {
@@ -113,6 +120,7 @@ extension MyPageViewController: UIAdaptivePresentationControllerDelegate {
     private func subscribe() {
         // 学習円形進捗バーボタンタップ
         studyPieChartButton.rx.tap.subscribe(onNext: { [unowned self] in
+            lightFeedBack.impactOccurred()
             let vc = TargetSettingViewController.makeInstance(targetType: .study, initialTargetCount: targetLearningCount)
             vc.presentationController?.delegate = self
             present(vc, animated: true)
@@ -121,6 +129,7 @@ extension MyPageViewController: UIAdaptivePresentationControllerDelegate {
 
         // テスト円形進捗バーボタンタップ
         testPieChartButton.rx.tap.subscribe(onNext: { [unowned self] in
+            lightFeedBack.impactOccurred()
             let vc = TargetSettingViewController.makeInstance(targetType: .test, initialTargetCount: targetTestingCount)
             vc.presentationController?.delegate = self
             present(vc, animated: true)
@@ -128,6 +137,7 @@ extension MyPageViewController: UIAdaptivePresentationControllerDelegate {
 
         // 設定ボタンタップ
         settingButton.rx.tap.subscribe(onNext: { [unowned self] in
+            lightFeedBack.impactOccurred()
             let vc = SettingListViewController.makeInstanceInNavigationController(targetLearningCount: targetLearningCount, targetTestingCount: targetTestingCount)
             vc.presentationController?.delegate = self
             present(vc, animated: true)

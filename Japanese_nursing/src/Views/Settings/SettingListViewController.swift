@@ -33,6 +33,13 @@ class SettingListViewController: UIViewController {
 
     // MARK: - Properties
 
+    // 触感フィードバック
+    private let lightFeedBack: UIImpactFeedbackGenerator = {
+        let generator: UIImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: .light)
+        generator.prepare()
+        return generator
+    }()
+
     private var disposeBag = DisposeBag()
 
     private var targetLearningCount = 0
@@ -55,24 +62,28 @@ class SettingListViewController: UIViewController {
 
         // ニックネームの変更タップ
         userNameSettingButton.rx.tap.subscribe(onNext: { [weak self] in
+            self?.lightFeedBack.impactOccurred()
             let vc = UserNameSettingViewController.makeInstance()
             self?.navigationController?.pushViewController(vc, animated: true)
         }).disposed(by: disposeBag)
 
         // 目標学習数タップ
         studyTargetSettingButton.rx.tap.subscribe(onNext: { [unowned self] in
+            lightFeedBack.impactOccurred()
             let vc = TargetSettingViewController.makeInstance(targetType: .study, initialTargetCount: targetLearningCount)
             navigationController?.pushViewController(vc, animated: true)
         }).disposed(by: disposeBag)
 
         // 目標テストタップ
         testTargetSettingButton.rx.tap.subscribe(onNext: { [unowned self] in
+            lightFeedBack.impactOccurred()
             let vc = TargetSettingViewController.makeInstance(targetType: .test, initialTargetCount: targetTestingCount)
             navigationController?.pushViewController(vc, animated: true)
         }).disposed(by: disposeBag)
 
         // 利用規約タップ
         termOfServiceButton.rx.tap.subscribe(onNext: { [weak self] in
+            self?.lightFeedBack.impactOccurred()
             let url = "https://yuipuccho.github.io/Japanese_nursing_terms_of_service/"
             let vc = WebViewController.makeInstance(url: url, titleText: "利用規約")
             self?.navigationController?.pushViewController(vc, animated: true)
@@ -80,6 +91,7 @@ class SettingListViewController: UIViewController {
 
         // プライバシーポリシータップ
         privacyPolicyButton.rx.tap.subscribe(onNext: { [weak self] in
+            self?.lightFeedBack.impactOccurred()
             let url = "https://yuipuccho.github.io/Japanese_nursing_privacy_policy/"
             let vc = WebViewController.makeInstance(url: url, titleText: "プライバシーポリシー")
             self?.navigationController?.pushViewController(vc, animated: true)
