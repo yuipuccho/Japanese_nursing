@@ -78,10 +78,11 @@ class TestSettingsViewController: UIViewController {
         case all
         case mistake
         case untested
+        case mistakeAndUntested
     }
 
     /// 選択中の出題範囲
-    private var selectingQuestionRange: [QuestionRangeType] = [.all]
+    private var selectingQuestionRange: QuestionRangeType = .all
 
     /// 選択中の出題範囲
     private var selectingQuestionsCount: Int = 10
@@ -255,9 +256,8 @@ extension TestSettingsViewController {
     private func updateSelectingQuestionRange(tappedType: QuestionRangeType) {
         switch tappedType {
         case .all:
-            // 選択中の出題範囲を全てリセットしてから、.allを追加する
-            selectingQuestionRange.removeAll()
-            selectingQuestionRange.append(.all)
+            // 選択中の出題範囲を.allに変更する
+            selectingQuestionRange = .all
 
             // すべてを活性化
             updateActivateButton(type: .all, shouldActivate: true)
@@ -265,56 +265,48 @@ extension TestSettingsViewController {
             updateActivateButton(type: .mistake, shouldActivate: false)
             updateActivateButton(type: .untested, shouldActivate: false)
 
-        // TODO: API対応しだい変更
-        case .mistake:
-            // 選択中の出題範囲を全てリセットしてから、.mistakeを追加する
-            selectingQuestionRange.removeAll()
-            selectingQuestionRange.append(.mistake)
+        case .mistake, .untested:
 
-            // 苦手を活性化
-            updateActivateButton(type: .mistake, shouldActivate: true)
-            // 苦手以外を非活性化
-            updateActivateButton(type: .all, shouldActivate: false)
-            updateActivateButton(type: .untested, shouldActivate: false)
+            // タップされた項目のみ選択していた場合は、すべてを選択状態にする
+            if selectingQuestionRange == tappedType {
+                selectingQuestionRange = .all
+                // すべてを活性化
+                updateActivateButton(type: .all, shouldActivate: true)
+                // タップされた項目を非活性化
+                updateActivateButton(type: tappedType, shouldActivate: false)
+            }
 
-        case .untested:
-            // 選択中の出題範囲を全てリセットしてから、.untestedを追加する
-            selectingQuestionRange.removeAll()
-            selectingQuestionRange.append(.untested)
+            // すべてを選択していた場合は、タップされた項目を選択状態にする
+            else if selectingQuestionRange == .all {
+                selectingQuestionRange = tappedType
+                // すべてを非活性化
+                updateActivateButton(type: .all, shouldActivate: false)
+                // タップされた項目を活性化
+                updateActivateButton(type: tappedType, shouldActivate: true)
+            }
 
-            // 未出題を活性化
-            updateActivateButton(type: .untested, shouldActivate: true)
-            // 未出題以外を非活性化
-            updateActivateButton(type: .all, shouldActivate: false)
-            updateActivateButton(type: .mistake, shouldActivate: false)
+            // 「苦手」「未選択」の両方を選択していた場合は、タップされた項目を非選択状態にし、他一方を選択状態にする
+            else if selectingQuestionRange == .mistakeAndUntested {
+                updateActivateButton(type: tappedType, shouldActivate: false)
 
-            // TODO: - いったんコメントアウト
-//        case .mistake, .untested:
-//
-//            if !selectingQuestionRange.contains(tappedType) {
-//                // タップされた項目を活性化する場合
-//                // 選択中の出題範囲から.allを削除し、タップされた項目を追加する
-//                selectingQuestionRange.remove(value: .all)
-//                selectingQuestionRange.append(tappedType)
-//
-//                // すべてを非活性化
-//                updateActivateButton(type: .all, shouldActivate: false)
-//                // タップされた項目を活性化
-//                updateActivateButton(type: tappedType, shouldActivate: true)
-//
-//            } else {
-//                // タップされた項目を非活性にする場合
-//                // タップされた項目を選択中の出題範囲から削除する
-//                selectingQuestionRange.remove(value: tappedType)
-//                // タップされた項目を非活性化
-//                updateActivateButton(type: tappedType, shouldActivate: false)
-//
-//                // 選択中の出題範囲が1つもなくなった場合は、すべてを活性化する
-//                if selectingQuestionRange.count <= 0 {
-//                    updateSelectingQuestionRange(tappedType: .all)
-//                }
-//            }
+                if tappedType == .mistake {
+                    selectingQuestionRange = .untested
+                } else {
+                    selectingQuestionRange = .mistake
+                }
+            }
+
+            // 他一方のみを選択していた場合は、タップされた項目を選択状態にする（「苦手」「未選択」の両方が選択状態となる）
+            else if (tappedType == .untested && selectingQuestionRange == .mistake) ||
+                tappedType == .mistake && selectingQuestionRange == .untested {
+                selectingQuestionRange = .mistakeAndUntested
+                updateActivateButton(type: tappedType, shouldActivate: true)
+            }
+
+        default:
+            break
         }
+
         // 最大出題範囲数が、設定中の出題数を下回る場合は、出題数ラベルを更新する
         let maxQuestionsCount = calculateMaxQuestionsCount()
         if maxQuestionsCount <= selectingQuestionsCount {
@@ -342,6 +334,8 @@ extension TestSettingsViewController {
             view = untestedView
             label = untestedLabel
             countLabel = untestedCountLabel
+        default:
+            break
         }
 
         if shouldActivate {
@@ -397,15 +391,15 @@ extension TestSettingsViewController {
     /// 最大出題数を求める
     private func calculateMaxQuestionsCount() -> Int {
         var maxQuestionsCount = 0
-        for i in selectingQuestionRange {
-            switch i {
-            case .all:
-                maxQuestionsCount += allCount
-            case .mistake:
-                maxQuestionsCount += mistakeCount
-            case .untested:
-                maxQuestionsCount += untestedCount
-            }
+        switch selectingQuestionRange {
+        case .all:
+            maxQuestionsCount = allCount
+        case .mistake:
+            maxQuestionsCount = mistakeCount
+        case .untested:
+            maxQuestionsCount = untestedCount
+        case .mistakeAndUntested:
+            maxQuestionsCount = mistakeCount + untestedCount
         }
         return maxQuestionsCount
     }
