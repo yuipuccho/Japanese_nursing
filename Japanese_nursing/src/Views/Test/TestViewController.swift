@@ -108,7 +108,7 @@ class TestViewController: UIViewController {
     }()
 
     /// 出題範囲
-    private var questionRange: [TestSettingsViewController.QuestionRangeType] = [.all]
+    private var questionRange: TestSettingsViewController.QuestionRangeType = .all
     /// 出題数
     private var limit: Int = 20
 
@@ -198,7 +198,7 @@ extension TestViewController {
     }
 
     private func fetch() {
-        viewModel.fetch(questionRange: questionRange[0].rawValue, limit: limit)
+        viewModel.fetch(questionRange: questionRange.rawValue, limit: limit)
             .subscribe(
                 onNext: { [unowned self] _ in
                     maxIndex = viewModel.testWords.count - 1
@@ -411,7 +411,7 @@ extension TestViewController {
 
 extension TestViewController {
 
-    static func makeInstance(questionRange: [TestSettingsViewController.QuestionRangeType], limit: Int) -> UIViewController {
+    static func makeInstance(questionRange: TestSettingsViewController.QuestionRangeType, limit: Int) -> UIViewController {
         guard let vc = R.storyboard.testViewController.testViewController() else {
             assertionFailure("Can't make instance 'TestViewController'.")
             return UIViewController()
