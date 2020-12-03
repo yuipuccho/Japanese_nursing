@@ -34,6 +34,19 @@ class LearningSettingsViewController: UIViewController {
 
     // MARK: - Properties
 
+    // 触感フィードバック
+    private let lightFeedBack: UIImpactFeedbackGenerator = {
+        let generator: UIImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: .light)
+        generator.prepare()
+        return generator
+    }()
+
+    private let notificationFeedBack: UINotificationFeedbackGenerator = {
+        let generator: UINotificationFeedbackGenerator = UINotificationFeedbackGenerator()
+        generator.prepare()
+        return generator
+    }()
+
     private var disposeBag = DisposeBag()
 
     typealias displayCardType = DisplayCardType
@@ -68,26 +81,31 @@ class LearningSettingsViewController: UIViewController {
 
     private func subscribe() {
         allButton.rx.tap.subscribe(onNext: { [unowned self] in
+            lightFeedBack.impactOccurred()
             selectedDisplayCardType = .all
             updateDisplayCardSetting()
         }).disposed(by: disposeBag)
 
         rememberButton.rx.tap.subscribe(onNext: { [unowned self] in
+            lightFeedBack.impactOccurred()
             selectedDisplayCardType = .remember
             updateDisplayCardSetting()
         }).disposed(by: disposeBag)
 
         notRememberButton.rx.tap.subscribe(onNext: { [unowned self] in
+            lightFeedBack.impactOccurred()
             selectedDisplayCardType = .notRemember
             updateDisplayCardSetting()
         }).disposed(by: disposeBag)
 
         defaultButton.rx.tap.subscribe(onNext: { [unowned self] in
+            lightFeedBack.impactOccurred()
             selectedSortOrderType = .defaultOrder
             updateSortOrderSetting()
         }).disposed(by: disposeBag)
 
         randomButton.rx.tap.subscribe(onNext: { [unowned self] in
+            lightFeedBack.impactOccurred()
             selectedSortOrderType = .random
             updateSortOrderSetting()
         }).disposed(by: disposeBag)
@@ -96,11 +114,8 @@ class LearningSettingsViewController: UIViewController {
             dismiss(animated: true)
         }).disposed(by: disposeBag)
 
-        cancelButton.rx.tap.subscribe(onNext: { [unowned self] in
-            dismiss(animated: true)
-        }).disposed(by: disposeBag)
-
         applyButton.rx.tap.subscribe(onNext: { [unowned self] in
+            notificationFeedBack.notificationOccurred(.success)
             ApplicationConfigData.displayCardSetting = selectedDisplayCardType.rawValue
             ApplicationConfigData.cardSortOrderType = selectedSortOrderType.rawValue
             ApplicationConfigData.shouldUpdateCards = true

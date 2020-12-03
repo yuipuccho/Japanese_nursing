@@ -28,6 +28,13 @@ class UnitListViewController: UIViewController, UIScrollViewDelegate, UIAdaptive
     
     // MARK: - Properties
 
+    // 触感フィードバック
+    private let lightFeedBack: UIImpactFeedbackGenerator = {
+        let generator: UIImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: .light)
+        generator.prepare()
+        return generator
+    }()
+
     private var disposeBag = DisposeBag()
 
     private lazy var emptyView: EmptyView = {
@@ -111,6 +118,7 @@ extension UnitListViewController {
         // セルタップ
         tableView.rx.itemSelected
             .subscribe(onNext: { [unowned self] indexPath in
+                lightFeedBack.impactOccurred()
                 let vc = LearningUnitViewController.makeInstance(unitMasterId: viewModel.units[indexPath.row].id, unitTitle: viewModel.units[indexPath.row].vietnamese)
                 vc.presentationController?.delegate = self
                 self.present(vc, animated: true)

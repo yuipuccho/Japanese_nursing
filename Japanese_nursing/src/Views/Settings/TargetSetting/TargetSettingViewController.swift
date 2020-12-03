@@ -45,6 +45,13 @@ class TargetSettingViewController: UIViewController, UIPickerViewDelegate, UIPic
 
     // MARK: - Properties
 
+    // 触感フィードバック
+    private let notificationFeedBack: UINotificationFeedbackGenerator = {
+        let generator: UINotificationFeedbackGenerator = UINotificationFeedbackGenerator()
+        generator.prepare()
+        return generator
+    }()
+
     private var disposeBag = DisposeBag()
 
     /// 初期目標値
@@ -209,6 +216,7 @@ extension TargetSettingViewController {
         viewModel.fetch(authToken: ApplicationConfigData.authToken, targetLearningCount: targetLearningCount, targetTestingCount: targetTestingCount)
             .subscribe(
                 onNext: { [unowned self] in
+                    notificationFeedBack.notificationOccurred(.success)
                     HUD.flash(.label("保存しました！"), delay: 0.5) {_ in
                         if let nc = self.navigationController {
                             nc.popViewController(animated: true)

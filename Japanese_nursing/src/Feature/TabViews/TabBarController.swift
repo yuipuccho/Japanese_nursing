@@ -28,6 +28,13 @@ extension UITabBarController {
 
 class TabBarController: UITabBarController {
 
+    // 触感フィードバック
+    private let lightFeedBack: UIImpactFeedbackGenerator = {
+        let generator: UIImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: .light)
+        generator.prepare()
+        return generator
+    }()
+
     fileprivate var shouldSelectOnTabBar = true
     private var circleView : UIView!
     private var circleImageView: UIImageView!
@@ -117,6 +124,7 @@ class TabBarController: UITabBarController {
     }
 
     open override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        lightFeedBack.impactOccurred()
         guard let idx = tabBar.items?.firstIndex(of: item) else { return }
         if  idx != selectedIndex, let controller = viewControllers?[idx] {
             shouldSelectOnTabBar = false

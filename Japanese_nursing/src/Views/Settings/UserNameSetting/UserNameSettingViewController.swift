@@ -32,6 +32,13 @@ class UserNameSettingViewController: UIViewController {
 
     // MARK: - Properties
 
+    // 触感フィードバック
+    private let notificationFeedBack: UINotificationFeedbackGenerator = {
+        let generator: UINotificationFeedbackGenerator = UINotificationFeedbackGenerator()
+        generator.prepare()
+        return generator
+    }()
+
     private var disposeBag = DisposeBag()
 
     // MARK: - LifeCycle
@@ -65,8 +72,10 @@ class UserNameSettingViewController: UIViewController {
             if let text = self?.nameUnderLineTextField.text, !text.isEmpty, text.count <= 12 {
                 self?.fetch(userName: text)
             } else if let text = self?.nameUnderLineTextField.text, text.isEmpty {
+                self?.notificationFeedBack.notificationOccurred(.error)
                 self?.nameAlertLabel.text = "ニックネームを入力してください"
             } else {
+                self?.notificationFeedBack.notificationOccurred(.error)
                 self?.nameAlertLabel.text = "12文字以内で入力してください"
             }
 
@@ -92,7 +101,8 @@ class UserNameSettingViewController: UIViewController {
 
         viewModel.fetch(authToken: ApplicationConfigData.authToken, userName: userName)
             .subscribe(
-                onNext: { domain in
+                onNext: { [unowned self] domain in
+                    notificationFeedBack.notificationOccurred(.success)
                     HUD.flash(.label("変更しました！"), delay: 1.0) { [weak self] _ in
                         if let nc = self?.navigationController {
                             ApplicationConfigData.userName = userName

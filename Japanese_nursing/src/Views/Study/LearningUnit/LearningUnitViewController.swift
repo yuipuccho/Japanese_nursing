@@ -37,6 +37,13 @@ class LearningUnitViewController: UIViewController, UIAdaptivePresentationContro
 
     // MARK: - Properties
 
+    // 触感フィードバック
+    private let lightFeedBack: UIImpactFeedbackGenerator = {
+        let generator: UIImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: .light)
+        generator.prepare()
+        return generator
+    }()
+
     private let kolodaView = KolodaView()
 
     private var unitTitle = ""
@@ -120,6 +127,7 @@ class LearningUnitViewController: UIViewController, UIAdaptivePresentationContro
     private func subscribe() {
         // 設定ボタンタップ
         settingButton.rx.tap.subscribe(onNext: { [weak self] in
+            self?.lightFeedBack.impactOccurred()
             let vc = LearningSettingsViewController.makeInstance()
             vc.presentationController?.delegate = self
             self?.present(vc, animated: true)

@@ -60,6 +60,19 @@ class TestSettingsViewController: UIViewController {
 
     // MARK: - Properties
 
+    // 触感フィードバック
+    private let lightFeedBack: UIImpactFeedbackGenerator = {
+        let generator: UIImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: .light)
+        generator.prepare()
+        return generator
+    }()
+
+    private let notificationFeedBack: UINotificationFeedbackGenerator = {
+        let generator: UINotificationFeedbackGenerator = UINotificationFeedbackGenerator()
+        generator.prepare()
+        return generator
+    }()
+
     /// 出題範囲タイプ
     enum QuestionRangeType: Int {
         case all
@@ -144,6 +157,7 @@ extension TestSettingsViewController {
     private func subscribe() {
         // すべてボタンタップ
         allButton.rx.tap.subscribe(onNext: { [weak self] in
+            self?.lightFeedBack.impactOccurred()
             self?.updateSelectingQuestionRange(tappedType: .all)
         }).disposed(by: disposeBag)
 
@@ -151,29 +165,35 @@ extension TestSettingsViewController {
         mistakeButton.rx.tap.subscribe(onNext: { [weak self] in
             // 苦手数が0の場合はアラートを表示してreturn
             if self?.mistakeCount == 0 {
+                self?.notificationFeedBack.notificationOccurred(.error)
                 HUD.flash(.label("苦手な単語はありません"), delay: 0.5)
                 return
             }
+            self?.lightFeedBack.impactOccurred()
             self?.updateSelectingQuestionRange(tappedType: .mistake)
         }).disposed(by: disposeBag)
 
         // 未出題ボタンタップ
         untestedButton.rx.tap.subscribe(onNext: { [weak self] in
+            self?.lightFeedBack.impactOccurred()
             self?.updateSelectingQuestionRange(tappedType: .untested)
         }).disposed(by: disposeBag)
 
         // プラスボタンタップ
         plusButton.rx.tap.subscribe(onNext: { [weak self] in
+            self?.lightFeedBack.impactOccurred()
             self?.updateQuestionsCount(shouldPlus: true)
         }).disposed(by: disposeBag)
 
         // マイナスボタンタップ
         minusButton.rx.tap.subscribe(onNext: { [weak self] in
+            self?.lightFeedBack.impactOccurred()
             self?.updateQuestionsCount(shouldPlus: false)
         }).disposed(by: disposeBag)
 
         // スタートボタンタップ
         startButton.rx.tap.subscribe(onNext: { [unowned self] in
+            lightFeedBack.impactOccurred()
             let vc = TestViewController.makeInstance(questionRange: selectingQuestionRange, limit: selectingQuestionsCount)
             present(vc, animated: true)
         }).disposed(by: disposeBag)

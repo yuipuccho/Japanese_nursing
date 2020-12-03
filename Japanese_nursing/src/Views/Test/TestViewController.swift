@@ -60,6 +60,19 @@ class TestViewController: UIViewController {
 
     // MARK: - Properties
 
+    // 触感フィードバック
+    private let lightFeedBack: UIImpactFeedbackGenerator = {
+        let generator: UIImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: .light)
+        generator.prepare()
+        return generator
+    }()
+
+    private let notificationFeedBack: UINotificationFeedbackGenerator = {
+        let generator: UINotificationFeedbackGenerator = UINotificationFeedbackGenerator()
+        generator.prepare()
+        return generator
+    }()
+
     /// 選択項目の管理用Enum
     private enum SelectionType {
         case first
@@ -268,6 +281,7 @@ extension TestViewController {
         // 配列に追加する(テスト結果表示用)
         correctArray.append(viewModel.testWords[index])
 
+        lightFeedBack.impactOccurred()
         bigFeedbackImageView.isHidden = false
         bigFeedbackImageView.image = R.image.big_circle()
         feedbackView.isHidden = false
