@@ -69,8 +69,7 @@ public struct API {
             return "https"
         } else {
             // TODO: 後で追記
-            return ""
-        }
+            return "https"        }
     }()
 
     /// 接続先ホスト指定
@@ -80,8 +79,7 @@ public struct API {
         if Constants.DEBUG {
             return "damp-dusk-43056.herokuapp.com"
         } else {
-            // TODO: 後で追記
-            return ""
+            return "damp-dusk-43056.herokuapp.com"
         }
     }()
 
