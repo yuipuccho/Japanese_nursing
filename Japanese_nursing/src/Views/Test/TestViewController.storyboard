@@ -66,12 +66,6 @@
                                             <constraint firstAttribute="width" constant="36" id="VCS-OI-cnO"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JKb-LF-Vn9">
-                                        <rect key="frame" x="10" y="175" width="394" height="59.333333333333343"/>
-                                        <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="40"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IwH-x9-D9U">
                                         <rect key="frame" x="146.33333333333334" y="359" width="121.33333333333334" height="30"/>
                                         <subviews>
@@ -101,23 +95,40 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxk-6L-CMB">
                                         <rect key="frame" x="10" y="10" width="36" height="36"/>
                                     </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PqC-eR-RqI">
+                                        <rect key="frame" x="10" y="161.66666666666666" width="394" height="86"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aij-fp-Jpt">
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="26.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JKb-LF-Vn9">
+                                                <rect key="frame" x="0.0" y="26.666666666666689" width="394" height="59.333333333333343"/>
+                                                <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Bold" family="NotoSansCJKjpSub-Bold" pointSize="40"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="nfm-6h-g48" firstAttribute="centerX" secondItem="Brt-nJ-d7d" secondAttribute="centerX" id="04Q-pZ-L9G"/>
                                     <constraint firstItem="6y5-hC-xze" firstAttribute="top" secondItem="Brt-nJ-d7d" secondAttribute="top" constant="10" id="5qr-Z8-2U2"/>
                                     <constraint firstAttribute="bottom" secondItem="IwH-x9-D9U" secondAttribute="bottom" constant="20" id="9ke-1n-Nea"/>
                                     <constraint firstItem="kxk-6L-CMB" firstAttribute="bottom" secondItem="6y5-hC-xze" secondAttribute="bottom" id="D7U-a7-qYp"/>
+                                    <constraint firstItem="PqC-eR-RqI" firstAttribute="leading" secondItem="Brt-nJ-d7d" secondAttribute="leading" constant="10" id="PgV-cR-ijS"/>
                                     <constraint firstItem="kxk-6L-CMB" firstAttribute="top" secondItem="6y5-hC-xze" secondAttribute="top" id="QEN-kp-fao"/>
-                                    <constraint firstItem="JKb-LF-Vn9" firstAttribute="centerX" secondItem="Brt-nJ-d7d" secondAttribute="centerX" id="ZRG-a6-4V8"/>
-                                    <constraint firstItem="JKb-LF-Vn9" firstAttribute="leading" secondItem="Brt-nJ-d7d" secondAttribute="leading" constant="10" id="aCV-nJ-b2L"/>
+                                    <constraint firstAttribute="trailing" secondItem="PqC-eR-RqI" secondAttribute="trailing" constant="10" id="VK0-U2-kJl"/>
                                     <constraint firstItem="nfm-6h-g48" firstAttribute="centerY" secondItem="Brt-nJ-d7d" secondAttribute="centerY" id="cIO-nx-UIk"/>
                                     <constraint firstItem="6y5-hC-xze" firstAttribute="leading" secondItem="Brt-nJ-d7d" secondAttribute="leading" constant="10" id="dX8-ch-iHl"/>
                                     <constraint firstItem="kxk-6L-CMB" firstAttribute="leading" secondItem="6y5-hC-xze" secondAttribute="leading" id="drv-QJ-N6a"/>
                                     <constraint firstItem="nfm-6h-g48" firstAttribute="width" secondItem="Brt-nJ-d7d" secondAttribute="width" multiplier="0.55" id="dzl-ZO-xWz"/>
                                     <constraint firstItem="kxk-6L-CMB" firstAttribute="trailing" secondItem="6y5-hC-xze" secondAttribute="trailing" id="fej-BX-xQr"/>
-                                    <constraint firstItem="JKb-LF-Vn9" firstAttribute="centerY" secondItem="Brt-nJ-d7d" secondAttribute="centerY" id="qEO-z2-U3g"/>
                                     <constraint firstItem="IwH-x9-D9U" firstAttribute="centerX" secondItem="Brt-nJ-d7d" secondAttribute="centerX" id="sh7-8b-ZX8"/>
-                                    <constraint firstAttribute="trailing" secondItem="JKb-LF-Vn9" secondAttribute="trailing" constant="10" id="tBu-Hl-18T"/>
+                                    <constraint firstItem="PqC-eR-RqI" firstAttribute="centerY" secondItem="Brt-nJ-d7d" secondAttribute="centerY" id="u4Q-xJ-cg8"/>
+                                    <constraint firstItem="PqC-eR-RqI" firstAttribute="centerX" secondItem="Brt-nJ-d7d" secondAttribute="centerX" id="xMQ-tv-kC8"/>
                                     <constraint firstItem="Zy1-20-zsF" firstAttribute="centerY" secondItem="6y5-hC-xze" secondAttribute="centerY" id="xNX-AZ-hB4"/>
                                 </constraints>
                             </view>
@@ -420,6 +431,7 @@
                         <outlet property="fourthOptionImageView" destination="HiM-HN-hnI" id="Kv9-zK-LFl"/>
                         <outlet property="fourthOptionLabel" destination="QPI-EH-jmj" id="UrO-RK-A31"/>
                         <outlet property="fourthOptionView" destination="yfi-04-4dQ" id="kuh-It-L3Z"/>
+                        <outlet property="furiganaLabel" destination="aij-fp-Jpt" id="lEr-tK-Jwx"/>
                         <outlet property="progressLabel" destination="fJJ-Ef-vWr" id="tqc-bR-gCb"/>
                         <outlet property="progressView" destination="Zy1-20-zsF" id="LdE-DH-DIB"/>
                         <outlet property="questionLabel" destination="JKb-LF-Vn9" id="C4e-tj-KiZ"/>

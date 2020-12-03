@@ -27,6 +27,8 @@ class TestViewController: UIViewController {
     @IBOutlet private weak var progressView: UIView!
     /// 進捗ラベル
     @IBOutlet private weak var progressLabel: UILabel!
+    /// ふりがなラベル
+    @IBOutlet private weak var furiganaLabel: UILabel!
     /// 問題ラベル
     @IBOutlet private weak var questionLabel: UILabel!
     /// 中央の大きなフィードバックImageView
@@ -213,6 +215,8 @@ extension TestViewController {
 
     /// 問題を更新する
     private func updateQuestion() {
+        // ふりがなラベル
+        furiganaLabel.text = viewModel.testWords[index].furigana
         // 問題ラベル
         questionLabel.text = viewModel.testWords[index].japanese
 
