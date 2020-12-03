@@ -68,7 +68,6 @@ public struct API {
         if Constants.DEBUG {
             return "https"
         } else {
-            // TODO: 後で追記
             return "https"        }
     }()
 
