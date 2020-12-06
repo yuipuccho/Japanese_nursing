@@ -16,7 +16,7 @@ public struct GetTestWordsRequest: JapaneseNursingRequest {
 
     /// 認証トークン
     private var authToken: String
-    /// 出題範囲(0: すべて、1: 苦手、 2: 未出題)
+    /// 出題範囲(0: すべて、1: 苦手、 2: 未出題、3: 苦手&未出題)
     private var questionRange: Int
     /// 出題数
     private var limit: Int
@@ -51,7 +51,7 @@ public struct GetTestWordsRequest: JapaneseNursingRequest {
 }
 
 /**
- * 学習単語取得API Response
+ * テスト単語取得API Response
  */
 public struct GetTestWordsResponse: JapaneseNursingResponse {
 
