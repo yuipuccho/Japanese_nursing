@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import PKHUD
 
 /**
  * 学習設定VC
@@ -119,7 +120,9 @@ class LearningSettingsViewController: UIViewController {
             ApplicationConfigData.displayCardSetting = selectedDisplayCardType.rawValue
             ApplicationConfigData.cardSortOrderType = selectedSortOrderType.rawValue
             ApplicationConfigData.shouldUpdateCards = true
-            dismiss(animated: true)
+            HUD.flash(.label("適用しました！"), delay: 0.5) { [unowned self] _ in
+                self.dismiss(animated: true)
+            }
         }).disposed(by: disposeBag)
 
     }
